@@ -1,0 +1,197 @@
+# Methods to solve a linear systems
+
+	A ***system of linear equations*** of two variables consists of two equations.  A ***solution of a system*** of linear equations of two variables is an ordered pair that satisfies both equations.
+
+	Two methods to solve a linear system are the substitution method and the elimination method. The idea of the substitution method is to view each equation as an implicitly defined function. It's less efficient than the elimination method in general. The idea of elimination is to reduce the number of variables using properties of equations.
+
+## Substitution Method
+```{example}
+Solve the system of linear equations using the substitution method.
+$$
+\begin{aligned}
+    x + y =  & 3  \label{ex-1-1}\\
+    2x + y = & 4
+\end{aligned}
+$$
+```
+```{solution}
+**Step 1.:** Solve one variable from one equation. For example, one may solve $y$ from equation \eqref{ex-1-1}.
+$$y=3-x.$$
+
+**Step 2.:** Plug $y=3-x$ into the second equation and solve for $x$.
+$$
+\begin{aligned}
+    2x + (3-x) & = 4 \\
+    x+3        & =4  \\
+    x          & =1
+\end{aligned}
+$$
+%The result tells us that $x=1$.
+
+**Step 3.:** Plug the solution $x=1$ into the equation in Step 1 to solve for $y$.
+$$
+    y =3-x=3-1=2
+$$
+% The solution should be $(1, 2)$.
+
+**Step 4.:** Check the proposed solution.
+Plug $(1, 2)$ into the first equation:
+$$
+1+2=3.
+$$
+Plug $(1, 2)$ into the second equation:
+$$
+2\cdot 1+2=4.
+$$
+
+```
+		
+## Elimination Method
+
+```{example}
+Solve the system of linear equations using the addition method.
+$$
+\begin{aligned}
+5x + 2y & = 7  \label{ex-2-1} \\
+3x - y  & = 13
+\end{aligned}
+$$
+```
+
+```{solution}
+
+**Step 1.:** Eliminate one variable and solve for the other. For example, one may choose to eliminate $y$.
+In order to eliminate $y$, we \emph{add the opposite}. We multiply both sides of the second equation by $2$ to get the opposite $-2y$.
+$$
+\begin{aligned}
+2(3x) - 2y & =2\dot(13)  \\
+6x - 2y    & = 26  \label{ex-2-3}
+\end{aligned}
+$$
+Adding equations \eqref{ex-2-1} and \eqref{ex-2-3} will eliminate $y$.
+$$
+\begin{aligned}
+&  & 5x + 2y & = 7    \\
++ &  & 6x -2y  & = 26   \$$-0.5em]
+\cline{1-4}
+&  & 11x+0   & =33    \\
+&  & x       & =3
+\end{aligned}
+$$
+
+**Step 2.:** Find the missing variable by plugging $x=3$ into the first equation and solve for $y$.
+$$
+\begin{aligned}
+5\cdot 3+ 2y & =7  \\
+15+2y        & = 7 \\
+2y           & =-8 \\
+y            & =-4
+\end{aligned}
+$$
+
+**Step 3.:** Check the proposed solution.
+Plug $(3, -4)$ into the first equation: 
+$$5\cdot 3+2\cdot(-4)=15-8=7.$$
+Plug $(3, -4)$ into the second equation: 
+$$3\cdot 3-\cdot(-4)=9+4=13.$$
+
+```
+
+	
+```{note}
+A linear system may have ***one solution***, ***no solution*** or ***infinitely many solutions***.
+
+If the lines defined by equations in the linear system have the same slope but different $y$-intercepts or the elimination method ends up with $0=c$, where $c$ is a nonzero constant, then the system has no solution.
+
+If the lines defined by equations in the linear system have the same slope and the same $y$-intercept or the elimination method ends up with $0=0$, then the system has infinitely many solutions. In this case, we say that the system is ***dependent*** and a solution can be expressed in the form $(x, f(x))=(x, mx+b)$.
+```
+
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    2x-y   & =8 \\
+    -3x-5y & =1
+\end{aligned}
+$$
+```
+
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    x+4y=  & 10  \\
+    3x-2y= & -12
+\end{aligned}
+$$
+```
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    -x-5y & =29  \\
+    7x+3y & =-43
+\end{aligned}
+$$
+```
+
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    2x+15y= & 9   \\
+    x-18y=  & -21
+\end{aligned}
+$$
+```
+
+```{exercise}Solve.
+$$
+\begin{aligned}
+    2x+7y & =5  \\
+    3x+2y & =16
+\end{aligned}
+$$
+```
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    4x+3y=  & -10 \\
+    -2x+5y= & 18
+\end{aligned}
+$$
+```
+
+```{exercise}Solve.
+$$
+\begin{aligned}
+    3x+2y & =6  \\
+    6x+4y & =16
+\end{aligned}
+$$
+```
+
+
+```{exercise}
+Solve.
+$$
+\begin{aligned}
+    2x-3y  & =-6 \\
+    -4x+6y & =12
+\end{aligned}
+$$
+```
+
+```{exercise} Last week, Mike got 5 apples and 4 oranges for \$7. The week the prices are still the same and he got 3 apples and 6 oranges for \$6. What's the price for 1 apple and 1 orange? 
+```
+
+
+```{exercise} The sum of the digits of a certain two-digit number is 7. Reversing its digits increases the number by 27.
+	What is the number?
+```

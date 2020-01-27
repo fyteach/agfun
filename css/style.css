@@ -1,0 +1,43 @@
+.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning, .rmdthink{
+    padding: 1em 1em 1em 4em;
+    margin-bottom: 10px;
+    background: #f5f5f5 5px center/3em no-repeat;
+  }
+  .rmdcaution {
+    background-image: url("../figs/caution.png");
+  }
+  .rmdimportant {
+    background-image: url("../figs/important.png");
+  }
+  .rmdnote {
+    background-image: url("../figs/note.png");
+  }
+  .rmdtip {
+    background-image: url("../figs/tip.png");
+  }
+  .rmdwarning {
+    background-image: url("../figs/warning.png");
+  }
+
+  .rmdthink {
+    background-image: url("../figs/thinking.png");
+  }
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+body {
+  background-color: #ccd8f5;
+}

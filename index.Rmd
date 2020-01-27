@@ -1,0 +1,24 @@
+--- 
+title: "Algebra and Geometry of Elementary Functions"
+author: "Wenjuan Li and Fei Ye"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: "This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course."
+---
+
+# Introduction {-}
+
+This notebook is intended to give a brief introduction to elementary functions emphasizing on effective thinking in algebra and geometry.
+
+In the first part, we will review mathematical operations including addition, multiplication, $n$-th root, exponentiation and logarithm.
+
+In the second part, we will study the concepts of functions, algebraic functions and their applications.
+
+In the third part, we will study elementary transcendental functions and applications.
+
+Comments and suggestions are very welcome.
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+![by-nc-sa license icon](figs/by-nc-sa.png)
