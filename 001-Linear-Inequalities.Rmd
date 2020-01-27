@@ -8,22 +8,19 @@
 A course has three types of assessments: homework, monthly test and the final exam. The grading policy of the course says that homework counts 20%, monthly test counts 45% and the final exam counts for 35%. At the last day of class a student wants to know the minimum grade needed on the final to get a grade C or better, equivalently, overall grade 74 or above. The student earned 100 on homework and 80 on monthly test.
 
 1. What the minimum grade the student must earn on the final to get a C or better?
-   
 2. If, in addition, the final exam must be at least 55 to earn a C or better, what would be the minimum grade needed?
-   
-```
 
+```
 
 ```{block, type="rmdthink"}
 The college student has attempted 30 credits and a cumulated GPA 1.8. To graduate from the college, the GPA must be 2.0 or higher and the total credits must be at least 60. Now the student decides to spend more time on studying and aims at an cumulated GPA 2.5 on further courses.  
 How many more attempted credits the student must earn to graduate?
 
-**Cumulated GPA= $\dfrac{\text{Total Quality Points Earned}}{\text{Total Attempted Credits}}$ **
+**Cumulated GPA = $\dfrac{\text{Total Quality Points Earned}}{\text{Total Attempted Credits}}$**
 
-**Total Quality Points Earned= Sum of $\text{Credits Attempted}\times \text{Grade Value}$ **
+**Total Quality Points Earned = Sum of $\text{Credits Attempted}\times \text{Grade Value}$**
 
 ```
-
 
 ## Properties and Definitions
 
@@ -64,9 +61,9 @@ The third compound inequality is simplified expression for the compound inequali
 Solutions to an inequality normally form an interval which has boundaries and should reflect inequality signs. Depending on the form of  an inequality, we may a single interval and a union of intervals. For example, suppose $a<b$, we have the following equivalent representations of inequalities.
 
 | $x<a$ |$x\ge b$ |$a\le x<b$ |$x\le a$ or $x>b$ |
-|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|
+| ![less than](figs/Interval-number-line-less-than.png){max-width=10%} | ![greater than](figs/Interval-number-line-greater-than.png){max-width=10%} |![between](figs/Interval-number-line-between.png){max-width=10%} | ![beyond](figs/Interval-number-line-beyond.png){max-width=10%}|
 |$(-\infty, a)$|$[b,\infty)$|$[a, b)$|$(-\infty, a]\cup (b,\infty)$|
-
 
 ## Examples
 
@@ -76,12 +73,13 @@ Solutions to an inequality normally form an interval which has boundaries and sh
 An inequality (equation) is solved if the unknown variable is isolated. That's what to be expected. To isolate the unknown variable, you use comparisons to determine what mathematical operations should be applied. When an operation is applied to one side, the same operation should also be applied to the other side. For inequalities, we also need to determine whether the inequality sign should be preserved or reversed according to the operation.
 ```
 
-```{example} 
-Solve the linear inequality 
+```{example}
+Solve the linear inequality
 $$
 2x+4>0.
 $$
 ```
+
 ```{solution}
 $$
 \begin{aligned}
@@ -99,12 +97,13 @@ $$
 -3x-4<2.
 $$
 ```
+
 ```{solution}
 $$
 \begin{aligned}
                                         &  & -3x-4 & <2       \\
     \text{add $4$}                   &  & -3x   & <6  &  & \\
-    \text{divide by $-3$ and switch} &  & x     & >-2 
+    \text{divide by $-3$ and switch} &  & x     & >-2
 \end{aligned}
 $$
 The solution set is $(-2, +\infty)$.
@@ -116,6 +115,7 @@ $$
 x+2<3\quad \text{and}\quad -2x-3<1.
 $$
 ```
+
 ```{solution}
 $$
 \begin{aligned}
@@ -133,6 +133,7 @@ $$
 -x+4>2 \quad \text{or} \quad 2x-5\geq -3.
 $$
 ```
+
 ```{solution}
 $$
 \begin{aligned}
@@ -150,6 +151,7 @@ $$
 -4\leq\dfrac{2x-4}{3}<2.
 $$
 ```
+
 ```{solution}
 $$
 \begin{array}{rcl}
@@ -161,12 +163,14 @@ $$
 $$
 The solution set is $[-4, 5)$.
 ```
+
 ```{example}
 Solve the compound linear inequality
 $$
 -1\leq \dfrac{-3x+4}{2}<3.
 $$
 ```
+
 ```{solution}
 $$
 \begin{array}{rcl}
@@ -198,7 +202,6 @@ The range of $5-3x$ is $(-1, 8]$.
 ```{block2, type="rmdtip"}
 **Understand the Problem.** Understanding the known, the unknown and the condition of the given problem is the key to solve the problem. Normally, by comparing the known and unknown, you will find the way to solve the problem.
 ```
-
 
 ## Exercises
 

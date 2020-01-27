@@ -1,6 +1,6 @@
 --- 
 title: "Algebra and Geometry of Elementary Functions"
-author: "Wenjuan Li and Fei Ye"
+# author: "Wenjuan Li and Fei Ye"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
