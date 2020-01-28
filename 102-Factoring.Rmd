@@ -1,1 +1,187 @@
 # Review of Factoring
+
+## Factor by Removing the GCF
+
+***The  greatest common factor (GCF)*** of two terms is a polynomial with the **greatest coefficient** and of the **highest possible degree** that divides each term.
+
+To ***factor a polynomial*** is to **express the polynomial as a product** of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.
+
+```{example}
+
+Factor $4x^3y-8x^2y^2+12x^3y^3$.
+
+```
+
+```{solution}
+
+1. Find the GCF of all terms.  
+    The GCF of $4x^3y$, $-8x^2y^2$ and $12x^4y^3$ is $4x^2y$.
+
+1. Write each term as the product of the GCF and the remaining factor.  
+    $4x^3y=(4x^2y)\cdot x$, $-8x^2y^2=(4x^2y)\cdot (-2y)$, and $12x^4y^3=(4x^2y)(3xy^2)$.
+
+1. Factor out the GCF from each term.  
+    $4x^3y-8x^2y^2+12x^3y^3=4x^2y\cdot(x-2y+3xy^2)$.
+
+```
+
+## Factor by Grouping
+
+For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.
+
+```{example}
+
+Factor $2x^2-6xy+xz-3yz$.
+
+```
+
+```{solution}
+
+1. Group the first two terms and the last two terms.
+$$
+\begin{aligned}
+&2x^2-6xy+xz-3yz\\
+=&(2x^2-6xy)+(xz-3yz)
+\end{aligned}
+$$
+
+1. Factor out the GCF from each group.
+$$
+\begin{aligned}
+% &(2x^2-6xy)+(xz-3yz)\\
+=&2x(x-3y)+z(x-3y)
+\end{aligned}
+$$
+
+1. Factor out the binomial GCF.
+$$
+\begin{aligned}
+% &2x(x-3y)+z(x-3y)\\
+=&(x-3y)(2x+z).
+\end{aligned}
+$$
+
+```
+
+```{example}
+
+Factor $ax+4b-2a-2bx$.
+
+```
+
+```{solution}
+
+1. Group the first term with the third term and group the second term with the last term.
+$$
+\begin{aligned}
+&ax+4b-2a-2bx\\
+=&(ax-2a)+(-2bx+4b)
+\end{aligned}
+$$
+
+1. Factor out the GCF from each group.
+$$
+\begin{aligned}
+% &(ax-2a)+(-2bx+4b)\\
+=&a(x-2)+(-2b)(x-2)
+\end{aligned}
+$$
+
+1. Factor out the binomial GCF.
+$$
+\begin{aligned}
+% &a(x-2)+(-2b)(x-2)\\
+=&(x-2)(a-2b).
+\end{aligned}
+$$
+
+```
+
+```{block2, type="rmdtip"}
+
+**Guess and check.** Once you factored one group, you may expect that the other group has the same binomial factor so that factoring may be continued.
+
+```
+
+## Factor Difference of Squares
+
+Difference of squares
+
+$$a^2-b^2=(a-b)(a+b)$$
+
+```{example}
+
+Factor $25x^2-16$.
+
+```
+
+```{solution}
+
+1. Recognize the binomial as a difference of squares.
+$$\begin{aligned}
+&25x^2-16\\
+=&(5x)^2-4^2
+\end{aligned}
+$$
+
+1. Apply the formula.
+$$
+\begin{aligned}
+% &25x^2-16\\=&(5x)^2-4^2\\
+=&(5x-4)(5x+4).
+\end{aligned}
+$$
+
+```
+
+
+```{example}
+Factor $32x^3y-2xy^5$ completely.
+```
+
+```{solution}
+$$
+32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
+$$
+```
+
+## Exercises
+
+```{exercise}
+Factor out the GCF.
+
+1. $18x^2y^2-12xy^3-6x^3y^4$
+1. $5x(x-7)+3y(x-7)$
+1. $-2a^2(x+y)+3a(x+y)$
+
+```
+
+```{exercise} 
+
+Factor by grouping.
+
+1. $12xy-10y+18x-15$
+1. $12ac-18bc-10ad+15bd$
+1. $5ax-4bx-5ay+4by$ 
+
+```
+
+```{exercise}
+
+Factor completely.
+
+1. $25x^2-4$
+1. $8x^3-27$
+1. $125y^3+1$ \hfill\null
+
+```
+
+```{exercise}
+
+Factor completely.
+
+1. $27x^4+xy^3$
+1. $16xy^3-2x^4$
+1. $x^4+3x^3-4x^2-12x$ \hfill\null
+
+```

@@ -118,7 +118,182 @@ $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 </div>
 <div id="review-of-factoring" class="section level1" number="2">
 <h1><span class="header-section-number">Lesson 2</span> Review of Factoring</h1>
+<div id="factor-by-removing-the-gcf" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Factor by Removing the GCF</h2>
+<p><strong><em>The greatest common factor (GCF)</em></strong> of two terms is a polynomial with the <strong>greatest coefficient</strong> and of the <strong>highest possible degree</strong> that divides each term.</p>
+<p>To <strong><em>factor a polynomial</em></strong> is to <strong>express the polynomial as a product</strong> of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.</p>
 
+<div class="example">
+<p><span id="exm:unnamed-chunk-12" class="example"><strong>Example 2.1  </strong></span>
+Factor <span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Find the GCF of all terms.<br />
+The GCF of <span class="math inline">\(4x^3y\)</span>, <span class="math inline">\(-8x^2y^2\)</span> and <span class="math inline">\(12x^4y^3\)</span> is <span class="math inline">\(4x^2y\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Write each term as the product of the GCF and the remaining factor.<br />
+<span class="math inline">\(4x^3y=(4x^2y)\cdot x\)</span>, <span class="math inline">\(-8x^2y^2=(4x^2y)\cdot (-2y)\)</span>, and <span class="math inline">\(12x^4y^3=(4x^2y)(3xy^2)\)</span>.</p></li>
+<li><p>Factor out the GCF from each term.<br />
+<span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3=4x^2y\cdot(x-2y+3xy^2)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="factor-by-grouping" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Factor by Grouping</h2>
+<p>For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-14" class="example"><strong>Example 2.2  </strong></span>
+Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Group the first two terms and the last two terms.
+<span class="math display">\[
+\begin{aligned}
+&amp;2x^2-6xy+xz-3yz\\
+=&amp;(2x^2-6xy)+(xz-3yz)
+\end{aligned}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Factor out the GCF from each group.
+<span class="math display">\[
+\begin{aligned}
+% &amp;(2x^2-6xy)+(xz-3yz)\\
+=&amp;2x(x-3y)+z(x-3y)
+\end{aligned}
+\]</span></p></li>
+<li><p>Factor out the binomial GCF.
+<span class="math display">\[
+\begin{aligned}
+% &amp;2x(x-3y)+z(x-3y)\\
+=&amp;(x-3y)(2x+z).
+\end{aligned}
+\]</span></p></li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-16" class="example"><strong>Example 2.3  </strong></span>
+Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Group the first term with the third term and group the second term with the last term.
+<span class="math display">\[
+\begin{aligned}
+&amp;ax+4b-2a-2bx\\
+=&amp;(ax-2a)+(-2bx+4b)
+\end{aligned}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Factor out the GCF from each group.
+<span class="math display">\[
+\begin{aligned}
+% &amp;(ax-2a)+(-2bx+4b)\\
+=&amp;a(x-2)+(-2b)(x-2)
+\end{aligned}
+\]</span></p></li>
+<li><p>Factor out the binomial GCF.
+<span class="math display">\[
+\begin{aligned}
+% &amp;a(x-2)+(-2b)(x-2)\\
+=&amp;(x-2)(a-2b).
+\end{aligned}
+\]</span></p></li>
+</ol>
+</div>
+
+<div class="rmdtip">
+<p><strong>Guess and check.</strong> Once you factored one group, you may expect that the other group has the same binomial factor so that factoring may be continued.</p>
+</div>
+</div>
+<div id="factor-difference-of-squares" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Factor Difference of Squares</h2>
+<p>Difference of squares</p>
+<p><span class="math display">\[a^2-b^2=(a-b)(a+b)\]</span></p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-19" class="example"><strong>Example 2.4  </strong></span>
+Factor <span class="math inline">\(25x^2-16\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Recognize the binomial as a difference of squares.
+<span class="math display">\[\begin{aligned}
+&amp;25x^2-16\\
+=&amp;(5x)^2-4^2
+\end{aligned}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Apply the formula.
+<span class="math display">\[
+\begin{aligned}
+% &amp;25x^2-16\\=&amp;(5x)^2-4^2\\
+=&amp;(5x-4)(5x+4).
+\end{aligned}
+\]</span></li>
+</ol>
+</div>
+
+<div class="example">
+<span id="exm:unnamed-chunk-21" class="example"><strong>Example 2.5  </strong></span>Factor <span class="math inline">\(32x^3y-2xy^5\)</span> completely.
+</div>
+
+<div class="solution">
+ <span class="solution"><em>Solution. </em></span> <span class="math display">\[
+32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
+\]</span>
+</div>
+</div>
+<div id="exercises-1" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Exercises</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-23" class="exercise"><strong>Exercise 2.1  </strong></span>Factor out the GCF.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(18x^2y^2-12xy^3-6x^3y^4\)</span></li>
+<li><span class="math inline">\(5x(x-7)+3y(x-7)\)</span></li>
+<li><span class="math inline">\(-2a^2(x+y)+3a(x+y)\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-24" class="exercise"><strong>Exercise 2.2  </strong></span>
+Factor by grouping.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(12xy-10y+18x-15\)</span></li>
+<li><span class="math inline">\(12ac-18bc-10ad+15bd\)</span></li>
+<li><span class="math inline">\(5ax-4bx-5ay+4by\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercise 2.3  </strong></span>
+Factor completely.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(25x^2-4\)</span></li>
+<li><span class="math inline">\(8x^3-27\)</span></li>
+<li><span class="math inline">\(125y^3+1\)</span> </li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-26" class="exercise"><strong>Exercise 2.4  </strong></span>
+Factor completely.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(27x^4+xy^3\)</span></li>
+<li><span class="math inline">\(16xy^3-2x^4\)</span></li>
+<li><span class="math inline">\(x^4+3x^3-4x^2-12x\)</span> </li>
+</ol>
+</div>
+
+</div>
 </div>
             </section>
 
