@@ -1,0 +1,9 @@
+# (PART\*) Part 3: Functions and Applications {-}
+
+# Introduction to Functions
+
+## Sets, Order Pairs, and the Rectangular Coordinate System
+
+## Functions Defined by Equations
+
+## Graphs of Functions

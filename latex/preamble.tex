@@ -1,0 +1,299 @@
+\usepackage{framed,color}
+\definecolor{shadecolor}{RGB}{248,248,248}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Adjust words spacing %%%%%%%%%%%%%%%%%%
+\usepackage[protrusion=true,expansion=true]{microtype}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% Packages for Math %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathtools}
+% \usepackage{breqn}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Font Encoding Packages %%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage[utf8]{inputenc}
+
+% \usepackage[T1]{fontenc}  % use this if European fonts (ec) package is installed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Font Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{libertine}  %%%%%The Linux Libertine font family
+% \usepackage[libertine]{newtxmath}
+
+% \usepackage[expert,altbullet,vargreek,noamssymbols]{lucidabr}
+% \usepackage[expert,vargreek,noamssymbols]{lucbmath}
+
+
+% \usepackage{charter}    %%%%%%Good for screen display
+% \usepackage[charter]{mathdesign}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+	linktoc=all
+}
+
+\usepackage{color}
+% \usepackage[table]{xcolor}
+
+\definecolor{greenbean}{RGB}{144,237,204}
+%\pagecolor{greenbean}
+\def\gray{\color{gray}}
+\def\black{\color{black}}
+\def\blue{\color{blue}}
+\def\red{\color{red}}
+\def\green{\color{green}}
+\def\yellow{\color{yellow}}
+\def\cyan{\color{cyan}}
+\def\brown{\color{brown}}
+\def\purple{\color{purple}}
+\def\olive{\color{olive}}
+\def\lime{\color{lime}}
+\def\darkgray{\color{darkgray}}
+
+%%%%%%%%%%%%%%%% Include Graphs %%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\textfloatsep=0pt
+\dblfloatsep=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%% Spacing for Baseline and Parskip  %%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%% Packages for Fine Tune Content %%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage{indentfirst,bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{hhline}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%add blank pages%%%%%%%%%
+% \usepackage{afterpage}
+\newcommand\blankpage{%
+\null
+    \thispagestyle{empty}%
+    % \addtocounter{page}{-1}%
+    \newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%% Enumerate Style %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[inline]{enumitem}
+\setenumerate{
+	% label=\textup{(\arabic*)},
+	% afterlabel={\quad},
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	itemsep=2pt,
+	parsep=0pt,
+	% labelindent=0em,
+	% itemindent = *,
+	itemindent=1ex,
+	wide,
+	itemjoin={\hspace{\fill}},
+	%%Horizontal
+}
+\setitemize{
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	itemsep=0pt,
+	parsep=0pt,
+	%%Horizontal
+	labelindent=0em,
+	leftmargin =!,
+	itemindent = 0pt,
+	labelsep= 2pt,
+	labelwidth=1em,
+}
+\setlist{topsep=0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Remove Vertical Some Spacing%%%%%%%%%%%%%%%
+\makeatletter
+\def\example@space@setup{
+	\example@preskip=2pt
+	\example@postskip=0
+}
+\makeatother
+
+% \makeatletter
+% \def\exercise@space@setup{%
+%   \exercise@preskip=0 \exercise@postskip=\exercise@preskip
+% }
+% \makeatother
+
+\makeatletter
+\def\solution@space@setup{
+	\solution@preskip=-\medskip
+	\solution@postskip=0
+}
+\makeatother
+
+% \makeatletter
+% \def\proof@space@setup{
+% 	\proof@preskip=0pt
+% 	\proof@postskip=0pt
+% }
+% \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% Packages for Pictures and Commutative Diagrams%%%%%%
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgfmath}
+\usepackage{tikz-cd}
+\usepackage{pgffor}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{
+	calc,
+	angles,
+	quotes,
+	arrows.meta,
+	decorations.markings,
+	math,
+	backgrounds,
+	pgfplots.statistics,
+	matrix,
+	patterns,
+	shapes.geometric,
+	spy,
+	intersections,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% Setup the Coordinate System %%%%%%%%%%%%%%%%%%%%%%
+\pgfplotsset{every axis/.style={
+			%		 axis equal image,
+			axis x line=middle,    % put the x axis in the middle
+			axis y line=middle,    % put the y axis in the middle
+			axis line style={-latex,very thick}, % arrows on the axis
+			xlabel={$x$},          % default put x on x-axis
+			ylabel={$y$},          % default put y on y-axis
+			xlabel style = {font=\tiny, at={(xticklabel* cs:1)}, anchor=south},
+			ylabel style = {font=\tiny, at={(yticklabel* cs:1)}, anchor=west},
+			scaled ticks=true,
+			x tick label style={font=\tiny, yshift=0.25ex, inner xsep=0pt},
+			y tick label style={font=\tiny, xshift=0.25ex, inner ysep=0pt},
+			grid style={black},
+			% set layers=standard,
+		}
+}
+
+%%%%%%%%%%%%%%% include files/Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{import}
+% \usepackage{subfiles}
+\usepackage[verbose]{wrapfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Cancel common factors in Math %%%%%%%%%%%%%%%%%%%%
+\usepackage[makeroom]{cancel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%% Math mode without vertical spacing %%%%%%%%%%%%%%%%%
+\makeatletter
+\g@addto@macro\normalsize{%
+	\setlength\abovedisplayskip{1pt plus 2pt minus 2pt}%
+	\setlength\belowdisplayskip{1pt plus 2pt minus 2pt}%
+	\setlength\abovedisplayshortskip{1pt plus 2pt minus 2pt}%
+	\setlength\belowdisplayshortskip{1pt plus 2pt minus 2pt}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Redefine the original definition of \paragraph in the article
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{1ex \@plus 0.2ex \@minus .2ex}{-1ex}%
+  {\normalfont\large\bfseries}%
+}
+\makeatother
+
+\addto\captionsenglish{%
+	\renewcommand{\chaptername}{Lesson \thechapter}
+}
+
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\parll}{ {\mathbin{\parallel}} }
+\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}
+
+\makeatletter
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+\newcommand*\widebar[1]{%
+\begingroup
+\def\mathaccent##1##2{%
+\rel@kern{0.8}%
+\overline{\rel@kern{-0.8}\macc@nucleus\rel@kern{0.2}}%
+\rel@kern{-0.2}%
+}%
+\macc@depth\@ne
+\let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+\mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+\macc@set@skewchar\relax
+\let\mathaccentV\macc@nested@a
+\macc@nested@a\relax111{#1}%
+\endgroup
+}
+\renewcommand{\bar}{\widebar}
+\newcommand*\centermath[1]{\omit\hfil~$\displaystyle#1$~\hfil\ignorespaces}
+\newcommand{\cmc}{\centermath}
+\newcommand*\ctc[1]{\omit\hfil\quad~ #1 ~\quad\hfil\ignorespaces}
+\newcommand{\dfn}[1]{\textit{\textbf{#1}}}
+
+
+\newlength{\lengthsignature}
+\settowidth{\lengthsignature}{Summer 2018}
+
+\usepackage{longtable}
+
+\geometry{
+	letterpaper,
+	top=0.9in,
+	bottom=0.8in,
+	left=0.8in,
+	right=0.8in,
+	% footsep=0pt
+	}
+
+\usepackage[export]{adjustbox}
+
+% \fancyheadoffset[LO,LE]{0cm}
+
+% \fancyfoot[L]{\raisebox{-0.6\baselineskip}{\includegraphics[height=1.2\baselineskip, valign=c]{pics/by-nc-sa.eps}}}
+
+% \fancyfoot[R]{\raisebox{-0.6\baselineskip}{\hfill \scriptsize \sffamily A Concise Workbook for College Algebra}\hspace{-1ex}}
+
+
+\setlength\columnsep{10pt}
+\setlength{\footskip}{6pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 1pt minus 1pt}
+\setlength{\parsep}{2pt plus 1pt minus 1pt}
+\setlength{\topsep}{2pt plus 1pt minus 1pt}
+\setlength{\multicolsep}{1pt plus 1pt minus 1pt}
+
+\def\rotationdegree{180}
+
+\raggedcolumns % to align multicols by top.
+
+
+\frontmatter

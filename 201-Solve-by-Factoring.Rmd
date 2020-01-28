@@ -1,0 +1,5 @@
+# (PART\*) Part 2: Equations and Applications {-}
+
+# Solve Polynomial Equations by Factoring
+
+## Zero-Product Rule

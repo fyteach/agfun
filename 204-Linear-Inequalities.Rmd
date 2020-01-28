@@ -1,8 +1,6 @@
-# (PART\*) Part I {-} 
-
 # Linear Inequalities
 
-## Real Life Problems
+## Know the Grade You Must Earn
 
 ```{block2, type="rmdthink"}
 A course has three types of assessments: homework, monthly test and the final exam. The grading policy of the course says that homework counts 20%, monthly test counts 45% and the final exam counts for 35%. At the last day of class a student wants to know the minimum grade needed on the final to get a grade C or better, equivalently, overall grade 74 or above. The student earned 100 on homework and 80 on monthly test.

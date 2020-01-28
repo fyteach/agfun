@@ -1,9 +1,20 @@
 --- 
 title: "Algebra and Geometry of Elementary Functions"
-# author: "Wenjuan Li and Fei Ye"
+author: "Fei Ye"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: book
+documentclass: latex/elegantbookr
+# bibliography: [book.bib]
+# biblio-style: apalike
+# logo: "figure/logo.png"
+# cover: "figure/cover.jpg"
+institute: ""
+extrainfo: ""
+version: "0.01"
+github-repo: fyemath/agfun
+classoption: "en,12pt"
+# indent: 40pt
+# subparagraph: yes
 description: "This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course."
 ---
 

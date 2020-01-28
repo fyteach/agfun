@@ -2,6 +2,7 @@ bookdown::gitbook:
   includes:
       before_body: html/math-shortcuts.html
   split_by: chapter
+  toc_depth: 1
   css: css/style.css
   config:
     toc:
@@ -16,8 +17,10 @@ bookdown::gitbook:
       # twitter: no
 bookdown::pdf_book:
   includes:
-    in_header: preamble.tex
+    in_header: latex/preamble.tex
   latex_engine: pdflatex
-  citation_package: natbib
+  # citation_package: natbib
   keep_tex: yes
-
+  toc_depth: 2
+  template: latex/template.tex
+  pandoc_args: ["--top-level-division=chapter", "--lua-filter=latex/sidebar.lua"]

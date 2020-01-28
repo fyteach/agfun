@@ -1,0 +1,14 @@
+\babel@toc {english}{}
+\babel@toc {english}{}
+\contentsline {chapter}{Introduction}{ii}{chapter*.2}% 
+\contentsline {part}{Part I}{iv}{part*.4}% 
+\contentsline {chapter}{Integral Exponents}{iv}{chapter*.5}% 
+\contentsline {section}{\numberline {0.1}What do you think}{iv}{section.0.1}% 
+\contentsline {chapter}{Linear Inequalities}{v}{chapter*.6}% 
+\contentsline {section}{\numberline {0.2}Real Life Problems}{v}{section.0.2}% 
+\contentsline {section}{\numberline {0.3}Properties and Definitions}{v}{section.0.3}% 
+\contentsline {subsection}{Properties of Inequalities}{v}{section*.7}% 
+\contentsline {subsection}{Compound Inequalities}{v}{table.0.1}% 
+\contentsline {subsection}{Interval Notations}{vi}{table.0.1}% 
+\contentsline {section}{\numberline {0.4}Examples}{vi}{section.0.4}% 
+\contentsline {section}{\numberline {0.5}Exercises}{viii}{section.0.5}% 

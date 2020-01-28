@@ -1,7 +1,21 @@
 book_filename: "agfun"
 rmd_files: [
   "index.Rmd",
-  "001-Linear-Inequalities.Rmd",
+  "101-Integer-Exponents.Rmd",
+  "102-Factoring.Rmd",
+  "103-Ration-Expressions.Rmd",
+  "104-Radicals-Rational-Exponents.Rmd",
+  "201-Solve-by-Factoring.Rmd",
+  "202-Quadratic-Formula.Rmd",
+  "203-Applications-Quadratic-Equations.Rmd",
+  "204-Linear-Inequalities.Rmd",
+  "301-Introduction-to-functions.Rmd",
+  "302-Linear-functions.Rmd",
+  "303-Quadratic-functions.Rmd",
+  "304-Rational-Radical-functions.Rmd",
+  "305-Exp-functions.Rmd",
+  "306-Log-functions.Rmd",
+  "307-Exp-Log-Equations.Rmd",
 ]
 
 output_dir: book_output
