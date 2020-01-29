@@ -2,7 +2,7 @@
 
 # Integer Exponents
 
-## Don't Be Tricked by Exponents
+## Don't Be Tricked
 
 ```{block2, type="rmdthink"}
 
@@ -79,7 +79,7 @@ To avoid mistakes when working with negative exponents, it's better to apply the
 
 ```
 
-## Exercises
+## Practice
 
 ```{exercise}
 

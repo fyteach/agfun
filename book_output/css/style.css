@@ -41,3 +41,24 @@ pre code {
 body {
   background-color: #ccd8f5;
 }
+
+.exercise ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.exercise li {
+  min-width: 32%;
+  margin-right: 5%;
+  list-style-type: lower-alpha;
+  margin-left: -0.8em;
+  padding-left: 1em;
+  flex-grow: 1; 
+}
+
+.exercise li::marker {
+  font-size: 1.2em;
+}
