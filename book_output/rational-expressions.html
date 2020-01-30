@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-01-28" />
+<meta name="date" content="2020-01-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="review-of-factoring.html"/>
 <link rel="next" href="radicals-and-rational-exponents.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -112,14 +111,182 @@
 <div class="latex-macros" style="display: none">
 $$\require{color}$$
 $$\require{amsmath}$$
+$$\require{cancel}$$
 $$\definecolor{purple}{RGB}{226, 15, 233}$$
 $$\definecolor{grey}{RGB}{177, 159, 149}$$
 $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 </div>
-<div id="rational-expressions" class="section level1" number="3">
+<div id="rational-expressions" class="section level1">
 <h1><span class="header-section-number">Lesson 3</span> Rational Expressions</h1>
-<div id="simplify-rational-expressions" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Simplify Rational Expressions</h2>
+<div id="rational-expressions-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Rational Expressions</h2>
+<p>Let <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> be polynomial functions of <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> is not a constant function. We call the function <span class="math inline">\(r(x)=\frac{p(x)}{q(x)}\)</span> a . The domain of <span class="math inline">\(r\)</span> is <span class="math inline">\(\{x\mid Q(x)\neq 0\}\)</span>.
+The expression <span class="math inline">\(\frac{p(x)}{q(x)}\)</span> is called a , the polynomial <span class="math inline">\(q(x)\)</span> , and the polynomial <span class="math inline">\(q(x)\)</span> .
+A rational expression is  if the numerator and the denominator have no common factor other than <span class="math inline">\(1\)</span>.</p>
+<p>Let <span class="math inline">\(p(x)\)</span>, <span class="math inline">\(q(x)\)</span> be polynomials with <span class="math inline">\(q(x)\neq 0\)</span> and <span class="math inline">\(c(x)\)</span> be a nonzero expression. Then
+<span class="math display">\[
+\dfrac{~p(x)\cdot c(x)~}{~q(x)\cdot c(x)~}=\dfrac{~p(x)~}{~q(x)~}.
+\]</span></p>
+
+<div class="example">
+<span id="exm:unnamed-chunk-39" class="example"><strong>Example 3.1  </strong></span>Simplify <span class="math inline">\(\dfrac{x^2+4x+3}{x^2+3x+2}\)</span>.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Factor both the top and the bottom.
+<span class="math display">\[
+    \dfrac{x^2+4x+3}{x^2+3x+2}=\dfrac{(x+1)(x+3)}{(x+1)(x+2)}.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Divide out common factors.
+<span class="math display">\[
+ \dfrac{(x+1)(x+3)}{(x+1)(x+2)}=\dfrac{x+3}{x+2}.
+\]</span></li>
+</ol>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-41" class="example"><strong>Example 3.2  </strong></span>
+Simplify <span class="math inline">\(\dfrac{2x^2-x-3}{2x^2-3x-5}\)</span>.</p>
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Factor both the top and the bottom.
+<span class="math display">\[\dfrac{2x^2-x-3}{2x^2-3x-5}=\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Divide out common factors.
+<span class="math display">\[\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}=\dfrac{2x-3}{2x-5}.\]</span></li>
+</ol>
+</div>
+
+</div>
+<div id="multiplying-rational-expressions" class="section level2">
+<h2><span class="header-section-number">3.2</span> Multiplying Rational Expressions</h2>
+<p>If <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> are polynomials with <span class="math inline">\(q\neq 0\)</span> and <span class="math inline">\(t\neq 0\)</span>, then
+<span class="math display">\[
+\dfrac{~p~}{~q~}\cdot\dfrac{~s~}{~t~}=\dfrac{~ps~}{~qt~}.
+\]</span></p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-43" class="example"><strong>Example 3.3  </strong></span>
+Multiply and then simplify.
+<span class="math display">\[\dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}.\]</span></p>
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Factor numerators and denominators.
+<span class="math display">\[
+    \dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}=\dfrac{3\cdot x\cdot x}{(x-2)(x+3)}\cdot\dfrac{(x-2)(x+2)}{2\cdot3\cdot x}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Multiply and simplify.
+<span class="math display">\[
+ \dfrac{\cancel{3}\cdot \cancel{x}\cdot x\cdot\cancel{(x-2)}(x+2)}{\cancel{(x-2)}(x+3)\cdot 2\cdot\cancel{3}\cdot \cancel{x}}=\dfrac{x(x+2)}{2(x+3)}
+\]</span></li>
+</ol>
+</div>
+
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-45" class="example"><strong>Example 3.4  </strong></span>
+Multiply and then simplify.
+<span class="math display">\[
+\dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}.
+\]</span></p>
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+<span class="math display">\[
+\dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}
+=\dfrac{(3x+1)\cancel{(x-3)}\cancel{(x+4)}(x-4)}{\cancel{(x+4)}(x+4)(5x+1)\cancel{(x-3)}}
+=\dfrac{(3x+1)(x-4)}{(x+4)(5x+1)}
+\]</span></p>
+</div>
+
+</div>
+<div id="dividing-rational-expressions" class="section level2">
+<h2><span class="header-section-number">3.3</span> Dividing Rational Expressions</h2>
+<p>If <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> are polynomials where <span class="math inline">\(q\neq 0\)</span>, $s$ and <span class="math inline">\(t\neq 0\)</span>, then
+<span class="math display">\[
+\dfrac{~p~}{~q~}\div\dfrac{~s~}{~t~}=\dfrac{~p~}{~q~}\cdot\dfrac{~t~}{~s~}=\dfrac{~pt~}{~qs~}.
+\]</span></p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-47" class="example"><strong>Example 3.5  </strong></span>
+Divide and then simplify.
+<span class="math display">\[
+\dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}.
+\]</span></p>
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+1. Rewrite as a multiplication.
+<span class="math display">\[
+\dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot \dfrac{2x^2-x-3}{6x-2}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Factor and simplify.
+<span class="math display">\[
+\dfrac{2x+6}{x^2-6x-7}\cdot\dfrac{2x^2-x-3}{6x-2}
+=\dfrac{\cancel{2}(x+3)\cancel{(x+1)}(2x-3)}{\cancel{2}\cancel{(x+1)}(x-7)(3x-1)}
+=\dfrac{(x+3)(2x-3)}{(x-7)(3x-1)}
+\]</span></li>
+</ol>
+</div>
+
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-49" class="exercise"><strong>Problem 3.1  </strong></span>
+Simplify.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\dfrac{3x^2-x-4}{x+1}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{2x^2-x-3}{2x^2+3x+1}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{x^2-9}{3x^2-8x-3}\)</span></p></li>
+</ol>
+</div>
+
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-50" class="exercise"><strong>Problem 3.2  </strong></span>
+Multiply and simplify.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\dfrac{x+5}{x+4}\cdot\dfrac{x^2+3x-4}{x^2-25}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{3x^2-2x}{x+2}\cdot\dfrac{3x^2-4x-4}{9x^2-4}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{6y-2}{3-y}\cdot\dfrac{y^2-6y+9}{3y^2-y}\)</span></p></li>
+</ol>
+</div>
+
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-51" class="exercise"><strong>Problem 3.3  </strong></span>
+Divide and simplify.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\dfrac{9x^2-49}{6}\div\dfrac{3x^2-x-14}{2x+4}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{x^2+3x-10}{2x-2}\div\dfrac{x^2-5x+6}{x^2-4x+3}\)</span></p></li>
+<li><p><span class="math inline">\(\dfrac{y-x}{xy}\div\dfrac{x^2-y^2}{y^2}\)</span></p></li>
+</ol>
+</div>
+
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-52" class="exercise"><strong>Problem 3.4  </strong></span>
+Simplify.
+<span class="math display">\[
+\frac{-x^2+11x-18}{x^2-4x+4}\div \frac{x^2-5x-36}{x^2-7x+12}\cdot \frac{2x^2+7x-4}{x^2+2x-15}
+\]</span></p>
+</div>
+
 
 </div>
 </div>

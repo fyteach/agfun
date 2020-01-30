@@ -3,7 +3,7 @@ rmd_files: [
   "index.Rmd",
   "101-Integer-Exponents.Rmd",
   "102-Factoring.Rmd",
-  "103-Ration-Expressions.Rmd",
+  "103-Rational-Expressions.Rmd",
   "104-Radicals-Rational-Exponents.Rmd",
   "201-Solve-by-Factoring.Rmd",
   "202-Quadratic-Formula.Rmd",

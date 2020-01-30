@@ -7,12 +7,12 @@
 Do you know a faster way to find the values?
 
 1. Find the value of the polynomial $2x^3-98x$ when $x=-7$.
-   
+
 2. Find the value of the polynomial $x^2-9x-22$ when $x=11$.
-   
+
 3. Find the value of the polynomial $x^3-2x^2-9x+18$ when $x=-3$.
-   
-4. Find the value of $17^2-13^2$.
+
+4. Find the value of $16^2-14^2$.
 
 ```
 
@@ -116,11 +116,17 @@ Once you factored one group, you may expect that the other group has the same bi
 
 ```
 
-## Factor Difference of Squares
+## Factor Difference of Powers
 
-Difference of squares
+Factoring is closely related to solving polynomial equations. If a polynomial equation $p(x)=0$ has a solution $r$, then $p(x)$ has a factor $x-r$. For example, $x^n-r^n=0$ has a solution $x=r$. So the difference $x^n-r^n$ has a factor $(x-r)$. Using long division or by induction, we obtain the following equality.
 
-$$a^2-b^2=(a-b)(a+b)$$
+**Difference of $n$-th powers**
+
+$$a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots +ab^{n-2}+b^{n-1})$$
+
+In particular,
+
+$$a^2-b^2=(a-b)(a+b).$$
 
 ```{example}
 
@@ -166,7 +172,7 @@ If a trinomial $ax^2+bx+c$, $A\neq 0$, can be factored, then it can be expressed
 $$ax^2+bx+c=(mx+n)(px+q).$$
 By simplify the product using the FOIL method and comparing coefficients, we observe that 
 $$
-a=\underbrace{mn}_{\mathrm{F}}\quad\quad\quad 
+a=\underbrace{mn}_{\mathrm{F}}\quad\quad\quad
 b=\underbrace{mq}_{\mathrm{O}}~\underset{+}{\underset{}{+}}~\underbrace{np}_{\mathrm{I}}
 \quad\quad\quad 
 c=\underbrace{nq}_{\mathrm{F}}
@@ -177,10 +183,9 @@ A trinomial $ax^2+bx+c$ is also called a ***quadratic polynomial***. The functio
 ```{block2, type="rmdtip"}
 
 **Trial and error.**  
-The observation suggests to use trial and error to find the undetermined coefficients $m$, $n$, $p$, and $q$ from factors of $a$ and $c$ such that the sum of cross products $mq+np$ is $b$. A diagram as shown in the following examples can help check a trial.
+The observation suggests to use trial and error to find the undetermined coefficients $m$, $n$, $p$, and $q$ from factors of $a$ and $c$ such that the sum of cross products $mq+np$ is $b$. A diagram as shown in the following examples will be helpful to check a trial.
 
 ```
-
 
 ```{example}
 
@@ -275,13 +280,13 @@ Factor out the GCF.
 
 ```
 
-```{exercise} 
+```{exercise}
 
 Factor by grouping.
 
 1. $12xy-10y+18x-15$
 1. $12ac-18bc-10ad+15bd$
-1. $5ax-4bx-5ay+4by$ 
+1. $5ax-4bx-5ay+4by$
 
 ```
 

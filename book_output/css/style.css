@@ -1,7 +1,7 @@
 .rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning, .rmdthink{
     padding: 1em 1em 1em 4em;
     margin-bottom: 10px;
-    background: #f5f5f5 5px center/3em no-repeat;
+    background: #89e9f1 5px center/3em no-repeat;
   }
   .rmdcaution {
     background-image: url("../figs/caution.png");
@@ -42,23 +42,40 @@ body {
   background-color: #ccd8f5;
 }
 
+span.exercise, span.example {
+  margin-right: 0.5em;
+}
+
+
 .exercise ol {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
-.exercise li {
-  min-width: 32%;
-  margin-right: 5%;
+.exercise ol li {
+  /* min-width: 27%;
+  margin-right: 6%; */
   list-style-type: lower-alpha;
-  margin-left: -0.8em;
-  padding-left: 1em;
-  flex-grow: 1; 
+  margin-left: -0.6em;
+  padding-left: 0.6em;
+  flex-grow: 1;
 }
+
+/* .exercise li:not(:last-child)::after {
+  margin-right: 2em;
+} */
 
 .exercise li::marker {
   font-size: 1.2em;
+}
+
+.exercise>p>span::before{
+  content: "\270f";
+  font-size: 1.2em;
+  color: lime;
+  padding-right: 0.3em; 
 }

@@ -1,4 +1,4 @@
-# (PART\*) Part I: Mathematical Operations {-} 
+# (PART\*) Part I: Mathematical Operations {-}
 
 # Integer Exponents
 
@@ -34,7 +34,6 @@ In the notation $x^n$, $n$ is called ***the exponent***, $x$ is called ***the ba
 | The power to a power rule $$\left(x^a\right)^b=x^{ab}.$$ | $$\left(2^{2}\right)^3=2^6=64;$$ $$\left(x^2\right)^3=x^6.$$ |
 | The product raised to a power rule $$(xy)^n=x^ny^n.$$ | $$\left(-2x\right)^{2}=(-2)^2x^2=4x^2.$$ |
 | The quotient raised to a power rule (for $y\neq 0$.) $$\left(\dfrac{x}{y}\right)^n=\dfrac{x^n}{y^n}.$$ | $$    \left(\dfrac{x}{-2}\right)^{3}=\dfrac{x^3}{(-2)^3}=-\dfrac{x^3}{8}.$$ |
-
 
 ```{block2, type="rmdnote"}
 

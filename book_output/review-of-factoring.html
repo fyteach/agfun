@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-01-28" />
+<meta name="date" content="2020-01-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="integer-exponents.html"/>
 <link rel="next" href="rational-expressions.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -112,13 +111,14 @@
 <div class="latex-macros" style="display: none">
 $$\require{color}$$
 $$\require{amsmath}$$
+$$\require{cancel}$$
 $$\definecolor{purple}{RGB}{226, 15, 233}$$
 $$\definecolor{grey}{RGB}{177, 159, 149}$$
 $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 </div>
-<div id="review-of-factoring" class="section level1" number="2">
+<div id="review-of-factoring" class="section level1">
 <h1><span class="header-section-number">Lesson 2</span> Review of Factoring</h1>
-<div id="can-you-beat-a-calculator" class="section level2" number="2.1">
+<div id="can-you-beat-a-calculator" class="section level2">
 <h2><span class="header-section-number">2.1</span> Can You Beat a Calculator</h2>
 
 <div class="rmdthink">
@@ -127,11 +127,12 @@ $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 <li><p>Find the value of the polynomial <span class="math inline">\(2x^3-98x\)</span> when <span class="math inline">\(x=-7\)</span>.</p></li>
 <li><p>Find the value of the polynomial <span class="math inline">\(x^2-9x-22\)</span> when <span class="math inline">\(x=11\)</span>.</p></li>
 <li><p>Find the value of the polynomial <span class="math inline">\(x^3-2x^2-9x+18\)</span> when <span class="math inline">\(x=-3\)</span>.</p></li>
-<li><p>Find the value of <span class="math inline">\(17^2-13^2\)</span>.</p></li>
+<li><p>Find the value of <span class="math inline">\(16^2-14^2\)</span>.</p></li>
 </ol>
 </div>
+
 </div>
-<div id="factor-by-removing-the-gcf" class="section level2" number="2.2">
+<div id="factor-by-removing-the-gcf" class="section level2">
 <h2><span class="header-section-number">2.2</span> Factor by Removing the GCF</h2>
 <p><strong><em>The greatest common factor (GCF)</em></strong> of two terms is a polynomial with the <strong>greatest coefficient</strong> and of the <strong>highest possible degree</strong> that divides each term.</p>
 <p>To <strong><em>factor a polynomial</em></strong> is to <strong>express the polynomial as a product</strong> of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.</p>
@@ -140,6 +141,7 @@ $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 <p><span id="exm:unnamed-chunk-13" class="example"><strong>Example 2.1  </strong></span>
 Factor <span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -152,8 +154,9 @@ The GCF of <span class="math inline">\(4x^3y\)</span>, <span class="math inline"
 <span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3=4x^2y\cdot(x-2y+3xy^2)\)</span>.</p></li>
 </ol>
 </div>
+
 </div>
-<div id="factor-by-grouping" class="section level2" number="2.3">
+<div id="factor-by-grouping" class="section level2">
 <h2><span class="header-section-number">2.3</span> Factor by Grouping</h2>
 <p>For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.</p>
 
@@ -161,6 +164,7 @@ The GCF of <span class="math inline">\(4x^3y\)</span>, <span class="math inline"
 <p><span id="exm:unnamed-chunk-15" class="example"><strong>Example 2.2  </strong></span>
 Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -187,10 +191,12 @@ Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
 </ol>
 </div>
 
+
 <div class="example">
 <p><span id="exm:unnamed-chunk-17" class="example"><strong>Example 2.3  </strong></span>
 Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -217,20 +223,26 @@ Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
 </ol>
 </div>
 
+
 <div class="rmdtip">
 <p><strong>Guess and check.</strong><br />
 Once you factored one group, you may expect that the other group has the same binomial factor so that factoring may be continued.</p>
 </div>
+
 </div>
-<div id="factor-difference-of-squares" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Factor Difference of Squares</h2>
-<p>Difference of squares</p>
-<p><span class="math display">\[a^2-b^2=(a-b)(a+b)\]</span></p>
+<div id="factor-difference-of-powers" class="section level2">
+<h2><span class="header-section-number">2.4</span> Factor Difference of Powers</h2>
+<p>Factoring is closely related to solving polynomial equations. If a polynomial equation <span class="math inline">\(p(x)=0\)</span> has a solution <span class="math inline">\(r\)</span>, then <span class="math inline">\(p(x)\)</span> has a factor <span class="math inline">\(x-r\)</span>. For example, <span class="math inline">\(x^n-r^n=0\)</span> has a solution <span class="math inline">\(x=r\)</span>. So the difference <span class="math inline">\(x^n-r^n\)</span> has a factor <span class="math inline">\((x-r)\)</span>. Using long division or by induction, we obtain the following equality.</p>
+<p><strong>Difference of <span class="math inline">\(n\)</span>-th powers</strong></p>
+<p><span class="math display">\[a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots +ab^{n-2}+b^{n-1})\]</span></p>
+<p>In particular,</p>
+<p><span class="math display">\[a^2-b^2=(a-b)(a+b).\]</span></p>
 
 <div class="example">
 <p><span id="exm:unnamed-chunk-20" class="example"><strong>Example 2.4  </strong></span>
 Factor <span class="math inline">\(25x^2-16\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -250,10 +262,12 @@ Factor <span class="math inline">\(25x^2-16\)</span>.</p>
 </ol>
 </div>
 
+
 <div class="example">
 <p><span id="exm:unnamed-chunk-22" class="example"><strong>Example 2.5  </strong></span>
 Factor <span class="math inline">\(32x^3y-2xy^5\)</span> completely.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -261,14 +275,15 @@ Factor <span class="math inline">\(32x^3y-2xy^5\)</span> completely.</p>
 32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
 \]</span></p>
 </div>
+
 </div>
-<div id="factor-trinomials" class="section level2" number="2.5">
+<div id="factor-trinomials" class="section level2">
 <h2><span class="header-section-number">2.5</span> Factor Trinomials</h2>
 <p>If a trinomial <span class="math inline">\(ax^2+bx+c\)</span>, <span class="math inline">\(A\neq 0\)</span>, can be factored, then it can be expressed as a product of two binomials:
 <span class="math display">\[ax^2+bx+c=(mx+n)(px+q).\]</span>
 By simplify the product using the FOIL method and comparing coefficients, we observe that
 <span class="math display">\[
-a=\underbrace{mn}_{\mathrm{F}}\quad\quad\quad 
+a=\underbrace{mn}_{\mathrm{F}}\quad\quad\quad
 b=\underbrace{mq}_{\mathrm{O}}~\underset{+}{\underset{}{+}}~\underbrace{np}_{\mathrm{I}}
 \quad\quad\quad 
 c=\underbrace{nq}_{\mathrm{F}}
@@ -277,13 +292,15 @@ c=\underbrace{nq}_{\mathrm{F}}
 
 <div class="rmdtip">
 <p><strong>Trial and error.</strong><br />
-The observation suggests to use trial and error to find the undetermined coefficients <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, and <span class="math inline">\(q\)</span> from factors of <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span> such that the sum of cross products <span class="math inline">\(mq+np\)</span> is <span class="math inline">\(b\)</span>. A diagram as shown in the following examples can help check a trial.</p>
+The observation suggests to use trial and error to find the undetermined coefficients <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, and <span class="math inline">\(q\)</span> from factors of <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span> such that the sum of cross products <span class="math inline">\(mq+np\)</span> is <span class="math inline">\(b\)</span>. A diagram as shown in the following examples will be helpful to check a trial.</p>
 </div>
+
 
 <div class="example">
 <p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 2.6  </strong></span>
 Factor <span class="math inline">\(x^2+6x+8\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -301,10 +318,12 @@ This step can be checked easily using the following diagram.<br />
 </ol>
 </div>
 
+
 <div class="example">
 <p><span id="exm:unnamed-chunk-27" class="example"><strong>Example 2.7  </strong></span>
 Factor <span class="math inline">\(2x^2+5x-3\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -322,16 +341,19 @@ This step can be checked easily using the following diagram.<br />
 </ol>
 </div>
 
+
 <div class="rmdtip">
 <p><strong>Use Auxiliary Problem.</strong><br />
 Some higher degree polynomials may be rewrite as a trinomial after a substitution. Factoring the trinomial helps factor the polynomial.</p>
 </div>
+
 
 <div class="example">
 <p><span id="exm:unnamed-chunk-30" class="example"><strong>Example 2.8  </strong></span>
 Factor the trinomial completely.</p>
 <p><span class="math display">\[4x^4-x^2-3\]</span></p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> 
@@ -349,8 +371,9 @@ Factor the trinomial completely.</p>
 \]</span></p></li>
 </ol>
 </div>
+
 </div>
-<div id="practice-1" class="section level2" number="2.6">
+<div id="practice-1" class="section level2">
 <h2><span class="header-section-number">2.6</span> Practice</h2>
 
 <div class="exercise">
@@ -363,6 +386,7 @@ Factor out the GCF.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-33" class="exercise"><strong>Problem 2.2  </strong></span>
 Factor by grouping.</p>
@@ -372,6 +396,7 @@ Factor by grouping.</p>
 <li><span class="math inline">\(5ax-4bx-5ay+4by\)</span></li>
 </ol>
 </div>
+
 
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-34" class="exercise"><strong>Problem 2.3  </strong></span>
@@ -383,6 +408,7 @@ Factor completely.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-35" class="exercise"><strong>Problem 2.4  </strong></span>
 Factor completely.</p>
@@ -391,6 +417,7 @@ Factor completely.</p>
 <li><span class="math inline">\(x^4+3x^3-4x^2-12x\)</span></li>
 </ol>
 </div>
+
 
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-36" class="exercise"><strong>Problem 2.5  </strong></span>
@@ -402,6 +429,7 @@ Factor the trinomial.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-37" class="exercise"><strong>Problem 2.6  </strong></span>
 Factor the trinomial.</p>
@@ -412,6 +440,7 @@ Factor the trinomial.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
 <p><span id="exr:unnamed-chunk-38" class="exercise"><strong>Problem 2.7  </strong></span>
 Factor completely into polynomials with integer coefficients.</p>
@@ -421,6 +450,7 @@ Factor completely into polynomials with integer coefficients.</p>
 <li><span class="math inline">\(2x^3y-9x^2y^2-5xy^3\)</span></li>
 </ol>
 </div>
+
 
 </div>
 </div>
