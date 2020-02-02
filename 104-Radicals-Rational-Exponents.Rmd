@@ -1,1 +1,425 @@
 # Radicals and Rational Exponents
+
+## Do You Want to Be a Fire Fighter
+
+```{block2, type="rmdthink"}
+
+To reach the 5th floor window of a building that is 25 feet from the location of the turntable aerial ladder truck. How long should the ladder be placed to reach the window? The hight of that window is 50 feet.
+
+![Picture from www.montgomerycountymd.gov demonstrating the positioning of a turntable aerial ladder truck](figs/Aerial-Apparatus-Positioning.png)
+
+```
+
+## Radical Expressions
+
+If $b^2=a$, then we say that $b$ is a ***square root*** of $a$. We denote the positive square root of $a$ as $\sqrt{a}$, called the ***principal square root***.
+
+<!-- We call the function $f(x)=\sqrt{x}$ a ***square root function***. As a real-valued function, the domain of the square root function consists of all real numbers $x$ such that $x\ge 0$, in interval notation, the domain is $[0,+\infty)$. -->
+
+For any real number $a$, the expression $\sqrt{a^2}$ can be simplified as
+$$
+\sqrt{a^2}=|a|.
+$$
+
+If $b^3=a$, then we say that $b$ is a ***cube root*** of $a$. The cube root of a real number $a$ is denoted by $\sqrt[3]{a}$.
+
+For any real number $a$, the expression $\sqrt[3]{a^3}$ can be simplified as
+$$
+\sqrt[3]{a^3}=a.
+$$
+
+In general, if $b^n=a$, then we say that $b$ is an ***$n$-th root*** of $a$.  If $n$ is **even**, the **positive** $n$-th root of $a$, called the ***principal $n$-th root***, is denoted by $\sqrt[n]{a}$. If $n$ is odd,  the $n$-the root $\sqrt[n]{a}$ of $a$ has the same sign with $a$.
+
+In $\sqrt[n]{a}$, the symbol $\sqrt{\phantom{a}}$ is called the ***radical sign***, $a$ is called  the ***radicand***, and $n$ is called the ***index***.
+
+If $n$ is even, then the $n$-th root of a negative number is not a real number.
+
+For any real number $a$, the expression $\sqrt[n]{a^n}$ can be simplified as
+
+1. $\sqrt[n]{a^n}=|a|$ if $n$ is even.
+1. $\sqrt[n]{a^n}=a$ if $n$ is odd.
+
+A radical is simplified if the radicand has no perfect power factors against the radical.
+
+```{example}
+
+Simplify the radical expression using the definition.
+
+1. $\sqrt{4(y-1)^2}$
+1. $\sqrt[3]{-8x^3y^6}$
+
+```
+
+```{solution}
+\
+
+1. $\sqrt{4(y-1)^2}=\sqrt{[2(y-1)]^2}=2|y-1|$.
+1. $\sqrt[3]{-8x^3y^6}=\sqrt[3]{(-2xy^2)^2}=-2xy^2$.
+
+```
+
+## Rational Exponents
+
+If $\sqrt[n]{a}$ is a real number, then we define $a^{\frac mn}$ as
+$$
+a^{\frac mn}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m.
+$$
+
+Rational exponents have the same properties as integral exponents:
+
+<div class="enuminline">
+1. $a^m\cdot a^n=a^{m+n}$
+2. 1. $\dfrac{a^m}{a^n}=a^{m-n}$
+3. $a^{-\frac mn}=\dfrac{~1~}{~a^{\frac mn}~}$
+   \
+4. $(a^m)^n=a^{mn}$
+5. $(ab)^m=a^m\cdot b^m$
+6. $\left(\dfrac ab\right)^m=\dfrac{a^m}{b^m}$
+\
+</div>
+
+```{example}
+
+Simplify the radical expression or the expression with rational exponents. **Write in radical notation**.
+
+1. $\sqrt{x}\sqrt[3]{x^2}$
+2. $\sqrt[3]{\sqrt{x^3}}$
+3. $\left(\frac{x^{\frac12}}{x^{-\frac56}}\right )^{\frac14}$
+4. $\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}$
+
+```
+
+```{solution}
+\
+
+1.
+$$
+\sqrt{x}\sqrt[3]{x^2}=x^{\frac12}x^{\frac{2}{3}}=x^{\frac{1}{2}+\frac{2}{3}}=x^\frac{7}{6}=x\sqrt[6]{x}.
+$$
+1.
+$$
+\sqrt[3]{\sqrt{x^3}}=(\sqrt{x^3})^\frac{1}{3}=[(x^3)^{\frac{1}{2}}]^{\frac{1}{3}}=x^{3\cdot\frac{1}{2}\cdot\frac{1}{3}}=x^{\frac{1}{2}}=\sqrt{x}.
+$$
+1.
+$$
+\left(\frac{x^{\frac12}}{x^{-\frac56}}\right)^{\frac14}=(x^{\frac12}x^{\frac56})^{\frac14}=(x^{\frac{1}{2}+\frac{5}{6}})^{\frac{1}{4}}=(x^\frac{4}{3})^{\frac{1}{4}}=x^{\frac{1}{3}}=\sqrt[3]{x}.
+$$
+1.
+$$
+\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}=\sqrt{\frac{y^2}{x^2}}=\sqrt{\left(\frac yx\right)^2}=\left|\frac yx\right|.
+$$
+
+```
+
+```{block2, type="rmdnote"}
+
+In general, rewriting radical in rational exponents helps simplify calculations.
+
+```
+
+## Product and Quotient Rules for Radicals
+
+If $\sqrt[n]{a}$ and $\sqrt[n]{b}$ are real numbers, then
+$${\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{ab}.$$
+
+If $\sqrt[n]a$ and $\sqrt[n]b$ are real numbers and $b\neq 0$, then
+$$\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.$$
+
+```{example}
+
+Simplify the expression.
+
+1. $\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}$.
+1. $\dfrac{\sqrt[5]{96x^9y^3}}{\sqrt[5]{3x^{-1}y}}$.
+
+```
+
+```{solution}
+\
+
+1. $\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}=\sqrt[4]{(8xy^4)\cdot (2x^7y)}=\sqrt[4]{16x^8y^5}=\sqrt[4]{2^4(x^2)^4y^4\cdot y}=2x^2y\sqrt[4]{y}$.
+2. $\dfrac{ \sqrt[5]{96x^9y^3} }{ \sqrt[5]{3x^{-1}y} }=\sqrt[5]{\dfrac{96x^9y^3}{3x^{-1}y}}=\sqrt[5]{32x^{10}y^2}=\sqrt[5]{(2x^2)^5\cdot y^2}=2x^2\sqrt[5]{y^2}$.
+
+```
+
+## Combining Like Radicals
+
+Two radicals are called ***like radicals*** if they have the same index and the same radicand.  We add or subtract like radicals by combining their coefficients.
+
+```{example}
+
+Simplify the expression.
+
+$$
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}.
+$$
+
+```
+
+```{solution}
+\
+
+$$
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}=2x\sqrt{2x}-2x^2+x^2\sqrt{2x}=(x^2+2x)\sqrt{2x}-2x^2.
+$$
+
+```
+
+## Multiplying Radicals
+
+Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.
+
+```{example}
+
+Simplify the expression.
+$$
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x}).
+$$
+
+```
+
+```{solution}
+\
+
+$$
+\begin{aligned}
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x})
+=&\sqrt{2x}\cdot\sqrt{2x}-3\sqrt{x}\cdot\sqrt{2x}+2\sqrt{x}\cdot\sqrt{2x}-6\sqrt{x}\cdot\sqrt{x}\\
+=&2x-3x\sqrt{2}+2x\sqrt{2}-6x\\
+=&-4x-x\sqrt{2}\\
+=&-(4+\sqrt{2})x.
+\end{aligned}
+$$
+
+```
+
+## Rationalizing Denominators
+
+Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.
+
+```{example}
+
+Rationalize the denominator.
+
+1. $\dfrac{1}{2\sqrt{x^3}}$
+1. $\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}$
+
+```
+
+```{solution}
+\
+
+1. In this case, to get rid of the radical in the bottom, we multiply the expression by $\dfrac{\sqrt{x}}{\sqrt{x}}$ so that the radicand in the bottom becomes a perfect power.
+    $$
+    \dfrac{1}{2\sqrt{x^3}}=\dfrac{1}{2\sqrt{x^3}}\cdot\dfrac{\sqrt{x}}{\sqrt{x}}=\dfrac{\sqrt{x}}{2\sqrt{x^2}\sqrt{x}}=\dfrac{\sqrt{x}}{2x^2}.  
+    $$
+1. In this case, we use the formula $(a-b)(a+b)=a^2+b^2$. Multiply the expression by $\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}+\sqrt{y}}$.
+    $$
+    \dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}=\dfrac{(\sqrt{x}+\sqrt{y})^2}{(\sqrt{x}-\sqrt{y})(\sqrt{x}+\sqrt{y})}=\dfrac{x+y+2\sqrt{xy}}{x-y}.
+    $$
+
+```
+
+## Practice
+
+```{exercise}
+
+Evaluate the square root. If the square root is not a real number, state so.
+
+1. $-\sqrt{\frac{4}{25}}$
+1. $\sqrt{49}-\sqrt{9}$
+1. $-\sqrt{-1}$\null
+
+```
+
+```{exercise}
+
+Simplify the radical expression.
+
+1. $\sqrt{(-7x^2)^2}$
+1. $\sqrt{(x+2)^2}$
+1. $\sqrt{25x^2y^6}$
+
+```
+
+```{exercise}
+
+Simplify the radical expression.
+
+1. $\sqrt[3]{-27x^3}$
+1. $\sqrt[4]{16x^8}$
+1. $\sqrt[5]{(2x-1)^5}$
+
+```
+
+```{exercise}
+
+Simplify the radical expression. Assume all variables are positive.
+
+1. $\sqrt{50}$
+1. $\sqrt[3]{-8x^2y^3}$
+1. $\sqrt[5]{32x^{12}y^2z^8}$
+
+```
+
+```{exercise}
+
+Write the radical expression with rational exponents.
+
+1. $\sqrt[3]{(2x)^5}$
+1. $(\sqrt[5]{3xy})^7$
+1. $\sqrt[4]{(x^2+3)^3}$
+
+```
+
+```{exercise}
+
+Write in radical notation and simplify.
+
+1. $4^{\frac32}$
+1. $-81^{\frac 34}$
+1. $\left(\frac{27}{8}\right)^{-\frac{2}{3}}$
+
+```
+
+```{exercise}
+
+Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.
+
+1. $\dfrac{12x^{\frac12}}{4x^{\frac23}}$
+1. $(x^{-\frac35}y^{\frac12})^{\frac13}$
+1. $\left(\frac{x^{\frac12}}{x^{-\frac13}}\right)^4$
+
+```
+
+```{exercise}
+
+Simplify the expression. Write  in radical notation.  Assume $x$ is nonnegative.
+
+1. $\dfrac{\sqrt{x}}{\sqrt[3]{x}}$
+1. $\sqrt{\sqrt[3]{x}}$
+1. $\sqrt{x}\sqrt[3]{x}$
+
+```
+
+```{exercise}
+
+Simplify the expression. Write in radical notation. Assume $x$ is nonnegative.
+
+1. $\sqrt[5]{32x^{\frac13}}$
+1. $\left(\dfrac{\sqrt[4]{9x}}{3}\right)^{-2}$
+1. $\sqrt{\frac{1}{\sqrt[3]{x^{-2}}}}$
+
+```
+
+```{exercise}
+
+Simplify the expression. Write in radical notation. Assume all variables are nonnegative.
+
+1. $\sqrt[3]{(-x)^{-2}}\sqrt[2]{x^3}$
+1. $\left(\dfrac{8a^{-\frac{5}{2}}b}{a^{\frac12}b^{-5}}\right)^{-\frac23}$
+1. $\left(\dfrac{y^{-\frac{1}{3}}}{\sqrt[3]{x^{2}}}\right)^{-3}$
+
+```
+
+```{exercise}
+
+Multiply and simplify.
+
+1. $\sqrt[3]{4}\sqrt[3]{5}$
+1. $\sqrt{|x+7|}\sqrt{|x-7|}$
+1. $\sqrt[3]{(x-y)^{\frac52}}\sqrt[3]{(x-y)^{\frac72}}$
+
+```
+
+```{exercise}
+
+Simplify the radical expression. Assume all variables are positive.
+
+1. $\sqrt{20xy}\cdot\sqrt{4xy^2}$
+1. $\sqrt[3]{16}\cdot5\sqrt[3]{2}$
+1. $\sqrt[5]{8x^4y^3z^3}\cdot\sqrt[5]{8xy^4z^8}$
+
+```
+
+```{exercise}
+
+Divide. Assume all variables are positive. Answers must be simplified.
+
+1. $\sqrt{\dfrac{9x^3}{y^8}}$
+1. $\sqrt[3]{\dfrac{32x^4}{x}}$
+1. $\dfrac{\sqrt{40x^5}}{\sqrt{2x}}$
+1. $\dfrac{\sqrt[3]{24a^6b^4}}{\sqrt[3]{3b}}$
+
+```
+
+```{exercise}
+
+Add or subtract, and simplify. Assume all variables are positive.
+
+1. $5\sqrt6+3\sqrt6$
+1. $4\sqrt{20}-2\sqrt5$
+1. $3\sqrt{32x^2}+5x\sqrt{8}$
+
+```
+
+```{exercise}
+
+Add or subtract, and simplify. Assume all variables are positive
+
+1. $7\sqrt{4x^2}+2\sqrt{25x}-\sqrt{16x}$
+1. $5\sqrt[3]{x^2y}+\sqrt[3]{27x^5y^4}$
+1. $3\sqrt{9y^3}-3y\sqrt{16y}+\sqrt{25y^3}$
+
+```
+
+```{exercise}
+
+Multiply and simplify. Assume all variables are positive.
+
+1. $\sqrt2(3\sqrt3-2\sqrt2)$
+1. $(\sqrt5+\sqrt7)(3\sqrt5-2\sqrt7)$
+1. $(\sqrt3+\sqrt2)^2$
+
+```
+
+```{exercise}
+
+Multiply and simplify. Assume all variables are positive.
+
+1. $(\sqrt6-\sqrt5)(\sqrt6+\sqrt5)$
+1. $(\sqrt{x+1}-1)(\sqrt{x+1}+1)$
+1. $(2\sqrt[3]x+6)(\sqrt[3]x+1)$
+
+```
+
+```{exercise}
+
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
+
+1. $\sqrt[3]{\dfrac2{25}}$
+1. $\sqrt{\dfrac{2x}{7y}}$
+1. $\dfrac{\sqrt[3]{x}}{\sqrt[3]{3y^2}}$
+1. $\dfrac{3x}{\sqrt[4]{x^3y}}$
+
+```
+
+```{exercise}
+
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
+
+1. $\dfrac{6\sqrt3}{\sqrt3-1}$
+1. $\dfrac{\sqrt5-\sqrt3}{\sqrt5+\sqrt3}$
+1. $\dfrac{3+\sqrt2}{2+\sqrt3}$
+1. $\dfrac{2\sqrt{x}}{\sqrt x- \sqrt y}$
+
+```
+
+```{exercise}
+
+Simplify and rationalize the denominator. Assume all variables are positive.
+
+1. $\dfrac{\sqrt{x}}{\sqrt x-1}+\dfrac{1}{\sqrt{x}+1}$
+1. $\dfrac{\sqrt{x}+1}{\sqrt x}-\dfrac{1}{\sqrt{x}-1}$
+
+```

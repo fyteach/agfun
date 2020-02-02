@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions</title>
+  <title>Topic 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:title" content="Topic 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="fyemath/agfun" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions" />
+  <meta name="twitter:title" content="Topic 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions" />
   
   <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   
@@ -24,15 +24,16 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-01-29" />
+<meta name="date" content="2020-02-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rational-expressions.html"/>
+<link rel="prev" href="algebra-of-rational-expressions.html"/>
 <link rel="next" href="solve-polynomial-equations-by-factoring.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,6 +49,16 @@
 
 
 
+
+
+<script src="../js/collapse.js"></script>
+<script src="../js/solutionfolding.js"></script>
+
+<script>
+$(document).ready(function () {
+  window.initializeSolutionFolding("show" === "hide");
+});
+</script>
 
 
 
@@ -73,7 +84,7 @@
 <li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
 <li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
 <li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
-<li class="chapter" data-level="3" data-path="rational-expressions.html"><a href="rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Rational Expressions</a></li>
+<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
 <li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
 <li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
 <li class="chapter" data-level="5" data-path="solve-polynomial-equations-by-factoring.html"><a href="solve-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solve Polynomial Equations by Factoring</a></li>
@@ -116,9 +127,421 @@ $$\definecolor{purple}{RGB}{226, 15, 233}$$
 $$\definecolor{grey}{RGB}{177, 159, 149}$$
 $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
 </div>
-<div id="radicals-and-rational-exponents" class="section level1">
-<h1><span class="header-section-number">Lesson 4</span> Radicals and Rational Exponents</h1>
+<div id="radicals-and-rational-exponents" class="section level1" number="4">
+<h1><span class="header-section-number">Topic 4</span> Radicals and Rational Exponents</h1>
+<div id="do-you-want-to-be-a-fire-fighter" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Do You Want to Be a Fire Fighter</h2>
 
+<div class="rmdthink">
+<p>To reach the 5th floor window of a building that is 25 feet from the location of the turntable aerial ladder truck. How long should the ladder be placed to reach the window? The hight of that window is 50 feet.</p>
+<div class="figure">
+<img src="figs/Aerial-Apparatus-Positioning.png" alt="" />
+<p class="caption">Picture from www.montgomerycountymd.gov demonstrating the positioning of a turntable aerial ladder truck</p>
+</div>
+</div>
+</div>
+<div id="radical-expressions" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Radical Expressions</h2>
+<p>If <span class="math inline">\(b^2=a\)</span>, then we say that <span class="math inline">\(b\)</span> is a <strong><em>square root</em></strong> of <span class="math inline">\(a\)</span>. We denote the positive square root of <span class="math inline">\(a\)</span> as <span class="math inline">\(\sqrt{a}\)</span>, called the <strong><em>principal square root</em></strong>.</p>
+<!-- We call the function $f(x)=\sqrt{x}$ a ***square root function***. As a real-valued function, the domain of the square root function consists of all real numbers $x$ such that $x\ge 0$, in interval notation, the domain is $[0,+\infty)$. -->
+<p>For any real number <span class="math inline">\(a\)</span>, the expression <span class="math inline">\(\sqrt{a^2}\)</span> can be simplified as
+<span class="math display">\[
+\sqrt{a^2}=|a|.
+\]</span></p>
+<p>If <span class="math inline">\(b^3=a\)</span>, then we say that <span class="math inline">\(b\)</span> is a <strong><em>cube root</em></strong> of <span class="math inline">\(a\)</span>. The cube root of a real number <span class="math inline">\(a\)</span> is denoted by <span class="math inline">\(\sqrt[3]{a}\)</span>.</p>
+<p>For any real number <span class="math inline">\(a\)</span>, the expression <span class="math inline">\(\sqrt[3]{a^3}\)</span> can be simplified as
+<span class="math display">\[
+\sqrt[3]{a^3}=a.
+\]</span></p>
+<p>In general, if <span class="math inline">\(b^n=a\)</span>, then we say that <span class="math inline">\(b\)</span> is an <strong><em><span class="math inline">\(n\)</span>-th root</em></strong> of <span class="math inline">\(a\)</span>. If <span class="math inline">\(n\)</span> is <strong>even</strong>, the <strong>positive</strong> <span class="math inline">\(n\)</span>-th root of <span class="math inline">\(a\)</span>, called the <strong><em>principal <span class="math inline">\(n\)</span>-th root</em></strong>, is denoted by <span class="math inline">\(\sqrt[n]{a}\)</span>. If <span class="math inline">\(n\)</span> is odd, the <span class="math inline">\(n\)</span>-the root <span class="math inline">\(\sqrt[n]{a}\)</span> of <span class="math inline">\(a\)</span> has the same sign with <span class="math inline">\(a\)</span>.</p>
+<p>In <span class="math inline">\(\sqrt[n]{a}\)</span>, the symbol <span class="math inline">\(\sqrt{\phantom{a}}\)</span> is called the <strong><em>radical sign</em></strong>, <span class="math inline">\(a\)</span> is called the <strong><em>radicand</em></strong>, and <span class="math inline">\(n\)</span> is called the <strong><em>index</em></strong>.</p>
+<p>If <span class="math inline">\(n\)</span> is even, then the <span class="math inline">\(n\)</span>-th root of a negative number is not a real number.</p>
+<p>For any real number <span class="math inline">\(a\)</span>, the expression <span class="math inline">\(\sqrt[n]{a^n}\)</span> can be simplified as</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[n]{a^n}=|a|\)</span> if <span class="math inline">\(n\)</span> is even.</li>
+<li><span class="math inline">\(\sqrt[n]{a^n}=a\)</span> if <span class="math inline">\(n\)</span> is odd.</li>
+</ol>
+<p>A radical is simplified if the radicand has no perfect power factors against the radical.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-80" class="example"><strong>Example 4.1  </strong></span>
+Simplify the radical expression using the definition.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{4(y-1)^2}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{-8x^3y^6}\)</span></li>
+</ol>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{4(y-1)^2}=\sqrt{[2(y-1)]^2}=2|y-1|\)</span>.</li>
+<li><span class="math inline">\(\sqrt[3]{-8x^3y^6}=\sqrt[3]{(-2xy^2)^2}=-2xy^2\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="rational-exponents" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Rational Exponents</h2>
+<p>If <span class="math inline">\(\sqrt[n]{a}\)</span> is a real number, then we define <span class="math inline">\(a^{\frac mn}\)</span> as
+<span class="math display">\[
+a^{\frac mn}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m.
+\]</span></p>
+<p>Rational exponents have the same properties as integral exponents:</p>
+<div class="enuminline">
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(a^m\cdot a^n=a^{m+n}\)</span></li>
+<li><ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{a^m}{a^n}=a^{m-n}\)</span></li>
+</ol></li>
+<li><span class="math inline">\(a^{-\frac mn}=\dfrac{~1~}{~a^{\frac mn}~}\)</span><br />
+</li>
+<li><span class="math inline">\((a^m)^n=a^{mn}\)</span></li>
+<li><span class="math inline">\((ab)^m=a^m\cdot b^m\)</span></li>
+<li><span class="math inline">\(\left(\dfrac ab\right)^m=\dfrac{a^m}{b^m}\)</span><br />
+</li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-82" class="example"><strong>Example 4.2  </strong></span>
+Simplify the radical expression or the expression with rational exponents. <strong>Write in radical notation</strong>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{x}\sqrt[3]{x^2}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{\sqrt{x^3}}\)</span></li>
+<li><span class="math inline">\(\left(\frac{x^{\frac12}}{x^{-\frac56}}\right )^{\frac14}\)</span></li>
+<li><span class="math inline">\(\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}\)</span></li>
+</ol>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><span class="math display">\[
+\sqrt{x}\sqrt[3]{x^2}=x^{\frac12}x^{\frac{2}{3}}=x^{\frac{1}{2}+\frac{2}{3}}=x^\frac{7}{6}=x\sqrt[6]{x}.
+\]</span></li>
+<li><span class="math display">\[
+\sqrt[3]{\sqrt{x^3}}=(\sqrt{x^3})^\frac{1}{3}=[(x^3)^{\frac{1}{2}}]^{\frac{1}{3}}=x^{3\cdot\frac{1}{2}\cdot\frac{1}{3}}=x^{\frac{1}{2}}=\sqrt{x}.
+\]</span></li>
+<li><span class="math display">\[
+\left(\frac{x^{\frac12}}{x^{-\frac56}}\right)^{\frac14}=(x^{\frac12}x^{\frac56})^{\frac14}=(x^{\frac{1}{2}+\frac{5}{6}})^{\frac{1}{4}}=(x^\frac{4}{3})^{\frac{1}{4}}=x^{\frac{1}{3}}=\sqrt[3]{x}.
+\]</span></li>
+<li><span class="math display">\[
+\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}=\sqrt{\frac{y^2}{x^2}}=\sqrt{\left(\frac yx\right)^2}=\left|\frac yx\right|.
+\]</span></li>
+</ol>
+</div>
+
+<div class="rmdnote">
+<p>In general, rewriting radical in rational exponents helps simplify calculations.</p>
+</div>
+</div>
+<div id="product-and-quotient-rules-for-radicals" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Product and Quotient Rules for Radicals</h2>
+<p>If <span class="math inline">\(\sqrt[n]{a}\)</span> and <span class="math inline">\(\sqrt[n]{b}\)</span> are real numbers, then
+<span class="math display">\[{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{ab}.\]</span></p>
+<p>If <span class="math inline">\(\sqrt[n]a\)</span> and <span class="math inline">\(\sqrt[n]b\)</span> are real numbers and <span class="math inline">\(b\neq 0\)</span>, then
+<span class="math display">\[\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.\]</span></p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-85" class="example"><strong>Example 4.3  </strong></span>
+Simplify the expression.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}\)</span>.</li>
+<li><span class="math inline">\(\dfrac{\sqrt[5]{96x^9y^3}}{\sqrt[5]{3x^{-1}y}}\)</span>.</li>
+</ol>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}=\sqrt[4]{(8xy^4)\cdot (2x^7y)}=\sqrt[4]{16x^8y^5}=\sqrt[4]{2^4(x^2)^4y^4\cdot y}=2x^2y\sqrt[4]{y}\)</span>.</li>
+<li><span class="math inline">\(\dfrac{ \sqrt[5]{96x^9y^3} }{ \sqrt[5]{3x^{-1}y} }=\sqrt[5]{\dfrac{96x^9y^3}{3x^{-1}y}}=\sqrt[5]{32x^{10}y^2}=\sqrt[5]{(2x^2)^5\cdot y^2}=2x^2\sqrt[5]{y^2}\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="combining-like-radicals" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Combining Like Radicals</h2>
+<p>Two radicals are called <strong><em>like radicals</em></strong> if they have the same index and the same radicand. We add or subtract like radicals by combining their coefficients.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-87" class="example"><strong>Example 4.4  </strong></span>
+Simplify the expression.</p>
+<p><span class="math display">\[
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}.
+\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p><span class="math display">\[
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}=2x\sqrt{2x}-2x^2+x^2\sqrt{2x}=(x^2+2x)\sqrt{2x}-2x^2.
+\]</span></p>
+</div>
+</div>
+<div id="multiplying-radicals" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Multiplying Radicals</h2>
+<p>Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-89" class="example"><strong>Example 4.5  </strong></span>
+Simplify the expression.
+<span class="math display">\[
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x}).
+\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x})
+=&amp;\sqrt{2x}\cdot\sqrt{2x}-3\sqrt{x}\cdot\sqrt{2x}+2\sqrt{x}\cdot\sqrt{2x}-6\sqrt{x}\cdot\sqrt{x}\\
+=&amp;2x-3x\sqrt{2}+2x\sqrt{2}-6x\\
+=&amp;-4x-x\sqrt{2}\\
+=&amp;-(4+\sqrt{2})x.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div id="rationalizing-denominators" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Rationalizing Denominators</h2>
+<p>Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-91" class="example"><strong>Example 4.6  </strong></span>
+Rationalize the denominator.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{1}{2\sqrt{x^3}}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}\)</span></li>
+</ol>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li>In this case, to get rid of the radical in the bottom, we multiply the expression by <span class="math inline">\(\dfrac{\sqrt{x}}{\sqrt{x}}\)</span> so that the radicand in the bottom becomes a perfect power.
+<span class="math display">\[
+ \dfrac{1}{2\sqrt{x^3}}=\dfrac{1}{2\sqrt{x^3}}\cdot\dfrac{\sqrt{x}}{\sqrt{x}}=\dfrac{\sqrt{x}}{2\sqrt{x^2}\sqrt{x}}=\dfrac{\sqrt{x}}{2x^2}.  
+ \]</span></li>
+<li>In this case, we use the formula <span class="math inline">\((a-b)(a+b)=a^2+b^2\)</span>. Multiply the expression by <span class="math inline">\(\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}+\sqrt{y}}\)</span>.
+<span class="math display">\[
+ \dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}=\dfrac{(\sqrt{x}+\sqrt{y})^2}{(\sqrt{x}-\sqrt{y})(\sqrt{x}+\sqrt{y})}=\dfrac{x+y+2\sqrt{xy}}{x-y}.
+ \]</span></li>
+</ol>
+</div>
+</div>
+<div id="practice-3" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> Practice</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-93" class="exercise"><strong>Problem 4.1  </strong></span>
+Evaluate the square root. If the square root is not a real number, state so.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(-\sqrt{\frac{4}{25}}\)</span></li>
+<li><span class="math inline">\(\sqrt{49}-\sqrt{9}\)</span></li>
+<li><span class="math inline">\(-\sqrt{-1}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-94" class="exercise"><strong>Problem 4.2  </strong></span>
+Simplify the radical expression.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{(-7x^2)^2}\)</span></li>
+<li><span class="math inline">\(\sqrt{(x+2)^2}\)</span></li>
+<li><span class="math inline">\(\sqrt{25x^2y^6}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-95" class="exercise"><strong>Problem 4.3  </strong></span>
+Simplify the radical expression.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[3]{-27x^3}\)</span></li>
+<li><span class="math inline">\(\sqrt[4]{16x^8}\)</span></li>
+<li><span class="math inline">\(\sqrt[5]{(2x-1)^5}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-96" class="exercise"><strong>Problem 4.4  </strong></span>
+Simplify the radical expression. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{50}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{-8x^2y^3}\)</span></li>
+<li><span class="math inline">\(\sqrt[5]{32x^{12}y^2z^8}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-97" class="exercise"><strong>Problem 4.5  </strong></span>
+Write the radical expression with rational exponents.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[3]{(2x)^5}\)</span></li>
+<li><span class="math inline">\((\sqrt[5]{3xy})^7\)</span></li>
+<li><span class="math inline">\(\sqrt[4]{(x^2+3)^3}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-98" class="exercise"><strong>Problem 4.6  </strong></span>
+Write in radical notation and simplify.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(4^{\frac32}\)</span></li>
+<li><span class="math inline">\(-81^{\frac 34}\)</span></li>
+<li><span class="math inline">\(\left(\frac{27}{8}\right)^{-\frac{2}{3}}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-99" class="exercise"><strong>Problem 4.7  </strong></span>
+Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{12x^{\frac12}}{4x^{\frac23}}\)</span></li>
+<li><span class="math inline">\((x^{-\frac35}y^{\frac12})^{\frac13}\)</span></li>
+<li><span class="math inline">\(\left(\frac{x^{\frac12}}{x^{-\frac13}}\right)^4\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-100" class="exercise"><strong>Problem 4.8  </strong></span>
+Simplify the expression. Write in radical notation. Assume <span class="math inline">\(x\)</span> is nonnegative.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{\sqrt{x}}{\sqrt[3]{x}}\)</span></li>
+<li><span class="math inline">\(\sqrt{\sqrt[3]{x}}\)</span></li>
+<li><span class="math inline">\(\sqrt{x}\sqrt[3]{x}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-101" class="exercise"><strong>Problem 4.9  </strong></span>
+Simplify the expression. Write in radical notation. Assume <span class="math inline">\(x\)</span> is nonnegative.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[5]{32x^{\frac13}}\)</span></li>
+<li><span class="math inline">\(\left(\dfrac{\sqrt[4]{9x}}{3}\right)^{-2}\)</span></li>
+<li><span class="math inline">\(\sqrt{\frac{1}{\sqrt[3]{x^{-2}}}}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-102" class="exercise"><strong>Problem 4.10  </strong></span>
+Simplify the expression. Write in radical notation. Assume all variables are nonnegative.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[3]{(-x)^{-2}}\sqrt[2]{x^3}\)</span></li>
+<li><span class="math inline">\(\left(\dfrac{8a^{-\frac{5}{2}}b}{a^{\frac12}b^{-5}}\right)^{-\frac23}\)</span></li>
+<li><span class="math inline">\(\left(\dfrac{y^{-\frac{1}{3}}}{\sqrt[3]{x^{2}}}\right)^{-3}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-103" class="exercise"><strong>Problem 4.11  </strong></span>
+Multiply and simplify.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[3]{4}\sqrt[3]{5}\)</span></li>
+<li><span class="math inline">\(\sqrt{|x+7|}\sqrt{|x-7|}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{(x-y)^{\frac52}}\sqrt[3]{(x-y)^{\frac72}}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-104" class="exercise"><strong>Problem 4.12  </strong></span>
+Simplify the radical expression. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{20xy}\cdot\sqrt{4xy^2}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{16}\cdot5\sqrt[3]{2}\)</span></li>
+<li><span class="math inline">\(\sqrt[5]{8x^4y^3z^3}\cdot\sqrt[5]{8xy^4z^8}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-105" class="exercise"><strong>Problem 4.13  </strong></span>
+Divide. Assume all variables are positive. Answers must be simplified.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{\dfrac{9x^3}{y^8}}\)</span></li>
+<li><span class="math inline">\(\sqrt[3]{\dfrac{32x^4}{x}}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt{40x^5}}{\sqrt{2x}}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt[3]{24a^6b^4}}{\sqrt[3]{3b}}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-106" class="exercise"><strong>Problem 4.14  </strong></span>
+Add or subtract, and simplify. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(5\sqrt6+3\sqrt6\)</span></li>
+<li><span class="math inline">\(4\sqrt{20}-2\sqrt5\)</span></li>
+<li><span class="math inline">\(3\sqrt{32x^2}+5x\sqrt{8}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-107" class="exercise"><strong>Problem 4.15  </strong></span>
+Add or subtract, and simplify. Assume all variables are positive</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(7\sqrt{4x^2}+2\sqrt{25x}-\sqrt{16x}\)</span></li>
+<li><span class="math inline">\(5\sqrt[3]{x^2y}+\sqrt[3]{27x^5y^4}\)</span></li>
+<li><span class="math inline">\(3\sqrt{9y^3}-3y\sqrt{16y}+\sqrt{25y^3}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-108" class="exercise"><strong>Problem 4.16  </strong></span>
+Multiply and simplify. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt2(3\sqrt3-2\sqrt2)\)</span></li>
+<li><span class="math inline">\((\sqrt5+\sqrt7)(3\sqrt5-2\sqrt7)\)</span></li>
+<li><span class="math inline">\((\sqrt3+\sqrt2)^2\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-109" class="exercise"><strong>Problem 4.17  </strong></span>
+Multiply and simplify. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\((\sqrt6-\sqrt5)(\sqrt6+\sqrt5)\)</span></li>
+<li><span class="math inline">\((\sqrt{x+1}-1)(\sqrt{x+1}+1)\)</span></li>
+<li><span class="math inline">\((2\sqrt[3]x+6)(\sqrt[3]x+1)\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-110" class="exercise"><strong>Problem 4.18  </strong></span>
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt[3]{\dfrac2{25}}\)</span></li>
+<li><span class="math inline">\(\sqrt{\dfrac{2x}{7y}}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt[3]{x}}{\sqrt[3]{3y^2}}\)</span></li>
+<li><span class="math inline">\(\dfrac{3x}{\sqrt[4]{x^3y}}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-111" class="exercise"><strong>Problem 4.19  </strong></span>
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{6\sqrt3}{\sqrt3-1}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt5-\sqrt3}{\sqrt5+\sqrt3}\)</span></li>
+<li><span class="math inline">\(\dfrac{3+\sqrt2}{2+\sqrt3}\)</span></li>
+<li><span class="math inline">\(\dfrac{2\sqrt{x}}{\sqrt x- \sqrt y}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-112" class="exercise"><strong>Problem 4.20  </strong></span>
+Simplify and rationalize the denominator. Assume all variables are positive.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{\sqrt{x}}{\sqrt x-1}+\dfrac{1}{\sqrt{x}+1}\)</span></li>
+<li><span class="math inline">\(\dfrac{\sqrt{x}+1}{\sqrt x}-\dfrac{1}{\sqrt{x}-1}\)</span></li>
+</ol>
+</div>
+
+</div>
 </div>
 
 
@@ -128,7 +551,7 @@ $$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
           </div>
         </div>
       </div>
-<a href="rational-expressions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="algebra-of-rational-expressions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="solve-polynomial-equations-by-factoring.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

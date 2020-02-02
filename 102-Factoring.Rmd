@@ -29,6 +29,7 @@ Factor $4x^3y-8x^2y^2+12x^3y^3$.
 ```
 
 ```{solution}  
+\
 
 1. Find the GCF of all terms.  
    The GCF of $4x^3y$, $-8x^2y^2$ and $12x^4y^3$ is $4x^2y$.
@@ -52,6 +53,7 @@ Factor $2x^2-6xy+xz-3yz$.
 ```
 
 ```{solution}  
+\
 
 1. Group the first two terms and the last two terms.
    $$
@@ -60,7 +62,7 @@ Factor $2x^2-6xy+xz-3yz$.
     =&(2x^2-6xy)+(xz-3yz)
     \end{aligned}
    $$
-   
+
 2. Factor out the GCF from each group.  
    $$
     \begin{aligned}
@@ -84,6 +86,7 @@ Factor $ax+4b-2a-2bx$.
 ```
 
 ```{solution}  
+\
 
 1. Group the first term with the third term and group the second term with the last term.
 $$
@@ -135,6 +138,7 @@ Factor $25x^2-16$.
 ```
 
 ```{solution}
+\
 
 1. Recognize the binomial as a difference of squares.
 $$\begin{aligned}
@@ -159,6 +163,7 @@ Factor $32x^3y-2xy^5$ completely.
 ```
 
 ```{solution}
+\
 
 $$
 32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
@@ -194,6 +199,7 @@ Factor $x^2+6x+8$.
 ```
 
 ```{solution}
+\
 
 1. Factor $a=1$:
    $$1=1\cdot 1.$$
@@ -218,6 +224,7 @@ Factor $2x^2+5x-3$.
 ```
 
 ```{solution}
+\
 
 1. Factor $a=2$:
    $$1=1\cdot 2.$$
@@ -251,6 +258,7 @@ $$4x^4-x^2-3$$
 ```
 
 ```{solution}
+\
 
 1. Let $x^2=y$. Then $4x^4-x^2-3=4y^2-y-3$.
 

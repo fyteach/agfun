@@ -46,8 +46,7 @@ span.exercise, span.example {
   margin-right: 0.5em;
 }
 
-
-.exercise ol {
+div.exercise ol, div.example ol, div.enuminline ol {
   display: flex;
   flex-direction: row;
   /* flex-wrap: nowrap; */
@@ -56,26 +55,65 @@ span.exercise, span.example {
   align-content: space-between;
 }
 
-.exercise ol li {
-  /* min-width: 27%;
-  margin-right: 6%; */
+div.exercise ol li {
+  /* min-width: 27%; */
+  margin-right: 5%;
   list-style-type: lower-alpha;
   margin-left: -0.6em;
   padding-left: 0.6em;
   flex-grow: 1;
 }
 
-/* .exercise li:not(:last-child)::after {
-  margin-right: 2em;
-} */
+div.example ol li, div.enuminline ol li {
+    /* min-width: 27%; */
+    margin-right: 5%;
+    margin-left: -0.6em;
+    padding-left: 0.6em;
+    flex-grow: 1;
+  }
 
-.exercise li::marker {
+div.exercise ol li:last-of-type, div.example ol li:last-of-type, div.enuminline ol li:last-of-type {
+    margin-right: 0em;
+}
+
+div.exercise li::marker {
   font-size: 1.2em;
 }
 
-.exercise>p>span::before{
+span.exercise::before{
   content: "\270f";
   font-size: 1.2em;
   color: lime;
   padding-right: 0.3em; 
+}
+
+button.solution-folding-btn {
+    background-color: rgb(127, 54, 223);
+    border: none;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+.solution-button-row { 
+    display: flex;
+    margin-bottom: 1em;
+}
+
+div.solution>p:first-of-type {
+  display: none;
+}
+
+.collapse { 
+    display: none; 
+}
+
+.in { 
+    display:block 
+}
+
+div.figure img, div.figure caption {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

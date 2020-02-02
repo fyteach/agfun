@@ -17,11 +17,11 @@ A sheet of everyday copy paper is about 0.01 millimeter thick. Repeat folding al
 ```
 
 ## Properties of Exponents
+
 For an integer $n$, and an expression $x$, the mathematical operation of the $n$-times repeated multiplication of $x$  is call exponentiation, written as $x^n$, that is,
 $$
 x^n=\underbrace{x\cdot x \cdots x}_{n \text{factors of} x}.
 $$
-
 
 In the notation $x^n$, $n$ is called ***the exponent***, $x$ is called ***the base***, and $x^n$ is called ***the power***, read as "$x$ raised to the $n$-th power",  "$x$ to the $n$-th power", "$x$ to the $n$-th", "$x$ to the power of $n$" or "$x$ to the $n$".
 
@@ -47,8 +47,6 @@ Within the same level, the convention is to perform from the left to the right.
 
 ```
 
-## Examples
-
 ```{example}
 
 Simplify. **Write with positive exponents.**
@@ -59,6 +57,7 @@ $$
 ```
 
 ```{solution}
+\
 
 $$
 \left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}

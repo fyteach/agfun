@@ -1,6 +1,8 @@
 bookdown::gitbook:
   includes:
-      before_body: html/math-shortcuts.html
+    in_header: html/solution-fold.html
+    before_body: html/math-shortcuts.html
+      
   split_by: chapter
   toc_depth: 1
   css: css/style.css
