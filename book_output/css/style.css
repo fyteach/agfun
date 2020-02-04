@@ -1,27 +1,21 @@
-.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning, .rmdthink{
+.rmdnote, .rmdtip, .rmdthink{
     padding: 1em 1em 1em 4em;
     margin-bottom: 10px;
-    background: #89e9f1 5px center/3em no-repeat;
-  }
-  .rmdcaution {
-    background-image: url("../figs/caution.png");
-  }
-  .rmdimportant {
-    background-image: url("../figs/important.png");
-  }
-  .rmdnote {
-    background-image: url("../figs/note.png");
-  }
-  .rmdtip {
-    background-image: url("../figs/tip.png");
-  }
-  .rmdwarning {
-    background-image: url("../figs/warning.png");
-  }
+}
 
-  .rmdthink {
+.rmdnote {
+    background: #f5ead8 5px center/3em no-repeat;
+    background-image: url("../figs/note.png");
+}
+.rmdtip {
+    background: #88c1f0 5px center/3em no-repeat;
+    background-image: url("../figs/tip.png");
+}
+.rmdthink {
+    background: #96f5f8 5px center/3em no-repeat;
     background-image: url("../figs/thinking.png");
-  }
+}
+
 
 p.caption {
   color: #777;
@@ -112,8 +106,16 @@ div.solution>p:first-of-type {
     display:block 
 }
 
-div.figure img, div.figure caption {
+img, caption {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.riddle ol li {
+    list-style-type: decimal;
+}
+
+div.riddle ol li::marker {
+    font-weight: bold;
 }

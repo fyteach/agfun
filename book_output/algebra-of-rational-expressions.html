@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-01" />
+<meta name="date" content="2020-02-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,18 +87,20 @@ $(document).ready(function () {
 <li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
 <li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
 <li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
-<li class="chapter" data-level="5" data-path="solve-polynomial-equations-by-factoring.html"><a href="solve-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solve Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
 <li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
-<li class="chapter" data-level="7" data-path="applications-of-quadratic-equations.html"><a href="applications-of-quadratic-equations.html"><i class="fa fa-check"></i><b>7</b> Applications of Quadratic Equations</a></li>
-<li class="chapter" data-level="8" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>8</b> Linear Inequalities</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
 <li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
-<li class="chapter" data-level="9" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>9</b> Introduction to Functions</a></li>
-<li class="chapter" data-level="10" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>10</b> Linear Functions</a></li>
-<li class="chapter" data-level="11" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>11</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="12" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>12</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="13" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>13</b> Exponential Functions</a></li>
-<li class="chapter" data-level="14" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>14</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="15" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>15</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -125,7 +127,9 @@ $$\require{amsmath}$$
 $$\require{cancel}$$
 $$\definecolor{purple}{RGB}{226, 15, 233}$$
 $$\definecolor{grey}{RGB}{177, 159, 149}$$
-$$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div id="algebra-of-rational-expressions" class="section level1" number="3">
 <h1><span class="header-section-number">Topic 3</span> Algebra of Rational Expressions</h1>
@@ -147,7 +151,7 @@ A rational expression is <strong><em>simplified</em></strong> if the numerator a
 \]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-40" class="example"><strong>Example 3.1  </strong></span>
+<p><span id="exm:unnamed-chunk-41" class="example"><strong>Example 3.1  </strong></span>
 Simplify <span class="math inline">\(\dfrac{x^2+4x+3}{x^2+3x+2}\)</span>.</p>
 </div>
 
@@ -167,7 +171,7 @@ Simplify <span class="math inline">\(\dfrac{x^2+4x+3}{x^2+3x+2}\)</span>.</p>
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-42" class="example"><strong>Example 3.2  </strong></span>
+<p><span id="exm:unnamed-chunk-43" class="example"><strong>Example 3.2  </strong></span>
 Simplify <span class="math inline">\(\dfrac{2x^2-x-3}{2x^2-3x-5}\)</span>.</p>
 </div>
 
@@ -190,7 +194,7 @@ Simplify <span class="math inline">\(\dfrac{2x^2-x-3}{2x^2-3x-5}\)</span>.</p>
 \]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-44" class="example"><strong>Example 3.3  </strong></span>
+<p><span id="exm:unnamed-chunk-45" class="example"><strong>Example 3.3  </strong></span>
 Multiply and then simplify.
 <span class="math display">\[\dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}.\]</span></p>
 </div>
@@ -211,7 +215,7 @@ Multiply and then simplify.
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-46" class="example"><strong>Example 3.4  </strong></span>
+<p><span id="exm:unnamed-chunk-47" class="example"><strong>Example 3.4  </strong></span>
 Multiply and then simplify.
 <span class="math display">\[
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}.
@@ -230,13 +234,13 @@ Multiply and then simplify.
 </div>
 <div id="dividing-rational-expressions" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Dividing Rational Expressions</h2>
-<p>If <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> are polynomials where <span class="math inline">\(q\neq 0\)</span>, $s$ and <span class="math inline">\(t\neq 0\)</span>, then
+<p>If <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> are polynomials where <span class="math inline">\(q\neq 0\)</span>, <span class="math inline">\(s\neq 0\)</span> and <span class="math inline">\(t\neq 0\)</span>, then
 <span class="math display">\[
 \dfrac{~p~}{~q~}\div\dfrac{~s~}{~t~}=\dfrac{~p~}{~q~}\cdot\dfrac{~t~}{~s~}=\dfrac{~pt~}{~qs~}.
 \]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-48" class="example"><strong>Example 3.5  </strong></span>
+<p><span id="exm:unnamed-chunk-49" class="example"><strong>Example 3.5  </strong></span>
 Divide and then simplify.<br />
 <span class="math display">\[
 \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}.
@@ -269,7 +273,7 @@ Divide and then simplify.<br />
 \]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-50" class="example"><strong>Example 3.6  </strong></span>
+<p><span id="exm:unnamed-chunk-51" class="example"><strong>Example 3.6  </strong></span>
 Add and simplify<br />
 <span class="math display">\[
 \dfrac{x^2+4}{x^2+3x+2}+\dfrac{5x}{x^2+3x+2}.
@@ -292,7 +296,7 @@ Add and simplify<br />
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-52" class="example"><strong>Example 3.7  </strong></span>
+<p><span id="exm:unnamed-chunk-53" class="example"><strong>Example 3.7  </strong></span>
 Subtract and simplify <span class="math inline">\(\dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}\)</span>.</p>
 </div>
 
@@ -318,7 +322,7 @@ What if all denominators are the same? How to make denominators the same? Reduci
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-55" class="example"><strong>Example 3.8  </strong></span>
+<p><span id="exm:unnamed-chunk-56" class="example"><strong>Example 3.8  </strong></span>
 Find the LCD of <span class="math inline">\(\dfrac{3}{x^2-x-6}\)</span> and <span class="math inline">\(\dfrac{6}{x^2-4}\)</span>.</p>
 </div>
 
@@ -359,7 +363,7 @@ Find the LCD of <span class="math inline">\(\dfrac{3}{x^2-x-6}\)</span> and <spa
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-57" class="example"><strong>Example 3.9  </strong></span>
+<p><span id="exm:unnamed-chunk-58" class="example"><strong>Example 3.9  </strong></span>
 Subtract and simplify<br />
 <span class="math display">\[\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}\]</span></p>
 </div>
@@ -419,7 +423,7 @@ Subtract and simplify<br />
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-60" class="example"><strong>Example 3.10  </strong></span>
+<p><span id="exm:unnamed-chunk-61" class="example"><strong>Example 3.10  </strong></span>
 Simplify
 <span class="math display">\[
 \dfrac{~\dfrac{2x-1}{x^2-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{1}{x^2-1}~}
@@ -482,7 +486,7 @@ Simplify
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-63" class="example"><strong>Example 3.11  </strong></span>
+<p><span id="exm:unnamed-chunk-64" class="example"><strong>Example 3.11  </strong></span>
 Simplify
 <span class="math display">\[\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}\]</span></p>
 </div>
@@ -510,7 +514,7 @@ In this case, the LCD is <span class="math inline">\((x-1)(x+1)\)</span>.</p></l
 <h2><span class="header-section-number">3.8</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-65" class="exercise"><strong>Problem 3.1  </strong></span>
+<p><span id="exr:unnamed-chunk-66" class="exercise"><strong>Problem 3.1  </strong></span>
 Simplify.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\dfrac{3x^2-x-4}{x+1}\)</span></p></li>
@@ -520,7 +524,7 @@ Simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-66" class="exercise"><strong>Problem 3.2  </strong></span>
+<p><span id="exr:unnamed-chunk-67" class="exercise"><strong>Problem 3.2  </strong></span>
 Multiply and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\dfrac{x+5}{x+4}\cdot\dfrac{x^2+3x-4}{x^2-25}\)</span></p></li>
@@ -530,7 +534,7 @@ Multiply and simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-67" class="exercise"><strong>Problem 3.3  </strong></span>
+<p><span id="exr:unnamed-chunk-68" class="exercise"><strong>Problem 3.3  </strong></span>
 Divide and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\dfrac{9x^2-49}{6}\div\dfrac{3x^2-x-14}{2x+4}\)</span></p></li>
@@ -540,7 +544,7 @@ Divide and simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-68" class="exercise"><strong>Problem 3.4  </strong></span>
+<p><span id="exr:unnamed-chunk-69" class="exercise"><strong>Problem 3.4  </strong></span>
 Simplify.
 <span class="math display">\[
 \frac{-x^2+11x-18}{x^2-4x+4}\div \frac{x^2-5x-36}{x^2-7x+12}\cdot \frac{2x^2+7x-4}{x^2+2x-15}
@@ -548,7 +552,7 @@ Simplify.
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-69" class="exercise"><strong>Problem 3.5  </strong></span>
+<p><span id="exr:unnamed-chunk-70" class="exercise"><strong>Problem 3.5  </strong></span>
 Add/subtract and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{x^2+2x-2}{x^2+2x-15}+\dfrac{5x+12}{x^2+2x-15}\)</span></li>
@@ -558,7 +562,7 @@ Add/subtract and simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-70" class="exercise"><strong>Problem 3.6  </strong></span>
+<p><span id="exr:unnamed-chunk-71" class="exercise"><strong>Problem 3.6  </strong></span>
 Find the LCD of rational expressions.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{2x}{2x^2-5x-3}\)</span>and <span class="math inline">\(\dfrac{x-1}{x^2-x-6}\)</span></li>
@@ -567,7 +571,7 @@ Find the LCD of rational expressions.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-71" class="exercise"><strong>Problem 3.7  </strong></span>
+<p><span id="exr:unnamed-chunk-72" class="exercise"><strong>Problem 3.7  </strong></span>
 Add and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{x}{x+1}+\dfrac{x-1}{x+2}\)</span></li>
@@ -577,7 +581,7 @@ Add and simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-72" class="exercise"><strong>Problem 3.8  </strong></span>
+<p><span id="exr:unnamed-chunk-73" class="exercise"><strong>Problem 3.8  </strong></span>
 Subtract and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{3x+5}{x^2-7x+12}-\dfrac{3}{x-3}\)</span></li>
@@ -587,7 +591,7 @@ Subtract and simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-73" class="exercise"><strong>Problem 3.9  </strong></span>
+<p><span id="exr:unnamed-chunk-74" class="exercise"><strong>Problem 3.9  </strong></span>
 Simplify.
 <span class="math display">\[
 \frac{x+11}{7x^2-2x-5}+\frac{x-2}{x-1}-\frac{x}{7x+5}
@@ -595,7 +599,7 @@ Simplify.
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-74" class="exercise"><strong>Problem 3.10  </strong></span>
+<p><span id="exr:unnamed-chunk-75" class="exercise"><strong>Problem 3.10  </strong></span>
 Subtract and simplify.
 <span class="math display">\[
 \frac{x-1}{x^2-3x}+\frac{4}{x^2-2\:x-3}-\frac{1}{x\left(x+1\right)}
@@ -603,7 +607,7 @@ Subtract and simplify.
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-75" class="exercise"><strong>Problem 3.11  </strong></span>
+<p><span id="exr:unnamed-chunk-76" class="exercise"><strong>Problem 3.11  </strong></span>
 Simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{~1+\dfrac{2}{x}~}{~1-\dfrac{2}{x}~}\)</span></li>
@@ -612,7 +616,7 @@ Simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-76" class="exercise"><strong>Problem 3.12  </strong></span>
+<p><span id="exr:unnamed-chunk-77" class="exercise"><strong>Problem 3.12  </strong></span>
 Simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{~\dfrac{x^2-y^2}{y^2}~}{~\dfrac1x-\dfrac{1}{y}~}\)</span></li>
@@ -621,7 +625,7 @@ Simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-77" class="exercise"><strong>Problem 3.13  </strong></span>
+<p><span id="exr:unnamed-chunk-78" class="exercise"><strong>Problem 3.13  </strong></span>
 Simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{~\dfrac{5x}{x^2-x-6}~}{~\dfrac2{x+2}+\dfrac{3}{x-3}~}\)</span></li>
@@ -630,7 +634,7 @@ Simplify.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-78" class="exercise"><strong>Problem 3.14  </strong></span>
+<p><span id="exr:unnamed-chunk-79" class="exercise"><strong>Problem 3.14  </strong></span>
 Tim and Jim refill their cars at the same gas station twice last month. Each time Tim got $20 gas and Jim got 8 gallon. Suppose they refill their cars on same days. The price was $2.5 per gallon the first time. The price on the second time changed. Can you find out who had the better average price?</p>
 </div>
 

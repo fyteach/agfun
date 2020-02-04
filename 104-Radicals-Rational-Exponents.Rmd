@@ -220,6 +220,87 @@ Rationalize the denominator.
 
 ```
 
+## Complex Numbers
+
+The imaginary unit $\ii$ is defined as $\ii=\sqrt{-1}$. Hence $\ii^2=-1$.
+
+If $b$ is a positive number, then $\sqrt{-b}=\ii\sqrt{b}$.
+
+Let $a$ and $b$ are two real numbers. We define a complex number by the expression $a+b \ii$.
+The number $a $ is called the real part and the number $b$ is called the imaginary part. If $b=0$,
+then the complex number $a+b\ii=a$ is just the real number.
+If $b\neq 0$, then we call the complex number $a+b\ii$ an imaginary number.
+If $a=0$ and $b\neq 0$, then the complex number $a+b\ii=b\ii$ is called a purely imaginary number.
+
+Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.
+
+```{example}
+
+Simplify and write your answer in the form $a+b\ii$, where $a$ and $b$ are real numbers and $\ii$ is the imaginary unit.
+
+1. $\sqrt{-3}\sqrt{-4}$
+2. $(4\ii-3)(-2+\ii)$
+3. $\frac{-2+5\ii}{\ii}$
+4. $\frac{1}{1-2\ii}$
+5. $\ii^{2018}$
+
+```
+
+```{solution}
+\
+
+1.
+$$
+    \sqrt{-3}\sqrt{-4}=\ii\sqrt{3}\cdot\ii\sqrt{4}=\ii^2\cdot \sqrt3\cdot 2=-2\sqrt{3}.
+$$
+1.
+$$
+    \begin{split}
+        (4\ii-3)(-2+\ii)&=4\ii\cdot(-2)+4\ii\cdot \ii+(-3)\cdot(-2)+(-3)\cdot\ii \\
+        &=-8\ii+(-4)+6+(-3\ii)=2-11\ii.
+    \end{split}
+$$
+1.
+$$
+    \begin{split}
+        \frac{-2+5\ii}{\ii}&=\frac{(-2+5\ii)\ii}{\ii\cdot \ii}=\frac{-2\ii+5\ii^2}{\ii^2}\\
+        &=\frac{-2\ii-5}{-1}=5+2\ii.
+    \end{split}
+$$
+1.
+$$
+    \begin{split}
+        \frac{1}{1-2\ii}&=\frac{(1+2\ii)}{(1-2\ii)(1+2\ii)}=\frac{1+2\ii}{1-(2\ii)^2}\\
+        &=\frac{1+2\ii}{5}=\frac{1}{5}+\frac{2}{5}\ii.
+    \end{split}
+$$
+1.
+$$
+    \ii^{2018}=\ii^{4\cdot 504+2}=(\ii^4)^{504}\cdot \ii^2=-1.
+$$
+
+```
+
+```{example}
+
+Evaluate $f(1+\ii)$ for the function $f(z)=z^2+\frac{z-1}{z+1}$. Write your answer in the form $a+b\ii$.
+
+```
+
+```{solution}
+\
+
+$$
+\begin{aligned}
+f(1+\ii)=&(1+\ii)^2+\frac{\ii}{2+\ii}\\
+=&1+2\ii+\ii^2+\frac{\ii(2-\ii)}{4-\ii^2}\\
+=&2\ii+\frac{1+2\ii}{5}\\
+=&\frac15+\frac{12}{5}\ii.
+\end{aligned}
+$$
+
+```
+
 ## Practice
 
 ```{exercise}
@@ -421,5 +502,62 @@ Simplify and rationalize the denominator. Assume all variables are positive.
 
 1. $\dfrac{\sqrt{x}}{\sqrt x-1}+\dfrac{1}{\sqrt{x}+1}$
 1. $\dfrac{\sqrt{x}+1}{\sqrt x}-\dfrac{1}{\sqrt{x}-1}$
+
+```
+
+```{exercise}
+
+Add, subtract, multiply complex numbers and write your answer in the form $a+b\ii$.
+
+1.  $\sqrt{-2}\cdot\sqrt{-3}$
+2.  $\sqrt{2}\cdot\sqrt{-8}$
+3.  $(5-2\ii)+(3+3\ii)$
+4. $(2+6\ii)-(12-4\ii)$
+
+```
+
+```{exercise}
+
+Add, subtract, multiply complex numbers and write your answer in the form $a+b\ii$.
+
+1.  $(3+\ii)(4+5\ii)$
+2.  $(7-2\ii)(-3+6\ii)$
+3.  $(3-x\sqrt{-1})(3+x\sqrt{-1})$
+4.  $(2+3\ii)^2$
+
+```
+
+```{exercise}
+
+Divide the complex number and write your answer in the form $a+b\ii$.
+
+1. $\dfrac{2\ii}{1+\ii}$
+2. $\dfrac{5-2\ii}{3+2\ii}$
+3. $\dfrac{2+3\ii}{3-\ii}$
+4. $\dfrac{4+7\ii}{-3\ii}$
+
+```
+
+```{exercise}
+
+Simplify the expression. %where $\ii=\sqrt{-1}$ is the imaginary unit.
+
+1. $(-\ii)^{8}$
+1. $\ii^{15}$
+1. $\ii^{2017}$
+1. $\dfrac1{\ii^{2018}}$
+
+```
+
+```{exercise}
+
+Evaluate the function polynomial $2x^2-3x+5$ for $x=1-\ii$.
+Write your answer in the form $a+b\ii$.
+```
+
+```{exercise}
+
+Evaluate the polynomial $\ii x^2-x+\frac{2}{x-1}$ for $x=\ii-1$.
+Write your answer in the form $a+b\ii$.
 
 ```

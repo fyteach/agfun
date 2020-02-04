@@ -346,3 +346,53 @@ Factor completely into polynomials with integer coefficients.
 3. $2x^3y-9x^2y^2-5xy^3$
 
 ```
+
+```{exercise}
+
+Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.
+
+"$\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{10~~2~~9~~15}$,\quad $\dfrac{\phantom{A}}{9~~5~~14}$\quad $\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{4~~3~~15~~7~~2~~1}$;
+\phantom{"} $\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{11~~2~~2}$,\quad $\dfrac{\phantom{A}}{9~~5~~14}$\quad $\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{8~~5~~3~~6}$;
+\phantom{"} $\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{14~~3}$,\quad $\dfrac{\phantom{A}}{9~~5~~14}$\quad $\dfrac{\phantom{A}}{13}$\quad $\dfrac{\phantom{A}}{12~~5~~14~~2~~15~~11~~1~~9~~5~~14}$."
+
+||||||||
+|---|---|---|---|---|---|---|
+| **A:** $3x-2$ | **B:** $2x+1$ | **C:** $x+6$ | **D:** $x+7$ | **E:** $2x-1$ | **F:** $3x-1$ | **G:** $x+10$ |
+| **H:** $x-8$ | **I:** $2x+9$ | **J:** $x-1$ | **K:** $x+3$ | **L:** $2x-5$ | **M:** $x+5$ | **N:** $x-7$ |
+| **O:** $x-13$ | **P:** $5x-3$ | **Q:** $4x-11$ | **R:** $x-9$ | **S:** $2x+3$ | **T:** $x+4$ | **U:** $7x+1$ |
+| **V:** $3x+5$ | **W:** $3x+4$ | **X:** $8x+3$ | **Y:** $x-14$ | **Z:** $5x-6$ | | |
+
+<div class="riddle">
+1.
+$x^2-2x-24$
+1.
+$6x^2+x-2$
+1.
+$x^2-16x+39$
+1.
+$6x^2+13x-5$
+1.
+$x^2-5x-14$
+1.
+$3x^2-5x-12$
+1.
+$x^2-x-110$
+1.
+$x^2-9$
+1.
+$-3x^2+11x-6$
+1.
+$x^2-10x+16$
+1.
+$-2x^2+5x+12$
+1.
+$42x^2-x-1$
+1.
+$-2x^2-3x+27$
+1.
+$x^2+14x+49$
+1.
+$x^2-81$
+</div>
+
+```

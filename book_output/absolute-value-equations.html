@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 9 Absolute Value Equations | Algebra and Geometry of Elementary Functions</title>
+  <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 9 Absolute Value Equations | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="github-repo" content="fyemath/agfun" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 9 Absolute Value Equations | Algebra and Geometry of Elementary Functions" />
+  
+  <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  
+
+<meta name="author" content="Fei Ye" />
+
+
+<meta name="date" content="2020-02-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="radical-equations.html"/>
+<link rel="next" href="linear-inequalities.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="../js/collapse.js"></script>
+<script src="../js/solutionfolding.js"></script>
+
+<script>
+$(document).ready(function () {
+  window.initializeSolutionFolding("show" === "hide");
+});
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Algebra and Geometry of Functions</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
+<li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
+<li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
+<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
+<li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
+<li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
+<li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algebra and Geometry of Elementary Functions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div class="latex-macros" style="display: none">
+$$\require{color}$$
+$$\require{amsmath}$$
+$$\require{cancel}$$
+$$\definecolor{purple}{RGB}{226, 15, 233}$$
+$$\definecolor{grey}{RGB}{177, 159, 149}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
+</div>
+<div id="absolute-value-equations" class="section level1" number="9">
+<h1><span class="header-section-number">Topic 9</span> Absolute Value Equations</h1>
+<div id="properties-of-absolute-values" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Properties of Absolute Values</h2>
+<p>The <strong><em>absolute value</em></strong> of a real number <span class="math inline">\(a\)</span>, denoted by <span class="math inline">\(|a|\)</span>, is the distance from <span class="math inline">\(0\)</span> to <span class="math inline">\(a\)</span> on the number line. In particular, <span class="math inline">\(|a|\)</span> is always greater than or equal to <span class="math inline">\(0\)</span>, that is <span class="math inline">\(|a|\geq 0\)</span>. Absolute values satisfy the following properties:
+<span class="math display">\[
+|-a|=|a|, \quad |ab|=|a||b| \quad \text{and} \quad \left|\frac{a}{b}\right|=\frac{|a|}{|b|}.
+\]</span></p>
+<p>An absolute value equation may be rewritten as <span class="math inline">\(|X|=c\)</span>, where <span class="math inline">\(X\)</span> represents an algebraic expression.</p>
+<p>If <span class="math inline">\(c\)</span> is <strong>positive</strong>, then the equation <span class="math inline">\(|X|=c\)</span> is equivalent to {<span class="math inline">\(X=c\)</span>or <span class="math inline">\(X=-c\)</span>.}</p>
+<p>If <span class="math inline">\(c\)</span> is <strong>negative</strong>, then the solution set of <span class="math inline">\(|X|=c\)</span> is <strong>empty</strong>.
+An <strong><em>empty set</em></strong> is denoted by <span class="math inline">\(\emptyset\)</span>.</p>
+<p>More generally, <span class="math inline">\(|X|=|Y|\)</span> is equivalent to <span class="math inline">\(X=Y\)</span> or <span class="math inline">\(X=-Y\)</span>.</p>
+<p>The equation <span class="math inline">\(|X|=0\)</span> is equivalent to <span class="math inline">\(X=0\)</span>.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-198" class="example"><strong>Example 9.1  </strong></span>
+Solve the equation
+<span class="math display">\[|2x-3|=7.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>The equation is equivalent to
+<span class="math display">\[
+\begin{aligned}
+    2x-3  =-7   &amp; \qquad\text{or} &amp; 2x-3  =7  \\
+    2x    =-4   &amp;          &amp; 2x    =10 \\
+    x     =-2   &amp; \qquad\text{or} &amp; x     =5
+\end{aligned}
+\]</span></p>
+<p>The solutions are <span class="math inline">\(x=-2\)</span> or <span class="math inline">\(x=5\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2, 5\}\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-200" class="example"><strong>Example 9.2  </strong></span>
+Solve the equation
+<span class="math display">\[|2x-1|-3=8.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite the equation into <span class="math inline">\(|X|=c\)</span> form.
+<span class="math display">\[|2x-1|=11\]</span></p></li>
+<li><p>Solve the equation.
+<span class="math display">\[
+ \begin{aligned}
+     2x-1  =-11   &amp; \qquad\text{or} &amp; 2x-1  =11 \\
+     2x    =-10   &amp;          &amp; 2x    =12 \\
+     x     =-5    &amp; \qquad\text{or} &amp; x     =6
+ \end{aligned}
+ \]</span></p></li>
+</ol>
+<p>The solutions are <span class="math inline">\(x=-5\)</span> or <span class="math inline">\(x=6\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-5, 6\}\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-202" class="example"><strong>Example 9.3  </strong></span>
+Solve the equation
+<span class="math display">\[3|2x-5|=9.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite the equation into <span class="math inline">\(|X|=c\)</span> form.
+<span class="math display">\[|2x-5|=3\]</span></p></li>
+<li><p>Solve the equation.
+<span class="math display">\[
+ \begin{aligned}
+     2x-5  =-3   &amp; \qquad\text{or} &amp; 2x-5  =3 \\
+     2x    =2    &amp;          &amp; 2x    =8 \\
+     x     =1    &amp; \qquad\text{or} &amp; x     =4
+ \end{aligned}
+ \]</span></p></li>
+</ol>
+<p>The solutions are <span class="math inline">\(x=1\)</span> or <span class="math inline">\(x=4\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{1, 4\}\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-204" class="example"><strong>Example 9.4  </strong></span>
+Solve the equation
+<span class="math display">\[2|1-2x|-3=7.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite the equation into <span class="math inline">\(|X|=c\)</span> form.
+<span class="math display">\[|2x-1|=5\]</span></p></li>
+<li><p>Solve the equation.
+<span class="math display">\[
+ \begin{aligned}
+     2x-1  =-5   &amp; \qquad\text{ or } &amp; 2x-1  =5 \\
+     2x    =-4   &amp;            &amp; 2x    =6 \\
+     x     =-2   &amp; \qquad\text{or}   &amp; x     =3
+ \end{aligned}
+ \]</span></p></li>
+</ol>
+<p>The solutions are <span class="math inline">\(x=-2\)</span> or <span class="math inline">\(x=3\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2, 3\}\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-206" class="example"><strong>Example 9.5  </strong></span>
+Solve the equation
+<span class="math display">\[|3x-2|=|x+2|.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>Note that two numbers have the same absolute value only if they are the same or opposite to each other. Then the equation is equivalent to<br />
+<span class="math display">\[3x-2=x+2\quad \text{or} \quad 3x-2=-(x+2).\]</span>
+<span class="math display">\[
+\begin{aligned}
+    3x-2  =x+2   &amp; \qquad\text{or} &amp; 3x-2  =-(x+2) \\
+    2x    =4     &amp;          &amp; 4x    =0      \\
+    x     =2     &amp; \qquad\text{or} &amp; x     =0
+\end{aligned}
+\]</span></p>
+<p>The solutions are <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=0\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{0, 2\}\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-208" class="example"><strong>Example 9.6  </strong></span>
+Solve the equation
+<span class="math display">\[2|1-x|=|2x+10|.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>Since <span class="math inline">\(2\)</span> is positive, <span class="math inline">\(2|1-x|=|2||1-x|=|2-2x|\)</span>. Moreover, because <span class="math inline">\(|-X|=|X|\)</span>, the equation is equivalent to
+<span class="math display">\[|2x-2|=|2x+10|.\]</span>
+<span class="math display">\[
+\begin{aligned}
+    2x-2  =2x+10   &amp; \qquad\text{or} &amp; 2x-2  =-(2x+10) \\
+    -2    =10      &amp; \qquad\text{or} &amp; 4x    =-8       \\
+                   &amp;          &amp; x     =-2
+\end{aligned}
+\]</span></p>
+<p>The original equation only has one solution <span class="math inline">\(x=-2\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2\}\)</span>.</p>
+</div>
+</div>
+<div id="practice-8" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Practice</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-210" class="exercise"><strong>Problem 9.1  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|2x-1|=5\)</span></li>
+<li><span class="math inline">\(\left|\dfrac{3x-9}{2}\right|=3\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-211" class="exercise"><strong>Problem 9.2  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|3x-6|+4=13\)</span></li>
+<li><span class="math inline">\(3|2x-5|=9\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-212" class="exercise"><strong>Problem 9.3  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|5x-10|+6=6\)</span></li>
+<li><span class="math inline">\(-3|3x-11|=5\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-213" class="exercise"><strong>Problem 9.4  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(3|5x - 2|-4 = 8\)</span></li>
+<li><span class="math inline">\(-2|3x + 1| + 5= -3\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-214" class="exercise"><strong>Problem 9.5  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|5x-12|=|3x-4|\)</span></li>
+<li><span class="math inline">\(|x-1|=-5|(2-x)-1|\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-215" class="exercise"><strong>Problem 9.6  </strong></span>
+Find the solution set for the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|2x-1|=5-x\)</span></li>
+<li><span class="math inline">\(-2x=|x+3|\)</span></li>
+</ol>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="radical-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linear-inequalities.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agfun.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

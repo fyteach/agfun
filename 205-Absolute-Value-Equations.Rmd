@@ -1,0 +1,224 @@
+# Absolute Value Equations
+
+## Properties of Absolute Values
+
+The ***absolute value*** of a real number $a$, denoted by $|a|$, is the distance from $0$ to $a$ on the number line. In particular, $|a|$ is always greater than or equal to $0$, that is $|a|\geq 0$. Absolute values satisfy the following properties:
+$$
+|-a|=|a|, \quad |ab|=|a||b| \quad \text{and} \quad \left|\frac{a}{b}\right|=\frac{|a|}{|b|}.
+$$
+
+\paragraph*{Absolute Value Equation} An absolute value equation may be rewritten as $|X|=c$, where $X$ represents an algebraic expression.
+
+If $c$ is **positive**, then the equation $|X|=c$ is equivalent to {$X=c$\quad or \quad $X=-c$.}
+
+If $c$ is **negative**, then the solution set of $|X|=c$ is **empty**.
+An ***empty set*** is denoted by $\emptyset$.
+
+More generally, $|X|=|Y|$ is equivalent to $X=Y$ or $X=-Y$.
+
+The equation $|X|=0$ is equivalent to $X=0$.
+
+```{example}
+
+Solve the equation
+$$|2x-3|=7.$$
+
+```
+
+```{solution}
+\
+
+The equation is equivalent to
+$$
+\begin{aligned}
+    2x-3  =-7   & \qquad\text{or} & 2x-3  =7  \\
+    2x    =-4   &          & 2x    =10 \\
+    x     =-2   & \qquad\text{or} & x     =5
+\end{aligned}
+$$
+
+The solutions are $x=-2$ or $x=5$. In set-builder notation, the solution set is $\{-2, 5\}$.
+
+```
+
+```{example}
+
+Solve the equation
+$$|2x-1|-3=8.$$
+
+```
+
+```{solution}
+\
+
+1. Rewrite the equation into $|X|=c$ form.
+    $$|2x-1|=11$$
+
+1. Solve the equation.
+    $$
+    \begin{aligned}
+        2x-1  =-11   & \qquad\text{or} & 2x-1  =11 \\
+        2x    =-10   &          & 2x    =12 \\
+        x     =-5    & \qquad\text{or} & x     =6
+    \end{aligned}
+    $$
+
+The solutions are $x=-5$ or $x=6$. In set-builder notation, the solution set is $\{-5, 6\}$.
+
+```
+
+```{example}
+
+Solve the equation
+$$3|2x-5|=9.$$
+
+```
+
+```{solution}
+\
+
+1. Rewrite the equation into $|X|=c$ form.
+    $$|2x-5|=3$$
+
+2. Solve the equation.
+    $$
+    \begin{aligned}
+        2x-5  =-3   & \qquad\text{or} & 2x-5  =3 \\
+        2x    =2    &          & 2x    =8 \\
+        x     =1    & \qquad\text{or} & x     =4
+    \end{aligned}
+    $$
+
+The solutions are $x=1$ or $x=4$. In set-builder notation, the solution set is $\{1, 4\}$.
+
+```
+
+```{example}
+
+Solve the equation
+$$2|1-2x|-3=7.$$
+
+```
+
+```{solution}
+\
+
+1. Rewrite the equation into $|X|=c$ form.
+    $$|2x-1|=5$$
+
+2. Solve the equation.
+    $$
+    \begin{aligned}
+        2x-1  =-5   & \qquad\text{ or } & 2x-1  =5 \\
+        2x    =-4   &            & 2x    =6 \\
+        x     =-2   & \qquad\text{or}   & x     =3
+    \end{aligned}
+    $$
+
+The solutions are $x=-2$ or $x=3$. In set-builder notation, the solution set is $\{-2, 3\}$.
+
+```
+
+```{example}
+
+Solve the equation
+$$|3x-2|=|x+2|.$$
+
+```
+
+```{solution}
+\
+
+Note that two numbers have the same absolute value only if they are the same or opposite to each other. Then the equation is equivalent to  
+$$3x-2=x+2\quad \text{or} \quad 3x-2=-(x+2).$$
+$$
+\begin{aligned}
+    3x-2  =x+2   & \qquad\text{or} & 3x-2  =-(x+2) \\
+    2x    =4     &          & 4x    =0      \\
+    x     =2     & \qquad\text{or} & x     =0
+\end{aligned}
+$$
+
+The solutions are $x=2$ and $x=0$. In set-builder notation, the solution set is $\{0, 2\}$.
+
+```
+
+```{example}
+
+Solve the equation
+$$2|1-x|=|2x+10|.$$
+
+```
+
+```{solution}
+\
+
+Since $2$ is positive, $2|1-x|=|2||1-x|=|2-2x|$. Moreover, because $|-X|=|X|$, the equation is equivalent to
+$$|2x-2|=|2x+10|.$$
+$$
+\begin{aligned}
+    2x-2  =2x+10   & \qquad\text{or} & 2x-2  =-(2x+10) \\
+    -2    =10      & \qquad\text{or} & 4x    =-8       \\
+                   &          & x     =-2
+\end{aligned}
+$$
+
+The original equation only has one solution $x=-2$. In set-builder notation, the solution set is $\{-2\}$.
+
+```
+
+## Practice
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $|2x-1|=5$
+2. $\left|\dfrac{3x-9}{2}\right|=3$
+
+```
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $|3x-6|+4=13$
+2. $3|2x-5|=9$
+
+```
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $|5x-10|+6=6$
+1. $-3|3x-11|=5$
+
+```
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $3|5x - 2|-4 = 8$
+1. $-2|3x + 1| + 5= -3$
+
+```
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $|5x-12|=|3x-4|$
+1. $|x-1|=-5|(2-x)-1|$
+
+```
+
+```{exercise}
+
+Find the solution set for the equation.
+
+1. $|2x-1|=5-x$
+1. $-2x=|x+3|$
+
+```

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions</title>
+  <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="github-repo" content="fyemath/agfun" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions" />
+  
+  <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  
+
+<meta name="author" content="Fei Ye" />
+
+
+<meta name="date" content="2020-02-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="radicals-and-rational-exponents.html"/>
+<link rel="next" href="quadratic-formula.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="../js/collapse.js"></script>
+<script src="../js/solutionfolding.js"></script>
+
+<script>
+$(document).ready(function () {
+  window.initializeSolutionFolding("show" === "hide");
+});
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Algebra and Geometry of Functions</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
+<li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
+<li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
+<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
+<li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
+<li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
+<li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algebra and Geometry of Elementary Functions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div class="latex-macros" style="display: none">
+$$\require{color}$$
+$$\require{amsmath}$$
+$$\require{cancel}$$
+$$\definecolor{purple}{RGB}{226, 15, 233}$$
+$$\definecolor{grey}{RGB}{177, 159, 149}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
+</div>
+<div id="solving-polynomial-equations-by-factoring" class="section level1" number="5">
+<h1><span class="header-section-number">Topic 5</span> Solving Polynomial Equations by Factoring</h1>
+<div id="do-you-know-how-many-people-in-the-room" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Do You Know How Many People In The Room</h2>
+
+<div class="rmdthink">
+<p>In meeting room, a group of people all shook hands with one another. In total, 15 handshake occurred. Do you know how many people in the group?</p>
+</div>
+</div>
+<div id="properties-of-equations" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Properties of Equations</h2>
+<p>An <strong><em>equation</em></strong> is an statement that asserts an equality containing unknown variables. For example, <span class="math inline">\(2x+3=1\)</span> is an equation of the unknown variable <span class="math inline">\(x\)</span>.</p>
+<p>Equations often contain variable other than the unknowns. Those variables, which are assumed to be known, are usually called <strong><em>constants</em></strong>, <strong><em>coefficients</em></strong> or <strong><em>parameters</em></strong>. For example, in the linear equation <span class="math inline">\(ax+b=c\)</span> of (the unknown) <span class="math inline">\(x\)</span>, the variables <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are referred as known coefficients or constants.</p>
+<p>An <strong><em>identity</em></strong> is an equation that is true for all possible values of the variable(s) it contains. For example, <span class="math inline">\(x^2-y^2=(x+y)(x-y)\)</span> is an identity.</p>
+<p><strong><em>Solving an equation</em></strong> consists of determining values of the variables that make the equality true. Two equations are said to be <strong><em>equivalent</em></strong> if and only if they have the same solution set, that is, a solution of one equation is also a solution of the other equation. For example <span class="math inline">\(2x-6=0\)</span> and <span class="math inline">\(x-1=2\)</span> are equivalent.</p>
+
+<div class="rmdnote">
+<p>When solving an equation, the following operations can be used to transform an equation to an equivalent one:</p>
+<ul>
+<li><p>Adding or subtracting the same quantity to both sides of an equation. For example, <span class="math inline">\(x-1=2\)</span> is equivalent to <span class="math inline">\(x-1+1=2+1\)</span>.</p></li>
+<li><p>Multiplying or dividing both sides of an equation <strong>by a non-zero quantity</strong>. For example <span class="math inline">\(2x=4\)</span> is equivalent to <span class="math inline">\(\frac{2x}{2}=\frac{4}{2}\)</span>.</p></li>
+<li><p>Applying an identity to transform one side of the equation. For example, <span class="math inline">\(x^2-1=0\)</span> is equivalent to <span class="math inline">\((x-1)(x+1)=0\)</span>, where the identity <span class="math inline">\(x^2-1=(x-1)(x+1)\)</span> was applied.</p></li>
+</ul>
+</div>
+
+<div class="rmdnote">
+<p>In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called extraneous solutions. For example, taking squares of both sides of the equation <span class="math inline">\(x=1\)</span> produces the equation <span class="math inline">\(x^2=1\)</span>. The new equation <span class="math inline">\(x^2=1\)</span> has two solutions <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=1\)</span>, but the original equation <span class="math inline">\(x=1\)</span> only has one solution. The solution <span class="math inline">\(x=-1\)</span> of the equation <span class="math inline">\(x^2=1\)</span> is an extraneous solution of the equation <span class="math inline">\(x=1\)</span>.</p>
+</div>
+</div>
+<div id="quadratic-equations" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Quadratic Equations</h2>
+<p>A <strong>polynomial equation</strong> is an equation that can be written in the form
+<span class="math display">\[
+a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}=0,
+\]</span>
+where <span class="math inline">\(n\)</span> is a positive integer and <span class="math inline">\(a_n\ne 0\)</span>.</p>
+<p>A polynomial equation is called a <strong><em>quadratic equation</em></strong> if <span class="math inline">\(n=2\)</span>. For example, <span class="math inline">\(2x^2+5x-3=0\)</span>. We often write a quadratic equation in its <strong><em>standard form</em></strong>
+<span class="math display">\[a x^2+bx+c=0,\]</span>
+where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are numbers, and <span class="math inline">\(a\neq 0\)</span>.</p>
+<p>When solving linear equations, arithmetic operations are enough. In general, one may need to use identity or functional operation. Factoring is one of those frequently used identity operation. Indeed, to solve a problem, a general strategy is to to reduce the original problem to easier problems. Using factoring and the <strong><em>zero product property</em></strong>:
+<span class="math display">\[A\cdot B=0 \quad ~~\text{if and only if}~~  \quad A=0 ~~\text{or}~~ B=0,\]</span>
+one can transform a polynomial equation into smaller degree polynomial equations. In particular, if <span class="math inline">\(ax^2+bx+c=(mx-p)(nx-q)\)</span>, then a solution of the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> is a solution of either <span class="math inline">\(mx-p=0\)</span> or <span class="math inline">\(nx-q=0\)</span>.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-127" class="example"><strong>Example 5.1  </strong></span>
+Solve the equation
+<span class="math display">\[2x^2+5x=3.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite the equation into “<em>Expression</em>=0” form and factor.
+<span class="math display">\[
+ \begin{aligned}
+     2x^2+5x&amp;=3\\
+     2x^2+5x-3&amp;=0\\
+     (2x-1)(x+3)&amp;=0
+ \end{aligned}
+ \]</span></p></li>
+<li><p>Apply the zero product property.
+<span class="math display">\[2x-1=0\quad\text{or}\quad x+3=0.\]</span></p></li>
+<li><p>Solve each equation.
+<span class="math display">\[
+ \begin{aligned}
+     2x-1 =0       &amp; \qquad\text{or} &amp; x+3 =0  \\
+     2x   =1       &amp;    &amp; x   =-3 \\
+     x    =\frac12 &amp; \qquad\text{or} &amp; x   =-3
+ \end{aligned}
+ \]</span></p></li>
+<li><p>The solution set is <span class="math inline">\(\{-3, \frac12\}\)</span>.</p></li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-129" class="example"><strong>Example 5.2  </strong></span>
+Solve the equation
+<span class="math display">\[(x-2)(x+3)=-4.\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite the equation into “<em>Expression</em>=0” form and factor.
+<span class="math display">\[
+ \begin{aligned}
+     (x-2)(x+3)&amp;=-4\\
+     x^2+x-6&amp;=-4\\
+     x^2+x-2&amp;=0\\
+     (x-1)(x+2)&amp;=0
+ \end{aligned}
+ \]</span></p></li>
+<li><p>Apply the zero product property.
+<span class="math display">\[x-1=0\quad\text{or}\quad x+2=0.\]</span></p></li>
+<li><p>Solve each equation.
+<span class="math display">\[
+ \begin{aligned}
+     x-1 =0 &amp; \qquad\text{or} &amp; x+2 =0  \\
+     x   =1 &amp; \qquad\text{or} &amp; x   =-2
+ \end{aligned}
+ \]</span></p></li>
+<li><p>The solution set is <span class="math inline">\(\{-2, 1\}\)</span>.</p></li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-131" class="example"><strong>Example 5.3  </strong></span>
+A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is <span class="math inline">\(10\)</span> meters by <span class="math inline">\(16\)</span> meters and the total area is 216 square meters, determine the width of the path.</p>
+<p><img src="figs/tikz-rectangular-uniform-width.png" style="width:30.0%" /></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that the width of the frame is <span class="math inline">\(x\)</span> meters. Translate given information into expressions in <span class="math inline">\(x\)</span> and build an equation.<br />
+Total Width: <span class="math inline">\(2x+10\)</span>  Total Length: <span class="math inline">\(2x+16\)</span><br />
+Width <span class="math inline">\(\times\)</span> Length=Total Area:
+<span class="math display">\[(2x+10)(2x+16)=216.\]</span></p></li>
+<li><p>Solve the equation.
+<span class="math display">\[
+ \begin{aligned}
+     (2x+10)(2x+16)&amp;=216\\
+     4x^2+52x+160&amp;=216\\
+     4x^2+52x-56&amp;=0\\
+     x^2+13x-14&amp;=0\\
+     (x+14)(x-1)&amp;=0
+ \end{aligned}
+ \]</span>
+<span class="math display">\[
+ x = -14\quad \text{or}\quad x = 1
+ \]</span></p></li>
+<li><p>So the width of the path is <span class="math inline">\(1\)</span> meter.</p></li>
+</ol>
+</div>
+
+<div class="rmdtip">
+<p><strong>Understand the Problem</strong><br />
+When solving a word problem, you may first outline what’s known and what’s unknown, and restate the problem using algebraic expressions. Once you reformulated the problem algebraically, you may solve it using your mathematical knowledge.</p>
+</div>
+</div>
+<div id="practice-4" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Practice</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-134" class="exercise"><strong>Problem 5.1  </strong></span>
+Factor the trinomial.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(x^2+4x+3\)</span></li>
+<li><span class="math inline">\(x^2+6x-7\)</span></li>
+<li><span class="math inline">\(x^2-3x-10\)</span></li>
+<li><span class="math inline">\(x^2-5x+6\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-135" class="exercise"><strong>Problem 5.2  </strong></span>
+Factor the trinomial.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(5x^2+7x+2\)</span></li>
+<li><span class="math inline">\(2x^2+5x-12\)</span></li>
+<li><span class="math inline">\(3x^2-10x-8\)</span></li>
+<li><span class="math inline">\(4x^2-12x+5\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-136" class="exercise"><strong>Problem 5.3  </strong></span>
+Solve the equation by factoring.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(x^2-3x+2=0\)</span></li>
+<li><span class="math inline">\(2x^2-3x=5\)</span></li>
+<li><span class="math inline">\((x-1)(x+3)=5\)</span></li>
+<li><span class="math inline">\(\frac13(2-x)(x+5)=4\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-137" class="exercise"><strong>Problem 5.4  </strong></span>
+Find all real solutions of the equation by factoring.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(4(x-2)^2-9=0\)</span></li>
+<li><span class="math inline">\(2x^3-18x=0\)</span></li>
+<li><span class="math inline">\(3x^4-2x^2=1\)</span></li>
+<li><span class="math inline">\(x^3-3x^2-4x+12=0\)</span></li>
+</ol>
+</div>
+<!-- 
+\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-138"><strong>(\#exr:unnamed-chunk-138) </strong></span>
+Find the $x$-intercepts for each of the the following functions.
+
+1. $f(x)=2x^2-x-21$
+1. $g(x)=(x+1)(x-2)-4$
+
+``` -->
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-139" class="exercise"><strong>Problem 5.5  </strong></span>
+A paint measuring <span class="math inline">\(3\)</span> inches by <span class="math inline">\(4\)</span> inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is <span class="math inline">\(30\)</span> square inches, determine the width of the frame.</p>
+<p><img src="figs/tikz-paint-uniform-width.png" style="width:30.0%" /></p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-140" class="exercise"><strong>Problem 5.6  </strong></span>
+A rectangle whose length is <span class="math inline">\(2\)</span> meters longer than its width has an area <span class="math inline">\(8\)</span> square meters. Find the width and the length of the rectangle.</p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-141" class="exercise"><strong>Problem 5.7  </strong></span>
+The product of two <strong>consecutive negative odd</strong> numbers is <span class="math inline">\(35\)</span>. Find the numbers.</p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-142" class="exercise"><strong>Problem 5.8  </strong></span>
+In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.</p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-143" class="exercise"><strong>Problem 5.9  </strong></span>
+A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height <span class="math inline">\(h(t)\)</span> of the ball from the ground after time <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)=-16t^2 + 48t + 160\)</span> feet. How long it will take the ball to hit the ground?</p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-144" class="exercise"><strong>Problem 5.10  </strong></span>
+A toy factory estimates that the demand of a particular toy is <span class="math inline">\(300 -x\)</span> units each week if the price is $<span class="math inline">\(x\)</span> dollars per unit. Each week there is a fixed cost $40,000 to produce the demanded toys.
+The weekly revenue is a function of the price given by <span class="math inline">\(R(x)=x(30-x)\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Find the function that models the weekly revenue, <span class="math inline">\(R\)</span>, received when the selling price is $<span class="math inline">\(x\)</span> per unit.</li>
+<li>What the price range so the the revenue is nonnegative.</li>
+</ol>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="radicals-and-rational-exponents.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quadratic-formula.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agfun.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

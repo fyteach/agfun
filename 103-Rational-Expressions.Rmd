@@ -108,7 +108,7 @@ $$
 
 ## Dividing Rational Expressions
 
-If $p$, $q$, $s$, $t$ are polynomials where $q\neq 0$, $s\neq $ and $t\neq 0$, then
+If $p$, $q$, $s$, $t$ are polynomials where $q\neq 0$, $s\neq 0$ and $t\neq 0$, then
 $$
 \dfrac{~p~}{~q~}\div\dfrac{~s~}{~t~}=\dfrac{~p~}{~q~}\cdot\dfrac{~t~}{~s~}=\dfrac{~pt~}{~qs~}.
 $$

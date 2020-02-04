@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 8 Radical Equations | Algebra and Geometry of Elementary Functions</title>
+  <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 8 Radical Equations | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="github-repo" content="fyemath/agfun" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 8 Radical Equations | Algebra and Geometry of Elementary Functions" />
+  
+  <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  
+
+<meta name="author" content="Fei Ye" />
+
+
+<meta name="date" content="2020-02-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rational-equations.html"/>
+<link rel="next" href="absolute-value-equations.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="../js/collapse.js"></script>
+<script src="../js/solutionfolding.js"></script>
+
+<script>
+$(document).ready(function () {
+  window.initializeSolutionFolding("show" === "hide");
+});
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Algebra and Geometry of Functions</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
+<li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
+<li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
+<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
+<li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
+<li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
+<li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algebra and Geometry of Elementary Functions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div class="latex-macros" style="display: none">
+$$\require{color}$$
+$$\require{amsmath}$$
+$$\require{cancel}$$
+$$\definecolor{purple}{RGB}{226, 15, 233}$$
+$$\definecolor{grey}{RGB}{177, 159, 149}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
+</div>
+<div id="radical-equations" class="section level1" number="8">
+<h1><span class="header-section-number">Topic 8</span> Radical Equations</h1>
+<div id="why-is-the-square-root-of-two-irrational" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Why is The Square Root of Two Irrational</h2>
+
+<div class="rmdthink">
+<p>We know that the number <span class="math inline">\(\sqrt{2}\)</span> is not a rational number. But why? Can you give an explanation?</p>
+<!-- [^square]: Watch the youtube video <https://www.youtube.com/watch?v=f1yDExNAEMg> for interesting explanation. -->
+</div>
+</div>
+<div id="solving-radical-equations-by-taking-a-power" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Solving Radical Equations by Taking a Power</h2>
+<p>The idea to solve a radical equation <span class="math inline">\(\sqrt[n]{X}=a\)</span> is to first take <span class="math inline">\(n\)</span>-th power of both sides to get rid of the radical sign, that is <span class="math inline">\(X=a^n\)</span> and then solve the resulting equation.</p>
+
+<div class="rmdtip">
+<p><strong>Solve by Reduction</strong><br />
+The goal to solve a single variable equation is to isolate the variable. When an equation involves radical expressions, you can not isolate the variable arithmetically without eliminating the radical sign unless the radicand is a perfect power. To remove a radical sign, you make take a power. However, you’d better to isolate it first. Because simply taking powers of both sides may create new radical expressions.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-180" class="example"><strong>Example 8.1  </strong></span>
+Solve the equation <span class="math inline">\(x-\sqrt{x+1}=1.\)</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>Arrange terms so that one radical is isolated on one side of the equation.
+<span class="math display">\[x-1=\sqrt{x+1}\]</span></p></li>
+<li><p>Square both sides to eliminate the square root.
+<span class="math display">\[(x-1)^2=x+1\]</span></p></li>
+<li><p>Solve the resulting equation.
+<span class="math display">\[
+   \begin{aligned}
+       x^2-2x+1&amp;=x+1\\
+       x^2-3x&amp;=0\\
+       x(x-3)&amp;=0
+   \end{aligned}
+\]</span>
+<span class="math display">\[
+\begin{aligned}
+   x =0 &amp; \qquad \text{or} &amp; x-3 =0 \\
+   x =0 &amp; \qquad \text{or} &amp; x   =3
+\end{aligned}
+\]</span></p></li>
+<li><p>Check all proposed solutions.<br />
+Plug <span class="math inline">\(x=0\)</span> into the original equation, we see that the left hand side is <span class="math inline">\(0-\sqrt{0+1}=0-\sqrt{1}=0-1=-1\)</span> which is not equal to the right hand side. So <span class="math inline">\(x=0\)</span> cannot be a solution.</p>
+<p>Plug <span class="math inline">\(x=3\)</span> into the original equation, we see that the left hand side is <span class="math inline">\(3-\sqrt{3+1}=3-\sqrt{4}=3-2=1\)</span>. So <span class="math inline">\(x=3\)</span> is a solution.</p></li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-182" class="example"><strong>Example 8.2  </strong></span>
+Solve the equation <span class="math inline">\(\sqrt{x-1}-\sqrt{x-6}=1.\)</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Isolated one radical.
+<span class="math display">\[
+   \sqrt{x-1}=\sqrt{x-6}+1\\
+\]</span></li>
+<li>Square both sides to remove radical sign and then isolate the remaining radical.
+<span class="math display">\[
+   \begin{aligned}
+       x-1&amp;=(x-6)+2\sqrt{x-6}+1\\
+       x-1&amp;=x-5+2\sqrt{x-6}\\
+       4&amp;=2\sqrt{x-6}\\
+       2&amp;=\sqrt{x-6}.
+   \end{aligned}
+\]</span></li>
+<li>Square both sides to remove the radical sign and then solve.
+<span class="math display">\[
+   \begin{aligned}
+       \sqrt{x-6}&amp;=2\\
+       x-6&amp;=4\\
+       x&amp;=10.
+   \end{aligned}
+\]</span>
+Since <span class="math inline">\(10-1&gt;0\)</span> and <span class="math inline">\(10-6&gt;0\)</span>, <span class="math inline">\(x=10\)</span> is a valid solution. Indeed,
+<span class="math display">\[
+   \sqrt{10-1}-\sqrt{10-6}=\sqrt{9}-\sqrt{4}=3-2=1.
+\]</span></li>
+</ol>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-184" class="example"><strong>Example 8.3  </strong></span>
+Solve the equation <span class="math inline">\(-2\sqrt[3]{x-4}=6.\)</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Isolated the radical.
+<span class="math display">\[
+   \sqrt[3]{x-4}=-3
+\]</span></li>
+<li>Cube both sides to eliminate the cube root and then solve the resulting equation.
+<span class="math display">\[
+   \begin{aligned}
+       x-4&amp;=(-3)^3\\
+       x-4&amp;=-27\\
+       x&amp;=-23
+   \end{aligned}
+\]</span>
+The solution is <span class="math inline">\(x=-23\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="equations-involving-rational-exponents" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Equations Involving Rational Exponents</h2>
+<p>Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}\)</span>. When <span class="math inline">\(m\)</span> is even and <span class="math inline">\(n\)</span> is odd, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=|X|\)</span>. Otherwise, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=X\)</span>.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-186" class="example"><strong>Example 8.4  </strong></span>
+Solve the equation <span class="math inline">\((x+2)^{\frac12}-(x-3)^{\frac12}=1\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>Since there are more than one term involving rational exponents, to solve the equation, we isolate one term and taking power and so on so forth.
+<span class="math display">\[
+\begin{aligned}
+    (x+2)^{\frac12}-(x-3)^{\frac12}=&amp;1\\
+    (x+2)^{\frac12}=&amp; (x-3)^{\frac12}+1\\
+    x+2 =&amp; \left((x-3)^{\frac12}+1\right)^2\\
+    x+2 =&amp; (x-3)+2(x-3)^{\frac12}+1\\
+    2(x-3)^{\frac12}=&amp;4\\
+    (x-3)^{\frac12}=&amp;2\\
+    x-3=&amp;4\\
+    x=&amp;7
+\end{aligned}
+\]</span>
+Check:
+<span class="math display">\[(7+2)^{\frac12}-(7-3)^{\frac12}=\sqrt{9}-\sqrt{4}=3-2=1.\]</span></p>
+<p>So the equation has one solution <span class="math inline">\(x=7\)</span>.</p>
+</div>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-188" class="example"><strong>Example 8.5  </strong></span>
+Solve the equation <span class="math inline">\((x-1)^{\frac{2}{3}}=4\)</span>.</p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>There are different way to solve this equation. One may is to take rational powers of both sides and solve the resulting equation.
+<span class="math display">\[
+\begin{aligned}
+    (x-1)^{\frac{2}{3}}=&amp;4\\
+    \left((x-1)^{\frac{2}{3}}\right)^{\frac32}=&amp;4^{\frac32}\\
+    |x-1|=&amp;8\\
+    x-1=8 \qquad\text{or}&amp;\qquad x-1=-8\\
+    x=9 \qquad\text{or}&amp;\qquad x=-7
+\end{aligned}
+\]</span>
+Check:
+<span class="math display">\[(9-1)^{\frac23}=8^{\frac23}=(8^{\frac13})^2=2^2=4;\]</span>
+<span class="math display">\[(-7-1)^{\frac23}=(-8)^{\frac23}=((-8)^{\frac13})^2=(-2)^2=4.\]</span></p>
+<p>So the equation has two solutions <span class="math inline">\(x=9\)</span> and <span class="math inline">\(x=-7\)</span>.</p>
+</div>
+</div>
+<div id="learn-from-mistakes" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Learn from Mistakes</h2>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-190" class="example"><strong>Example 8.6  </strong></span>
+Can you find the mistakes made in the solution and fix it?</p>
+<p>Solve the radical equation.
+<span class="math display">\[\sqrt{x-1}+2=x\]</span></p>
+<div style="color: red">
+<p><strong>Solution (incorrect)</strong>:
+<span class="math display">\[
+\begin{aligned}
+\sqrt{x-2}+2&amp;=x\\
+(\sqrt{x-2})^2+2^2&amp;=x^2\\
+x-2+4&amp;=x^2\\
+x+2&amp;=x^2\\
+x^2-x-2&amp;=0\\
+(x-2)(x+1)&amp;=0\\
+x-2=0 \qquad\text{or}&amp; \qquad x+1=0\\
+x=2 \qquad\text{or}&amp;\qquad x=-1
+\end{aligned}
+\]</span>
+Answer: the equation has two solutions <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=-1\)</span>.</p>
+</div>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>When squaring one side of the equation, the other side as a whole should be squared. The mistake occurred at the squaring step. The right way to solve the equation is as follows.
+<span class="math display">\[
+\begin{aligned}
+\sqrt{x-2}+2&amp;=x\\
+\sqrt{x-2}&amp;=x-2\\
+x-2&amp;=(x-2)^2\\
+(x-2)^2-(x-2)&amp;=0\\
+(x-2)(x-2-1)&amp;=0\\
+(x-2)(x-3)&amp;=0\\
+x=2 \qquad\text{or}&amp;\qquad x=3
+\end{aligned}
+\]</span>
+Because squaring is not an equivalent transformation in general, the solutions of the resulting equations must be checked. When <span class="math inline">\(x=2\)</span>, the left side of the original equation is <span class="math inline">\(\sqrt{2-2}+2=0+2=2\)</span>. When <span class="math inline">\(x=3\)</span>, the left side is <span class="math inline">\(\sqrt{3-2}+2=1+2=3\)</span>. So both <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span> are solutions of the function <span class="math inline">\(\sqrt{x-1}+2=x\)</span>.</p>
+</div>
+</div>
+<div id="practice-7" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Practice</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-192" class="exercise"><strong>Problem 8.1  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{3x+1}=4\)</span></li>
+<li><span class="math inline">\(\sqrt{2x-1}-5=0\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-193" class="exercise"><strong>Problem 8.2  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{5x+1}=x+1\)</span></li>
+<li><span class="math inline">\(x=\sqrt{3x+7}-3\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-194" class="exercise"><strong>Problem 8.3  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{6x+7}-x=2\)</span></li>
+<li><span class="math inline">\(\sqrt{x+2}+\sqrt{x-1}=3\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-195" class="exercise"><strong>Problem 8.4  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\sqrt{x+5}-\sqrt{x-3}=2\)</span></li>
+<li><span class="math inline">\(3\sqrt[3]{3x-1}=6\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-196" class="exercise"><strong>Problem 8.5  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\((x+3)^{\frac12}=x+1\)</span></li>
+<li><span class="math inline">\(2(x-1)^{\frac12}-(x-1)^{-\frac12}=1\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-197" class="exercise"><strong>Problem 8.6  </strong></span>
+Solve each radical equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\((x-1)^{\frac32}=8\)</span></li>
+<li><span class="math inline">\((x+1)^{\frac23}=4\)</span></li>
+</ol>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rational-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="absolute-value-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agfun.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

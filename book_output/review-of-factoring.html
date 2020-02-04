@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-01" />
+<meta name="date" content="2020-02-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,18 +87,20 @@ $(document).ready(function () {
 <li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
 <li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
 <li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
-<li class="chapter" data-level="5" data-path="solve-polynomial-equations-by-factoring.html"><a href="solve-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solve Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
 <li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
-<li class="chapter" data-level="7" data-path="applications-of-quadratic-equations.html"><a href="applications-of-quadratic-equations.html"><i class="fa fa-check"></i><b>7</b> Applications of Quadratic Equations</a></li>
-<li class="chapter" data-level="8" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>8</b> Linear Inequalities</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
 <li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
-<li class="chapter" data-level="9" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>9</b> Introduction to Functions</a></li>
-<li class="chapter" data-level="10" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>10</b> Linear Functions</a></li>
-<li class="chapter" data-level="11" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>11</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="12" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>12</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="13" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>13</b> Exponential Functions</a></li>
-<li class="chapter" data-level="14" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>14</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="15" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>15</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -125,7 +127,9 @@ $$\require{amsmath}$$
 $$\require{cancel}$$
 $$\definecolor{purple}{RGB}{226, 15, 233}$$
 $$\definecolor{grey}{RGB}{177, 159, 149}$$
-$$\newcommand*{\centermath}[1]{\hspace{\hfil} #1 \hspace{\hfil}}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div id="review-of-factoring" class="section level1" number="2">
 <h1><span class="header-section-number">Topic 2</span> Review of Factoring</h1>
@@ -442,6 +446,73 @@ Factor completely into polynomials with integer coefficients.</p>
 <li><span class="math inline">\(4x^4-12x^2+5\)</span></li>
 <li><span class="math inline">\(2x^3y-9x^2y^2-5xy^3\)</span></li>
 </ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-39" class="exercise"><strong>Problem 2.8  </strong></span>
+Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.</p>
+<p>“<span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{10~~2~~9~~15}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{4~~3~~15~~7~~2~~1}\)</span>;
+ <span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{11~~2~~2}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{8~~5~~3~~6}\)</span>;
+ <span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{14~~3}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{12~~5~~14~~2~~15~~11~~1~~9~~5~~14}\)</span>.”</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>A:</strong> <span class="math inline">\(3x-2\)</span></td>
+<td><strong>B:</strong> <span class="math inline">\(2x+1\)</span></td>
+<td><strong>C:</strong> <span class="math inline">\(x+6\)</span></td>
+<td><strong>D:</strong> <span class="math inline">\(x+7\)</span></td>
+<td><strong>E:</strong> <span class="math inline">\(2x-1\)</span></td>
+<td><strong>F:</strong> <span class="math inline">\(3x-1\)</span></td>
+<td><strong>G:</strong> <span class="math inline">\(x+10\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>H:</strong> <span class="math inline">\(x-8\)</span></td>
+<td><strong>I:</strong> <span class="math inline">\(2x+9\)</span></td>
+<td><strong>J:</strong> <span class="math inline">\(x-1\)</span></td>
+<td><strong>K:</strong> <span class="math inline">\(x+3\)</span></td>
+<td><strong>L:</strong> <span class="math inline">\(2x-5\)</span></td>
+<td><strong>M:</strong> <span class="math inline">\(x+5\)</span></td>
+<td><strong>N:</strong> <span class="math inline">\(x-7\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>O:</strong> <span class="math inline">\(x-13\)</span></td>
+<td><strong>P:</strong> <span class="math inline">\(5x-3\)</span></td>
+<td><strong>Q:</strong> <span class="math inline">\(4x-11\)</span></td>
+<td><strong>R:</strong> <span class="math inline">\(x-9\)</span></td>
+<td><strong>S:</strong> <span class="math inline">\(2x+3\)</span></td>
+<td><strong>T:</strong> <span class="math inline">\(x+4\)</span></td>
+<td><strong>U:</strong> <span class="math inline">\(7x+1\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>V:</strong> <span class="math inline">\(3x+5\)</span></td>
+<td><strong>W:</strong> <span class="math inline">\(3x+4\)</span></td>
+<td><strong>X:</strong> <span class="math inline">\(8x+3\)</span></td>
+<td><strong>Y:</strong> <span class="math inline">\(x-14\)</span></td>
+<td><strong>Z:</strong> <span class="math inline">\(5x-6\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="riddle">
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(x^2-2x-24\)</span></li>
+<li><span class="math inline">\(6x^2+x-2\)</span></li>
+<li><span class="math inline">\(x^2-16x+39\)</span></li>
+<li><span class="math inline">\(6x^2+13x-5\)</span></li>
+<li><span class="math inline">\(x^2-5x-14\)</span></li>
+<li><span class="math inline">\(3x^2-5x-12\)</span></li>
+<li><span class="math inline">\(x^2-x-110\)</span></li>
+<li><span class="math inline">\(x^2-9\)</span></li>
+<li><span class="math inline">\(-3x^2+11x-6\)</span></li>
+<li><span class="math inline">\(x^2-10x+16\)</span></li>
+<li><span class="math inline">\(-2x^2+5x+12\)</span></li>
+<li><span class="math inline">\(42x^2-x-1\)</span></li>
+<li><span class="math inline">\(-2x^2-3x+27\)</span></li>
+<li><span class="math inline">\(x^2+14x+49\)</span></li>
+<li><span class="math inline">\(x^2-81\)</span></li>
+</ol>
+</div>
 </div>
 
 </div>

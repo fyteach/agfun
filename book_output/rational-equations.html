@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 7 Rational Equations | Algebra and Geometry of Elementary Functions</title>
+  <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 7 Rational Equations | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  <meta name="github-repo" content="fyemath/agfun" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 7 Rational Equations | Algebra and Geometry of Elementary Functions" />
+  
+  <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
+  
+
+<meta name="author" content="Fei Ye" />
+
+
+<meta name="date" content="2020-02-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="quadratic-formula.html"/>
+<link rel="next" href="radical-equations.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="../js/collapse.js"></script>
+<script src="../js/solutionfolding.js"></script>
+
+<script>
+$(document).ready(function () {
+  window.initializeSolutionFolding("show" === "hide");
+});
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Algebra and Geometry of Functions</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
+<li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
+<li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
+<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
+<li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
+<li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
+<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
+<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
+<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
+<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
+<li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
+<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
+<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
+<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algebra and Geometry of Elementary Functions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div class="latex-macros" style="display: none">
+$$\require{color}$$
+$$\require{amsmath}$$
+$$\require{cancel}$$
+$$\definecolor{purple}{RGB}{226, 15, 233}$$
+$$\definecolor{grey}{RGB}{177, 159, 149}$$
+$$\newcommand{\ii}{\mathbf{i}}$$
+$$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
+$$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
+</div>
+<div id="rational-equations" class="section level1" number="7">
+<h1><span class="header-section-number">Topic 7</span> Rational Equations</h1>
+<div id="a-problem-of-the-father-of-algebra" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> A Problem of the Father of Algebra</h2>
+
+<div class="rmdthink">
+<p>The father of algebra, <a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi#Algebra">Muḥammad ibn Mūsā al-Khwārizmī</a>, in his book “<a href="https://archive.org/details/algebraofmohamme00khuwrich/page/44/mode/2up">Algebra</a>”, answered the following problem:</p>
+<blockquote>
+<p>“… I have divided ten into two parts; and have divided the first by the second, and the second by the first, and the sum of the quotient is two and one-sixth;…”</p>
+</blockquote>
+<p>Do you know what are those two parts?</p>
+<!-- [^1]: It might be the earliest problem on rational equation appeared in a book. -->
+</div>
+</div>
+<div id="solving-rational-equations" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Solving Rational Equations</h2>
+<p>A <strong><em>rational equation</em></strong> is an equation that contains a rational expression. One way to solve rational equations is to clear all denominators by multiplying the LCD to both sides. Note that because there are values such that the LCD has the value zero. Clearing denominator in general is not an equivalent transformation, rather a functional transformation. So don’t forget to check possible extraneous solutions.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-166" class="example"><strong>Example 7.1  </strong></span>
+Solve
+<span class="math display">\[
+\dfrac{5}{x^2-9}=\dfrac{3}{x-3}-\dfrac{2}{x+3}.
+\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Find the LCD.
+Since <span class="math inline">\(x^2-9=(x+3)(x-3)\)</span>, the LCD is <span class="math inline">\((x+3)(x-3)\)</span>.</li>
+<li>Clear denominators.
+Multiply each rational expression in both sides by <span class="math inline">\((x+3)(x-3)\)</span> and simplify:
+<span class="math display">\[
+     \begin{aligned}
+         (x+3)(x-3)\cdot\dfrac{5}{x^2-9}&amp;=(x+3)(x-3)\cdot\dfrac{3}{x-3}-(x+3)(x-3)\cdot\dfrac{2}{x+3}\\
+         5&amp;=3(x+3)-2(x-3)
+     \end{aligned}
+ \]</span></li>
+<li>Solve the resulting equation.
+<span class="math display">\[
+     \begin{aligned}
+         5&amp;=3(x+3)-2(x-3)
+         5&amp;=x+15\\
+         -10&amp;=x
+     \end{aligned}
+ \]</span></li>
+<li>Check for any extraneous solution by plugging the solution into the LCD to see if it is zero. If it is zero, then the solution is extraneous.
+<span class="math display">\[
+     (-10+3)(-10-3)\neq 0
+ \]</span>
+So <span class="math inline">\(x=-10\)</span> is a valid solution of the original equation.</li>
+</ol>
+</div>
+
+<div class="rmdtip">
+<p><strong>Reduction With Auxiliary Conditions</strong><br />
+Clearing denominator uses the strategy “<strong>reduction with auxiliary conditions</strong>”. The auxiliary condition used when clearing the denominators is that the LCD is non-zero. Generally, if you don’t know how to solve a problem under the given condition, you may try solve the problem by adding extra conditions first and then try to eliminate the extra conditions and/or their consequences.</p>
+</div>
+</div>
+<div id="literal-equations" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Literal Equations</h2>
+<p>A <strong><em>literal equation</em></strong> is an equation involving two or more variables. When solving a literal equation for one variable, other variables can be viewed as constants.</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-169" class="example"><strong>Example 7.2  </strong></span>
+Solve for <span class="math inline">\(x\)</span> from the equation
+<span class="math display">\[
+\frac{1}{x}+\frac{1}{y}=\dfrac{1}{z}.
+\]</span></p>
+</div>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<ol style="list-style-type: decimal">
+<li>The LCD is <span class="math inline">\(xyz\)</span>.</li>
+<li>Clear denominators.
+<span class="math display">\[
+     \begin{aligned}
+         xyz\cdot\frac{1}{x}+xyz\cdot\frac{1}{y}&amp;=xyz\cdot\dfrac{1}{z}\\
+         yz+xz&amp;=xy\\
+     \end{aligned}
+ \]</span></li>
+<li>Solve the resulting equation.
+<span class="math display">\[
+     \begin{aligned}
+         yz+xz&amp;=xy\\
+         yz&amp;=xy-xz\\
+         yz&amp;=x(y-z)\\
+         \dfrac{yz}{y-z}&amp;=x \quad \text{if} y\neq z
+     \end{aligned}
+ \]</span></li>
+<li>The solution is <span class="math inline">\(x=\dfrac{yz}{y-z}\)</span> if <span class="math inline">\(y\neq z\)</span>. If <span class="math inline">\(y=z\)</span>, the equation has no solution.</li>
+</ol>
+</div>
+
+<div class="rmdnote">
+<p>Another way to solve a rational equation is to rewrite and simplify the equation into the form <span class="math inline">\(\dfrac{\text{A}}{B}=0\)</span> where <span class="math inline">\(\dfrac{A}{B}\)</span> is a <strong>reduced fraction</strong>. Then the rational equation is equivalent to the equation <span class="math inline">\(A=0\)</span>.</p>
+</div>
+</div>
+<div id="practice-6" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Practice</h2>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-172" class="exercise"><strong>Problem 7.1  </strong></span>
+Solve.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac1{x+1}+\dfrac1{x-1}=\dfrac4{x^2-1}\)</span></li>
+<li><span class="math inline">\(\dfrac{30}{x^2-25}=\dfrac3{x+5}+\dfrac2{x-5}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-173" class="exercise"><strong>Problem 7.2  </strong></span>
+Solve.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\dfrac{2x-1}{x^2+2x-8}=\dfrac1{x-2}-\dfrac{2}{x+4}\)</span></li>
+<li><span class="math inline">\(\dfrac{3x}{x-5}=\dfrac{2x}{x+1}-\dfrac{42}{x^2-4x-5}\)</span></li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-174" class="exercise"><strong>Problem 7.3  </strong></span>
+Solve a variable from a formula.</p>
+<ol style="list-style-type: decimal">
+<li>Solve for <span class="math inline">\(f\)</span> from<span class="math inline">\(\dfrac1p+\dfrac1q=\dfrac1f\)</span>.</li>
+<li>Solve for <span class="math inline">\(x\)</span> from<span class="math inline">\(A=\dfrac{f+cx}{x}\)</span>.</li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-175" class="exercise"><strong>Problem 7.4  </strong></span>
+Solve for <span class="math inline">\(x\)</span> from the equation.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(2(x+1)^{-1}+x^{-1}=2\)</span>.</li>
+<li><span class="math inline">\(\displaystyle\frac{a^2x +2a}{x^{-1}}=-1\)</span>.</li>
+</ol>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-176" class="exercise"><strong>Problem 7.5  </strong></span>
+David can row 3 miles per hour in still water. It takes him 90 minutes to row 2 miles upstream and then back. How fast is the current?</p>
+</div>
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-177" class="exercise"><strong>Problem 7.6  </strong></span>
+The size of a A0 paper is defined to have an area of 1 square meter with the longer dimension <span class="math inline">\(\sqrt[4]{2}\)</span> meters. Successive paper sizes in the series A1, A2, A3, and so forth, are defined by halving the preceding paper size across the larger dimension. Can you find the dimension of a A4 paper?</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="quadratic-formula.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="radical-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["agfun.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

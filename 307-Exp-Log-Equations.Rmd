@@ -1,7 +1,158 @@
 # Applications of Exponential and Logarithmic Functions
 
-## Exponential Equations
+## Exponential and Logarithmic Equations
 
-## Logarithmic Equations
+To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.
 
-## Applications
+```{example}
+
+Solve the equation $10^{2x-1}-5=0$.
+
+```
+
+```{solution}
+\
+
+1.  Rewrite the equation in the form $b^u=c$:
+    $$10^{2x-1}=5.$$
+2. Take logarithm of both sides and simplify: $$2x-1=\log 5.$$
+3. Solve the resulting equation:
+    $$x=\frac{1}{2}(\log5+1).$$
+
+
+```
+
+```{example}
+
+Solve the equation $\log_2 x + \log_2 (x - 2) = 3$.
+
+```
+
+```{solution}
+\
+
+1. Rewrite the equation in the form $\log_bu=c$:
+    $$\log_2(x(x - 2)) = 3$$
+1. Rewrite the equation in the exponential form (moving the base):
+    $$x(x-2)=2^3$$
+1. Solve the resulting equation $x^2-2x-8=0$. The solutions are $x=-2$ and $x=4$
+1. Check proposed solutions. Both $x$ and $x-2$ has to be positive. So $x=-2$ is not a solution of the original equation.  When $x=4$, we have $\log_24+\log_22=2+1=3$.  So $x=4$ is a solution.
+
+```
+
+## Solving Compound Interest Model
+
+```{example}
+
+A check of \$5000 was deposited in a savings account with an annual interest rate $6\%$ which is compounded monthly. How many years will it take for the money to raise by 20\%?
+
+```
+
+```{solution}
+\
+
+The question tells us the following information:
+$P=5000$, $r=0.06$, $n=12$, and $A=5000\cdot (1+0.2)=6000$. What we want to know is the number of years $t$. The compound interest model tells us that $t$ satisfies the following equation:
+$$
+6000=5000\left(1+\frac{0.06}{12}\right)^{12t}.
+$$
+This is an exponential equation and can be solve using logarithms.
+$$
+\begin{aligned}
+5000\left(1+\frac{0.06}{12}\right)^{12t}&=6000\\
+\left(1+\frac{0.06}{12}\right)^{12t}&=1.2\\
+12t\cdot \log\left(1+0.06\div 12\right)&=1.2\\
+12t&=\log(1.2)\div \log(1+0.06\div 12)\\
+t&=\log(1.2)\div\log(1+0.06\div 12)\div 12\approx 3.
+\end{aligned}
+$$
+So it takes about 3 years for the savings to raise by 20\%.
+
+```
+
+```{block2, type="rmdnote"}
+
+When solving exponential and logarithmic equations, you may also use the one-to-one property if both sides are powers with the same base or logarithms with the same base.
+
+```
+
+## More Applications
+
+## Practice
+
+```{exercise}
+
+Solve the exponential equation.
+
+1. $2^{x-1}=4$
+2. $7e^{2x}-5=58$
+
+```
+
+```{exercise}
+
+Solve the exponential equation.
+
+1. $3^{x^2-2x}=e^{-\ln3}$
+1. $2^{(x+1)}=3^{(1-x)}$
+
+```
+
+```{exercise}
+
+Solve the logarithmic equation.
+
+1. $\log_5x+\log_5(4x-1)=1$
+1. $\ln \sqrt{x+1}=1$
+
+```
+
+```{exercise}
+
+Solve the logarithmic equation.
+
+1. $\log_2(x+2)-\log_2(x-5)=3$
+1. $\log_3(x-5)=2-\log_3(x+3)$
+
+
+```
+
+```{exercise}
+
+For the given function, find values of $x$ satisfying the given equation.
+
+
+1. $f(x)=\log_4x-2\log_4(x+1)$,\quad $f(x)=-1$
+1. $g(x)=\log(2-5x)+\log(-x)$,\quad $g(x)=1$
+
+
+```
+
+```{exercise}
+
+Find intersections of the given pairs of curves.
+
+
+1. $f(x)=e^{x^2}$ and~ $g(x)=e^x+12$.
+1. $f(x)=\log_7\left(\frac12(x+2)\right)$ and~ $g(x)=1-\log_7(x-3)$
+
+
+```
+
+```{exercise}
+
+Using the formula $A=P(1+\frac rn)^{nt}$ to determine how many years, to the nearest hundredth,  it will take to double an investment \$20,000 at the interest rate 5\% compounded monthly.
+
+```
+
+```{exercise}
+
+Newton's Law of Cooling states that the temperature $T$ of an object at any time $t$ satisfying the equation $T=T_s+(T_0-T_s)e^{-rt}$,
+where $T_s$ is the the temperature of the surrounding environment,
+$T_0$ is the initial temperature of the object,
+and $r$ is positive constant characteristic of the system,
+which is in units of ${\displaystyle {\text{time}}^{-1}}{\displaystyle {\text{time}}^{-1}}$.
+In a room with a temperature of $22 ^\circ C$, a cup of tea of $97 ^\circ C$ was freshly brewed. 
+Suppose that $r=\ln 5/20~~\text{minute}^{-1} $. In how many minutes, the temperature of the tea will be $37 ^\circ C$?
+
+```
