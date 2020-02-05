@@ -10,13 +10,13 @@ The function $f(x)=\log_bx$ is called the logarithmic function $f$ of $x$ with t
 
 Graphs of logarithmic functions:
 
-<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;">
+::: {.twocolumns}
 
-![](figs/tikz-example-log-function-graph-1.png){width=60%}
+![a log function with b>1](figs/tikz-example-log-function-graph-1.png){width=60%}\
 
-![](figs/tikz-example-log-function-graph-2.png){width=60%}
+![a log function with b<1](figs/tikz-example-log-function-graph-2.png){width=60%}\
 
-</div>
+:::
 
 ## Common Logarithms and Natural Logarithms
 

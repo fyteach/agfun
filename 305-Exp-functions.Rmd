@@ -9,13 +9,13 @@ $$
 
 Graphs of exponential functions:
 
-<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;">
+:::: {.twocolumns}
 
-![](figs/tikz-example-exp-function-1.png)
+![exp function base less than 1](figs/tikz-example-exp-function-1.png){width=60%}\
 
-![](figs/tikz-example-exp-function-2.png)
+![exp function base greater than 1](figs/tikz-example-exp-function-2.png){width=60%}\
 
-</div>
+::::
 
 ```{block2, type="rmdnote"}
 
@@ -48,8 +48,7 @@ A sum of $\$10,000$ is invested at an annual rate of $8\%$, Find the balance, to
 ```{solution}
 \
 
-1. Find values of $P$, $r$, $t$ and $n$. In this case,
-$P=10,000$, $r=8\%=0.08$, $t=5$ and $n$ depends compounding.
+1. Find values of $P$, $r$, $t$ and $n$. In this case, $P=10,000$, $r=8\%=0.08$, $t=5$ and $n$ depends compounding.
 1. Plug the values in the formula and calculate.
 1. ``Monthly'' means $n=12$. Then
     $$

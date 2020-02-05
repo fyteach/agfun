@@ -54,7 +54,7 @@ Use the graph in the picture to answer the following questions.
 2. Find all maximum and minimum values of the function if they exist.  
 3. Find the value of $x$ such that $(x, 0)$ is on the graph.
 
-![](figs/function-example-quadratic.png){width=60%}
+![the graph of a function](figs/function-example-quadratic.png){width=60%}\
 
 ```
 
@@ -62,12 +62,12 @@ Use the graph in the picture to answer the following questions.
 \
 
 1. The graph is a function. Because every vertical line crosses the graph at most once.  
-1. The graph has the left endpoint  at $(-2, -2)$ and but no right endpoint. So the domain is $[-2, +\infty)$.  
-1. The graph has a lowest positioned point $(-2, -2)$ but no highest positioned point. So the range is $[-2, +\infty)$.  
-1. The graph is above 2 over the interval $(3, \infty)$.  
-1. The graph is decreasing over the interval $(1,2)$.  
-1. The graph has minima at $(-2,1)$ and $(2,1)$.  
-1. The point $(x, 0)$ is on the $x$-axis. If $x=-0.5$, then it will be on the graph.
+2. The graph has the left endpoint  at $(-2, -2)$ and but no right endpoint. So the domain is $[-2, +\infty)$.  
+3. The graph has a lowest positioned point $(-2, -2)$ but no highest positioned point. So the range is $[-2, +\infty)$.  
+4. The graph is above 2 over the interval $(3, \infty)$.  
+5. The graph is decreasing over the interval $(1,2)$.  
+6. The graph has minima at $(-2,1)$ and $(2,1)$.  
+7. The point $(x, 0)$ is on the $x$-axis. If $x=-0.5$, then it will be on the graph.
 
 ```
 
@@ -110,7 +110,7 @@ Use the graph in the picture to answer the following questions.
 5. Find all points where the graph reaches a maximum or a minimum.
 6. Find the values of the $x$-coordinate of all points on the graph whose $y$-coordinate is $1$.
 
-![](figs/function-exercise-ray-cubic.png){width=60%}
+![the graph of a piecewise function](figs/function-exercise-ray-cubic.png){width=60%}\
 
 ```
 
@@ -124,7 +124,7 @@ Use the graph of the function $f$ in the picture to answer the following questio
 3. Find the values $x$ such that $f(x)=0$.
 4. Find the solution to the inequality $f(x)>0$. Write in interval notation.
 
-![](figs/function-exercise-cubic.png){width=60%}
+![the graph of a cubic function](figs/function-exercise-cubic.png){width=60%}\
 
 ```
 

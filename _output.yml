@@ -1,15 +1,14 @@
 bookdown::gitbook:
   includes:
-    in_header: html/solution-fold.html
-    before_body: html/math-shortcuts.html
-      
+    in_header: html/folding-solutions.html
+    before_body: html/math-shortcuts.html 
   split_by: chapter
   toc_depth: 1
   css: css/style.css
   config:
     toc:
       before: |
-        <li><a href="./">Algebra and Geometry of Functions</a></li>
+        <li><a href="./">Algebra and Geometry of Elementary Functions</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf"]
@@ -17,6 +16,9 @@ bookdown::gitbook:
       # github: no
       # facebook: no
       # twitter: no
+  mathjax: local
+  self_contained: false
+
 bookdown::pdf_book:
   includes:
     in_header: latex/preamble.tex

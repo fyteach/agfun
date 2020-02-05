@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 15 Exponential Functions | Algebra and Geometry of Elementary Functions</title>
+  <title>Topic 16 Exponential Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 15 Exponential Functions | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:title" content="Topic 16 Exponential Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="fyemath/agfun" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 15 Exponential Functions | Algebra and Geometry of Elementary Functions" />
+  <meta name="twitter:title" content="Topic 16 Exponential Functions | Algebra and Geometry of Elementary Functions" />
   
   <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-03" />
+<meta name="date" content="2020-02-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +51,287 @@
 
 
 
-<script src="../js/collapse.js"></script>
-<script src="../js/solutionfolding.js"></script>
+<script>
+/* ========================================================================
+ * Bootstrap: collapse.js v3.3.7
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+/* jshint latedef: false */
+
++function ($) {
+  'use strict';
+
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
+
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.transitioning = null
+
+    if (this.options.parent) {
+      this.$parent = this.getParent()
+    } else {
+      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+    }
+
+    if (this.options.toggle) this.toggle()
+  }
+
+  Collapse.VERSION  = '3.3.7'
+
+  Collapse.TRANSITION_DURATION = 350
+
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
+
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
+
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
+
+    var activesData
+    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+
+    if (actives && actives.length) {
+      activesData = actives.data('bs.collapse')
+      if (activesData && activesData.transitioning) return
+    }
+
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    if (actives && actives.length) {
+      Plugin.call(actives, 'hide')
+      activesData || actives.data('bs.collapse', null)
+    }
+
+    var dimension = this.dimension()
+
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')[dimension](0)
+      .attr('aria-expanded', true)
+
+    this.$trigger
+      .removeClass('collapsed')
+      .attr('aria-expanded', true)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+
+    this.$element
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  }
+
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
+
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    var dimension = this.dimension()
+
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse in')
+      .attr('aria-expanded', false)
+
+    this.$trigger
+      .addClass('collapsed')
+      .attr('aria-expanded', false)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse')
+        .trigger('hidden.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    this.$element
+      [dimension](0)
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+  }
+
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
+
+  Collapse.prototype.getParent = function () {
+    return $(this.options.parent)
+      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+      .each($.proxy(function (i, element) {
+        var $element = $(element)
+        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+      }, this))
+      .end()
+  }
+
+  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+    var isOpen = $element.hasClass('in')
+
+    $element.attr('aria-expanded', isOpen)
+    $trigger
+      .toggleClass('collapsed', !isOpen)
+      .attr('aria-expanded', isOpen)
+  }
+
+  function getTargetFromTrigger($trigger) {
+    var href
+    var target = $trigger.attr('data-target')
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+
+    return $(target)
+  }
+
+
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+
+      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.collapse
+
+  $.fn.collapse             = Plugin
+  $.fn.collapse.Constructor = Collapse
+
+
+  // COLLAPSE NO CONFLICT
+  // ====================
+
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
+
+
+  // COLLAPSE DATA-API
+  // =================
+
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var $this   = $(this)
+
+    if (!$this.attr('data-target')) e.preventDefault()
+
+    var $target = getTargetFromTrigger($this)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
+
+    Plugin.call($target, option)
+  })
+
+}(jQuery);
+
+</script>
+
+<script>
+// Folding solutions.
+// Code modified from the answer for the question on stackoverflow
+// https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+
+window.initializeSolutionFolding = function(show) {
+
+// handlers for show-all and hide all
+$("#rmd-show-all-solution").click(function() {
+  $('div.solution-collapse').each(function() {
+    $(this).collapse('show');
+  });
+});
+$("#rmd-hide-all-solution").click(function() {
+  $('div.solution-collapse').each(function() {
+    $(this).collapse('hide');
+  });
+});
+
+// index for unique solution element ids
+var currentIndex = 1;
+
+// select all solution blocks
+var rSolutionBlocks = $('div.solution');
+rSolutionBlocks.each(function() {
+
+  // create a collapsable div to wrap the solution in
+  var div = $('<div class="collapse solution-collapse"></div>');
+  if (show)
+    div.addClass('in');
+  var id = 'solution-643E0F36' + currentIndex++;
+  div.attr('id', id);
+  $(this).before(div);
+  $(this).detach().appendTo(div);
+
+  // add a show solution button right above
+  var showSolutionText = $('<span>' + (show ? 'Hide' : 'Solution') + '</span>');
+  var showSolutionButton = $('<button type="button" class="btn btn-default btn-xs solution-folding-btn pull-right"></button>');
+  showSolutionButton.append(showSolutionText);
+  showSolutionButton
+      .attr('data-toggle', 'collapse')
+      .attr('data-target', '#' + id)
+      .attr('aria-expanded', show)
+      .attr('aria-controls', id);
+
+  var buttonRow = $('<div class="solution-button-row"></div>');
+  var buttonCol = $('<div class="col-md-12"></div>');
+
+  buttonCol.append(showSolutionButton);
+  buttonRow.append(buttonCol);
+
+  div.before(buttonRow);
+
+  // update state of button on show/hide
+  // div.on('hidden.bs.collapse', function () {
+  //   showSolutionText.text('Show');
+  // });
+  // div.on('show.bs.collapse', function () {
+  //   showSolutionText.text('Hide');
+  // });
+});
+
+}
+
+</script>
 
 <script>
 $(document).ready(function () {
@@ -77,30 +356,30 @@ $(document).ready(function () {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Algebra and Geometry of Functions</a></li>
+<li><a href="./">Algebra and Geometry of Elementary Functions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib]</a></li>
 <li class="part"><span><b>Part I: Mathematical Operations</b></span></li>
-<li class="chapter" data-level="1" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>1</b> Integer Exponents</a></li>
-<li class="chapter" data-level="2" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>2</b> Review of Factoring</a></li>
-<li class="chapter" data-level="3" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>3</b> Algebra of Rational Expressions</a></li>
-<li class="chapter" data-level="4" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>4</b> Radicals and Rational Exponents</a></li>
+<li class="chapter" data-level="2" data-path="integer-exponents.html"><a href="integer-exponents.html"><i class="fa fa-check"></i><b>2</b> Integer Exponents</a></li>
+<li class="chapter" data-level="3" data-path="review-of-factoring.html"><a href="review-of-factoring.html"><i class="fa fa-check"></i><b>3</b> Review of Factoring</a></li>
+<li class="chapter" data-level="4" data-path="algebra-of-rational-expressions.html"><a href="algebra-of-rational-expressions.html"><i class="fa fa-check"></i><b>4</b> Algebra of Rational Expressions</a></li>
+<li class="chapter" data-level="5" data-path="radicals-and-rational-exponents.html"><a href="radicals-and-rational-exponents.html"><i class="fa fa-check"></i><b>5</b> Radicals and Rational Exponents</a></li>
 <li class="part"><span><b>Part 2: Equations and Applications</b></span></li>
-<li class="chapter" data-level="5" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>5</b> Solving Polynomial Equations by Factoring</a></li>
-<li class="chapter" data-level="6" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>6</b> Quadratic Formula</a></li>
-<li class="chapter" data-level="7" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>7</b> Rational Equations</a></li>
-<li class="chapter" data-level="8" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>8</b> Radical Equations</a></li>
-<li class="chapter" data-level="9" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>9</b> Absolute Value Equations</a></li>
-<li class="chapter" data-level="10" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>10</b> Linear Inequalities</a></li>
+<li class="chapter" data-level="6" data-path="solving-polynomial-equations-by-factoring.html"><a href="solving-polynomial-equations-by-factoring.html"><i class="fa fa-check"></i><b>6</b> Solving Polynomial Equations by Factoring</a></li>
+<li class="chapter" data-level="7" data-path="quadratic-formula.html"><a href="quadratic-formula.html"><i class="fa fa-check"></i><b>7</b> Quadratic Formula</a></li>
+<li class="chapter" data-level="8" data-path="rational-equations.html"><a href="rational-equations.html"><i class="fa fa-check"></i><b>8</b> Rational Equations</a></li>
+<li class="chapter" data-level="9" data-path="radical-equations.html"><a href="radical-equations.html"><i class="fa fa-check"></i><b>9</b> Radical Equations</a></li>
+<li class="chapter" data-level="10" data-path="absolute-value-equations.html"><a href="absolute-value-equations.html"><i class="fa fa-check"></i><b>10</b> Absolute Value Equations</a></li>
+<li class="chapter" data-level="11" data-path="linear-inequalities.html"><a href="linear-inequalities.html"><i class="fa fa-check"></i><b>11</b> Linear Inequalities</a></li>
 <li class="part"><span><b>Part 3: Functions and Applications</b></span></li>
-<li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
-<li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
-<li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
-<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="12" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>12</b> Introduction to Functions</a></li>
+<li class="chapter" data-level="13" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>13</b> Linear Functions</a></li>
+<li class="chapter" data-level="14" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>14</b> Quadratic Functions</a></li>
+<li class="chapter" data-level="15" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>15</b> Rational and Radical Functions</a></li>
+<li class="chapter" data-level="16" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>16</b> Exponential Functions</a></li>
+<li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -131,30 +410,36 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="exponential-functions" class="section level1" number="15">
-<h1><span class="header-section-number">Topic 15</span> Exponential Functions</h1>
-<div id="definition-and-graphs-of-exponential-functions" class="section level2" number="15.1">
-<h2><span class="header-section-number">15.1</span> Definition and Graphs of Exponential Functions</h2>
+<div id="exponential-functions" class="section level1" number="16">
+<h1><span class="header-section-number">Topic 16</span> Exponential Functions</h1>
+<div id="definition-and-graphs-of-exponential-functions" class="section level2" number="16.1">
+<h2><span class="header-section-number">16.1</span> Definition and Graphs of Exponential Functions</h2>
 <p>Let <span class="math inline">\(b\)</span> be a positive number other than <span class="math inline">\(1\)</span> (i.e. <span class="math inline">\(b&gt;0\)</span> and <span class="math inline">\(b\neq 1\)</span>). The exponential function <span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span> with the base <span class="math inline">\(b\)</span> is defined as
 <span class="math display">\[
 f(x)=b^x\quad\quad\text{or}\quad\quad y=b^x.
 \]</span></p>
 <p>Graphs of exponential functions:</p>
-<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;">
-<p><img src="figs/tikz-example-exp-function-1.png" /></p>
-<p><img src="figs/tikz-example-exp-function-2.png" /></p>
+<div class="twocolumns">
+<div class="figure">
+<img src="figs/tikz-example-exp-function-1.png" style="width:60.0%" alt="" />
+<p class="caption">exp function base less than 1</p>
+</div>
+<div class="figure">
+<img src="figs/tikz-example-exp-function-2.png" alt="" />
+<p class="caption">exp function base greater than 1</p>
+</div>
 </div>
 
 <div class="rmdnote">
 <p>The exponential function <span class="math inline">\(f(x)=b^x\)</span> is an one-to-one function: any vertical line or any horizontal line crosses the graph at most once. Equivalently, the equation <span class="math inline">\(b^x=c\)</span> has at most one solution for any real number <span class="math inline">\(c\)</span>.</p>
 </div>
 </div>
-<div id="the-natural-number-e" class="section level2" number="15.2">
-<h2><span class="header-section-number">15.2</span> The Natural Number <span class="math inline">\(e\)</span></h2>
+<div id="the-natural-number-e" class="section level2" number="16.2">
+<h2><span class="header-section-number">16.2</span> The Natural Number <span class="math inline">\(e\)</span></h2>
 <p>The natural number <span class="math inline">\(e\)</span> is the number to which the quantity <span class="math inline">\(\left(1+\dfrac1n\right)^n\)</span> approaches as <span class="math inline">\(n\)</span> takes on increasingly large values. Approximately, <span class="math inline">\(e\approx2.718281827\)</span>.</p>
 </div>
-<div id="compound-interests" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> Compound Interests</h2>
+<div id="compound-interests" class="section level2" number="16.3">
+<h2><span class="header-section-number">16.3</span> Compound Interests</h2>
 <p>After <span class="math inline">\(t\)</span> years, the balance <span class="math inline">\(A\)</span> in an account with a principal <span class="math inline">\(P\)</span> and annual interest rate <span class="math inline">\(r\)</span> is given by the following formulas:</p>
 <ol style="list-style-type: decimal">
 <li>For <span class="math inline">\(n\)</span> compounding periods per year: <span class="math inline">\(A=P\left(1+\dfrac{r}{n}\right)^{nt}\)</span>.</li>
@@ -162,7 +447,7 @@ f(x)=b^x\quad\quad\text{or}\quad\quad y=b^x.
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-300" class="example"><strong>Example 15.1  </strong></span>
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 16.1  </strong></span>
 A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual rate of <span class="math inline">\(8\%\)</span>, Find the balance, to the nearest hundredth dollar, in the account after <span class="math inline">\(5\)</span> years if the interest is compounded</p>
 <ol style="list-style-type: decimal">
 <li>monthly,</li>
@@ -176,8 +461,7 @@ A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual 
 <p> <span class="solution"><em>Solution. </em></span> <br />
 </p>
 <ol style="list-style-type: decimal">
-<li>Find values of <span class="math inline">\(P\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(t\)</span> and <span class="math inline">\(n\)</span>. In this case,
-<span class="math inline">\(P=10,000\)</span>, <span class="math inline">\(r=8\%=0.08\)</span>, <span class="math inline">\(t=5\)</span> and <span class="math inline">\(n\)</span> depends compounding.</li>
+<li>Find values of <span class="math inline">\(P\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(t\)</span> and <span class="math inline">\(n\)</span>. In this case, <span class="math inline">\(P=10,000\)</span>, <span class="math inline">\(r=8\%=0.08\)</span>, <span class="math inline">\(t=5\)</span> and <span class="math inline">\(n\)</span> depends compounding.</li>
 <li>Plug the values in the formula and calculate.</li>
 <li>``Monthly’’ means <span class="math inline">\(n=12\)</span>. Then
 <span class="math display">\[
@@ -203,7 +487,7 @@ A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual 
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-303" class="example"><strong>Example 15.2  </strong></span>
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 16.2  </strong></span>
 The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4%.
 The predicted population is <span class="math inline">\(P(t)=0.78(1.004)^t\)</span> billions after <span class="math inline">\(t\)</span> years since 2015.
 To the nearest thousandth of a billion, what will the predicted population of the country be in 2030?</p>
@@ -218,18 +502,18 @@ P(15)=0.78(1.004)^{15}\approx 0.828 \quad \text{billions}.
 \]</span></p>
 </div>
 </div>
-<div id="practice-14" class="section level2" number="15.4">
-<h2><span class="header-section-number">15.4</span> Practice</h2>
+<div id="practice-14" class="section level2" number="16.4">
+<h2><span class="header-section-number">16.4</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-305" class="exercise"><strong>Problem 15.1  </strong></span>
+<p><span id="exr:unnamed-chunk-7" class="exercise"><strong>Problem 16.1  </strong></span>
 The value of a car is depreciating according to the formula: <span class="math inline">\(V=25000(3.2)^{-0.05x}\)</span>,
 where <span class="math inline">\(x\)</span> is the age of the car in years.
 Find the value of the car, to the nearest dollar, when it is five years old.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-306" class="exercise"><strong>Problem 15.2  </strong></span>
+<p><span id="exr:unnamed-chunk-8" class="exercise"><strong>Problem 16.2  </strong></span>
 A sum of $20,000 is invested at an annual rate of 5.5%, Find the balance, to the nearest dollar,
 in the account after 5 years subject to</p>
 <ol style="list-style-type: decimal">
@@ -239,7 +523,7 @@ in the account after 5 years subject to</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-307" class="exercise"><strong>Problem 15.3  </strong></span>
+<p><span id="exr:unnamed-chunk-9" class="exercise"><strong>Problem 16.3  </strong></span>
 Sketch the graph of the function and find its range.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=3^x\)</span></li>
@@ -248,7 +532,7 @@ Sketch the graph of the function and find its range.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-308" class="exercise"><strong>Problem 15.4  </strong></span>
+<p><span id="exr:unnamed-chunk-10" class="exercise"><strong>Problem 16.4  </strong></span>
 Use the given function to compare the values of <span class="math inline">\(f(-1.05)\)</span>, <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(2.4)\)</span> and determine which value is the largest and which value is the smallest. Explain your answer.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\left(\frac{5}{2}\right)^x\)</span></li>

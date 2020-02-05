@@ -68,7 +68,7 @@ Sketch the graph of the linear function $f(x)=-\frac12 x + 1$.
 2. Evaluate $f(x)$: $f(0)=1$ and $f(2)=0$.
 3. Plot the points $(0, 1)$ and $(2, 0)$ and draw a line through them.
 
-![](figs/tikz-linear-function-example-a.png){width=80%}
+![graph a linear function using two points](figs/tikz-linear-function-example-a.png){width=80%}\
 
 **Method 2: Get points by raise and run.**
 
@@ -76,7 +76,7 @@ Sketch the graph of the linear function $f(x)=-\frac12 x + 1$.
 2. Use $\frac{\text{rise}}{\text{run}}=-\frac{1}{2}$ to get one or more points, e.g, we will get $(-2, 2)$ by taking $\text{rise}=1$ and $\text{run}=-2$, i.e. move up $1$ unit, then move to the right $2$ units.
 3. Plot the points $(0, 1)$ and $(-2, 2)$ and draw a line through them.
 
-![](figs/tikz-linear-function-example-b.png){width=80%}
+![graph a linear function using rise over run](figs/tikz-linear-function-example-b.png){width=80%}\
 
 ```
 
@@ -264,7 +264,7 @@ Use the graph of the line $L$ to answer the following questions
 1. Find an equation for the line $L_\perp$ perpendicular to $L$ and passing through $(1,1)$.
 1. Find an equation for the line $L_\parallel$ parallel to $L$ and passing through $(-2,-1)$.
 
-![](tikz-perp-prll-exercise.png){width=80%}
+![The graph of a line](figs/tikz-perp-prll-exercise.png){width=80%}\
 
 ```
 

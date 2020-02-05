@@ -128,7 +128,7 @@ $$(x-2)(x+3)=-4.$$
 
 A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is  $10$ meters by $16$ meters and the total area is 216 square meters, determine the width of the path.
 
-![](figs/tikz-rectangular-uniform-width.png){width=30%}
+![rectangular garden with uniform width pass](figs/tikz-rectangular-uniform-width.png){width=30%}\
 
 ```
 
@@ -224,7 +224,7 @@ Find the $x$-intercepts for each of the the following functions.
 
 A paint measuring $3$ inches by $4$ inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is $30$ square inches, determine the width of the frame.
 
-![](figs/tikz-paint-uniform-width.png){width=30%}
+![paint with uniform width path](figs/tikz-paint-uniform-width.png){width=30%}\
 
 ```
 

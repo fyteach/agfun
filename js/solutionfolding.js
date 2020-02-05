@@ -1,3 +1,7 @@
+// Folding solutions.
+// Code modified from the answer for the question on stackoverflow
+// https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+
 window.initializeSolutionFolding = function(show) {
 
   // handlers for show-all and hide all

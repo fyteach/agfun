@@ -113,7 +113,7 @@ Consider the parabola in the graph.
 4. For what values of $x$ is $f(x)=-3$.
 5. Find an equation for the function.
 
-![](figs/tikz-exercise-graph-quadratic-1.png){width=60%}
+![The graph of an open upward parabola](figs/tikz-exercise-graph-quadratic-1.png){width=60%}\
 
 ```
 
@@ -127,7 +127,7 @@ Consider the parabola in the graph.
 4. For what values of $x$ is $f(x)=\frac{3}{2}$.
 5. Find an equation for the function.
 
-![](figs/tikz-exercise-graph-quadratic-2.png){width=60%}
+![The graph of an open downward parabola](figs/tikz-exercise-graph-quadratic-2.png){width=60%}\
 
 ```
 
