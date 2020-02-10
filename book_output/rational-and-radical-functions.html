@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-04" />
+<meta name="date" content="2020-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="quadratic-functions.html"/>
-<link rel="next" href="exponential-functions.html"/>
+<link rel="next" href="radical-functions.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -377,9 +377,10 @@ $(document).ready(function () {
 <li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
 <li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
 <li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
-<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="15" data-path="radical-functions.html"><a href="radical-functions.html"><i class="fa fa-check"></i><b>15</b> Radical Functions</a></li>
+<li class="chapter" data-level="16" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>16</b> Exponential Functions</a></li>
+<li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -412,12 +413,27 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div id="rational-and-radical-functions" class="section level1" number="14">
 <h1><span class="header-section-number">Topic 14</span> Rational and Radical Functions</h1>
-<div id="the-domain-of-a-rational-function" class="section level2" number="14.1">
-<h2><span class="header-section-number">14.1</span> The Domain of a Rational Function</h2>
+<div id="the-law-of-lever" class="section level2" number="14.1">
+<h2><span class="header-section-number">14.1</span> The Law of Lever</h2>
+
+<div class="rmdthink">
+<blockquote>
+<p>“Give me a fulcrum and a place to stand, I will move the world.” by <a href="https://en.wikipedia.org/wiki/Archimedes#Mathematics">Archimedes of Syracuse</a></p>
+</blockquote>
+<p>In volume I of his book “On the Equilibrium of Planes”, Archimedes proved that magnitudes are in equilibrium at distances reciprocally proportional to their weights. See the video <a href="https://youtu.be/yhrR4384SGE?t=8">Law of the Lever</a> on youtube for an animated explanation.</p>
+<p>Suppose there is a infinite long lever with a load 100 newton that is placed 1 meters away the fulcrum, the pivoting point.</p>
+<ul>
+<li>Can you find the force needed to balance the load in terms of the distance away from the fulcrum?</li>
+<li>How much force will be needed if it is place 5 meters away from the fulcrum?</li>
+</ul>
+</div>
+</div>
+<div id="the-domain-of-a-rational-function" class="section level2" number="14.2">
+<h2><span class="header-section-number">14.2</span> The Domain of a Rational Function</h2>
 <p>A <strong><em>rational function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\frac{p(x)}{q(x)}\)</span>, where <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are polynomials and the degree of <span class="math inline">\(q(x)\)</span> is at least one. Since the denominator cannot be zero, the domain of <span class="math inline">\(f\)</span> consists all real numbers except the numbers such that <span class="math inline">\(q(x)=0\)</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-293" class="example"><strong>Example 14.1  </strong></span>
+<p><span id="exm:unnamed-chunk-302" class="example"><strong>Example 14.1  </strong></span>
 Find the domain of the function <span class="math inline">\(f(x)=\frac{1}{x-1}\)</span>.</p>
 </div>
 
@@ -430,12 +446,29 @@ Find the domain of the function <span class="math inline">\(f(x)=\frac{1}{x-1}\)
 \]</span></p>
 </div>
 </div>
-<div id="the-domain-of-a-radical-function" class="section level2" number="14.2">
-<h2><span class="header-section-number">14.2</span> The Domain of a Radical Function</h2>
+<div id="speed-of-a-tsunami" class="section level2" number="14.3">
+<h2><span class="header-section-number">14.3</span> Speed of a Tsunami</h2>
+
+<div class="rmdthink">
+<p>A <a href="https://en.wikipedia.org/wiki/Tsunami">tsunami</a> is generally referred to is a series of waves on the ocean caused by earthquakes or other events that cause sudden displacements of large volumes of water. In ideal situation, the velocity <span class="math inline">\(v\)</span> of a wave at where the water depth is <span class="math inline">\(d\)</span> meters is approximately
+<span class="math display">\[
+v=\sqrt{9.8d}.
+\]</span>
+The wave will slow down when closer to the coast but will be higher.</p>
+<p>Suppose a tsunami was caused by earthquake somewhere 10000 meters away the coast of California. The depth of the water where the tsunami was generated is 5000 meter.</p>
+<ul>
+<li>What’s the initial speed of the tsunami?</li>
+<li>What’s the speed of the tsunami at where the water depth is 2000.</li>
+<li>Suppose the speed wouldn’t decrease, how long it takes the tsunami reach the coast?</li>
+</ul>
+</div>
+</div>
+<div id="the-domain-of-a-radical-function" class="section level2" number="14.4">
+<h2><span class="header-section-number">14.4</span> The Domain of a Radical Function</h2>
 <p>A <strong><em>radical function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\sqrt[n]{r(x)}\)</span>, where <span class="math inline">\(r(x)\)</span> is an algebraic expression. For example <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. When <span class="math inline">\(n\)</span> is odd number, <span class="math inline">\(r(x)\)</span> can be any real number. When <span class="math inline">\(n\)</span> is even, <span class="math inline">\(r(x)\)</span> has to be nonnegative, that is <span class="math inline">\(r(x)\geq 0\)</span> so that <span class="math inline">\(f(x)\)</span> is a real number.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-295" class="example"><strong>Example 14.2  </strong></span>
+<p><span id="exm:unnamed-chunk-305" class="example"><strong>Example 14.2  </strong></span>
 Find the domain of the function <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>.</p>
 </div>
 
@@ -449,14 +482,11 @@ Solve the inequality, we get <span class="math inline">\(x\geq -1\)</span>. In i
 \]</span></p>
 </div>
 </div>
-<div id="applications" class="section level2" number="14.3">
-<h2><span class="header-section-number">14.3</span> Applications</h2>
-</div>
-<div id="practice-13" class="section level2" number="14.4">
-<h2><span class="header-section-number">14.4</span> Practice</h2>
+<div id="practice-13" class="section level2" number="14.5">
+<h2><span class="header-section-number">14.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-297" class="exercise"><strong>Problem 14.1  </strong></span>
+<p><span id="exr:unnamed-chunk-307" class="exercise"><strong>Problem 14.1  </strong></span>
 Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\frac{x^2}{x-2}\)</span></li>
@@ -467,7 +497,7 @@ Find the domain of each function. Write in interval notation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-298" class="exercise"><strong>Problem 14.2  </strong></span>
+<p><span id="exr:unnamed-chunk-308" class="exercise"><strong>Problem 14.2  </strong></span>
 Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=1-\frac{2x}{x+3}\)</span></li>
@@ -485,7 +515,7 @@ Find the domain of each function. Write in interval notation.</p>
         </div>
       </div>
 <a href="quadratic-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="radical-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

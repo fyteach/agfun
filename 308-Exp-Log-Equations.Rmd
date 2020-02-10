@@ -1,5 +1,22 @@
 # Applications of Exponential and Logarithmic Functions
 
+## Newton’s Law of Cooling
+
+```{block2, type="rmdthink"}
+
+Suppose an object with an initial temperature $T(0)$ is placed in an environment with surrounding temperature $T_{\text{env}}$. By [Newton's Law of Cooling](https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling), after $t$ minutes, the temperature of the object $T(t)$ is given by the exponential function
+$$
+T(t)=T_{\text{env}}+(T(0)-T_{\text{env}})\,e^{-rt},
+$$
+where $r$ is a positive constant characteristic of the system.
+
+A cup of coffee is brewed with a temperature 195°F and placed in a room with the temperature 60°F. The cooling constant for a cup of coffee is  $ r = .09 \text{min}^{-1}$.
+
+1. After 30 minutes, what is the temperature of the coffee?
+2. How long it takes for the coffee to cool down to the room temperature?
+
+```
+
 ## Exponential and Logarithmic Equations
 
 To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.

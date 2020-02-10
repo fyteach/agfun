@@ -3,7 +3,7 @@ title: "Algebra and Geometry of Elementary Functions"
 author: "Fei Ye"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: latex/elegantbookr
+documentclass: "latex/elegantbook"
 # bibliography: [book.bib]
 # biblio-style: apalike
 # logo: "figure/logo.png"

@@ -1,5 +1,13 @@
 # Logarithmic Functions
 
+## Estimate the Number of Digits
+
+```{block2, type="rmdthink"}
+
+Can you estimate the number of digits in the integer part of the number $2^{15}\times \sqrt{2020}\div 2021$?
+
+```
+
 ## Definition and Graphs of Logarithmic Function
 
 For $x>0$, $b>0$ and $b\neq 1$, there is a unique number $y$ satisfying the equation $b^y=x$. We denote the unique number $y$ by $\log_bx$, read as logarithm to the base $b$ of $x$.  In other words, the defining relation between exponentiation and logarithm is

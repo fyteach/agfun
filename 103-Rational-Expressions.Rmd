@@ -6,6 +6,10 @@
 
 Matt is kayaking upstream on a river with his best effort. After 30 minutes, he received an emergency call and has to return in 20 minute. The speed of the current of the river is 1 mph.  Under normal condition, a paddler's average paddling speed is between 2 and 5 mph. Do you think Matt can return on time? Why?
 
+```{block2, type="rmdthink"}
+
+A construction team is building a house. After half of the work was done, to expedite the construction process, the another team joins in the construction. The first team normally takes 7-10 days to build a hours. The second team normally takes 2 extra days to build a house. How many days it takes to build the house?
+
 ```
 
 ## Rational Expressions

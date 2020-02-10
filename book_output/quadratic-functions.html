@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-04" />
+<meta name="date" content="2020-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="linear-functions.html"/>
-<link rel="next" href="rational-and-radical-functions.html"/>
+<link rel="next" href="rational-functions.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -376,10 +376,11 @@ $(document).ready(function () {
 <li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
 <li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
 <li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
-<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-functions.html"><a href="rational-functions.html"><i class="fa fa-check"></i><b>14</b> Rational Functions</a></li>
+<li class="chapter" data-level="15" data-path="radical-functions.html"><a href="radical-functions.html"><i class="fa fa-check"></i><b>15</b> Radical Functions</a></li>
+<li class="chapter" data-level="16" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>16</b> Exponential Functions</a></li>
+<li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -412,8 +413,15 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div id="quadratic-functions" class="section level1" number="13">
 <h1><span class="header-section-number">Topic 13</span> Quadratic Functions</h1>
-<div id="the-graph-of-a-quadratic-function" class="section level2" number="13.1">
-<h2><span class="header-section-number">13.1</span> The Graph of a Quadratic Function</h2>
+<div id="maximize-the-revenue" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> Maximize the Revenue</h2>
+
+<div class="rmdthink">
+<p>When price increases, demand decreases and vice verse. A retail store found that the price <span class="math inline">\(p\)</span> as a function of the demand <span class="math inline">\(x\)</span> for a certain product is <span class="math inline">\(p(x)=100-\frac12 x\)</span>. The revenue <span class="math inline">\(R\)</span> of selling <span class="math inline">\(x\)</span> units is <span class="math inline">\(R=x\cdot p(x)=x(100-\frac12x)\)</span>. To maximize the revenue, what should be the price?</p>
+</div>
+</div>
+<div id="the-graph-of-a-quadratic-function" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> The Graph of a Quadratic Function</h2>
 <p>The graph of a quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>, is called a <strong><em>parabola</em></strong>.</p>
 <p>By completing the square, a quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> can always be written in the form <span class="math inline">\(f(x)=a(x-h)^2+k\)</span>, where <span class="math inline">\(h=-\dfrac{b}{2a}\)</span> and <span class="math inline">\(k=f(h)=f\left(-\dfrac{b}{2a}\right)\)</span>.</p>
 <ol style="list-style-type: decimal">
@@ -421,16 +429,16 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <li>The point <span class="math inline">\((h, k)=\left(-\dfrac{b}{2a}, f\left(-\dfrac{b}{2a}\right)\right)\)</span> is called the <strong><em>vertex</em></strong> of the parabola.</li>
 </ol>
 </div>
-<div id="the-minimum-or-maximum-of-a-quadratic-function" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> The Minimum or Maximum of a Quadratic Function</h2>
+<div id="the-minimum-or-maximum-of-a-quadratic-function" class="section level2" number="13.3">
+<h2><span class="header-section-number">13.3</span> The Minimum or Maximum of a Quadratic Function</h2>
 <p>Consider the quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li>If <span class="math inline">\(a&gt;0\)</span>, then the parabola opens upward and <span class="math inline">\(f\)</span> has a minimum <span class="math inline">\(f\left(-\dfrac{b}{2a}\right)\)</span> at the vertex.</li>
 <li>If <span class="math inline">\(a&lt;0\)</span>, then the parabola opens downward and <span class="math inline">\(f\)</span> has a maximum <span class="math inline">\(f\left(-\dfrac{b}{2a}\right)\)</span> at the vertex.</li>
 </ol>
 </div>
-<div id="intercepts-of-a-quadratic-function" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Intercepts of a Quadratic Function</h2>
+<div id="intercepts-of-a-quadratic-function" class="section level2" number="13.4">
+<h2><span class="header-section-number">13.4</span> Intercepts of a Quadratic Function</h2>
 <p>Consider the quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li>The <span class="math inline">\(y\)</span>-intercept is <span class="math inline">\((0, f(0))=(0, c)\)</span>.</li>
@@ -438,7 +446,7 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-281" class="example"><strong>Example 13.1  </strong></span>
+<p><span id="exm:unnamed-chunk-289" class="example"><strong>Example 13.1  </strong></span>
 Does the function <span class="math inline">\(f(x)=2x^2-4x-6\)</span> have a maximum or minimum? Find it.</p>
 </div>
 
@@ -458,7 +466,7 @@ The minimum is
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-283" class="example"><strong>Example 13.2  </strong></span>
+<p><span id="exm:unnamed-chunk-291" class="example"><strong>Example 13.2  </strong></span>
 Consider the function <span class="math inline">\(f(x)=-x^2+3x+6\)</span>. Find values of <span class="math inline">\(x\)</span> such that <span class="math inline">\(f(x)=2\)</span>.</p>
 </div>
 
@@ -474,7 +482,7 @@ The values of <span class="math inline">\(x\)</span> such that <span class="math
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-285" class="example"><strong>Example 13.3  </strong></span>
+<p><span id="exm:unnamed-chunk-293" class="example"><strong>Example 13.3  </strong></span>
 A quadratic function <span class="math inline">\(f\)</span> whose the vertex is <span class="math inline">\((1, 2)\)</span> has a <span class="math inline">\(y\)</span>-intercept <span class="math inline">\((0, -3)\)</span>. Find the equation that defines the function.</p>
 </div>
 
@@ -491,11 +499,11 @@ The quadratic function <span class="math inline">\(f\)</span> is given by <span 
 </ol>
 </div>
 </div>
-<div id="practice-12" class="section level2" number="13.4">
-<h2><span class="header-section-number">13.4</span> Practice</h2>
+<div id="practice-12" class="section level2" number="13.5">
+<h2><span class="header-section-number">13.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-287" class="exercise"><strong>Problem 13.1  </strong></span>
+<p><span id="exr:unnamed-chunk-295" class="exercise"><strong>Problem 13.1  </strong></span>
 Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=-(x-2)^2+4\)</span> and find</p>
 <ol style="list-style-type: decimal">
 <li>the coordinates of the <span class="math inline">\(x\)</span>-intercepts,</li>
@@ -507,7 +515,7 @@ Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=-(x
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-288" class="exercise"><strong>Problem 13.2  </strong></span>
+<p><span id="exr:unnamed-chunk-296" class="exercise"><strong>Problem 13.2  </strong></span>
 Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=x^2+2x-3\)</span> and find</p>
 <ol style="list-style-type: decimal">
 <li>the coordinates of the <span class="math inline">\(x\)</span>-intercepts,</li>
@@ -519,7 +527,7 @@ Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=x^2
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-289" class="exercise"><strong>Problem 13.3  </strong></span>
+<p><span id="exr:unnamed-chunk-297" class="exercise"><strong>Problem 13.3  </strong></span>
 Consider the parabola in the graph.</p>
 <ol style="list-style-type: decimal">
 <li>Determine the coordinates of the <span class="math inline">\(x\)</span>-intercepts.</li>
@@ -533,7 +541,7 @@ Consider the parabola in the graph.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-290" class="exercise"><strong>Problem 13.4  </strong></span>
+<p><span id="exr:unnamed-chunk-298" class="exercise"><strong>Problem 13.4  </strong></span>
 Consider the parabola in the graph.</p>
 <ol style="list-style-type: decimal">
 <li>Determine the coordinates of the <span class="math inline">\(x\)</span>-intercepts.</li>
@@ -547,12 +555,12 @@ Consider the parabola in the graph.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-291" class="exercise"><strong>Problem 13.5  </strong></span>
+<p><span id="exr:unnamed-chunk-299" class="exercise"><strong>Problem 13.5  </strong></span>
 A store owner estimates that by charging <span class="math inline">\(x\)</span> dollars each for a certain cell phone case, he can sell <span class="math inline">\(d(x)=40 - x\)</span> phone cases each week. The revenue in dollars is <span class="math inline">\(R(x)=xd(x)\)</span> when the selling price of a computer is <span class="math inline">\(x\)</span>, Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-292" class="exercise"><strong>Problem 13.6  </strong></span>
+<p><span id="exr:unnamed-chunk-300" class="exercise"><strong>Problem 13.6  </strong></span>
 A ball is thrown upward from the ground with an initial velocity <span class="math inline">\(v_0\)</span> ft/sec. The height <span class="math inline">\(h(t)\)</span> of the ball after <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)= -16t^2 + v_0t\)</span>. The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.</p>
 </div>
@@ -565,7 +573,7 @@ Find the maximum height and how long it will take the ball to reach the maximum 
         </div>
       </div>
 <a href="linear-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rational-and-radical-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rational-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

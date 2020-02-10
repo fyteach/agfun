@@ -14,10 +14,11 @@ rmd_files: [
   "301-Introduction-to-functions.Rmd",
   "302-Linear-functions.Rmd",
   "303-Quadratic-functions.Rmd",
-  "304-Rational-Radical-functions.Rmd",
-  "305-Exp-functions.Rmd",
-  "306-Log-functions.Rmd",
-  "307-Exp-Log-Equations.Rmd",
+  "304-Rational-functions.Rmd",
+  "305-Radical-functions.Rmd",
+  "306-Exp-functions.Rmd",
+  "307-Log-functions.Rmd",
+  "308-Exp-Log-Equations.Rmd",
 ]
 
 output_dir: book_output

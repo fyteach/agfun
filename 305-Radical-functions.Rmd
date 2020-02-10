@@ -1,0 +1,100 @@
+# Radical Functions
+<!-- 
+## The Law of Lever
+
+```{block2, type="rmdthink"}
+
+ > “Give me a fulcrum and a place to stand, I will move the world.” by [Archimedes of Syracuse](https://en.wikipedia.org/wiki/Archimedes#Mathematics)
+
+ In volume I of his book "On the Equilibrium of Planes", Archimedes proved that magnitudes are in equilibrium at distances reciprocally proportional to their weights. See the video [Law of the Lever](https://youtu.be/yhrR4384SGE?t=8) on youtube for an animated explanation.
+
+Suppose there is a infinite long lever with a load 100 newton that is placed 1 meters away the fulcrum, the pivoting point.
+
+- Can you find the force needed to balance the load in terms of the distance away from the fulcrum?
+- How much force will be needed if it is place 5 meters away from the fulcrum?
+
+```
+
+## The Domain of a Rational Function
+
+A ***rational function*** $f$ is defined by an equation $f(x)=\frac{p(x)}{q(x)}$, where $p(x)$ and $q(x)$ are polynomials and the degree of $q(x)$ is at least one. Since the denominator cannot be zero, the domain of $f$ consists all real numbers except the numbers such that $q(x)=0$
+
+```{example}
+
+Find the domain of the function $f(x)=\frac{1}{x-1}$.
+
+```
+
+```{solution}
+\
+
+Solve the equation $x-1=0$, we get $x=1$. Then the domain is $\{x\mid x\neq 1\}$. In interval notation, the domain is
+$$
+(-\infty, 1)\cup (1,\infty).
+$$
+
+``` -->
+
+## Speed of a Tsunami
+
+```{block2, type="rmdthink"}
+
+A [tsunami](https://en.wikipedia.org/wiki/Tsunami) is generally referred to is a series of waves on the ocean caused by earthquakes or other events that cause sudden displacements of large volumes of water. In ideal situation, the velocity $v$ of a wave at where the water depth is $d$ meters is approximately
+$$
+v=\sqrt{9.8d}.
+$$
+The wave will slow down when closer to the coast but will be higher.
+
+Suppose a tsunami was caused by earthquake somewhere 10000 meters away the coast of California. The depth of the water where the tsunami was generated is 5000 meter.
+
+- What's the initial speed of the tsunami?
+- What's the speed of the tsunami at where the water depth is 2000.
+- Suppose the speed wouldn't decrease, how long it takes the tsunami reach the coast?
+
+```
+
+## The Domain of a Radical Function
+
+A ***radical function*** $f$ is defined by an equation $f(x)=\sqrt[n]{r(x)}$, where $r(x)$ is an algebraic expression.  For example $f(x)=\sqrt{x+1}$. When $n$ is odd number, $r(x)$ can be any real number.  When $n$ is even, $r(x)$ has to be nonnegative, that is $r(x)\geq 0$ so that $f(x)$ is a real number.
+
+```{example}
+
+Find the domain of the function $f(x)=\sqrt{x+1}$.
+
+```
+
+```{solution}
+\
+
+Since the index is $2$ which is even, the function has real outputs only if the radicand $x+1\geq 0$.
+Solve the inequality, we get $x\geq -1$. In interval notation, the domain is
+$$
+[-1,\infty).
+$$
+
+```
+
+## Practice
+
+<!-- 
+```{exercise}
+
+Find the domain of each function. Write in interval notation.
+
+1. $f(x)=\frac{x^2}{x-2}$
+1. $f(x)=\frac{x}{x^2-1}$
+1. $f(x)=\sqrt{2x-3}$
+1. $f(x)=\sqrt{x^2+1}$
+
+``` -->
+
+```{exercise}
+
+Find the domain of each function. Write in interval notation.
+
+1. $f(x)=1-\frac{2x}{x+3}$
+1. $f(x)=\frac{x-2}{x^2-4}$
+1. $f(x)=\sqrt{1-x^2}$
+1. $f(x)=-\sqrt{\frac{1}{x-5}}$
+
+```

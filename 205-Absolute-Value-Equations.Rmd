@@ -1,5 +1,13 @@
 # Absolute Value Equations
 
+## The Direction of a Number
+
+```{block2, type="rmdthink"}
+
+Can you determine the value of the expression $\dfrac{|x|}{x}$ for all nonzero real number $x$ and explain the meaning of the value?
+
+```
+
 ## Properties of Absolute Values
 
 The ***absolute value*** of a real number $a$, denoted by $|a|$, is the distance from $0$ to $a$ on the number line. In particular, $|a|$ is always greater than or equal to $0$, that is $|a|\geq 0$. Absolute values satisfy the following properties:

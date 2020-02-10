@@ -1,5 +1,13 @@
 # Linear Functions
 
+## Cost, Revenue and Profit
+
+```{block2, type="rmdthink"}
+
+A company has fixed costs of \$10,000 for equipment and variable costs of \$15 for each unit of output. The sale price for each unit is $25. What is total cost, total revenue and total profit at varying levels of output?
+
+```
+
 ## The Slope-Intercept Form Equation
 
 The slope of a line measures the steepness, in other words, "rise" over "run", or rate of change of the line. Using the rectangular coordinate  system, the ***slope*** $m$ of a line is defined as

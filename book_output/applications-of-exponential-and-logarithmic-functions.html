@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 17 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions</title>
+  <title>Topic 18 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 17 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:title" content="Topic 18 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="fyemath/agfun" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 17 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions" />
+  <meta name="twitter:title" content="Topic 18 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions" />
   
   <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-04" />
+<meta name="date" content="2020-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -376,10 +376,11 @@ $(document).ready(function () {
 <li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
 <li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
 <li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
-<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-functions.html"><a href="rational-functions.html"><i class="fa fa-check"></i><b>14</b> Rational Functions</a></li>
+<li class="chapter" data-level="15" data-path="radical-functions.html"><a href="radical-functions.html"><i class="fa fa-check"></i><b>15</b> Radical Functions</a></li>
+<li class="chapter" data-level="16" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>16</b> Exponential Functions</a></li>
+<li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -410,14 +411,30 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="applications-of-exponential-and-logarithmic-functions" class="section level1" number="17">
-<h1><span class="header-section-number">Topic 17</span> Applications of Exponential and Logarithmic Functions</h1>
-<div id="exponential-and-logarithmic-equations" class="section level2" number="17.1">
-<h2><span class="header-section-number">17.1</span> Exponential and Logarithmic Equations</h2>
+<div id="applications-of-exponential-and-logarithmic-functions" class="section level1" number="18">
+<h1><span class="header-section-number">Topic 18</span> Applications of Exponential and Logarithmic Functions</h1>
+<div id="newtons-law-of-cooling" class="section level2" number="18.1">
+<h2><span class="header-section-number">18.1</span> Newton’s Law of Cooling</h2>
+
+<div class="rmdthink">
+<p>Suppose an object with an initial temperature <span class="math inline">\(T(0)\)</span> is placed in an environment with surrounding temperature <span class="math inline">\(T_{\text{env}}\)</span>. By <a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling">Newton’s Law of Cooling</a>, after <span class="math inline">\(t\)</span> minutes, the temperature of the object <span class="math inline">\(T(t)\)</span> is given by the exponential function
+<span class="math display">\[
+T(t)=T_{\text{env}}+(T(0)-T_{\text{env}})\,e^{-rt},
+\]</span>
+where <span class="math inline">\(r\)</span> is a positive constant characteristic of the system.</p>
+<p>A cup of coffee is brewed with a temperature 195°F and placed in a room with the temperature 60°F. The cooling constant for a cup of coffee is $ r = .09 ^{-1}$.</p>
+<ol style="list-style-type: decimal">
+<li>After 30 minutes, what is the temperature of the coffee?</li>
+<li>How long it takes for the coffee to cool down to the room temperature?</li>
+</ol>
+</div>
+</div>
+<div id="exponential-and-logarithmic-equations" class="section level2" number="18.2">
+<h2><span class="header-section-number">18.2</span> Exponential and Logarithmic Equations</h2>
 <p>To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-335" class="example"><strong>Example 17.1  </strong></span>
+<p><span id="exm:unnamed-chunk-356" class="example"><strong>Example 18.1  </strong></span>
 Solve the equation <span class="math inline">\(10^{2x-1}-5=0\)</span>.</p>
 </div>
 
@@ -434,7 +451,7 @@ Solve the equation <span class="math inline">\(10^{2x-1}-5=0\)</span>.</p>
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-337" class="example"><strong>Example 17.2  </strong></span>
+<p><span id="exm:unnamed-chunk-358" class="example"><strong>Example 18.2  </strong></span>
 Solve the equation <span class="math inline">\(\log_2 x + \log_2 (x - 2) = 3\)</span>.</p>
 </div>
 
@@ -451,11 +468,11 @@ Solve the equation <span class="math inline">\(\log_2 x + \log_2 (x - 2) = 3\)</
 </ol>
 </div>
 </div>
-<div id="solving-compound-interest-model" class="section level2" number="17.2">
-<h2><span class="header-section-number">17.2</span> Solving Compound Interest Model</h2>
+<div id="solving-compound-interest-model" class="section level2" number="18.3">
+<h2><span class="header-section-number">18.3</span> Solving Compound Interest Model</h2>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-339" class="example"><strong>Example 17.3  </strong></span>
+<p><span id="exm:unnamed-chunk-360" class="example"><strong>Example 18.3  </strong></span>
 A check of $5000 was deposited in a savings account with an annual interest rate <span class="math inline">\(6\%\)</span> which is compounded monthly. How many years will it take for the money to raise by 20%?</p>
 </div>
 
@@ -484,14 +501,14 @@ So it takes about 3 years for the savings to raise by 20%.</p>
 <p>When solving exponential and logarithmic equations, you may also use the one-to-one property if both sides are powers with the same base or logarithms with the same base.</p>
 </div>
 </div>
-<div id="more-applications" class="section level2" number="17.3">
-<h2><span class="header-section-number">17.3</span> More Applications</h2>
+<div id="more-applications" class="section level2" number="18.4">
+<h2><span class="header-section-number">18.4</span> More Applications</h2>
 </div>
-<div id="practice-16" class="section level2" number="17.4">
-<h2><span class="header-section-number">17.4</span> Practice</h2>
+<div id="practice-17" class="section level2" number="18.5">
+<h2><span class="header-section-number">18.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-342" class="exercise"><strong>Problem 17.1  </strong></span>
+<p><span id="exr:unnamed-chunk-363" class="exercise"><strong>Problem 18.1  </strong></span>
 Solve the exponential equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(2^{x-1}=4\)</span></li>
@@ -500,7 +517,7 @@ Solve the exponential equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-343" class="exercise"><strong>Problem 17.2  </strong></span>
+<p><span id="exr:unnamed-chunk-364" class="exercise"><strong>Problem 18.2  </strong></span>
 Solve the exponential equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(3^{x^2-2x}=e^{-\ln3}\)</span></li>
@@ -509,7 +526,7 @@ Solve the exponential equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-344" class="exercise"><strong>Problem 17.3  </strong></span>
+<p><span id="exr:unnamed-chunk-365" class="exercise"><strong>Problem 18.3  </strong></span>
 Solve the logarithmic equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\log_5x+\log_5(4x-1)=1\)</span></li>
@@ -518,7 +535,7 @@ Solve the logarithmic equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-345" class="exercise"><strong>Problem 17.4  </strong></span>
+<p><span id="exr:unnamed-chunk-366" class="exercise"><strong>Problem 18.4  </strong></span>
 Solve the logarithmic equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\log_2(x+2)-\log_2(x-5)=3\)</span></li>
@@ -527,7 +544,7 @@ Solve the logarithmic equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-346" class="exercise"><strong>Problem 17.5  </strong></span>
+<p><span id="exr:unnamed-chunk-367" class="exercise"><strong>Problem 18.5  </strong></span>
 For the given function, find values of <span class="math inline">\(x\)</span> satisfying the given equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\log_4x-2\log_4(x+1)\)</span>,<span class="math inline">\(f(x)=-1\)</span></li>
@@ -536,7 +553,7 @@ For the given function, find values of <span class="math inline">\(x\)</span> sa
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-347" class="exercise"><strong>Problem 17.6  </strong></span>
+<p><span id="exr:unnamed-chunk-368" class="exercise"><strong>Problem 18.6  </strong></span>
 Find intersections of the given pairs of curves.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=e^{x^2}\)</span> and~ <span class="math inline">\(g(x)=e^x+12\)</span>.</li>
@@ -545,12 +562,12 @@ Find intersections of the given pairs of curves.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-348" class="exercise"><strong>Problem 17.7  </strong></span>
+<p><span id="exr:unnamed-chunk-369" class="exercise"><strong>Problem 18.7  </strong></span>
 Using the formula <span class="math inline">\(A=P(1+\frac rn)^{nt}\)</span> to determine how many years, to the nearest hundredth, it will take to double an investment $20,000 at the interest rate 5% compounded monthly.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-349" class="exercise"><strong>Problem 17.8  </strong></span>
+<p><span id="exr:unnamed-chunk-370" class="exercise"><strong>Problem 18.8  </strong></span>
 Newton’s Law of Cooling states that the temperature <span class="math inline">\(T\)</span> of an object at any time <span class="math inline">\(t\)</span> satisfying the equation <span class="math inline">\(T=T_s+(T_0-T_s)e^{-rt}\)</span>,
 where <span class="math inline">\(T_s\)</span> is the the temperature of the surrounding environment,
 <span class="math inline">\(T_0\)</span> is the initial temperature of the object,

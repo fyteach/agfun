@@ -1,5 +1,4 @@
-\documentclass[en,12pt]{latex/elegantbookr}
-
+\documentclass[en,12pt]{elegantbook}
 
 \hypersetup{
   pdfcreator={LaTeX via pandoc}}
@@ -7,7 +6,7 @@
 
 \usepackage{longtable,booktabs}
 
-
+\usepackage[utf8]{inputenc}
 
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
@@ -24,7 +23,7 @@
 
   \author{Fei Ye}
 
-  \date{2020-01-29}
+  \date{2020-02-05}
 
 % logo 图案
 % 封面图片
@@ -334,24 +333,24 @@
 \frontmatter
 
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Problem}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{lemma}{Lemma}[chapter]
+% \newtheorem{corollary}{Corollary}[chapter]
+% \newtheorem{proposition}{Proposition}[chapter]
+% \newtheorem{conjecture}{Conjecture}[chapter]
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definition}[chapter]
+% \theoremstyle{definition}
+% \newtheorem{example}{Example}[chapter]
+% \theoremstyle{definition}
+% \newtheorem{exercise}{Problem}[chapter]
+% \theoremstyle{remark}
+% \newtheorem*{remark}{Remark}
+% \newtheorem*{solution}{Solution}
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
 % 封面
-\maketitle
+% \maketitle
 % 插入 before_body.tex
 
 % 目录
@@ -469,9 +468,6 @@ In mathematics, the order of operations reflects conventions about which procedu
 Within the same level, the convention is to perform from the left to the right.
 \EndKnitrBlock{rmdnote}
 
-\hypertarget{examples}{%
-\section{Examples}\label{examples}}
-
 \BeginKnitrBlock{example}
 \protect\hypertarget{exm:unnamed-chunk-4}{}{\label{exm:unnamed-chunk-4} }
 Simplify. \textbf{Write with positive exponents.}
@@ -481,7 +477,8 @@ Simplify. \textbf{Write with positive exponents.}
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
+\iffalse{} {Solution. } \fi{}\\
+
 \[
 \left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}
 =\left(\dfrac{x^3}{2z^{5}y^8}\right)^{-4}
@@ -604,13 +601,13 @@ Factor \(4x^3y-8x^2y^2+12x^3y^3\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Find the GCF of all terms.\\
-The GCF of \(4x^3y\), \(-8x^2y^2\) and \(12x^4y^3\) is \(4x^2y\).
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Find the GCF of all terms.\\
+  The GCF of \(4x^3y\), \(-8x^2y^2\) and \(12x^4y^3\) is \(4x^2y\).
 \item
   Write each term as the product of the GCF and the remaining factor.\\
   \(4x^3y=(4x^2y)\cdot x\), \(-8x^2y^2=(4x^2y)\cdot (-2y)\), and \(12x^4y^3=(4x^2y)(3xy^2)\).
@@ -631,18 +628,18 @@ Factor \(2x^2-6xy+xz-3yz\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Group the first two terms and the last two terms.
-\[
-    \begin{aligned}
-    &2x^2-6xy+xz-3yz\\
-    =&(2x^2-6xy)+(xz-3yz)
-    \end{aligned}
-   \]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Group the first two terms and the last two terms.
+  \[
+   \begin{aligned}
+   &2x^2-6xy+xz-3yz\\
+   =&(2x^2-6xy)+(xz-3yz)
+   \end{aligned}
+  \]
 \item
   Factor out the GCF from each group.\\
   \[
@@ -666,18 +663,18 @@ Factor \(ax+4b-2a-2bx\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Group the first term with the third term and group the second term with the last term.
-\[
-\begin{aligned}
-&ax+4b-2a-2bx\\
-=&(ax-2a)+(-2bx+4b)
-\end{aligned}
-\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Group the first term with the third term and group the second term with the last term.
+  \[
+  \begin{aligned}
+  &ax+4b-2a-2bx\\
+  =&(ax-2a)+(-2bx+4b)
+  \end{aligned}
+  \]
 \item
   Factor out the GCF from each group.
   \[
@@ -719,18 +716,17 @@ Factor \(25x^2-16\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Recognize the binomial as a difference of squares.
-\[\begin{aligned}
-&25x^2-16\\
-=&(5x)^2-4^2
-\end{aligned}
-\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+\item
+  Recognize the binomial as a difference of squares.
+  \[\begin{aligned}
+  &25x^2-16\\
+  =&(5x)^2-4^2
+  \end{aligned}
+  \]
 \item
   Apply the formula.
   \[
@@ -747,7 +743,8 @@ Factor \(32x^3y-2xy^5\) completely.
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
+\iffalse{} {Solution. } \fi{}\\
+
 \[
 32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
 \]
@@ -779,13 +776,13 @@ Factor \(x^2+6x+8\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Factor \(a=1\):
-\[1=1\cdot 1.\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Factor \(a=1\):
+  \[1=1\cdot 1.\]
 \item
   Factor \(c=8\):
   \[8=1\cdot 8=2\cdot 4.\]
@@ -806,13 +803,13 @@ Factor \(2x^2+5x-3\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Factor \(a=2\):
-\[1=1\cdot 2.\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Factor \(a=2\):
+  \[1=1\cdot 2.\]
 \item
   Factor \(c=-3\):
   \[-3=1\cdot (-3)=(-1)\cdot 3.\]
@@ -840,12 +837,12 @@ Factor the trinomial completely.
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Let \(x^2=y\). Then \(4x^4-x^2-3=4y^2-y-3\).
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\item
+  Let \(x^2=y\). Then \(4x^4-x^2-3=4y^2-y-3\).
 \item
   Factor the trinomial in \(y\): \(4y^2-y-3=(4y+3)(y-1)\).
 \item
@@ -974,15 +971,76 @@ Factor completely into polynomials with integer coefficients.
 \end{enumerate}
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-39}{}{\label{exr:unnamed-chunk-39} }
+Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.
+
+``\(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{10~~2~~9~~15}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{4~~3~~15~~7~~2~~1}\);
+\phantom{"} \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{11~~2~~2}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{8~~5~~3~~6}\);
+\phantom{"} \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{14~~3}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{12~~5~~14~~2~~15~~11~~1~~9~~5~~14}\).''
+
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule
+\endhead
+\textbf{A:} \(3x-2\) & \textbf{B:} \(2x+1\) & \textbf{C:} \(x+6\) & \textbf{D:} \(x+7\) & \textbf{E:} \(2x-1\) & \textbf{F:} \(3x-1\) & \textbf{G:} \(x+10\)\tabularnewline
+\textbf{H:} \(x-8\) & \textbf{I:} \(2x+9\) & \textbf{J:} \(x-1\) & \textbf{K:} \(x+3\) & \textbf{L:} \(2x-5\) & \textbf{M:} \(x+5\) & \textbf{N:} \(x-7\)\tabularnewline
+\textbf{O:} \(x-13\) & \textbf{P:} \(5x-3\) & \textbf{Q:} \(4x-11\) & \textbf{R:} \(x-9\) & \textbf{S:} \(2x+3\) & \textbf{T:} \(x+4\) & \textbf{U:} \(7x+1\)\tabularnewline
+\textbf{V:} \(3x+5\) & \textbf{W:} \(3x+4\) & \textbf{X:} \(8x+3\) & \textbf{Y:} \(x-14\) & \textbf{Z:} \(5x-6\) & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2-2x-24\)
+\item
+  \(6x^2+x-2\)
+\item
+  \(x^2-16x+39\)
+\item
+  \(6x^2+13x-5\)
+\item
+  \(x^2-5x-14\)
+\item
+  \(3x^2-5x-12\)
+\item
+  \(x^2-x-110\)
+\item
+  \(x^2-9\)
+\item
+  \(-3x^2+11x-6\)
+\item
+  \(x^2-10x+16\)
+\item
+  \(-2x^2+5x+12\)
+\item
+  \(42x^2-x-1\)
+\item
+  \(-2x^2-3x+27\)
+\item
+  \(x^2+14x+49\)
+\item
+  \(x^2-81\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\hypertarget{algebra-of-rational-expressions}{%
+\chapter{Algebra of Rational Expressions}\label{algebra-of-rational-expressions}}
+
+\hypertarget{is-there-enough-time}{%
+\section{Is There Enough Time}\label{is-there-enough-time}}
+
+\BeginKnitrBlock{rmdthink}
+Matt is kayaking upstream on a river with his best effort. After 30 minutes, he received an emergency call and has to return in 20 minute. The speed of the current of the river is 1 mph. Under normal condition, a paddler's average paddling speed is between 2 and 5 mph. Do you think Matt can return on time? Why?
+\EndKnitrBlock{rmdthink}
+
 \hypertarget{rational-expressions}{%
-\chapter{Rational Expressions}\label{rational-expressions}}
+\section{Rational Expressions}\label{rational-expressions}}
 
-\hypertarget{rational-expressions-1}{%
-\section{Rational Expressions}\label{rational-expressions-1}}
-
-Let \(p\) and \(q\) be polynomial functions of \(x\) and \(p\) is not a constant function. We call the function \(r(x)=\frac{p(x)}{q(x)}\) a \dfn{rational function}. The domain of \(r\) is \(\{x\mid Q(x)\neq 0\}\).
-The expression \(\frac{p(x)}{q(x)}\) is called a \dfn{rational expression}, the polynomial \(q(x)\) \dfn{the numerator}, and the polynomial \(q(x)\) \dfn{the denominator}.
-A rational expression is \dfn{simplified} if the numerator and the denominator have no common factor other than \(1\).
+Let \(p\) and \(q\) be polynomial functions of \(x\) and \(p\) is not a constant function. We call the function \(r(x)=\frac{p(x)}{q(x)}\) a \textbf{\emph{rational function}}. The domain of \(r\) is \(\{x\mid Q(x)\neq 0\}\).
+The expression \(\frac{p(x)}{q(x)}\) is called a \textbf{\emph{rational expression}}, the polynomial \(q(x)\) is called the \textbf{\emph{numerator}}, and the polynomial \(q(x)\) is called the \textbf{\emph{denominator}}.
+A rational expression is \textbf{\emph{simplified}} if the numerator and the denominator have no common factor other than \(1\).
 
 Let \(p(x)\), \(q(x)\) be polynomials with \(q(x)\neq 0\) and \(c(x)\) be a nonzero expression. Then
 \[
@@ -990,20 +1048,20 @@ Let \(p(x)\), \(q(x)\) be polynomials with \(q(x)\neq 0\) and \(c(x)\) be a nonz
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-39}{}{\label{exm:unnamed-chunk-39} }
+\protect\hypertarget{exm:unnamed-chunk-41}{}{\label{exm:unnamed-chunk-41} }
 Simplify \(\dfrac{x^2+4x+3}{x^2+3x+2}\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Factor both the top and the bottom.
-\[
-    \dfrac{x^2+4x+3}{x^2+3x+2}=\dfrac{(x+1)(x+3)}{(x+1)(x+2)}.
-\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
+\item
+  Factor both the top and the bottom.
+  \[
+   \dfrac{x^2+4x+3}{x^2+3x+2}=\dfrac{(x+1)(x+3)}{(x+1)(x+2)}.
+  \]
 \item
   Divide out common factors.
   \[
@@ -1013,18 +1071,18 @@ Simplify \(\dfrac{x^2+4x+3}{x^2+3x+2}\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-41}{}{\label{exm:unnamed-chunk-41} }
+\protect\hypertarget{exm:unnamed-chunk-43}{}{\label{exm:unnamed-chunk-43} }
 Simplify \(\dfrac{2x^2-x-3}{2x^2-3x-5}\).
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Factor both the top and the bottom.
-\[\dfrac{2x^2-x-3}{2x^2-3x-5}=\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}.\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
+\item
+  Factor both the top and the bottom.
+  \[\dfrac{2x^2-x-3}{2x^2-3x-5}=\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}.\]
 \item
   Divide out common factors.
   \[\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}=\dfrac{2x-3}{2x-5}.\]
@@ -1040,21 +1098,21 @@ If \(p\), \(q\), \(s\), \(t\) are polynomials with \(q\neq 0\) and \(t\neq 0\), 
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-43}{}{\label{exm:unnamed-chunk-43} }
+\protect\hypertarget{exm:unnamed-chunk-45}{}{\label{exm:unnamed-chunk-45} }
 Multiply and then simplify.
 \[\dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}.\]
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Factor numerators and denominators.
-\[
-    \dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}=\dfrac{3\cdot x\cdot x}{(x-2)(x+3)}\cdot\dfrac{(x-2)(x+2)}{2\cdot3\cdot x}
-\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
+\item
+  Factor numerators and denominators.
+  \[
+   \dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}=\dfrac{3\cdot x\cdot x}{(x-2)(x+3)}\cdot\dfrac{(x-2)(x+2)}{2\cdot3\cdot x}
+  \]
 \item
   Multiply and simplify.
   \[
@@ -1064,7 +1122,7 @@ Multiply and then simplify.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-45}{}{\label{exm:unnamed-chunk-45} }
+\protect\hypertarget{exm:unnamed-chunk-47}{}{\label{exm:unnamed-chunk-47} }
 Multiply and then simplify.
 \[
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}.
@@ -1072,7 +1130,8 @@ Multiply and then simplify.
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
+\iffalse{} {Solution. } \fi{}\\
+
 \[
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}
 =\dfrac{(3x+1)\cancel{(x-3)}\cancel{(x+4)}(x-4)}{\cancel{(x+4)}(x+4)(5x+1)\cancel{(x-3)}}
@@ -1083,31 +1142,31 @@ Multiply and then simplify.
 \hypertarget{dividing-rational-expressions}{%
 \section{Dividing Rational Expressions}\label{dividing-rational-expressions}}
 
-If \(p\), \(q\), \(s\), \(t\) are polynomials where \(q\neq 0\), \$s\neq \$ and \(t\neq 0\), then
+If \(p\), \(q\), \(s\), \(t\) are polynomials where \(q\neq 0\), \(s\neq 0\) and \(t\neq 0\), then
 \[
 \dfrac{~p~}{~q~}\div\dfrac{~s~}{~t~}=\dfrac{~p~}{~q~}\cdot\dfrac{~t~}{~s~}=\dfrac{~pt~}{~qs~}.
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-47}{}{\label{exm:unnamed-chunk-47} }
-Divide and then simplify.
+\protect\hypertarget{exm:unnamed-chunk-49}{}{\label{exm:unnamed-chunk-49} }
+Divide and then simplify.\\
 \[
 \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}.
 \]
 \EndKnitrBlock{example}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-1. Rewrite as a multiplication.
-\[
-\dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot \dfrac{2x^2-x-3}{6x-2}
-\]
+\iffalse{} {Solution. } \fi{}\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  Factor and simplify.
+  Rewrite as a multiplication.\\
+  \[
+  \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot \dfrac{2x^2-x-3}{6x-2}
+  \]
+\item
+  Factor and simplify.\\
   \[
   \dfrac{2x+6}{x^2-6x-7}\cdot\dfrac{2x^2-x-3}{6x-2}
   =\dfrac{\cancel{2}(x+3)\cancel{(x+1)}(2x-3)}{\cancel{2}\cancel{(x+1)}(x-7)(3x-1)}
@@ -1116,8 +1175,259 @@ Divide and then simplify.
 \end{enumerate}
 \EndKnitrBlock{solution}
 
+\hypertarget{adding-or-subtracting-rational-expressions-with-the-same-denominator}{%
+\section{Adding or Subtracting Rational Expressions with the Same Denominator}\label{adding-or-subtracting-rational-expressions-with-the-same-denominator}}
+
+If \(P\), \(Q\) and \(R\) are polynomials with \(R\neq 0\), then
+\[
+\dfrac{~P~}{~R~}+\dfrac{~Q~}{~R~}=\dfrac{~P+Q~}{~R~}\qquad \text{and} \qquad
+\dfrac{~P~}{~R~}-\dfrac{~Q~}{~R~}=\dfrac{~P-Q~}{~R~}.
+\]
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-51}{}{\label{exm:unnamed-chunk-51} }
+Add and simplify\\
+\[
+\dfrac{x^2+4}{x^2+3x+2}+\dfrac{5x}{x^2+3x+2}.
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine if the rational expressions have the same denominator. If so, the new numerator will be the sum/difference of the numerators.
+  \[
+   \dfrac{x^2+4}{x^2+3x+2}+\dfrac{5x}{x^2+3x+2}=\dfrac{x^2+5x+4}{x^2+3x+2}.
+  \]
+\item
+  Simplify the resulting rational expression.
+  \[
+   \dfrac{x^2+5x+4}{x^2+3x+2}=\dfrac{(x+1)(x+4)}{(x+1)(x+2)}=\dfrac{x+4}{x+2}.
+  \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-53}{}{\label{exm:unnamed-chunk-53} }
+Subtract and simplify \(\dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\begin{aligned}
+    \dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}=&\dfrac{2x^2-3x-5}{2x^2-x-3}\\
+    =&\dfrac{(2x-5)(x+1)}{(2x-3)(x+1)}\\
+    =&\dfrac{2x-5}{2x-3}.
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{adding-or-subtracting-rational-expressions-with-different-denominators}{%
+\section{Adding or Subtracting Rational Expressions with Different Denominators}\label{adding-or-subtracting-rational-expressions-with-different-denominators}}
+
+To add or subtract rational expressions with different denominators, we need to rewrite the rational expressions to equivalent rational expressions with the same denominator, say the LCD.
+
+\BeginKnitrBlock{rmdtip}
+\textbf{Equivalent Reduction.}\\
+What if all denominators are the same? How to make denominators the same? Reducing the problem to an easier one using equivalent operations helps solve the problem.
+\EndKnitrBlock{rmdtip}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-56}{}{\label{exm:unnamed-chunk-56} }
+Find the LCD of \(\dfrac{3}{x^2-x-6}\) and \(\dfrac{6}{x^2-4}\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Factor each denominator.
+  \[
+   x^2-x-6=(x+2)(x-3)\qquad x^2-4=(x-2)(x+2)
+  \]
+\item
+  List the factors of the first denominator and add unlisted factors of the second factor to get the final list.
+
+  \begin{longtable}[]{@{}lccc@{}}
+  \toprule
+  \endhead
+  First list & \((x+2)\) & \((x-3)\) &\tabularnewline
+  Second list & \((x+2)\) & & \((x-2)\)\tabularnewline
+  Final list & \((x+2)\) & \((x-3)\) & \((x-2)\)\tabularnewline
+  \bottomrule
+  \end{longtable}
+\item
+  The LCD is the product of factors in the final list.\\
+  \[(x+2)(x-3)(x-2).\]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-58}{}{\label{exm:unnamed-chunk-58} }
+Subtract and simplify\\
+\[\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Find the LCD.
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    First factor denominators.\\
+    \[x^2-2x-8=(x+2)(x-4)\]
+    \[x^2-4=(x-2)(x+2)\]
+  \item
+    Then using the table to find the final list of factors of the LCD.
+
+    \begin{longtable}[]{@{}lccc@{}}
+    \toprule
+    \endhead
+    First list & \((x+2)\) & & \((x-4)\)\tabularnewline
+    Second list & \((x+2)\) & \((x-2)\) &\tabularnewline
+    Final list & \((x+2)\) & \((x-2)\) & \((x-4)\)\tabularnewline
+    \bottomrule
+    \end{longtable}
+  \end{enumerate}
+
+  The LCD is \((x+2)(x-2)(x-4)\).
+\item
+  Rewrite each rational expression into an equivalent expression with the LCD as the new denominator.\\
+  \[
+       \dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}=\dfrac{(x-3)(x-2)}{(x+2)(x-2)(x-4)}-\dfrac{(x-4)}{(x+2)(x-2)(x-4)}
+   \]
+\item
+  Subtract and simplify.\\
+  \[
+       \dfrac{(x-3)(x-2)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{(x^2-5x+6)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{x^2-6x+10}{(x+2)(x-2)(x-4)}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{simplifying-complex-rational-expressions}{%
+\section{Simplifying Complex Rational Expressions}\label{simplifying-complex-rational-expressions}}
+
+A \textbf{\emph{complex rational expression}} is a rational expression whose denominator or numerator contains a rational expression.
+
+A complex rational expression is equivalent to the quotient of its numerator by its denominator. That suggests the following strategy to simplify a complex rational expression.
+
+\BeginKnitrBlock{rmdtip}
+\textbf{Simplify and Change the Viewpoint.} A complex rational expression is a quotient of two rational expressions. You may rewrite it as an multiplication by flipping the denominator. However, it's better to simply the numerator and denominator or you won't see a good looking new expression.
+\EndKnitrBlock{rmdtip}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-61}{}{\label{exm:unnamed-chunk-61} }
+Simplify
+\[
+\dfrac{~\dfrac{2x-1}{x^2-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{1}{x^2-1}~}
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Simplify the numerator and the denominator.
+  \[
+       \begin{aligned}
+           \dfrac{~\dfrac{2x-1}{x^2-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{1}{x^2-1}~}
+           =&\dfrac{
+               ~\dfrac{2x-1}{(x-1)(x+1)}+\dfrac{(x-1)(x-1)}{(x-1)(x+1)}~
+           }{~
+               \dfrac{(x+1)(x+1)}{(x-1)(x+1)}-\dfrac{1}{(x-1)(x+1)}~
+           }\\[5pt]
+           =&\dfrac{
+               ~\dfrac{(2x-1)+(x-1)(x-1)}{(x-1)(x+1)}~
+           }{
+               ~\dfrac{(x+1)(x+1)-1}{(x-1)(x+1)}~
+           }\\[5pt]
+           =&\dfrac{
+               ~\dfrac{(2x-1)+(x^2-2x+1)}{(x-1)(x+1)}~
+           }{
+               ~\dfrac{(x^2+2x+1)-1}{(x-1)(x+1)}~
+           }\\[5pt]
+           =&\dfrac{
+               ~\dfrac{x^2}{(x-1)(x+1)}~
+           }{
+               ~\dfrac{x^2+2x}{(x-1)(x+1)}~
+           }
+       \end{aligned}
+   \]
+\item
+  Rewrite as a product.
+  \[
+       \dfrac{
+           ~\dfrac{x^2}{(x-1)(x+1)}~
+       }{
+           ~\dfrac{x^2+2x}{(x-1)(x+1)}~
+       }
+       =\dfrac{x^2}{(x-1)(x+1)}\cdot \dfrac{(x-1)(x+1)}{x^2+2x}
+   \]
+\item
+  Multiply and simplify.
+  \[
+       \begin{aligned}
+       \dfrac{x^2}{(x-1)(x+1)}\cdot \dfrac{(x-1)(x+1)}{x^2+2x}
+       =&\dfrac{x\cdot x}{(x-1)(x+1)}\cdot \dfrac{(x-1)(x+1)}{x(x+2)}\\[5pt]
+       =& \dfrac{\bcancel{x}x\cancel{(x-1)(x+1)}}{\bcancel{x}(x+2)\cancel{(x-1)(x+1)}}\\[5pt]
+       =& \dfrac{x}{x+2}
+       \end{aligned}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdnote}
+Another way to simplify a complex rational expression is to multiply the LCD to both the denominator and numerator and then simplify.
+\EndKnitrBlock{rmdnote}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-64}{}{\label{exm:unnamed-chunk-64} }
+Simplify
+\[\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Find the LCD of all denominators.\\
+  In this case, the LCD is \((x-1)(x+1)\).
+\item
+  Multiply the complex rational expression by \(\dfrac{(x-1)(x+1)}{(x-1)(x+1)}\) and simplify.
+  \[
+  \begin{aligned}
+   \dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}
+   =&\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}\cdot \dfrac{(x-1)(x+1)}{(x-1)(x+1)}\\[5pt]
+   =& \dfrac{~(x-1)(x+1)\left(\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}\right)~}{~(x-1)(x+1)\left(\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}\right)~}\\[5pt]
+   =& \dfrac{~(x+1)^2+(x-1)^2~}{~(x+1)^2-(x-1)^2~}\\[5pt]
+   =& \dfrac{x^2+1}{2x}
+  \end{aligned}
+  \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-2}{%
+\section{Practice}\label{practice-2}}
+
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-49}{}{\label{exr:unnamed-chunk-49} }
+\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66} }
 Simplify.
 
 \begin{enumerate}
@@ -1132,7 +1442,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-50}{}{\label{exr:unnamed-chunk-50} }
+\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67} }
 Multiply and simplify.
 
 \begin{enumerate}
@@ -1147,7 +1457,7 @@ Multiply and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-51}{}{\label{exr:unnamed-chunk-51} }
+\protect\hypertarget{exr:unnamed-chunk-68}{}{\label{exr:unnamed-chunk-68} }
 Divide and simplify.
 
 \begin{enumerate}
@@ -1162,31 +1472,2309 @@ Divide and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-52}{}{\label{exr:unnamed-chunk-52} }
+\protect\hypertarget{exr:unnamed-chunk-69}{}{\label{exr:unnamed-chunk-69} }
 Simplify.
 \[
 \frac{-x^2+11x-18}{x^2-4x+4}\div \frac{x^2-5x-36}{x^2-7x+12}\cdot \frac{2x^2+7x-4}{x^2+2x-15}
 \]
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-70}{}{\label{exr:unnamed-chunk-70} }
+Add/subtract and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{x^2+2x-2}{x^2+2x-15}+\dfrac{5x+12}{x^2+2x-15}\)
+\item
+  \(\dfrac{3x-10}{x^2-25}-\dfrac{2x-15}{x^2-25}\)
+\item
+  \(\dfrac{4}{(x-3)(x+2)}+\dfrac{3x-2}{x^2-x-6}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71} }
+Find the LCD of rational expressions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{2x}{2x^2-5x-3}\)\quad and \quad \(\dfrac{x-1}{x^2-x-6}\)
+\item
+  \(\dfrac{9}{7x^2-28x}\) \quad and \quad \(\dfrac{2}{x^2-8x+16}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-72}{}{\label{exr:unnamed-chunk-72} }
+Add and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{x}{x+1}+\dfrac{x-1}{x+2}\)
+\item
+  \(\dfrac{x+2}{2x^2-x-3}+\dfrac{1}{x^2+3x+2}\)
+\item
+  \(\dfrac{4}{x-3}+\dfrac{3x-2}{x^2-x-6}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73} }
+Subtract and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{3x+5}{x^2-7x+12}-\dfrac{3}{x-3}\)
+\item
+  \(\dfrac{y}{y^2-5y-6}-\dfrac{7}{y^2-4y-5}\)
+\item
+  \(\dfrac{2x-3}{x^2+3x-10}-\dfrac{x+2}{x^2+2x-8}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-74}{}{\label{exr:unnamed-chunk-74} }
+Simplify.
+\[
+\frac{x+11}{7x^2-2x-5}+\frac{x-2}{x-1}-\frac{x}{7x+5}
+\]
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75} }
+Subtract and simplify.
+\[
+\frac{x-1}{x^2-3x}+\frac{4}{x^2-2\:x-3}-\frac{1}{x\left(x+1\right)}
+\]
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-76}{}{\label{exr:unnamed-chunk-76} }
+Simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{~1+\dfrac{2}{x}~}{~1-\dfrac{2}{x}~}\)
+\item
+  \(\dfrac{~\dfrac{1}{x^2}-1~}{~\dfrac{1}{x^2}-\dfrac{1}{x}~}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77} }
+Simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{~\dfrac{x^2-y^2}{y^2}~}{~\dfrac1x-\dfrac{1}{y}~}\)
+\item
+  \(\dfrac{~\dfrac{2}{(x+1)^2}-\dfrac{1}{x+1}~}{~1-\dfrac{4}{(x+1)^2}~}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-78}{}{\label{exr:unnamed-chunk-78} }
+Simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{~\dfrac{5x}{x^2-x-6}~}{~\dfrac2{x+2}+\dfrac{3}{x-3}~}\)
+\item
+  \(\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79} }
+Tim and Jim refill their cars at the same gas station twice last month. Each time Tim got \$20 gas and Jim got 8 gallon. Suppose they refill their cars on same days. The price was \$2.5 per gallon the first time. The price on the second time changed. Can you find out who had the better average price?
+\EndKnitrBlock{exercise}
+
 \hypertarget{radicals-and-rational-exponents}{%
 \chapter{Radicals and Rational Exponents}\label{radicals-and-rational-exponents}}
+
+\hypertarget{do-you-want-to-be-a-fire-fighter}{%
+\section{Do You Want to Be a Fire Fighter}\label{do-you-want-to-be-a-fire-fighter}}
+
+\BeginKnitrBlock{rmdthink}
+To reach the 5th floor window of a building that is 25 feet from the location of the turntable aerial ladder truck. How long should the ladder be placed to reach the window? The hight of that window is 50 feet.
+
+\begin{figure}
+\centering
+\includegraphics{figs/Aerial-Apparatus-Positioning.png}
+\caption{Picture from www.montgomerycountymd.gov demonstrating the positioning of a turntable aerial ladder truck}
+\end{figure}
+\EndKnitrBlock{rmdthink}
+
+\hypertarget{radical-expressions}{%
+\section{Radical Expressions}\label{radical-expressions}}
+
+If \(b^2=a\), then we say that \(b\) is a \textbf{\emph{square root}} of \(a\). We denote the positive square root of \(a\) as \(\sqrt{a}\), called the \textbf{\emph{principal square root}}.
+
+For any real number \(a\), the expression \(\sqrt{a^2}\) can be simplified as
+\[
+\sqrt{a^2}=|a|.
+\]
+
+If \(b^3=a\), then we say that \(b\) is a \textbf{\emph{cube root}} of \(a\). The cube root of a real number \(a\) is denoted by \(\sqrt[3]{a}\).
+
+For any real number \(a\), the expression \(\sqrt[3]{a^3}\) can be simplified as
+\[
+\sqrt[3]{a^3}=a.
+\]
+
+In general, if \(b^n=a\), then we say that \(b\) is an \textbf{\emph{\(n\)-th root}} of \(a\). If \(n\) is \textbf{even}, the \textbf{positive} \(n\)-th root of \(a\), called the \textbf{\emph{principal \(n\)-th root}}, is denoted by \(\sqrt[n]{a}\). If \(n\) is odd, the \(n\)-the root \(\sqrt[n]{a}\) of \(a\) has the same sign with \(a\).
+
+In \(\sqrt[n]{a}\), the symbol \(\sqrt{\phantom{a}}\) is called the \textbf{\emph{radical sign}}, \(a\) is called the \textbf{\emph{radicand}}, and \(n\) is called the \textbf{\emph{index}}.
+
+If \(n\) is even, then the \(n\)-th root of a negative number is not a real number.
+
+For any real number \(a\), the expression \(\sqrt[n]{a^n}\) can be simplified as
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[n]{a^n}=|a|\) if \(n\) is even.
+\item
+  \(\sqrt[n]{a^n}=a\) if \(n\) is odd.
+\end{enumerate}
+
+A radical is simplified if the radicand has no perfect power factors against the radical.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-81}{}{\label{exm:unnamed-chunk-81} }
+Simplify the radical expression using the definition.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{4(y-1)^2}\)
+\item
+  \(\sqrt[3]{-8x^3y^6}\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{4(y-1)^2}=\sqrt{[2(y-1)]^2}=2|y-1|\).
+\item
+  \(\sqrt[3]{-8x^3y^6}=\sqrt[3]{(-2xy^2)^2}=-2xy^2\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{rational-exponents}{%
+\section{Rational Exponents}\label{rational-exponents}}
+
+If \(\sqrt[n]{a}\) is a real number, then we define \(a^{\frac mn}\) as
+\[
+a^{\frac mn}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m.
+\]
+
+Rational exponents have the same properties as integral exponents:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(a^m\cdot a^n=a^{m+n}\)
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    \(\dfrac{a^m}{a^n}=a^{m-n}\)
+  \end{enumerate}
+\item
+  \(a^{-\frac mn}=\dfrac{~1~}{~a^{\frac mn}~}\)\\
+\item
+  \((a^m)^n=a^{mn}\)
+\item
+  \((ab)^m=a^m\cdot b^m\)
+\item
+  \(\left(\dfrac ab\right)^m=\dfrac{a^m}{b^m}\)\\
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-83}{}{\label{exm:unnamed-chunk-83} }
+Simplify the radical expression or the expression with rational exponents. \textbf{Write in radical notation}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{x}\sqrt[3]{x^2}\)
+\item
+  \(\sqrt[3]{\sqrt{x^3}}\)
+\item
+  \(\left(\frac{x^{\frac12}}{x^{-\frac56}}\right )^{\frac14}\)
+\item
+  \(\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \[
+  \sqrt{x}\sqrt[3]{x^2}=x^{\frac12}x^{\frac{2}{3}}=x^{\frac{1}{2}+\frac{2}{3}}=x^\frac{7}{6}=x\sqrt[6]{x}.
+  \]
+\item
+  \[
+  \sqrt[3]{\sqrt{x^3}}=(\sqrt{x^3})^\frac{1}{3}=[(x^3)^{\frac{1}{2}}]^{\frac{1}{3}}=x^{3\cdot\frac{1}{2}\cdot\frac{1}{3}}=x^{\frac{1}{2}}=\sqrt{x}.
+  \]
+\item
+  \[
+  \left(\frac{x^{\frac12}}{x^{-\frac56}}\right)^{\frac14}=(x^{\frac12}x^{\frac56})^{\frac14}=(x^{\frac{1}{2}+\frac{5}{6}})^{\frac{1}{4}}=(x^\frac{4}{3})^{\frac{1}{4}}=x^{\frac{1}{3}}=\sqrt[3]{x}.
+  \]
+\item
+  \[
+  \sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}=\sqrt{\frac{y^2}{x^2}}=\sqrt{\left(\frac yx\right)^2}=\left|\frac yx\right|.
+  \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdnote}
+In general, rewriting radical in rational exponents helps simplify calculations.
+\EndKnitrBlock{rmdnote}
+
+\hypertarget{product-and-quotient-rules-for-radicals}{%
+\section{Product and Quotient Rules for Radicals}\label{product-and-quotient-rules-for-radicals}}
+
+If \(\sqrt[n]{a}\) and \(\sqrt[n]{b}\) are real numbers, then
+\[{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{ab}.\]
+
+If \(\sqrt[n]a\) and \(\sqrt[n]b\) are real numbers and \(b\neq 0\), then
+\[\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.\]
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-86}{}{\label{exm:unnamed-chunk-86} }
+Simplify the expression.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}\).
+\item
+  \(\dfrac{\sqrt[5]{96x^9y^3}}{\sqrt[5]{3x^{-1}y}}\).
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}=\sqrt[4]{(8xy^4)\cdot (2x^7y)}=\sqrt[4]{16x^8y^5}=\sqrt[4]{2^4(x^2)^4y^4\cdot y}=2x^2y\sqrt[4]{y}\).
+\item
+  \(\dfrac{ \sqrt[5]{96x^9y^3} }{ \sqrt[5]{3x^{-1}y} }=\sqrt[5]{\dfrac{96x^9y^3}{3x^{-1}y}}=\sqrt[5]{32x^{10}y^2}=\sqrt[5]{(2x^2)^5\cdot y^2}=2x^2\sqrt[5]{y^2}\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{combining-like-radicals}{%
+\section{Combining Like Radicals}\label{combining-like-radicals}}
+
+Two radicals are called \textbf{\emph{like radicals}} if they have the same index and the same radicand. We add or subtract like radicals by combining their coefficients.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-88}{}{\label{exm:unnamed-chunk-88} }
+Simplify the expression.
+
+\[
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}.
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}=2x\sqrt{2x}-2x^2+x^2\sqrt{2x}=(x^2+2x)\sqrt{2x}-2x^2.
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{multiplying-radicals}{%
+\section{Multiplying Radicals}\label{multiplying-radicals}}
+
+Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-90}{}{\label{exm:unnamed-chunk-90} }
+Simplify the expression.
+\[
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x}).
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\begin{aligned}
+(\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x})
+=&\sqrt{2x}\cdot\sqrt{2x}-3\sqrt{x}\cdot\sqrt{2x}+2\sqrt{x}\cdot\sqrt{2x}-6\sqrt{x}\cdot\sqrt{x}\\
+=&2x-3x\sqrt{2}+2x\sqrt{2}-6x\\
+=&-4x-x\sqrt{2}\\
+=&-(4+\sqrt{2})x.
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{rationalizing-denominators}{%
+\section{Rationalizing Denominators}\label{rationalizing-denominators}}
+
+Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-92}{}{\label{exm:unnamed-chunk-92} }
+Rationalize the denominator.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{1}{2\sqrt{x^3}}\)
+\item
+  \(\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In this case, to get rid of the radical in the bottom, we multiply the expression by \(\dfrac{\sqrt{x}}{\sqrt{x}}\) so that the radicand in the bottom becomes a perfect power.
+  \[
+   \dfrac{1}{2\sqrt{x^3}}=\dfrac{1}{2\sqrt{x^3}}\cdot\dfrac{\sqrt{x}}{\sqrt{x}}=\dfrac{\sqrt{x}}{2\sqrt{x^2}\sqrt{x}}=\dfrac{\sqrt{x}}{2x^2}.  
+   \]
+\item
+  In this case, we use the formula \((a-b)(a+b)=a^2+b^2\). Multiply the expression by \(\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}+\sqrt{y}}\).
+  \[
+   \dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}=\dfrac{(\sqrt{x}+\sqrt{y})^2}{(\sqrt{x}-\sqrt{y})(\sqrt{x}+\sqrt{y})}=\dfrac{x+y+2\sqrt{xy}}{x-y}.
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{complex-numbers}{%
+\section{Complex Numbers}\label{complex-numbers}}
+
+The imaginary unit \(\ii\) is defined as \(\ii=\sqrt{-1}\). Hence \(\ii^2=-1\).
+
+If \(b\) is a positive number, then \(\sqrt{-b}=\ii\sqrt{b}\).
+
+Let \(a\) and \(b\) are two real numbers. We define a complex number by the expression \(a+b \ii\).
+The number \$a \$ is called the real part and the number \(b\) is called the imaginary part. If \(b=0\),
+then the complex number \(a+b\ii=a\) is just the real number.
+If \(b\neq 0\), then we call the complex number \(a+b\ii\) an imaginary number.
+If \(a=0\) and \(b\neq 0\), then the complex number \(a+b\ii=b\ii\) is called a purely imaginary number.
+
+Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-94}{}{\label{exm:unnamed-chunk-94} }
+Simplify and write your answer in the form \(a+b\ii\), where \(a\) and \(b\) are real numbers and \(\ii\) is the imaginary unit.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{-3}\sqrt{-4}\)
+\item
+  \((4\ii-3)(-2+\ii)\)
+\item
+  \(\frac{-2+5\ii}{\ii}\)
+\item
+  \(\frac{1}{1-2\ii}\)
+\item
+  \(\ii^{2018}\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \[
+    \sqrt{-3}\sqrt{-4}=\ii\sqrt{3}\cdot\ii\sqrt{4}=\ii^2\cdot \sqrt3\cdot 2=-2\sqrt{3}.
+  \]
+\item
+  \[
+    \begin{split}
+        (4\ii-3)(-2+\ii)&=4\ii\cdot(-2)+4\ii\cdot \ii+(-3)\cdot(-2)+(-3)\cdot\ii \\
+        &=-8\ii+(-4)+6+(-3\ii)=2-11\ii.
+    \end{split}
+  \]
+\item
+  \[
+    \begin{split}
+        \frac{-2+5\ii}{\ii}&=\frac{(-2+5\ii)\ii}{\ii\cdot \ii}=\frac{-2\ii+5\ii^2}{\ii^2}\\
+        &=\frac{-2\ii-5}{-1}=5+2\ii.
+    \end{split}
+  \]
+\item
+  \[
+    \begin{split}
+        \frac{1}{1-2\ii}&=\frac{(1+2\ii)}{(1-2\ii)(1+2\ii)}=\frac{1+2\ii}{1-(2\ii)^2}\\
+        &=\frac{1+2\ii}{5}=\frac{1}{5}+\frac{2}{5}\ii.
+    \end{split}
+  \]
+\item
+  \[
+    \ii^{2018}=\ii^{4\cdot 504+2}=(\ii^4)^{504}\cdot \ii^2=-1.
+  \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-96}{}{\label{exm:unnamed-chunk-96} }
+Evaluate \(f(1+\ii)\) for the function \(f(z)=z^2+\frac{z-1}{z+1}\). Write your answer in the form \(a+b\ii\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\begin{aligned}
+f(1+\ii)=&(1+\ii)^2+\frac{\ii}{2+\ii}\\
+=&1+2\ii+\ii^2+\frac{\ii(2-\ii)}{4-\ii^2}\\
+=&2\ii+\frac{1+2\ii}{5}\\
+=&\frac15+\frac{12}{5}\ii.
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-3}{%
+\section{Practice}\label{practice-3}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98} }
+Evaluate the square root. If the square root is not a real number, state so.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(-\sqrt{\frac{4}{25}}\)
+\item
+  \(\sqrt{49}-\sqrt{9}\)
+\item
+  \(-\sqrt{-1}\)\null
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99} }
+Simplify the radical expression.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{(-7x^2)^2}\)
+\item
+  \(\sqrt{(x+2)^2}\)
+\item
+  \(\sqrt{25x^2y^6}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100} }
+Simplify the radical expression.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[3]{-27x^3}\)
+\item
+  \(\sqrt[4]{16x^8}\)
+\item
+  \(\sqrt[5]{(2x-1)^5}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101} }
+Simplify the radical expression. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{50}\)
+\item
+  \(\sqrt[3]{-8x^2y^3}\)
+\item
+  \(\sqrt[5]{32x^{12}y^2z^8}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102} }
+Write the radical expression with rational exponents.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[3]{(2x)^5}\)
+\item
+  \((\sqrt[5]{3xy})^7\)
+\item
+  \(\sqrt[4]{(x^2+3)^3}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103} }
+Write in radical notation and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(4^{\frac32}\)
+\item
+  \(-81^{\frac 34}\)
+\item
+  \(\left(\frac{27}{8}\right)^{-\frac{2}{3}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104} }
+Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{12x^{\frac12}}{4x^{\frac23}}\)
+\item
+  \((x^{-\frac35}y^{\frac12})^{\frac13}\)
+\item
+  \(\left(\frac{x^{\frac12}}{x^{-\frac13}}\right)^4\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105} }
+Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{\sqrt{x}}{\sqrt[3]{x}}\)
+\item
+  \(\sqrt{\sqrt[3]{x}}\)
+\item
+  \(\sqrt{x}\sqrt[3]{x}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106} }
+Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[5]{32x^{\frac13}}\)
+\item
+  \(\left(\dfrac{\sqrt[4]{9x}}{3}\right)^{-2}\)
+\item
+  \(\sqrt{\frac{1}{\sqrt[3]{x^{-2}}}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107} }
+Simplify the expression. Write in radical notation. Assume all variables are nonnegative.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[3]{(-x)^{-2}}\sqrt[2]{x^3}\)
+\item
+  \(\left(\dfrac{8a^{-\frac{5}{2}}b}{a^{\frac12}b^{-5}}\right)^{-\frac23}\)
+\item
+  \(\left(\dfrac{y^{-\frac{1}{3}}}{\sqrt[3]{x^{2}}}\right)^{-3}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108} }
+Multiply and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[3]{4}\sqrt[3]{5}\)
+\item
+  \(\sqrt{|x+7|}\sqrt{|x-7|}\)
+\item
+  \(\sqrt[3]{(x-y)^{\frac52}}\sqrt[3]{(x-y)^{\frac72}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109} }
+Simplify the radical expression. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{20xy}\cdot\sqrt{4xy^2}\)
+\item
+  \(\sqrt[3]{16}\cdot5\sqrt[3]{2}\)
+\item
+  \(\sqrt[5]{8x^4y^3z^3}\cdot\sqrt[5]{8xy^4z^8}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110} }
+Divide. Assume all variables are positive. Answers must be simplified.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{\dfrac{9x^3}{y^8}}\)
+\item
+  \(\sqrt[3]{\dfrac{32x^4}{x}}\)
+\item
+  \(\dfrac{\sqrt{40x^5}}{\sqrt{2x}}\)
+\item
+  \(\dfrac{\sqrt[3]{24a^6b^4}}{\sqrt[3]{3b}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111} }
+Add or subtract, and simplify. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(5\sqrt6+3\sqrt6\)
+\item
+  \(4\sqrt{20}-2\sqrt5\)
+\item
+  \(3\sqrt{32x^2}+5x\sqrt{8}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112} }
+Add or subtract, and simplify. Assume all variables are positive
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(7\sqrt{4x^2}+2\sqrt{25x}-\sqrt{16x}\)
+\item
+  \(5\sqrt[3]{x^2y}+\sqrt[3]{27x^5y^4}\)
+\item
+  \(3\sqrt{9y^3}-3y\sqrt{16y}+\sqrt{25y^3}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113} }
+Multiply and simplify. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt2(3\sqrt3-2\sqrt2)\)
+\item
+  \((\sqrt5+\sqrt7)(3\sqrt5-2\sqrt7)\)
+\item
+  \((\sqrt3+\sqrt2)^2\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114} }
+Multiply and simplify. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((\sqrt6-\sqrt5)(\sqrt6+\sqrt5)\)
+\item
+  \((\sqrt{x+1}-1)(\sqrt{x+1}+1)\)
+\item
+  \((2\sqrt[3]x+6)(\sqrt[3]x+1)\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115} }
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt[3]{\dfrac2{25}}\)
+\item
+  \(\sqrt{\dfrac{2x}{7y}}\)
+\item
+  \(\dfrac{\sqrt[3]{x}}{\sqrt[3]{3y^2}}\)
+\item
+  \(\dfrac{3x}{\sqrt[4]{x^3y}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116} }
+Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{6\sqrt3}{\sqrt3-1}\)
+\item
+  \(\dfrac{\sqrt5-\sqrt3}{\sqrt5+\sqrt3}\)
+\item
+  \(\dfrac{3+\sqrt2}{2+\sqrt3}\)
+\item
+  \(\dfrac{2\sqrt{x}}{\sqrt x- \sqrt y}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117} }
+Simplify and rationalize the denominator. Assume all variables are positive.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{\sqrt{x}}{\sqrt x-1}+\dfrac{1}{\sqrt{x}+1}\)
+\item
+  \(\dfrac{\sqrt{x}+1}{\sqrt x}-\dfrac{1}{\sqrt{x}-1}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118} }
+Add, subtract, multiply complex numbers and write your answer in the form \(a+b\ii\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{-2}\cdot\sqrt{-3}\)
+\item
+  \(\sqrt{2}\cdot\sqrt{-8}\)
+\item
+  \((5-2\ii)+(3+3\ii)\)
+\item
+  \((2+6\ii)-(12-4\ii)\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119} }
+Add, subtract, multiply complex numbers and write your answer in the form \(a+b\ii\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((3+\ii)(4+5\ii)\)
+\item
+  \((7-2\ii)(-3+6\ii)\)
+\item
+  \((3-x\sqrt{-1})(3+x\sqrt{-1})\)
+\item
+  \((2+3\ii)^2\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120} }
+Divide the complex number and write your answer in the form \(a+b\ii\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{2\ii}{1+\ii}\)
+\item
+  \(\dfrac{5-2\ii}{3+2\ii}\)
+\item
+  \(\dfrac{2+3\ii}{3-\ii}\)
+\item
+  \(\dfrac{4+7\ii}{-3\ii}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121} }
+Simplify the expression. \%where \(\ii=\sqrt{-1}\) is the imaginary unit.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((-\ii)^{8}\)
+\item
+  \(\ii^{15}\)
+\item
+  \(\ii^{2017}\)
+\item
+  \(\dfrac1{\ii^{2018}}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122} }
+Evaluate the function polynomial \(2x^2-3x+5\) for \(x=1-\ii\).
+Write your answer in the form \(a+b\ii\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123} }
+Evaluate the polynomial \(\ii x^2-x+\frac{2}{x-1}\) for \(x=\ii-1\).
+Write your answer in the form \(a+b\ii\).
+\EndKnitrBlock{exercise}
 
 \hypertarget{part-part-2-equations-and-applications}{%
 \part*{Part 2: Equations and Applications}\label{part-part-2-equations-and-applications}}
 \addcontentsline{toc}{part}{Part 2: Equations and Applications}
 
-\hypertarget{solve-polynomial-equations-by-factoring}{%
-\chapter{Solve Polynomial Equations by Factoring}\label{solve-polynomial-equations-by-factoring}}
+\hypertarget{solving-polynomial-equations-by-factoring}{%
+\chapter{Solving Polynomial Equations by Factoring}\label{solving-polynomial-equations-by-factoring}}
 
-\hypertarget{zero-product-rule}{%
-\section{Zero-Product Rule}\label{zero-product-rule}}
+\hypertarget{do-you-know-how-many-people-in-the-room}{%
+\section{Do You Know How Many People In The Room}\label{do-you-know-how-many-people-in-the-room}}
+
+\BeginKnitrBlock{rmdthink}
+In meeting room, a group of people all shook hands with one another. In total, 15 handshake occurred. Do you know how many people in the group?
+\EndKnitrBlock{rmdthink}
+
+\hypertarget{properties-of-equations}{%
+\section{Properties of Equations}\label{properties-of-equations}}
+
+An \textbf{\emph{equation}} is an statement that asserts an equality containing unknown variables. For example, \(2x+3=1\) is an equation of the unknown variable \(x\).
+
+Equations often contain variable other than the unknowns. Those variables, which are assumed to be known, are usually called \textbf{\emph{constants}}, \textbf{\emph{coefficients}} or \textbf{\emph{parameters}}. For example, in the linear equation \(ax+b=c\) of (the unknown) \(x\), the variables \(a\), \(b\) and \(c\) are referred as known coefficients or constants.
+
+An \textbf{\emph{identity}} is an equation that is true for all possible values of the variable(s) it contains. For example, \(x^2-y^2=(x+y)(x-y)\) is an identity.
+
+\textbf{\emph{Solving an equation}} consists of determining values of the variables that make the equality true. Two equations are said to be \textbf{\emph{equivalent}} if and only if they have the same solution set, that is, a solution of one equation is also a solution of the other equation. For example \(2x-6=0\) and \(x-1=2\) are equivalent.
+
+\BeginKnitrBlock{rmdnote}
+When solving an equation, the following operations can be used to transform an equation to an equivalent one:
+
+\begin{itemize}
+\item
+  Adding or subtracting the same quantity to both sides of an equation. For example, \(x-1=2\) is equivalent to \(x-1+1=2+1\).
+\item
+  Multiplying or dividing both sides of an equation \textbf{by a non-zero quantity}. For example \(2x=4\) is equivalent to \(\frac{2x}{2}=\frac{4}{2}\).
+\item
+  Applying an identity to transform one side of the equation. For example, \(x^2-1=0\) is equivalent to \((x-1)(x+1)=0\), where the identity \(x^2-1=(x-1)(x+1)\) was applied.
+\end{itemize}
+\EndKnitrBlock{rmdnote}
+
+\BeginKnitrBlock{rmdnote}
+In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called extraneous solutions. For example, taking squares of both sides of the equation \(x=1\) produces the equation \(x^2=1\). The new equation \(x^2=1\) has two solutions \(x=-1\) and \(x=1\), but the original equation \(x=1\) only has one solution. The solution \(x=-1\) of the equation \(x^2=1\) is an extraneous solution of the equation \(x=1\).
+\EndKnitrBlock{rmdnote}
+
+\hypertarget{quadratic-equations}{%
+\section{Quadratic Equations}\label{quadratic-equations}}
+
+A \textbf{polynomial equation} is an equation that can be written in the form
+\[
+a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}=0,
+\]
+where \(n\) is a positive integer and \(a_n\ne 0\).
+
+A polynomial equation is called a \textbf{\emph{quadratic equation}} if \(n=2\). For example, \(2x^2+5x-3=0\). We often write a quadratic equation in its \textbf{\emph{standard form}}
+\[a x^2+bx+c=0,\]
+where \(a\), \(b\) and \(c\) are numbers, and \(a\neq 0\).
+
+When solving linear equations, arithmetic operations are enough. In general, one may need to use identity or functional operation. Factoring is one of those frequently used identity operation. Indeed, to solve a problem, a general strategy is to to reduce the original problem to easier problems. Using factoring and the \textbf{\emph{zero product property}}:
+\[A\cdot B=0 \quad ~~\text{if and only if}~~  \quad A=0 ~~\text{or}~~ B=0,\]
+one can transform a polynomial equation into smaller degree polynomial equations. In particular, if \(ax^2+bx+c=(mx-p)(nx-q)\), then a solution of the quadratic equation \(ax^2+bx+c=0\) is a solution of either \(mx-p=0\) or \(nx-q=0\).
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-127}{}{\label{exm:unnamed-chunk-127} }
+Solve the equation
+\[2x^2+5x=3.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation into ``\emph{Expression}=0'' form and factor.
+  \[
+   \begin{aligned}
+       2x^2+5x&=3\\
+       2x^2+5x-3&=0\\
+       (2x-1)(x+3)&=0
+   \end{aligned}
+   \]
+\item
+  Apply the zero product property.
+  \[2x-1=0\quad\text{or}\quad x+3=0.\]
+\item
+  Solve each equation.
+  \[
+   \begin{aligned}
+       2x-1 =0       & \qquad\text{or} & x+3 =0  \\
+       2x   =1       &    & x   =-3 \\
+       x    =\frac12 & \qquad\text{or} & x   =-3
+   \end{aligned}
+   \]
+\item
+  The solution set is \(\{-3, \frac12\}\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-129}{}{\label{exm:unnamed-chunk-129} }
+Solve the equation
+\[(x-2)(x+3)=-4.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation into ``\emph{Expression}=0'' form and factor.
+  \[
+   \begin{aligned}
+       (x-2)(x+3)&=-4\\
+       x^2+x-6&=-4\\
+       x^2+x-2&=0\\
+       (x-1)(x+2)&=0
+   \end{aligned}
+   \]
+\item
+  Apply the zero product property.
+  \[x-1=0\quad\text{or}\quad x+2=0.\]
+\item
+  Solve each equation.
+  \[
+   \begin{aligned}
+       x-1 =0 & \qquad\text{or} & x+2 =0  \\
+       x   =1 & \qquad\text{or} & x   =-2
+   \end{aligned}
+   \]
+\item
+  The solution set is \(\{-2, 1\}\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-131}{}{\label{exm:unnamed-chunk-131} }
+A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is \(10\) meters by \(16\) meters and the total area is 216 square meters, determine the width of the path.
+
+\includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-rectangular-uniform-width.png}\\
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Suppose that the width of the frame is \(x\) meters. Translate given information into expressions in \(x\) and build an equation.\\
+  Total Width: \(2x+10\) ~Total Length: \(2x+16\)\\
+  Width \(\times\) Length=Total Area:
+  \[(2x+10)(2x+16)=216.\]
+\item
+  Solve the equation.
+  \[
+   \begin{aligned}
+       (2x+10)(2x+16)&=216\\
+       4x^2+52x+160&=216\\
+       4x^2+52x-56&=0\\
+       x^2+13x-14&=0\\
+       (x+14)(x-1)&=0
+   \end{aligned}
+   \]
+  \[
+   x = -14\quad \text{or}\quad x = 1
+   \]
+\item
+  So the width of the path is \(1\) meter.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdtip}
+\textbf{Understand the Problem}\\
+When solving a word problem, you may first outline what's known and what's unknown, and restate the problem using algebraic expressions. Once you reformulated the problem algebraically, you may solve it using your mathematical knowledge.
+\EndKnitrBlock{rmdtip}
+
+\hypertarget{practice-4}{%
+\section{Practice}\label{practice-4}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-134}{}{\label{exr:unnamed-chunk-134} }
+Factor the trinomial.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2+4x+3\)
+\item
+  \(x^2+6x-7\)
+\item
+  \(x^2-3x-10\)
+\item
+  \(x^2-5x+6\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-135}{}{\label{exr:unnamed-chunk-135} }
+Factor the trinomial.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(5x^2+7x+2\)
+\item
+  \(2x^2+5x-12\)
+\item
+  \(3x^2-10x-8\)
+\item
+  \(4x^2-12x+5\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-136}{}{\label{exr:unnamed-chunk-136} }
+Solve the equation by factoring.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2-3x+2=0\)
+\item
+  \(2x^2-3x=5\)
+\item
+  \((x-1)(x+3)=5\)
+\item
+  \(\frac13(2-x)(x+5)=4\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-137}{}{\label{exr:unnamed-chunk-137} }
+Find all real solutions of the equation by factoring.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(4(x-2)^2-9=0\)
+\item
+  \(2x^3-18x=0\)
+\item
+  \(3x^4-2x^2=1\)
+\item
+  \(x^3-3x^2-4x+12=0\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-139}{}{\label{exr:unnamed-chunk-139} }
+A paint measuring \(3\) inches by \(4\) inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is \(30\) square inches, determine the width of the frame.
+
+\includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-paint-uniform-width.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-140}{}{\label{exr:unnamed-chunk-140} }
+A rectangle whose length is \(2\) meters longer than its width has an area \(8\) square meters. Find the width and the length of the rectangle.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-141}{}{\label{exr:unnamed-chunk-141} }
+The product of two \textbf{consecutive negative odd} numbers is \(35\). Find the numbers.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-142}{}{\label{exr:unnamed-chunk-142} }
+In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-143}{}{\label{exr:unnamed-chunk-143} }
+A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height \(h(t)\) of the ball from the ground after time \(t\) seconds is \(h(t)=-16t^2 + 48t + 160\) feet. How long it will take the ball to hit the ground?
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-144}{}{\label{exr:unnamed-chunk-144} }
+A toy factory estimates that the demand of a particular toy is \(300 -x\) units each week if the price is \$\(x\) dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
+The weekly revenue is a function of the price given by \(R(x)=x(30-x)\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the function that models the weekly revenue, \(R\), received when the selling price is \$\(x\) per unit.
+\item
+  What the price range so the the revenue is nonnegative.
+\end{enumerate}
+\EndKnitrBlock{exercise}
 
 \hypertarget{quadratic-formula}{%
 \chapter{Quadratic Formula}\label{quadratic-formula}}
 
-\hypertarget{applications-of-quadratic-equations}{%
-\chapter{Applications of Quadratic Equations}\label{applications-of-quadratic-equations}}
+\hypertarget{estimate-a-square-root}{%
+\section{Estimate a Square Root}\label{estimate-a-square-root}}
+
+\BeginKnitrBlock{rmdthink}
+Can you estimate the irrational numbers \(\sqrt{2}\), \(\sqrt{3}\), \(\sqrt{5}\) and \(\sqrt{7}\) without using a calculator?
+
+Can you estimate the square root \(\sqrt{m^2+n}\), where \(m\) and \(n\) are positive integers?
+\EndKnitrBlock{rmdthink}
+
+\hypertarget{completing-the-square}{%
+\section{Completing the Square}\label{completing-the-square}}
+
+\textbf{The square root property}:\\
+Suppose that \(X^2=d\). Then \(X=\sqrt{d}\) or \(X=-\sqrt{d}\), or simply \(X=\pm\sqrt{d}\).
+
+The square root property provides another method to solve a quadratic equation, completing the square. This method is based on the following observations:
+\[
+x^2+{\boldsymbol{b}}x+{\boldsymbol{\left(\frac b2\right)^2}}=\left(x+{\boldsymbol{\frac b2}}\right)^2,
+\]
+and more generally, let \(f(x)=ax^2+bx+c\), and \(h=-\frac{b}{2a}\), then
+\[
+ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
+\]
+
+The procedure to rewrite a trinomial as the sum of a perfect square and a constant is called \textbf{\emph{completing the square}}.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-146}{}{\label{exm:unnamed-chunk-146} }
+Solve the equation \(x^2+2x-1=0\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Isolate the constant.
+  \[x^2+2x=1\]
+\item
+  With \(b=2\), add \(\left(\frac 22\right)^2\) to both sides to complete a square for the binomial \(x^2+bx\).
+  \[
+   \begin{aligned}
+       x^2+2x+\left(\frac22\right)^2&=1+\left(\frac22\right)^2\\\
+       \left(x+\frac22\right)^2&=1+1\\
+       (x+1)^2&=2\\
+   \end{aligned}
+   \]
+\item
+  Solve the resulting equation using the square root property.
+  \[
+   \begin{aligned}
+       x+1 =\sqrt2    & \qquad\text{or} & x+1 =-\sqrt2   \\
+       x   =-1+\sqrt2 & \qquad\text{or} & x   =-1-\sqrt2
+   \end{aligned}
+   \]
+\end{enumerate}
+
+Note that the solution can also be written as \(x=-1\pm\sqrt2\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-148}{}{\label{exm:unnamed-chunk-148} }
+Solve the equation \(-2x^2+8x-9=0\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Isolate the constant.
+  \[-2x^2+8x=9\]
+\item
+  Divide by \(-2\) to rewrite the equation in \(x^2+Bx=C\) form
+  \[x^2-4x=-\frac{9}{2}\]
+\item
+  With \(b=-4\), add \(\left(\frac{-4}{2}\right)^2=4\) to both sides to complete the square for the binomial \(x^2-4x\).
+  \[
+   \begin{aligned}
+       x^2-4x+4&=-\frac{9}{2}+4\\\
+       (x-2)^2&=-\frac{1}{2}
+   \end{aligned}
+   \]
+\item
+  Solve the resulting equation and simplify.
+  \[
+   \begin{aligned}
+       x-2 =\frac{\ii}{\sqrt{2}}    & \qquad\text{or} & x-2 =-\frac{\ii}{\sqrt{2}}   \\
+       x   =2+\frac{\sqrt{2}}{2}\ii & \qquad\text{or} & x   =2-\frac{\sqrt{2}}{2}\ii
+   \end{aligned}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdtip}
+Another way to complete the square is to use the formula \(ax^2+bx+c=a(x-h)^2+f(h)\), where \(f(h)=ah^2+bh+c\) is the value of the polynomial \(ax^2+bx+c\) at \(x=h\).
+\EndKnitrBlock{rmdtip}
+
+\hypertarget{the-quadratic-formula}{%
+\section{The Quadratic Formula}\label{the-quadratic-formula}}
+
+Using the method of completing the square, we obtain the follow qudartic formula for the quadratic equation \(ax^2+bx+c=0\) with \(a\neq 0\):
+\[
+    x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}.
+\]
+
+The quantity \(b^2-4ac\) is called the \dfn{discriminant} of the quadratic equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(b^2-4ac>0\), the equation has two real solutions.
+\item
+  If \(b^2-4ac=0\), the equation has one real solution.
+\item
+  If \(b^2-4ac<0\), the equation has two imaginary solutions (no real solutions).
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-151}{}{\label{exm:unnamed-chunk-151} }
+Determine the type and the number of solutions of the equation \((x-1)(x+2)=-3\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation in the form \(ax^2+bx+c=0\).
+  \[
+       \begin{aligned}
+           (x-1)(x+2)&=-3\\
+           x^2+x+1&=0
+       \end{aligned}
+   \]
+\item
+  Find the values of \(a\), \(b\) and \(c\).
+  \[
+       a=1, b=1 ~\text{and}~ c=1.
+   \]
+\item
+  Find the discriminant \(b^2-4ac\).
+  \[
+       b^2-4ac=1^2-4\cdot 1\cdot 1=-3.
+   \]
+\end{enumerate}
+
+The equation has two imaginary solutions.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-153}{}{\label{exm:unnamed-chunk-153} }
+Solve the equation \(2x^2-4x+7=0\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Find the values of \(a\), \(b\) and \(c\).
+  \[
+       a=2, b=-4 ~\text{and}~ c=7.
+   \]
+\item
+  Find the discriminant \(b^2-4ac\).
+  \[
+       b^2-4ac=(-4)^2-4\cdot 2\cdot 7=16-56=-40.
+   \]
+\item
+  Apply the quadratic formula and simplify.
+  \[
+   \begin{aligned}
+       x=&\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\\
+       =&\dfrac{-(-4)\pm\sqrt{-40}}{2\cdot 2}\\
+       =&\frac{4\pm 2\sqrt{10} \ii}{4}\\
+       =&1\pm\frac{\sqrt{10}}{2}\ii.
+   \end{aligned}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-155}{}{\label{exm:unnamed-chunk-155} }
+Find the base and the height of a \textbf{triangle} whose base is three inches more than twice its height and whose area is \(5\) square inches. Round your answer to the nearest tenth of an inch.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  We may suppose the height is \(x\) inches. The base can be expressed as \(2x+3\) inches.
+\item
+  By the area formula for a triangle, we have an equation.
+  \[\frac12 x(2x+3)=5.\]
+\item
+  Rewrite the equation in \(ax^2+bx+c=0\) form.
+  \[
+       \begin{aligned}
+           x(2x+3)&=10\\
+           2x^2+3x-10&=0.
+       \end{aligned}
+   \]
+\item
+  By the quadratic formula, we have
+  \[
+   x=\frac{-3\pm\sqrt{3^2-4\cdot 2\cdot (-10)}}{2\cdot 2}=\frac{-3\pm \sqrt{89}}{4}.
+   \]
+\end{enumerate}
+
+Since \(x\) can not be negative, \(x=\frac{-3+\sqrt{89}}{4}\approx 1.6\) and \(2x+3\approx 6.2\).
+The height and base of the triangle are approximately \(1.6\) inches and 6.2 inches respectively.
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-5}{%
+\section{Practice}\label{practice-5}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-157}{}{\label{exr:unnamed-chunk-157} }
+Solve the quadratic equation by the square root property.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(2x^2-6=0\)
+\item
+  \((x-3)^2=10\)
+\item
+  \(4(x+1)^2+25=0\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-158}{}{\label{exr:unnamed-chunk-158} }
+Solve the quadratic equation by completing the square.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2+x-1=0\)
+\item
+  \(x^2+8x+12=0\)
+\item
+  \(3x^2+6x-1=0\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-159}{}{\label{exr:unnamed-chunk-159} }
+Determine the number and the type of solutions of the given equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2+8x+3=0\)
+\item
+  \(3x^2-2x+4=0\)
+\item
+  \(2x^2-4x+2=0\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-160}{}{\label{exr:unnamed-chunk-160} }
+Solve using the quadratic formula.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(x^2+3x-7=0\)
+\item
+  \(2x^2=-4x+5\)
+\item
+  \(2x^2=x-3\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-161}{}{\label{exr:unnamed-chunk-161} }
+Solve using the quadratic formula.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((x-1)(x+2)=3\)
+\item
+  \(2x^2-x=(x+2)(x-2)\)
+\item
+  \(\frac12 x^2+x= \frac13\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-162}{}{\label{exr:unnamed-chunk-162} }
+A \textbf{triangle} whose area is \(7.5\) square meters has a base that is one meter less than triple the height. Find the length of its base and height. Round to the nearest hundredth of a meter.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-163}{}{\label{exr:unnamed-chunk-163} }
+A \textbf{rectangular} garden whose length is \(2\) feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-164}{}{\label{exr:unnamed-chunk-164} }
+A 2 hour river cruise goes in a constant speed 16 miles upstream and then back again. The river has a current of 3 miles an hour. What is the boat's speed, rounded to the nearest hundredth of a mile/hour? How long is the journey upstream, rounded to the nearest tenth of a hour?
+\EndKnitrBlock{exercise}
+
+\hypertarget{rational-equations}{%
+\chapter{Rational Equations}\label{rational-equations}}
+
+\hypertarget{a-problem-of-the-father-of-algebra}{%
+\section{A Problem of the Father of Algebra}\label{a-problem-of-the-father-of-algebra}}
+
+\BeginKnitrBlock{rmdthink}
+The father of algebra, \href{https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi\#Algebra}{Muḥammad ibn Mūsā al-Khwārizmī}, in his book ``\href{https://archive.org/details/algebraofmohamme00khuwrich/page/44/mode/2up}{Algebra}'', answered the following problem:
+
+\begin{quote}
+``\ldots{} I have divided ten into two parts; and have divided the first by the second, and the second by the first, and the sum of the quotient is two and one-sixth;\ldots{}''
+\end{quote}
+
+Do you know what are those two parts?
+\EndKnitrBlock{rmdthink}
+
+\hypertarget{solving-rational-equations}{%
+\section{Solving Rational Equations}\label{solving-rational-equations}}
+
+A \textbf{\emph{rational equation}} is an equation that contains a rational expression. One way to solve rational equations is to clear all denominators by multiplying the LCD to both sides. Note that because there are values such that the LCD has the value zero. Clearing denominator in general is not an equivalent transformation, rather a functional transformation. So don't forget to check possible extraneous solutions.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-166}{}{\label{exm:unnamed-chunk-166} }
+Solve
+\[
+\dfrac{5}{x^2-9}=\dfrac{3}{x-3}-\dfrac{2}{x+3}.
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the LCD.
+  Since \(x^2-9=(x+3)(x-3)\), the LCD is \((x+3)(x-3)\).
+\item
+  Clear denominators.
+  Multiply each rational expression in both sides by \((x+3)(x-3)\) and simplify:
+  \[
+       \begin{aligned}
+           (x+3)(x-3)\cdot\dfrac{5}{x^2-9}&=(x+3)(x-3)\cdot\dfrac{3}{x-3}-(x+3)(x-3)\cdot\dfrac{2}{x+3}\\
+           5&=3(x+3)-2(x-3)
+       \end{aligned}
+   \]
+\item
+  Solve the resulting equation.
+  \[
+       \begin{aligned}
+           5&=3(x+3)-2(x-3)
+           5&=x+15\\
+           -10&=x
+       \end{aligned}
+   \]
+\item
+  Check for any extraneous solution by plugging the solution into the LCD to see if it is zero. If it is zero, then the solution is extraneous.
+  \[
+       (-10+3)(-10-3)\neq 0
+   \]
+  So \(x=-10\) is a valid solution of the original equation.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdtip}
+\textbf{Reduction With Auxiliary Conditions}\\
+Clearing denominator uses the strategy ``\textbf{reduction with auxiliary conditions}''. The auxiliary condition used when clearing the denominators is that the LCD is non-zero. Generally, if you don't know how to solve a problem under the given condition, you may try solve the problem by adding extra conditions first and then try to eliminate the extra conditions and/or their consequences.
+\EndKnitrBlock{rmdtip}
+
+\hypertarget{literal-equations}{%
+\section{Literal Equations}\label{literal-equations}}
+
+A \textbf{\emph{literal equation}} is an equation involving two or more variables. When solving a literal equation for one variable, other variables can be viewed as constants.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-169}{}{\label{exm:unnamed-chunk-169} }
+Solve for \(x\) from the equation
+\[
+\frac{1}{x}+\frac{1}{y}=\dfrac{1}{z}.
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The LCD is \(xyz\).
+\item
+  Clear denominators.
+  \[
+       \begin{aligned}
+           xyz\cdot\frac{1}{x}+xyz\cdot\frac{1}{y}&=xyz\cdot\dfrac{1}{z}\\
+           yz+xz&=xy\\
+       \end{aligned}
+   \]
+\item
+  Solve the resulting equation.
+  \[
+       \begin{aligned}
+           yz+xz&=xy\\
+           yz&=xy-xz\\
+           yz&=x(y-z)\\
+           \dfrac{yz}{y-z}&=x \quad \text{if} y\neq z
+       \end{aligned}
+   \]
+\item
+  The solution is \(x=\dfrac{yz}{y-z}\) if \(y\neq z\). If \(y=z\), the equation has no solution.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdnote}
+Another way to solve a rational equation is to rewrite and simplify the equation into the form \(\dfrac{\text{A}}{B}=0\) where \(\dfrac{A}{B}\) is a \textbf{reduced fraction}. Then the rational equation is equivalent to the equation \(A=0\).
+\EndKnitrBlock{rmdnote}
+
+\hypertarget{practice-6}{%
+\section{Practice}\label{practice-6}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-172}{}{\label{exr:unnamed-chunk-172} }
+Solve.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac1{x+1}+\dfrac1{x-1}=\dfrac4{x^2-1}\)
+\item
+  \(\dfrac{30}{x^2-25}=\dfrac3{x+5}+\dfrac2{x-5}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-173}{}{\label{exr:unnamed-chunk-173} }
+Solve.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dfrac{2x-1}{x^2+2x-8}=\dfrac1{x-2}-\dfrac{2}{x+4}\)
+\item
+  \(\dfrac{3x}{x-5}=\dfrac{2x}{x+1}-\dfrac{42}{x^2-4x-5}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-174}{}{\label{exr:unnamed-chunk-174} }
+Solve a variable from a formula.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Solve for \(f\) from\quad \(\dfrac1p+\dfrac1q=\dfrac1f\).
+\item
+  Solve for \(x\) from\quad \(A=\dfrac{f+cx}{x}\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-175}{}{\label{exr:unnamed-chunk-175} }
+Solve for \(x\) from the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(2(x+1)^{-1}+x^{-1}=2\).
+\item
+  \(\displaystyle\frac{a^2x +2a}{x^{-1}}=-1\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-176}{}{\label{exr:unnamed-chunk-176} }
+David can row 3 miles per hour in still water. It takes him 90 minutes to row 2 miles upstream and then back. How fast is the current?
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-177}{}{\label{exr:unnamed-chunk-177} }
+The size of a A0 paper is defined to have an area of 1 square meter with the longer dimension \(\sqrt[4]{2}\) meters. Successive paper sizes in the series A1, A2, A3, and so forth, are defined by halving the preceding paper size across the larger dimension. Can you find the dimension of a A4 paper?
+\EndKnitrBlock{exercise}
+
+\hypertarget{radical-equations}{%
+\chapter{Radical Equations}\label{radical-equations}}
+
+\hypertarget{design-a-pendulum-clock}{%
+\section{Design a Pendulum clock}\label{design-a-pendulum-clock}}
+
+A pendulum clock is a clock that uses a pendulum, a swinging weight, as its timekeeping element. \href{https://en.wikipedia.org/wiki/Galileo_Galilei}{Galileo Galilei} discovered in early 17th century the relation between the length \(L\) and the period \(T\) of a pendulum. For a pendulum clock, the relations is approximately determined by the following rule of thumb formula for pendulum:
+\[
+T\approx 2\sqrt{L}
+\]
+given that \(L\) is measured in meters and \(T\) is measured in second. If the period of a pendulum clock is 2 seconds, how long is the pendulum?\\
+
+\includegraphics{figs/pendulum-clock.gif}\\
+
+\hypertarget{why-is-the-square-root-of-two-irrational}{%
+\section{Why is The Square Root of Two Irrational}\label{why-is-the-square-root-of-two-irrational}}
+
+\BeginKnitrBlock{rmdthink}
+We know that the number \(\sqrt{2}\) is not a rational number. But why? Can you give an explanation?
+\EndKnitrBlock{rmdthink}
+
+\hypertarget{solving-radical-equations-by-taking-a-power}{%
+\section{Solving Radical Equations by Taking a Power}\label{solving-radical-equations-by-taking-a-power}}
+
+The idea to solve a radical equation \(\sqrt[n]{X}=a\) is to first take \(n\)-th power of both sides to get rid of the radical sign, that is \(X=a^n\) and then solve the resulting equation.
+
+\BeginKnitrBlock{rmdtip}
+\textbf{Solve by Reduction}\\
+The goal to solve a single variable equation is to isolate the variable. When an equation involves radical expressions, you can not isolate the variable arithmetically without eliminating the radical sign unless the radicand is a perfect power. To remove a radical sign, you make take a power. However, you'd better to isolate it first. Because simply taking powers of both sides may create new radical expressions.
+\EndKnitrBlock{rmdtip}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-180}{}{\label{exm:unnamed-chunk-180} }
+Solve the equation \(x-\sqrt{x+1}=1.\)
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Arrange terms so that one radical is isolated on one side of the equation.
+  \[x-1=\sqrt{x+1}\]
+\item
+  Square both sides to eliminate the square root.
+  \[(x-1)^2=x+1\]
+\item
+  Solve the resulting equation.
+  \[
+     \begin{aligned}
+         x^2-2x+1&=x+1\\
+         x^2-3x&=0\\
+         x(x-3)&=0
+     \end{aligned}
+  \]
+  \[
+  \begin{aligned}
+     x =0 & \qquad \text{or} & x-3 =0 \\
+     x =0 & \qquad \text{or} & x   =3
+  \end{aligned}
+  \]
+\item
+  Check all proposed solutions.\\
+  Plug \(x=0\) into the original equation, we see that the left hand side is \(0-\sqrt{0+1}=0-\sqrt{1}=0-1=-1\) which is not equal to the right hand side. So \(x=0\) cannot be a solution.
+
+  Plug \(x=3\) into the original equation, we see that the left hand side is \(3-\sqrt{3+1}=3-\sqrt{4}=3-2=1\). So \(x=3\) is a solution.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-182}{}{\label{exm:unnamed-chunk-182} }
+Solve the equation \(\sqrt{x-1}-\sqrt{x-6}=1.\)
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Isolated one radical.
+  \[
+     \sqrt{x-1}=\sqrt{x-6}+1\\
+  \]
+\item
+  Square both sides to remove radical sign and then isolate the remaining radical.
+  \[
+     \begin{aligned}
+         x-1&=(x-6)+2\sqrt{x-6}+1\\
+         x-1&=x-5+2\sqrt{x-6}\\
+         4&=2\sqrt{x-6}\\
+         2&=\sqrt{x-6}.
+     \end{aligned}
+  \]
+\item
+  Square both sides to remove the radical sign and then solve.
+  \[
+     \begin{aligned}
+         \sqrt{x-6}&=2\\
+         x-6&=4\\
+         x&=10.
+     \end{aligned}
+  \]
+  Since \(10-1>0\) and \(10-6>0\), \(x=10\) is a valid solution. Indeed,
+  \[
+     \sqrt{10-1}-\sqrt{10-6}=\sqrt{9}-\sqrt{4}=3-2=1.
+  \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-184}{}{\label{exm:unnamed-chunk-184} }
+Solve the equation \(-2\sqrt[3]{x-4}=6.\)
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Isolated the radical.
+  \[
+     \sqrt[3]{x-4}=-3
+  \]
+\item
+  Cube both sides to eliminate the cube root and then solve the resulting equation.
+  \[
+     \begin{aligned}
+         x-4&=(-3)^3\\
+         x-4&=-27\\
+         x&=-23
+     \end{aligned}
+  \]
+  The solution is \(x=-23\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{equations-involving-rational-exponents}{%
+\section{Equations Involving Rational Exponents}\label{equations-involving-rational-exponents}}
+
+Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression \(\left(X^{\frac mn}\right)^{\frac nm}\). When \(m\) is even and \(n\) is odd, \(\left(X^{\frac mn}\right)^{\frac nm}=|X|\). Otherwise, \(\left(X^{\frac mn}\right)^{\frac nm}=X\).
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-186}{}{\label{exm:unnamed-chunk-186} }
+Solve the equation \((x+2)^{\frac12}-(x-3)^{\frac12}=1\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+Since there are more than one term involving rational exponents, to solve the equation, we isolate one term and taking power and so on so forth.
+\[
+\begin{aligned}
+    (x+2)^{\frac12}-(x-3)^{\frac12}=&1\\
+    (x+2)^{\frac12}=& (x-3)^{\frac12}+1\\
+    x+2 =& \left((x-3)^{\frac12}+1\right)^2\\
+    x+2 =& (x-3)+2(x-3)^{\frac12}+1\\
+    2(x-3)^{\frac12}=&4\\
+    (x-3)^{\frac12}=&2\\
+    x-3=&4\\
+    x=&7
+\end{aligned}
+\]
+Check:
+\[(7+2)^{\frac12}-(7-3)^{\frac12}=\sqrt{9}-\sqrt{4}=3-2=1.\]
+
+So the equation has one solution \(x=7\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-188}{}{\label{exm:unnamed-chunk-188} }
+Solve the equation \((x-1)^{\frac{2}{3}}=4\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+There are different way to solve this equation. One may is to take rational powers of both sides and solve the resulting equation.
+\[
+\begin{aligned}
+    (x-1)^{\frac{2}{3}}=&4\\
+    \left((x-1)^{\frac{2}{3}}\right)^{\frac32}=&4^{\frac32}\\
+    |x-1|=&8\\
+    x-1=8 \qquad\text{or}&\qquad x-1=-8\\
+    x=9 \qquad\text{or}&\qquad x=-7
+\end{aligned}
+\]
+Check:
+\[(9-1)^{\frac23}=8^{\frac23}=(8^{\frac13})^2=2^2=4;\]
+\[(-7-1)^{\frac23}=(-8)^{\frac23}=((-8)^{\frac13})^2=(-2)^2=4.\]
+
+So the equation has two solutions \(x=9\) and \(x=-7\).
+\EndKnitrBlock{solution}
+
+\hypertarget{learn-from-mistakes}{%
+\section{Learn from Mistakes}\label{learn-from-mistakes}}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-190}{}{\label{exm:unnamed-chunk-190} }
+Can you find the mistakes made in the solution and fix it?
+
+Solve the radical equation.
+\[\sqrt{x-1}+2=x\]
+
+\textbf{Solution (incorrect)}:
+\[
+\begin{aligned}
+\sqrt{x-2}+2&=x\\
+(\sqrt{x-2})^2+2^2&=x^2\\
+x-2+4&=x^2\\
+x+2&=x^2\\
+x^2-x-2&=0\\
+(x-2)(x+1)&=0\\
+x-2=0 \qquad\text{or}& \qquad x+1=0\\
+x=2 \qquad\text{or}&\qquad x=-1
+\end{aligned}
+\]
+Answer: the equation has two solutions \(x=2\) and \(x=-1\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+When squaring one side of the equation, the other side as a whole should be squared. The mistake occurred at the squaring step. The right way to solve the equation is as follows.
+\[
+\begin{aligned}
+\sqrt{x-2}+2&=x\\
+\sqrt{x-2}&=x-2\\
+x-2&=(x-2)^2\\
+(x-2)^2-(x-2)&=0\\
+(x-2)(x-2-1)&=0\\
+(x-2)(x-3)&=0\\
+x=2 \qquad\text{or}&\qquad x=3
+\end{aligned}
+\]
+Because squaring is not an equivalent transformation in general, the solutions of the resulting equations must be checked. When \(x=2\), the left side of the original equation is \(\sqrt{2-2}+2=0+2=2\). When \(x=3\), the left side is \(\sqrt{3-2}+2=1+2=3\). So both \(x=2\) and \(x=3\) are solutions of the function \(\sqrt{x-1}+2=x\).
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-7}{%
+\section{Practice}\label{practice-7}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-192}{}{\label{exr:unnamed-chunk-192} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{3x+1}=4\)
+\item
+  \(\sqrt{2x-1}-5=0\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-193}{}{\label{exr:unnamed-chunk-193} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{5x+1}=x+1\)
+\item
+  \(x=\sqrt{3x+7}-3\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-194}{}{\label{exr:unnamed-chunk-194} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{6x+7}-x=2\)
+\item
+  \(\sqrt{x+2}+\sqrt{x-1}=3\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-195}{}{\label{exr:unnamed-chunk-195} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sqrt{x+5}-\sqrt{x-3}=2\)
+\item
+  \(3\sqrt[3]{3x-1}=6\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-196}{}{\label{exr:unnamed-chunk-196} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((x+3)^{\frac12}=x+1\)
+\item
+  \(2(x-1)^{\frac12}-(x-1)^{-\frac12}=1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-197}{}{\label{exr:unnamed-chunk-197} }
+Solve each radical equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((x-1)^{\frac32}=8\)
+\item
+  \((x+1)^{\frac23}=4\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\hypertarget{absolute-value-equations}{%
+\chapter{Absolute Value Equations}\label{absolute-value-equations}}
+
+\hypertarget{properties-of-absolute-values}{%
+\section{Properties of Absolute Values}\label{properties-of-absolute-values}}
+
+The \textbf{\emph{absolute value}} of a real number \(a\), denoted by \(|a|\), is the distance from \(0\) to \(a\) on the number line. In particular, \(|a|\) is always greater than or equal to \(0\), that is \(|a|\geq 0\). Absolute values satisfy the following properties:
+\[
+|-a|=|a|, \quad |ab|=|a||b| \quad \text{and} \quad \left|\frac{a}{b}\right|=\frac{|a|}{|b|}.
+\]
+
+\paragraph*{Absolute Value Equation}
+
+An absolute value equation may be rewritten as \(|X|=c\), where \(X\) represents an algebraic expression.
+
+If \(c\) is \textbf{positive}, then the equation \(|X|=c\) is equivalent to \{\(X=c\)\quad or \quad \(X=-c\).\}
+
+If \(c\) is \textbf{negative}, then the solution set of \(|X|=c\) is \textbf{empty}.
+An \textbf{\emph{empty set}} is denoted by \(\emptyset\).
+
+More generally, \(|X|=|Y|\) is equivalent to \(X=Y\) or \(X=-Y\).
+
+The equation \(|X|=0\) is equivalent to \(X=0\).
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-198}{}{\label{exm:unnamed-chunk-198} }
+Solve the equation
+\[|2x-3|=7.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+The equation is equivalent to
+\[
+\begin{aligned}
+    2x-3  =-7   & \qquad\text{or} & 2x-3  =7  \\
+    2x    =-4   &          & 2x    =10 \\
+    x     =-2   & \qquad\text{or} & x     =5
+\end{aligned}
+\]
+
+The solutions are \(x=-2\) or \(x=5\). In set-builder notation, the solution set is \(\{-2, 5\}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-200}{}{\label{exm:unnamed-chunk-200} }
+Solve the equation
+\[|2x-1|-3=8.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation into \(|X|=c\) form.
+  \[|2x-1|=11\]
+\item
+  Solve the equation.
+  \[
+   \begin{aligned}
+       2x-1  =-11   & \qquad\text{or} & 2x-1  =11 \\
+       2x    =-10   &          & 2x    =12 \\
+       x     =-5    & \qquad\text{or} & x     =6
+   \end{aligned}
+   \]
+\end{enumerate}
+
+The solutions are \(x=-5\) or \(x=6\). In set-builder notation, the solution set is \(\{-5, 6\}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-202}{}{\label{exm:unnamed-chunk-202} }
+Solve the equation
+\[3|2x-5|=9.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation into \(|X|=c\) form.
+  \[|2x-5|=3\]
+\item
+  Solve the equation.
+  \[
+   \begin{aligned}
+       2x-5  =-3   & \qquad\text{or} & 2x-5  =3 \\
+       2x    =2    &          & 2x    =8 \\
+       x     =1    & \qquad\text{or} & x     =4
+   \end{aligned}
+   \]
+\end{enumerate}
+
+The solutions are \(x=1\) or \(x=4\). In set-builder notation, the solution set is \(\{1, 4\}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-204}{}{\label{exm:unnamed-chunk-204} }
+Solve the equation
+\[2|1-2x|-3=7.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rewrite the equation into \(|X|=c\) form.
+  \[|2x-1|=5\]
+\item
+  Solve the equation.
+  \[
+   \begin{aligned}
+       2x-1  =-5   & \qquad\text{ or } & 2x-1  =5 \\
+       2x    =-4   &            & 2x    =6 \\
+       x     =-2   & \qquad\text{or}   & x     =3
+   \end{aligned}
+   \]
+\end{enumerate}
+
+The solutions are \(x=-2\) or \(x=3\). In set-builder notation, the solution set is \(\{-2, 3\}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-206}{}{\label{exm:unnamed-chunk-206} }
+Solve the equation
+\[|3x-2|=|x+2|.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+Note that two numbers have the same absolute value only if they are the same or opposite to each other. Then the equation is equivalent to\\
+\[3x-2=x+2\quad \text{or} \quad 3x-2=-(x+2).\]
+\[
+\begin{aligned}
+    3x-2  =x+2   & \qquad\text{or} & 3x-2  =-(x+2) \\
+    2x    =4     &          & 4x    =0      \\
+    x     =2     & \qquad\text{or} & x     =0
+\end{aligned}
+\]
+
+The solutions are \(x=2\) and \(x=0\). In set-builder notation, the solution set is \(\{0, 2\}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-208}{}{\label{exm:unnamed-chunk-208} }
+Solve the equation
+\[2|1-x|=|2x+10|.\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+Since \(2\) is positive, \(2|1-x|=|2||1-x|=|2-2x|\). Moreover, because \(|-X|=|X|\), the equation is equivalent to
+\[|2x-2|=|2x+10|.\]
+\[
+\begin{aligned}
+    2x-2  =2x+10   & \qquad\text{or} & 2x-2  =-(2x+10) \\
+    -2    =10      & \qquad\text{or} & 4x    =-8       \\
+                   &          & x     =-2
+\end{aligned}
+\]
+
+The original equation only has one solution \(x=-2\). In set-builder notation, the solution set is \(\{-2\}\).
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-8}{%
+\section{Practice}\label{practice-8}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-210}{}{\label{exr:unnamed-chunk-210} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(|2x-1|=5\)
+\item
+  \(\left|\dfrac{3x-9}{2}\right|=3\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-211}{}{\label{exr:unnamed-chunk-211} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(|3x-6|+4=13\)
+\item
+  \(3|2x-5|=9\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-212}{}{\label{exr:unnamed-chunk-212} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(|5x-10|+6=6\)
+\item
+  \(-3|3x-11|=5\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-213}{}{\label{exr:unnamed-chunk-213} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(3|5x - 2|-4 = 8\)
+\item
+  \(-2|3x + 1| + 5= -3\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-214}{}{\label{exr:unnamed-chunk-214} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(|5x-12|=|3x-4|\)
+\item
+  \(|x-1|=-5|(2-x)-1|\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-215}{}{\label{exr:unnamed-chunk-215} }
+Find the solution set for the equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(|2x-1|=5-x\)
+\item
+  \(-2x=|x+3|\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
 
 \hypertarget{linear-inequalities}{%
 \chapter{Linear Inequalities}\label{linear-inequalities}}
@@ -1297,8 +3885,8 @@ Solutions to an inequality normally form an interval which has boundaries and sh
 \bottomrule
 \end{longtable}
 
-\hypertarget{examples-1}{%
-\section{Examples}\label{examples-1}}
+\hypertarget{examples}{%
+\section{Examples}\label{examples}}
 
 \BeginKnitrBlock{rmdtip}
 \textbf{Think backward.} To solve a problem, knowing what to expect helps you narrow down the gap step by step by comparing the goal and your achievement.
@@ -1307,7 +3895,7 @@ An inequality (equation) is solved if the unknown variable is isolated. That's w
 \EndKnitrBlock{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-58}{}{\label{exm:unnamed-chunk-58} }Solve the linear inequality
+\protect\hypertarget{exm:unnamed-chunk-221}{}{\label{exm:unnamed-chunk-221} }Solve the linear inequality
 \[
 2x+4>0.
 \]
@@ -1325,7 +3913,7 @@ The solution set is \((-2, \infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-60}{}{\label{exm:unnamed-chunk-60} }Solve the linear inequality
+\protect\hypertarget{exm:unnamed-chunk-223}{}{\label{exm:unnamed-chunk-223} }Solve the linear inequality
 \[
 -3x-4<2.
 \]
@@ -1343,7 +3931,7 @@ The solution set is \((-2, +\infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-62}{}{\label{exm:unnamed-chunk-62} }Solve the compound linear inequality
+\protect\hypertarget{exm:unnamed-chunk-225}{}{\label{exm:unnamed-chunk-225} }Solve the compound linear inequality
 \[
 x+2<3\quad \text{and}\quad -2x-3<1.
 \]
@@ -1361,7 +3949,7 @@ That is \(-2<x<1\). The solution set is \((-2, 1)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-64}{}{\label{exm:unnamed-chunk-64} }Solve the compound linear inequality\\
+\protect\hypertarget{exm:unnamed-chunk-227}{}{\label{exm:unnamed-chunk-227} }Solve the compound linear inequality\\
 \[
 -x+4>2 \quad \text{or} \quad 2x-5\geq -3.
 \]
@@ -1379,7 +3967,7 @@ That is \(x\geq 1\) or \(x< 2\). The solution set is \((-\infty, +\infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-66}{}{\label{exm:unnamed-chunk-66} }Solve the compound linear inequality
+\protect\hypertarget{exm:unnamed-chunk-229}{}{\label{exm:unnamed-chunk-229} }Solve the compound linear inequality
 \[
 -4\leq\dfrac{2x-4}{3}<2.
 \]
@@ -1398,7 +3986,7 @@ The solution set is \([-4, 5)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-68}{}{\label{exm:unnamed-chunk-68} }Solve the compound linear inequality
+\protect\hypertarget{exm:unnamed-chunk-231}{}{\label{exm:unnamed-chunk-231} }Solve the compound linear inequality
 \[
 -1\leq \dfrac{-3x+4}{2}<3.
 \]
@@ -1417,7 +4005,7 @@ The solution set is \((-\frac23, 2]\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-70}{}{\label{exm:unnamed-chunk-70} }
+\protect\hypertarget{exm:unnamed-chunk-233}{}{\label{exm:unnamed-chunk-233} }
 Suppose that \(-1\le x < 2\). Find the range of \(5-3x\). Write your answer in interval notation.
 \EndKnitrBlock{example}
 
@@ -1438,11 +4026,11 @@ The range of \(5-3x\) is \((-1, 8]\).
 \textbf{Understand the Problem.} Understanding the known, the unknown and the condition of the given problem is the key to solve the problem. Normally, by comparing the known and unknown, you will find the way to solve the problem.
 \EndKnitrBlock{rmdtip}
 
-\hypertarget{practice-2}{%
-\section{Practice}\label{practice-2}}
+\hypertarget{practice-9}{%
+\section{Practice}\label{practice-9}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73} }
+\protect\hypertarget{exr:unnamed-chunk-236}{}{\label{exr:unnamed-chunk-236} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1456,7 +4044,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-74}{}{\label{exr:unnamed-chunk-74} }
+\protect\hypertarget{exr:unnamed-chunk-237}{}{\label{exr:unnamed-chunk-237} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1470,7 +4058,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75} }
+\protect\hypertarget{exr:unnamed-chunk-238}{}{\label{exr:unnamed-chunk-238} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1484,7 +4072,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-76}{}{\label{exr:unnamed-chunk-76} }
+\protect\hypertarget{exr:unnamed-chunk-239}{}{\label{exr:unnamed-chunk-239} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1498,7 +4086,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77} }
+\protect\hypertarget{exr:unnamed-chunk-240}{}{\label{exr:unnamed-chunk-240} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1512,7 +4100,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-78}{}{\label{exr:unnamed-chunk-78} }
+\protect\hypertarget{exr:unnamed-chunk-241}{}{\label{exr:unnamed-chunk-241} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -1526,7 +4114,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79} }
+\protect\hypertarget{exr:unnamed-chunk-242}{}{\label{exr:unnamed-chunk-242} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \[
 \frac13x+1<\frac12(2x-3)-1
@@ -1534,7 +4122,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-80}{}{\label{exr:unnamed-chunk-80} }
+\protect\hypertarget{exr:unnamed-chunk-243}{}{\label{exr:unnamed-chunk-243} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 \[
 0\le \frac25-\frac{x+1}{3}< 1
@@ -1542,17 +4130,17 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-81}{}{\label{exr:unnamed-chunk-81} }
+\protect\hypertarget{exr:unnamed-chunk-244}{}{\label{exr:unnamed-chunk-244} }
 Suppose \(0< x \le 1\). Find the range of \(-2x+1\). \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-82}{}{\label{exr:unnamed-chunk-82} }
+\protect\hypertarget{exr:unnamed-chunk-245}{}{\label{exr:unnamed-chunk-245} }
 Suppose that \(x+2y=1\) and \(1\leq x< 3\). Find the range of \(y\). \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-83}{}{\label{exr:unnamed-chunk-83} }
+\protect\hypertarget{exr:unnamed-chunk-246}{}{\label{exr:unnamed-chunk-246} }
 A toy store has a promotion ``Buy one get the second one half price'' on a certain popular toy. The sale price of the toy is \$20 each. Suppose the store makes more profit when you buy two. What do you think the store's purchasing price of the toy is?
 \EndKnitrBlock{exercise}
 
@@ -1563,44 +4151,1575 @@ A toy store has a promotion ``Buy one get the second one half price'' on a certa
 \hypertarget{introduction-to-functions}{%
 \chapter{Introduction to Functions}\label{introduction-to-functions}}
 
-\hypertarget{sets-order-pairs-and-the-rectangular-coordinate-system}{%
-\section{Sets, Order Pairs, and the Rectangular Coordinate System}\label{sets-order-pairs-and-the-rectangular-coordinate-system}}
+\hypertarget{functions-as-relations}{%
+\section{Functions as Relations}\label{functions-as-relations}}
 
-\hypertarget{functions-defined-by-equations}{%
-\section{Functions Defined by Equations}\label{functions-defined-by-equations}}
+A \textbf{\emph{relation}} is a set of ordered pairs. The set of all first components of the ordered pairs is called the \textbf{\emph{domain}}. The set of all second components of the ordered pairs is called the \textbf{\emph{range}}.
+
+A \textbf{\emph{function}} is a relation such that each element in the domain corresponds to \textbf{exactly one} element in the range.
+
+\hypertarget{function-notation}{%
+\section{Function Notation}\label{function-notation}}
+
+For a function, we usually use the variable \(x\) to represent an element from the domain and call it the \textbf{\emph{independent variable}}. The variable \(y\) is used to represent the value corresponding to \(x\) and is called the \textbf{\emph{dependent variable}}. We say \(y\) is a function of \(x\). When we consider several functions together, to distinguish them we named functions by a letter such as \(f\), \(g\), or \(F\). The notation \(f(x)\), read as \textbf{``\(f\) of \(x\)'' or ``\(f\) at \(x\)''}, represents the output of the function \(f\) when the input is \(x\).
+To find the value of a function at a given number, we substitute the independent variable \(x\) by the given number and then evaluate the expression. We call the procedure evaluating a function.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-247}{}{\label{exm:unnamed-chunk-247} }
+Find the indicated function value.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(-2)\),~\(f(x)=2x+1\)
+\item
+  \(g(2)\),~\(g(x)=3x^2-10\)
+\item
+  \(h(a-t)\),~\(h(x)=3x+5\).
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(-2)=2\cdot(-2)+1=-4+1=-3\).
+\item
+  \(g(-2)=3\cdot(2^2)-10=3\cdot 4-10=12-10=2\).
+\item
+  \(h(a-t)=3\cdot(a-t)+5=3a-3t+5\).
+\end{enumerate}
+\EndKnitrBlock{solution}
 
 \hypertarget{graphs-of-functions}{%
 \section{Graphs of Functions}\label{graphs-of-functions}}
 
+\textbf{\emph{The graph of a function}} is the graph of its ordered pairs.
+A graph of ordered pairs \((x,y)\) in the rectangular system defines \(y\) as a function of \(x\) if any vertical line crosses the graph at most once. This test is called the \textbf{\emph{vertical line test}}.
+
+\hypertarget{domain-and-range}{%
+\section{Domain and Range}\label{domain-and-range}}
+
+The domain of a graph is the set of all inputs (\(x\)-coordinates). The range of a graph is the set of all outputs (\(y\)-coordinates).
+To find the domain of a graph, we look for the left and the right endpoints. To find the range of a graph, we look for the highest and the lowest positioned points.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-249}{}{\label{exm:unnamed-chunk-249} }
+Use the graph in the picture to answer the following questions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine whether the graph is a function and explain your answer.\\
+\item
+  Find the domain (in interval notation) of the graph.\\
+\item
+  Find the range (in interval notation) of the graph.\\
+\item
+  Find the interval where the graph is above \(2\).\\
+\item
+  Find the interval where the graph is is decreasing.\\
+\item
+  Find all maximum and minimum values of the function if they exist.\\
+\item
+  Find the value of \(x\) such that \((x, 0)\) is on the graph.
+\end{enumerate}
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/function-example-quadratic.png}\\
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The graph is a function. Because every vertical line crosses the graph at most once.\\
+\item
+  The graph has the left endpoint at \((-2, -2)\) and but no right endpoint. So the domain is \([-2, +\infty)\).\\
+\item
+  The graph has a lowest positioned point \((-2, -2)\) but no highest positioned point. So the range is \([-2, +\infty)\).\\
+\item
+  The graph is above 2 over the interval \((3, \infty)\).\\
+\item
+  The graph is decreasing over the interval \((1,2)\).\\
+\item
+  The graph has minima at \((-2,1)\) and \((2,1)\).\\
+\item
+  The point \((x, 0)\) is on the \(x\)-axis. If \(x=-0.5\), then it will be on the graph.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-10}{%
+\section{Practice}\label{practice-10}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-251}{}{\label{exr:unnamed-chunk-251} }
+Find the indicated function values for the functions \(f(x)=-x^2+x-1\) and \(g(x)=2x-1\). Simplify your answer.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(2)\)
+\item
+  \(f(-x)\)
+\item
+  \(g(-1)\)
+\item
+  \(g(f(1))\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-252}{}{\label{exr:unnamed-chunk-252} }
+Suppose \(g(x) = -3x + 1\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Compute \(\dfrac{g(4)-g(1)}{4-1}\)
+\item
+  Compute \(\dfrac{g(x+h)-g(x)}{h}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-253}{}{\label{exr:unnamed-chunk-253} }
+Suppose the domain of the linear function \(l(x)=1-2x\) is \((0, 1)\). Find the range of the function.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-254}{}{\label{exr:unnamed-chunk-254} }
+Use the graph in the picture to answer the following questions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine whether the graph is a function and explain your answer.
+\item
+  Find the domain of the graph (write the domain in interval notation).
+\item
+  Find the range of the graph (write the range in interval notation).
+\item
+  Find the interval where the graph is above the \(x\)-axis.
+\item
+  Find all points where the graph reaches a maximum or a minimum.
+\item
+  Find the values of the \(x\)-coordinate of all points on the graph whose \(y\)-coordinate is \(1\).
+\end{enumerate}
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/function-exercise-ray-cubic.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-255}{}{\label{exr:unnamed-chunk-255} }
+Use the graph of the function \(f\) in the picture to answer the following questions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the \(y\)-intercept.
+\item
+  Find the value
+  \[\dfrac{f(3)-f(0)}{3}.\]
+\item
+  Find the values \(x\) such that \(f(x)=0\).
+\item
+  Find the solution to the inequality \(f(x)>0\). Write in interval notation.
+\end{enumerate}
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/function-exercise-cubic.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-256}{}{\label{exr:unnamed-chunk-256} }
+Today Matt drove from home to school in 30 minutes. He spent 6 minutes on local streets before driving on the highway and 4 minutes on local streets towards school after getting off the highway. On local streets, his average speed is 30 miles per hour. On the highway, his average speed is 60 miles per hours.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Write the distance \(d\) (in miles) he drove as a function of the time \(t\) (in minutes)?
+\item
+  After 15 minutes, where was he and how far did he drive?
+\item
+  How far did he drive from home to school?
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
 \hypertarget{linear-functions}{%
 \chapter{Linear Functions}\label{linear-functions}}
+
+\hypertarget{the-slope-intercept-form-equation}{%
+\section{The Slope-Intercept Form Equation}\label{the-slope-intercept-form-equation}}
+
+The slope of a line measures the steepness, in other words, ``rise'' over ``run'', or rate of change of the line. Using the rectangular coordinate system, the \textbf{\emph{slope}} \(m\) of a line is defined as
+\[
+m=\dfrac{y_2-y_1}{x_2-x_1}=\dfrac{\text{rise}}{\text{run}}=\dfrac{\text{change in the output }y}{\text{change in the input } x},
+\]
+where \((x_1, y_1)\) and \((x_2, y_2)\) are any two distinct points on the line. If the line intersects the \(y\)-axis at the point \((0, b)\), then a point \((x, y)\) is on the line if and only if
+\[
+y=mx+b.
+\]
+This equation is called the \textbf{\emph{slope-intercept form}} of the line.
+
+\hypertarget{point-slope-form-equation-of-a-line}{%
+\section{Point-Slope Form Equation of a Line}\label{point-slope-form-equation-of-a-line}}
+
+Suppose a line passing through the point \((x_0, y_0)\) has the slope \(m\). Solving from the slope formula, we see that any point \((x, y)\) on the line satisfies the equation equation
+\[
+y=m(x-x_0)+y_0
+\]
+which is called the \textbf{\emph{point-slope form}} equation.
+
+\hypertarget{linear-function}{%
+\section{Linear Function}\label{linear-function}}
+
+A \textbf{\emph{linear function}} \(f\) is a function whose graph is a line. An equation for \(f\) can be written as
+\[f(x) = mx + b\]
+where \(m\) is the slope and \(b=f(0)\).
+
+A function \(f\) is a linear function if the following equalities hold
+\[
+\dfrac{f(x_2)-f(x_1)}{x_2-x_1}
+=\dfrac{f(x_3)-f(x_1)}{x_3-x_1}
+\]
+for any three distinct points \((x_1, y_1)\), \((x_2, y_2)\) and \((x_3, y_3)\) on the graph of \(f\).
+
+\hypertarget{equations-of-linear-functions}{%
+\section{Equations of Linear Functions}\label{equations-of-linear-functions}}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-257}{}{\label{exm:unnamed-chunk-257} }
+Find the slope-intercept form equation for the linear function \(f\) such that \(f(2)=5\) and \(f(-1) = 2\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the slope \(m\): \(m=\frac{f(2)-f(-1)}{2-(-1)}=\frac{5-2}{2-(-1)}=\frac{3}{3}=1\).
+\item
+  Plug one of the points, say \((2, 5)\) in the point-slope form equation, we get \(y=1\cdot(x-2)+5\)
+\item
+  Simplify the above equation, we get the slope-intercept form equation \(f(x)=x+3\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{graph-a-linear-function-by-plotting-points}{%
+\section{Graph a Linear Function by Plotting Points}\label{graph-a-linear-function-by-plotting-points}}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-259}{}{\label{exm:unnamed-chunk-259} }
+Sketch the graph of the linear function \(f(x)=-\frac12 x + 1\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\textbf{Method 1: Get points by evaluating \(f(x)\).}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Choose two or more input values, e.g.~\(x=0\) and \(x=2\).
+\item
+  Evaluate \(f(x)\): \(f(0)=1\) and \(f(2)=0\).
+\item
+  Plot the points \((0, 1)\) and \((2, 0)\) and draw a line through them.
+\end{enumerate}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{figs/tikz-linear-function-example-a.png}\\
+
+\textbf{Method 2: Get points by raise and run.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Plot the \(y\)-intercept \((0, f(0))=(0, 1)\).
+\item
+  Use \(\frac{\text{rise}}{\text{run}}=-\frac{1}{2}\) to get one or more points, e.g, we will get \((-2, 2)\) by taking \(\text{rise}=1\) and \(\text{run}=-2\), i.e.~move up \(1\) unit, then move to the right \(2\) units.
+\item
+  Plot the points \((0, 1)\) and \((-2, 2)\) and draw a line through them.
+\end{enumerate}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{figs/tikz-linear-function-example-b.png}\\
+\EndKnitrBlock{solution}
+
+\hypertarget{horizontal-and-vertical-lines}{%
+\section{Horizontal and Vertical Lines}\label{horizontal-and-vertical-lines}}
+
+A \textbf{\emph{horizontal line}} is defined by an equation \(y=b\). The slope of a horizontal line is simply zero.
+A \textbf{\emph{vertical line}} is defined by an equation \(x=a\). The slope of a vertical line is \textbf{undefined}.
+
+A vertical line gives an example that a graph is not a function of \(x\). Indeed,
+the vertical line test fails for a vertical line.
+
+\hypertarget{explicit-function}{%
+\section{Explicit Function}\label{explicit-function}}
+
+When studying functions, we prefer a clearly expressed function rule. For example, in \(f(x)=-\frac23x+1\), the expression \(-\frac23x+1\) clearly tells us how to produce outputs. For a function \(f\) defined by an equation, for instance, \(2x+3y=3\), to find the function rule (that is an expression), we simply solve the given equation for \(y\).
+\[
+\begin{aligned}
+2x+3y&=3\\
+3y&=-2x+3\\
+y&=-\frac23x+1.
+\end{aligned}
+\]
+Now, we get \(f(x)=-\frac23x+1\).
+
+\hypertarget{perpendicular-and-parallel-lines}{%
+\section{Perpendicular and Parallel Lines}\label{perpendicular-and-parallel-lines}}
+
+Any two vertical lines are parallel. Two non-vertical lines are \textbf{\emph{parallel}} if and only if they \textbf{have the same slope}.
+
+A line that is parallel to the line \(y=mx+a\) has an equation \(y=mx+b\), where \(a\neq b\).
+
+Horizontal lines are perpendicular to vertical lines. Two non-vertical lines are \textbf{\emph{perpendicular}} if and only if \textbf{the product of their slopes is \(-1\)}.
+
+A line that is perpendicular to the line \(y=mx+a\) has an equation \(y=-\frac1m x+b\).
+
+\hypertarget{finding-equations-for-perpendicular-or-parallel-lines}{%
+\section{Finding Equations for Perpendicular or Parallel Lines}\label{finding-equations-for-perpendicular-or-parallel-lines}}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-261}{}{\label{exm:unnamed-chunk-261} }
+Find an equation of the line that is parallel to the line \(4x+2y=1\) and passes through the point \((-3, 1)\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the slope \(m\) of the original line from the slope-intercept form equation by solving for \(y\). \(y=-2x+\frac12\). So \(m=-2\).
+\item
+  Find the slope \(m_\parll\) of the parallel line.
+  \[m_\parll=m=-2.\]
+\item
+  Use the point-slope form.
+  \[
+       \begin{aligned}
+           y-1&=-2(x+3)\\
+           y&=-2x-5.
+       \end{aligned}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-263}{}{\label{exm:unnamed-chunk-263} }
+Find an equation of the line that is perpendicular to the line \(4x-2y=1\) and passes through the point \((-2,3)\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find the slope \(m\) of the original line from the slope-intercept form equation by solving for \(y\). \(y=2x-\frac12\). So \(m=2\).
+\item
+  Find the slope \(m_\perp\) of the perpendicular line.
+  \[m_\perp=-\frac1m=-\frac12.\]
+\item
+  Use the point-slope form.
+  \[
+       \begin{aligned}
+           y-3&=-\frac12(x+2)\\
+           y&=-\frac{1}{2}x+2.
+       \end{aligned}
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-11}{%
+\section{Practice}\label{practice-11}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-265}{}{\label{exr:unnamed-chunk-265} }
+Find the slope of the line passing through
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((3,5)\) and \((-1, 1)\)
+\item
+  \((-2,4)\) and \((5, -2)\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-266}{}{\label{exr:unnamed-chunk-266} }
+Find the point-slope form equation of the line with slope \(5\) that passes though \((-2, 1)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-267}{}{\label{exr:unnamed-chunk-267} }
+Find the point-slope form equation of the line passing thought \((3, -2)\) and \((1,4)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-268}{}{\label{exr:unnamed-chunk-268} }
+Find the slope-intercept form equation of the line passing through \((6, 3)\) and \((2, 5)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-269}{}{\label{exr:unnamed-chunk-269} }
+Determine whether the linear functions \(f(x)\) and \(h(x)\) with the following values \(f(-2)=-4\) \(f(0)=h(0)=2\) and \(h(2)=8\) define the same function. Explain your answer.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-270}{}{\label{exr:unnamed-chunk-270} }
+Suppose the points \((5, -1)\) and \((2, 5)\) are on the graph of a linear function \(f\). Find \(f(-3)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-271}{}{\label{exr:unnamed-chunk-271} }
+Graph the functions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=-x + 1\)
+\item
+  \(f(x)=\frac{1}{2}x - 1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-272}{}{\label{exr:unnamed-chunk-272} }
+A storage rental company charges a base fee of \$15 and \$\(x\) per day for a small cube. Suppose the cost is \$20 dollars for 10 days.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Write the cost \(y\) (in dollars) as a linear function of the number of days \(x\).
+\item
+  How much would it cost to rent a small cube for a whole summer (June, July and August)?
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-273}{}{\label{exr:unnamed-chunk-273} }
+Find an equation for each of the following two lines which pass through the same point \((-1, 2)\).\textbackslash{}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The vertical line.
+\item
+  The horizontal line.\hfill\null
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-274}{}{\label{exr:unnamed-chunk-274} }
+Line \(L\) is defined by the equation \(2x-5y=-3\).
+What is the slope \(m_\parallel\) of the line that is parallel to the line \(L\)?
+What is the slope \(m_\perp\) of the line that is perpendicular to the line \(L\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-275}{}{\label{exr:unnamed-chunk-275} }
+Line \(L_1\) is defined by \(3y+5x=7\). Line \(L_2\) passes through \((-1, -3)\) and \((4, -8)\). Determine whether \(L_1\) and \(L_2\) are parallel, perpendicular or neither.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-276}{}{\label{exr:unnamed-chunk-276} }
+Find the point-slope form and then the slope-intercept form equations of the line parallel to \(3x-y=4\) and passing through the point \((2,-3)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-277}{}{\label{exr:unnamed-chunk-277} }
+Find the slope-intercept form equation of the line that is perpendicular to \(4y-2x+3=0\) and passing through the point \((2, -5)\)
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-278}{}{\label{exr:unnamed-chunk-278} }
+The line \(L_1\) is defined \(Ax+By=3\). The line \(L_2\) is defined by the equation \(Ax+By=2\). The line \(L_3\) is defined by \(Bx-Ay=1\). Determine whether \(L_1\), \(L_2\) and \(L_3\) are parallel or perpendicular to each other.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-279}{}{\label{exr:unnamed-chunk-279} }
+Use the graph of the line \(L\) to answer the following questions
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find an equation for the line \(L\).
+\item
+  Find an equation for the line \(L_\perp\) perpendicular to \(L\) and passing through \((1,1)\).
+\item
+  Find an equation for the line \(L_\parallel\) parallel to \(L\) and passing through \((-2,-1)\).
+\end{enumerate}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{figs/tikz-perp-prll-exercise.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-280}{}{\label{exr:unnamed-chunk-280} }
+Determine whether the points \((-3,1)\), \((-2,6)\), \((3,5)\) and \((2, 0)\) form a square. Please explain your conclusion.
+\EndKnitrBlock{exercise}
 
 \hypertarget{quadratic-functions}{%
 \chapter{Quadratic Functions}\label{quadratic-functions}}
 
-\hypertarget{the-complete-square-form}{%
-\section{The Complete Square Form}\label{the-complete-square-form}}
+\hypertarget{the-graph-of-a-quadratic-function}{%
+\section{The Graph of a Quadratic Function}\label{the-graph-of-a-quadratic-function}}
+
+The graph of a quadratic function \(f(x)=ax^2+bx+c\), \(a\neq 0\), is called a \textbf{\emph{parabola}}.
+
+By completing the square, a quadratic function \(f(x)=ax^2+bx+c\) can always be written in the form \(f(x)=a(x-h)^2+k\), where \(h=-\dfrac{b}{2a}\) and \(k=f(h)=f\left(-\dfrac{b}{2a}\right)\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The line \(x=h=-\dfrac{b}{2a}\) is called the \textbf{\emph{axis of symmetry}} of the parabola.
+\item
+  The point \((h, k)=\left(-\dfrac{b}{2a}, f\left(-\dfrac{b}{2a}\right)\right)\) is called the \textbf{\emph{vertex}} of the parabola.
+\end{enumerate}
+
+\hypertarget{the-minimum-or-maximum-of-a-quadratic-function}{%
+\section{The Minimum or Maximum of a Quadratic Function}\label{the-minimum-or-maximum-of-a-quadratic-function}}
+
+Consider the quadratic function \(f(x)=ax^2+bx+c\), \(a\neq 0\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If \(a>0\), then the parabola opens upward and \(f\) has a minimum \(f\left(-\dfrac{b}{2a}\right)\) at the vertex.
+\item
+  If \(a<0\), then the parabola opens downward and \(f\) has a maximum \(f\left(-\dfrac{b}{2a}\right)\) at the vertex.
+\end{enumerate}
+
+\hypertarget{intercepts-of-a-quadratic-function}{%
+\section{Intercepts of a Quadratic Function}\label{intercepts-of-a-quadratic-function}}
+
+Consider the quadratic function \(f(x)=ax^2+bx+c\), \(a\neq 0\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The \(y\)-intercept is \((0, f(0))=(0, c)\).
+\item
+  The \(x\)-intercepts, if exist, are the solutions of the equation \(ax^2+bx+c=0\).
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-281}{}{\label{exm:unnamed-chunk-281} }
+Does the function \(f(x)=2x^2-4x-6\) have a maximum or minimum? Find it.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Since \(a>2\), the function opens upward and has a minimum.
+\item
+  Find the line of symmetry \(x=\frac{-b}{2a}\):
+  \(x=\frac{-(-4)}{2\cdot 2}=1\).
+\item
+  Find the minimum by plugging \(x=1\) into the function \(f\).
+  The minimum is
+  \[
+   f(-\frac{b}{2a})=f(1)=2-4-6=-8.
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-283}{}{\label{exm:unnamed-chunk-283} }
+Consider the function \(f(x)=-x^2+3x+6\). Find values of \(x\) such that \(f(x)=2\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Set up the equation for \(x\).
+  \[-x^2+3x+6=2\]
+\item
+  Solve the equation \(-x^2+3x+6=2\), we get \(x=-1\) or \(x=4\).
+  The values of \(x\) such that \(f(x)=2\) are \(x=-1\) and \(x=44\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-285}{}{\label{exm:unnamed-chunk-285} }
+A quadratic function \(f\) whose the vertex is \((1, 2)\) has a \(y\)-intercept \((0, -3)\). Find the equation that defines the function.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Write down the general form of \(f\) using only the vertex.
+  Quadratic functions with the vertex at \((1,2)\) are defined by \(y=a(x-1)^2+2\), where \(a\) is a nonzero real number.
+\item
+  Determine the unknown \(a\) using the remaining information.
+  Since \((0, -3)\) is on the graph of the function, the number \(a\) must satisfy the equation \(-3=a(0-1)^2+2\).
+\item
+  Solving for \(a\) from the equation, we get \(a=-5\).
+  The quadratic function \(f\) is given by \(f(x)=-5(x-1)^2+2\).
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-12}{%
+\section{Practice}\label{practice-12}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-287}{}{\label{exr:unnamed-chunk-287} }
+Sketch the graph of the quadratic functions \(f(x)=-(x-2)^2+4\) and find
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  the coordinates of the \(x\)-intercepts,
+\item
+  the coordinates of the \(y\)-intercept,
+\item
+  the equation of the axis of symmetry,
+\item
+  the coordinates of the vertex.
+\item
+  the interval of \(x\) values such that \(f(x)\geq 0\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-288}{}{\label{exr:unnamed-chunk-288} }
+Sketch the graph of the quadratic functions \(f(x)=x^2+2x-3\) and find
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  the coordinates of the \(x\)-intercepts,
+\item
+  the coordinates of the \(y\)-intercept,
+\item
+  the equation of the axis of symmetry,
+\item
+  the coordinates of the vertex.
+\item
+  the interval of \(x\) values such that \(f(x)>0\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-289}{}{\label{exr:unnamed-chunk-289} }
+Consider the parabola in the graph.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine the coordinates of the \(x\)-intercepts.
+\item
+  Determine the coordinates of the \(y\)-intercept.
+\item
+  Determine the coordinates of the vertex.
+\item
+  For what values of \(x\) is \(f(x)=-3\).
+\item
+  Find an equation for the function.
+\end{enumerate}
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-exercise-graph-quadratic-1.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-290}{}{\label{exr:unnamed-chunk-290} }
+Consider the parabola in the graph.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Determine the coordinates of the \(x\)-intercepts.
+\item
+  Determine the coordinates of the \(y\)-intercept.
+\item
+  Determine the coordinates of the vertex.
+\item
+  For what values of \(x\) is \(f(x)=\frac{3}{2}\).
+\item
+  Find an equation for the function.
+\end{enumerate}
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-exercise-graph-quadratic-2.png}\\
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-291}{}{\label{exr:unnamed-chunk-291} }
+A store owner estimates that by charging \(x\) dollars each for a certain cell phone case, he can sell \(d(x)=40 - x\) phone cases each week. The revenue in dollars is \(R(x)=xd(x)\) when the selling price of a computer is \(x\), Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-292}{}{\label{exr:unnamed-chunk-292} }
+A ball is thrown upward from the ground with an initial velocity \(v_0\) ft/sec.~The height \(h(t)\) of the ball after \(t\) seconds is \(h(t)= -16t^2 + v_0t\). The ball hits the ground after 4 seconds.
+Find the maximum height and how long it will take the ball to reach the maximum height.
+\EndKnitrBlock{exercise}
 
 \hypertarget{rational-and-radical-functions}{%
 \chapter{Rational and Radical Functions}\label{rational-and-radical-functions}}
 
+\hypertarget{the-domain-of-a-rational-function}{%
+\section{The Domain of a Rational Function}\label{the-domain-of-a-rational-function}}
+
+A \textbf{\emph{rational function}} \(f\) is defined by an equation \(f(x)=\frac{p(x)}{q(x)}\), where \(p(x)\) and \(q(x)\) are polynomials and the degree of \(q(x)\) is at least one. Since the denominator cannot be zero, the domain of \(f\) consists all real numbers except the numbers such that \(q(x)=0\)
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-293}{}{\label{exm:unnamed-chunk-293} }
+Find the domain of the function \(f(x)=\frac{1}{x-1}\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+Solve the equation \(x-1=0\), we get \(x=1\). Then the domain is \(\{x\mid x\neq 1\}\). In interval notation, the domain is
+\[
+(-\infty, 1)\cup (1,\infty).
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{the-domain-of-a-radical-function}{%
+\section{The Domain of a Radical Function}\label{the-domain-of-a-radical-function}}
+
+A \textbf{\emph{radical function}} \(f\) is defined by an equation \(f(x)=\sqrt[n]{r(x)}\), where \(r(x)\) is an algebraic expression. For example \(f(x)=\sqrt{x+1}\). When \(n\) is odd number, \(r(x)\) can be any real number. When \(n\) is even, \(r(x)\) has to be nonnegative, that is \(r(x)\geq 0\) so that \(f(x)\) is a real number.
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-295}{}{\label{exm:unnamed-chunk-295} }
+Find the domain of the function \(f(x)=\sqrt{x+1}\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+Since the index is \(2\) which is even, the function has real outputs only if the radicand \(x+1\geq 0\).
+Solve the inequality, we get \(x\geq -1\). In interval notation, the domain is
+\[
+[-1,\infty).
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{applications}{%
+\section{Applications}\label{applications}}
+
+\hypertarget{practice-13}{%
+\section{Practice}\label{practice-13}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-297}{}{\label{exr:unnamed-chunk-297} }
+Find the domain of each function. Write in interval notation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=\frac{x^2}{x-2}\)
+\item
+  \(f(x)=\frac{x}{x^2-1}\)
+\item
+  \(f(x)=\sqrt{2x-3}\)
+\item
+  \(f(x)=\sqrt{x^2+1}\)\hfill\null
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-298}{}{\label{exr:unnamed-chunk-298} }
+Find the domain of each function. Write in interval notation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=1-\frac{2x}{x+3}\)
+\item
+  \(f(x)=\frac{x-2}{x^2-4}\)
+\item
+  \(f(x)=\sqrt{1-x^2}\)
+\item
+  \(f(x)=-\sqrt{\frac{1}{x-5}}\)\hfill\null
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
 \hypertarget{exponential-functions}{%
 \chapter{Exponential Functions}\label{exponential-functions}}
+
+\hypertarget{definition-and-graphs-of-exponential-functions}{%
+\section{Definition and Graphs of Exponential Functions}\label{definition-and-graphs-of-exponential-functions}}
+
+Let \(b\) be a positive number other than \(1\) (i.e.~\(b>0\) and \(b\neq 1\)). The exponential function \(f\) of \(x\) with the base \(b\) is defined as
+\[
+f(x)=b^x\quad\quad\text{or}\quad\quad y=b^x.
+\]
+
+Graphs of exponential functions:
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-example-exp-function-1.png}\\
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-example-exp-function-2.png}\\
+
+\BeginKnitrBlock{rmdnote}
+The exponential function \(f(x)=b^x\) is an one-to-one function: any vertical line or any horizontal line crosses the graph at most once. Equivalently, the equation \(b^x=c\) has at most one solution for any real number \(c\).
+\EndKnitrBlock{rmdnote}
+
+\hypertarget{the-natural-number-e}{%
+\section{\texorpdfstring{The Natural Number \(e\)}{The Natural Number e}}\label{the-natural-number-e}}
+
+The natural number \(e\) is the number to which the quantity \(\left(1+\dfrac1n\right)^n\) approaches as \(n\) takes on increasingly large values. Approximately, \(e\approx2.718281827\).
+
+\hypertarget{compound-interests}{%
+\section{Compound Interests}\label{compound-interests}}
+
+After \(t\) years, the balance \(A\) in an account with a principal \(P\) and annual interest rate \(r\) is given by the following formulas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For \(n\) compounding periods per year: \(A=P\left(1+\dfrac{r}{n}\right)^{nt}\).
+\item
+  For compounding continuously: \(A=Pe^{rt}\).
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-300}{}{\label{exm:unnamed-chunk-300} }
+A sum of \(\$10,000\) is invested at an annual rate of \(8\%\), Find the balance, to the nearest hundredth dollar, in the account after \(5\) years if the interest is compounded
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  monthly,
+\item
+  quarterly,
+\item
+  semiannually,
+\item
+  continuous.
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Find values of \(P\), \(r\), \(t\) and \(n\). In this case, \(P=10,000\), \(r=8\%=0.08\), \(t=5\) and \(n\) depends compounding.
+\item
+  Plug the values in the formula and calculate.
+\item
+  ``Monthly'' means \(n=12\). Then
+  \[
+   A=10000\left(1+\frac{0.08}{12}\right)^{5\cdot 12}\approx 14898.46.
+   \]
+\item
+  ``Quarterly'' means \(n=4\). Then
+  \[
+   A=10000\left(1+\frac{0.08}{4}\right)^{5\cdot 4}\approx 14859.47.
+   \]
+\item
+  ``semiannually'' means \(n=2\). Then
+  \[
+   A=10000\left(1+\frac{0.08}{2}\right)^{5\cdot 2}\approx 14802.44.
+   \]
+\item
+  For continuously compounded interest, we have
+  \[
+   A=10000e^{0.08\cdot 5}\approx 14918.25.
+   \]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdnote}
+In the compounded investment module, the \(\frac rn\) is an approximation of the period interest rate. Indeed, if the period rate \(p\) satisfies the equation \((1+p)^n=1+r\), or equivalently \(p=\sqrt[n](1+r) - 1\). Using the formula \((1+x)^n=1+nx+\frac{n(n-1)}{2}x^2+\cdots +x^n\), one may approximately replace \(1+r\) by \((1+\frac rn)\) and obtain the approximation \(p\approx \frac rn\).
+\EndKnitrBlock{rmdnote}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-303}{}{\label{exm:unnamed-chunk-303} }
+The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4\%.
+The predicted population is \(P(t)=0.78(1.004)^t\) billions after \(t\) years since 2015.
+To the nearest thousandth of a billion, what will the predicted population of the country be in 2030?
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+The population is approximately
+\[
+P(15)=0.78(1.004)^{15}\approx 0.828 \quad \text{billions}.
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-14}{%
+\section{Practice}\label{practice-14}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-305}{}{\label{exr:unnamed-chunk-305} }
+The value of a car is depreciating according to the formula: \(V=25000(3.2)^{-0.05x}\),
+where \(x\) is the age of the car in years.
+Find the value of the car, to the nearest dollar, when it is five years old.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-306}{}{\label{exr:unnamed-chunk-306} }
+A sum of \$20,000 is invested at an annual rate of 5.5\%, Find the balance, to the nearest dollar,
+in the account after 5 years subject to
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  monthly compounding,
+\item
+  continuously compounding.
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-307}{}{\label{exr:unnamed-chunk-307} }
+Sketch the graph of the function and find its range.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=3^x\)
+\item
+  \(f(x)=\left(\frac13\right)^x\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-308}{}{\label{exr:unnamed-chunk-308} }
+Use the given function to compare the values of \(f(-1.05)\), \(f(0)\) and \(f(2.4)\) and determine which value is the largest and which value is the smallest. Explain your answer.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=\left(\frac{5}{2}\right)^x\)
+\item
+  \(f(x)=\left(\frac23\right)^x\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
 
 \hypertarget{logarithmic-functions}{%
 \chapter{Logarithmic Functions}\label{logarithmic-functions}}
 
+\hypertarget{definition-and-graphs-of-logarithmic-function}{%
+\section{Definition and Graphs of Logarithmic Function}\label{definition-and-graphs-of-logarithmic-function}}
+
+For \(x>0\), \(b>0\) and \(b\neq 1\), there is a unique number \(y\) satisfying the equation \(b^y=x\). We denote the unique number \(y\) by \(\log_bx\), read as logarithm to the base \(b\) of \(x\). In other words, the defining relation between exponentiation and logarithm is
+\[
+y=\log_bx \quad\text{if and only if} \quad b^y=x.
+\]
+The function \(f(x)=\log_bx\) is called the logarithmic function \(f\) of \(x\) with the base \(b\).
+
+Graphs of logarithmic functions:
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-example-log-function-graph-1.png}\\
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-example-log-function-graph-2.png}\\
+
+\hypertarget{common-logarithms-and-natural-logarithms}{%
+\section{Common Logarithms and Natural Logarithms}\label{common-logarithms-and-natural-logarithms}}
+
+A logarithmic function \(f(x)\) with base 10 is called the common logarithmic function and denoted by \(f(x)=\log x\).
+
+A logarithmic function \(f(x)\) with base the natural number \(e\) is called the natural logarithmic function and denoted by \(f(x)=\ln x\).
+
+\hypertarget{basic-properties-of-logarithms}{%
+\section{Basic Properties of Logarithms}\label{basic-properties-of-logarithms}}
+
+When \(b>0\) and \(b\neq 1\), and \(x>0\), we have
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(b^{\log_bx}=x\).
+\item
+  \(\log_b(b^x)=x\).
+\item
+  \(\log_bb=1\) and \(\log_b1=0\).
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-309}{}{\label{exm:unnamed-chunk-309} }
+Convert between exponential and logarithmic forms.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log x=\frac{1}{2}\)
+\item
+  \(3^{2x-1}=5\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+When converting between exponential and logarithmic forms, we move the base from one side to the other side, then add or drop the log sign.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Move the base 10 to the right side and drop the log from the left:
+  \[x=10^{\frac{1}{2}}\]
+\item
+  Move the 3 to the right and add log the the right:
+  \[2x-1=\log_35\]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-311}{}{\label{exm:unnamed-chunk-311} }
+Evaluate the logarithms.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_42\)
+\item
+  \(10^{\log(\frac{1}{2})}\)
+\item
+  \(\log_5(e^0)\)
+\end{enumerate}
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+The key is to rewrite the log and the power so that they have the same base.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_42= \log_44^{\frac{1}{2}}=\frac{1}{2}\).
+\item
+  \(10^{\log\frac{1}{2}}=10^{\log_{10}\frac{1}{2}}=\frac12\)
+\item
+  \(\log_5(e^0)=\log_51=0\)
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-313}{}{\label{exm:unnamed-chunk-313} }
+Find the domain of the function \(f(x)=\ln(2-3x)\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+The function has a real output if \(2-3x>0\). Solving the inequality, we get \(x<\frac{2}{3}\). So the domain of the function is \((-\infty, \frac{2}{3})\).
+\EndKnitrBlock{solution}
+
+\hypertarget{properties-of-logarithms}{%
+\section{Properties of Logarithms}\label{properties-of-logarithms}}
+
+For \(M>0\), \(N>0\), \(b>0\) and \(b\neq 1\), we have
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  (The product rule) \(\log_b(MN)=\log_bM+\log_bN\)
+\item
+  (The quotient rule) \(\log_b(\frac MN)=\log_bM-\log_bN\).
+\item
+  (The power rule) \(\log_b(M^p)=p\log_bM\), where \(p\) is any real number.
+\item
+  (The change-of-base property) \(\log_bM=\dfrac{\log_aM}{\log_ab}\), where \(a>0\) and \(a\neq 1\). In particular,
+  \[
+   \log_bM=\dfrac{\log M}{\log b} \quad\text{and}\quad \log_bM=\dfrac{\ln M}{\ln b}.
+   \]
+\end{enumerate}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-315}{}{\label{exm:unnamed-chunk-315} }
+Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\begin{aligned}
+\log_2\left(\frac{8\sqrt{y}}{x^3}\right)&=\log_2(8\sqrt{y})-\log_2(x^3)\\
+&=\log_28+\log_2(y^{\frac{1}{2}})-3\log_2x\\
+&=3+\frac{1}{2}\log_2y-3\log_2x.
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-317}{}{\label{exm:unnamed-chunk-317} }
+Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+2\ln(x-1)-\ln(x^2+1)=\ln((x-1)^2)-\ln(x^2+1)=\ln\left(\frac{(x-1)^2}{x^2+1}\right).
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-319}{}{\label{exm:unnamed-chunk-319} }
+Evaluate the logarithm \(\log_34\) and round it to the nearest tenth.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+On most scientific calculator, there are only the common logarithmic function \texttt{LOG} and the natural logarithmic function \texttt{LN}. To evaluate a logarithm based on a general number, we use the change-of-base property. In this case, the value of \(\log_34\) is \[\log_34=\frac{\log4}{\log3}\approx 1.3.\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-321}{}{\label{exm:unnamed-chunk-321} }
+Simplify the logarithmic expression
+\[
+\log_2(x^{\log 3})\log_32.
+\]
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\[
+\log_2(x^{\ln 3})\log_32
+=(\ln 3\log_2x)\log_32=\ln3\left(\frac{\ln x}{\ln 2}\right)\left(\frac{\ln 2}{\ln 3}\right)=\ln x.
+\]
+\EndKnitrBlock{solution}
+
+\hypertarget{practice-15}{%
+\section{Practice}\label{practice-15}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-323}{}{\label{exr:unnamed-chunk-323} }
+Write each equation into equivalent exponential form.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_37=y\)
+\item
+  \(3=\log_b64\)
+\item
+  \(\log x=y\)
+\item
+  \(\ln(x-1)=c\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-324}{}{\label{exr:unnamed-chunk-324} }
+Write each equation into equivalent logarithmic form.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(7^x=10\)
+\item
+  \(b^5=2\)
+\item
+  \(e^{2y-1}=x\)
+\item
+  \(10^x=c^2+1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-325}{}{\label{exr:unnamed-chunk-325} }
+Evaluate.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_216\)
+\item
+  \(\log_93\)
+\item
+  \(\log 10\)
+\item
+  \(\ln 1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-326}{}{\label{exr:unnamed-chunk-326} }
+Evaluate.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(e^{\ln 2}\)
+\item
+  \(\log 10^{\frac13}\)
+\item
+  \(\ln(\sqrt{e})\)
+\item
+  \(\log_2(\frac12)\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-327}{}{\label{exr:unnamed-chunk-327} }
+Find the domain of the function \(f(x)=\log(x-5)\). Write in interval notation.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-328}{}{\label{exr:unnamed-chunk-328} }
+Sketch the graph of each function and find its range.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=\log_2x\)
+\item
+  \(f(x)=\log_{\frac12} x\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-329}{}{\label{exr:unnamed-chunk-329} }
+Expand the logarithm and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log(100x)\)
+\item
+  \(\ln\left(\frac{10}{e^2}\right)\)
+\item
+  \(\log_b(\sqrt[3]{x})\)
+\item
+  \(\log_7(\frac{x^2\sqrt{y}}{z})\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-330}{}{\label{exr:unnamed-chunk-330} }
+Expand the logarithm and simplify.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_b\sqrt{\frac{x^2y}{5}}\)
+  \% 1. \(\log_2(\frac{\sqrt{x}}{y-1})\)
+\item
+  \(\ln(\sqrt[3]{(x^2+1)y^{-2}})\)
+\item
+  \(\log(x\sqrt{10x}-\sqrt{10x})\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-331}{}{\label{exr:unnamed-chunk-331} }
+Write as a single logarithm.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\frac13\log x +\log y\)
+\item
+  \(\frac12\ln(x^2+1)-2\ln x\)
+\item
+  \(\frac13\log_2 x - 3\log_2(x+1)+1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-332}{}{\label{exr:unnamed-chunk-332} }
+Write as a single logarithm.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(2\log(2x+1)-\frac12\log x\)
+\item
+  \(3\ln x - 5\ln y + \frac{1}{2}\ln z\)
+\item
+  \(3\log_3 x-2\log_3(1-x)+\frac13\log_3 (x^2+1)\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-333}{}{\label{exr:unnamed-chunk-333} }
+Evaluate the logarithm and round it to the nearest hundredth.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \$\log\_2 10 \$
+\item
+  \$\log\_3 5 \$
+\item
+  \(\dfrac{1}{\log_52}\)
+\item
+  \(\log_45-\log_29\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-334}{}{\label{exr:unnamed-chunk-334} }
+Simplify the logarithmic expression
+\[
+\frac{\log_3(x^2)\log_y\sqrt{3}}{\log x}.
+\]
+\EndKnitrBlock{exercise}
+
 \hypertarget{applications-of-exponential-and-logarithmic-functions}{%
 \chapter{Applications of Exponential and Logarithmic Functions}\label{applications-of-exponential-and-logarithmic-functions}}
 
-\hypertarget{exponential-equations}{%
-\section{Exponential Equations}\label{exponential-equations}}
+\hypertarget{exponential-and-logarithmic-equations}{%
+\section{Exponential and Logarithmic Equations}\label{exponential-and-logarithmic-equations}}
 
-\hypertarget{logarithmic-equations}{%
-\section{Logarithmic Equations}\label{logarithmic-equations}}
+To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.
 
-\hypertarget{applications}{%
-\section{Applications}\label{applications}}
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-335}{}{\label{exm:unnamed-chunk-335} }
+Solve the equation \(10^{2x-1}-5=0\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Rewrite the equation in the form \(b^u=c\):
+  \[10^{2x-1}=5.\]
+\item
+  Take logarithm of both sides and simplify: \[2x-1=\log 5.\]
+\item
+  Solve the resulting equation:
+  \[x=\frac{1}{2}(\log5+1).\]
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-337}{}{\label{exm:unnamed-chunk-337} }
+Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Rewrite the equation in the form \(\log_bu=c\):
+  \[\log_2(x(x - 2)) = 3\]
+\item
+  Rewrite the equation in the exponential form (moving the base):
+  \[x(x-2)=2^3\]
+\item
+  Solve the resulting equation \(x^2-2x-8=0\). The solutions are \(x=-2\) and \(x=4\)
+\item
+  Check proposed solutions. Both \(x\) and \(x-2\) has to be positive. So \(x=-2\) is not a solution of the original equation. When \(x=4\), we have \(\log_24+\log_22=2+1=3\). So \(x=4\) is a solution.
+\end{enumerate}
+\EndKnitrBlock{solution}
+
+\hypertarget{solving-compound-interest-model}{%
+\section{Solving Compound Interest Model}\label{solving-compound-interest-model}}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-339}{}{\label{exm:unnamed-chunk-339} }
+A check of \$5000 was deposited in a savings account with an annual interest rate \(6\%\) which is compounded monthly. How many years will it take for the money to raise by 20\%?
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}\\
+
+The question tells us the following information:
+\(P=5000\), \(r=0.06\), \(n=12\), and \(A=5000\cdot (1+0.2)=6000\). What we want to know is the number of years \(t\). The compound interest model tells us that \(t\) satisfies the following equation:
+\[
+6000=5000\left(1+\frac{0.06}{12}\right)^{12t}.
+\]
+This is an exponential equation and can be solve using logarithms.
+\[
+\begin{aligned}
+5000\left(1+\frac{0.06}{12}\right)^{12t}&=6000\\
+\left(1+\frac{0.06}{12}\right)^{12t}&=1.2\\
+12t\cdot \log\left(1+0.06\div 12\right)&=1.2\\
+12t&=\log(1.2)\div \log(1+0.06\div 12)\\
+t&=\log(1.2)\div\log(1+0.06\div 12)\div 12\approx 3.
+\end{aligned}
+\]
+So it takes about 3 years for the savings to raise by 20\%.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{rmdnote}
+When solving exponential and logarithmic equations, you may also use the one-to-one property if both sides are powers with the same base or logarithms with the same base.
+\EndKnitrBlock{rmdnote}
+
+\hypertarget{more-applications}{%
+\section{More Applications}\label{more-applications}}
+
+\hypertarget{practice-16}{%
+\section{Practice}\label{practice-16}}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-342}{}{\label{exr:unnamed-chunk-342} }
+Solve the exponential equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(2^{x-1}=4\)
+\item
+  \(7e^{2x}-5=58\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-343}{}{\label{exr:unnamed-chunk-343} }
+Solve the exponential equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(3^{x^2-2x}=e^{-\ln3}\)
+\item
+  \(2^{(x+1)}=3^{(1-x)}\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-344}{}{\label{exr:unnamed-chunk-344} }
+Solve the logarithmic equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_5x+\log_5(4x-1)=1\)
+\item
+  \(\ln \sqrt{x+1}=1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-345}{}{\label{exr:unnamed-chunk-345} }
+Solve the logarithmic equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\log_2(x+2)-\log_2(x-5)=3\)
+\item
+  \(\log_3(x-5)=2-\log_3(x+3)\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-346}{}{\label{exr:unnamed-chunk-346} }
+For the given function, find values of \(x\) satisfying the given equation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=\log_4x-2\log_4(x+1)\),\quad \(f(x)=-1\)
+\item
+  \(g(x)=\log(2-5x)+\log(-x)\),\quad \(g(x)=1\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-347}{}{\label{exr:unnamed-chunk-347} }
+Find intersections of the given pairs of curves.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(f(x)=e^{x^2}\) and\textasciitilde{} \(g(x)=e^x+12\).
+\item
+  \(f(x)=\log_7\left(\frac12(x+2)\right)\) and\textasciitilde{} \(g(x)=1-\log_7(x-3)\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-348}{}{\label{exr:unnamed-chunk-348} }
+Using the formula \(A=P(1+\frac rn)^{nt}\) to determine how many years, to the nearest hundredth, it will take to double an investment \$20,000 at the interest rate 5\% compounded monthly.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-349}{}{\label{exr:unnamed-chunk-349} }
+Newton's Law of Cooling states that the temperature \(T\) of an object at any time \(t\) satisfying the equation \(T=T_s+(T_0-T_s)e^{-rt}\),
+where \(T_s\) is the the temperature of the surrounding environment,
+\(T_0\) is the initial temperature of the object,
+and \(r\) is positive constant characteristic of the system,
+which is in units of \({\displaystyle {\text{time}}^{-1}}{\displaystyle {\text{time}}^{-1}}\).
+In a room with a temperature of \(22 ^\circ C\), a cup of tea of \(97 ^\circ C\) was freshly brewed.
+Suppose that \$r=\ln 5/20\textasciitilde\textasciitilde{}\text{minute}\^{}\{-1\} \$. In how many minutes, the temperature of the tea will be \(37 ^\circ C\)?
+\EndKnitrBlock{exercise}
 % 参考文献
 
 

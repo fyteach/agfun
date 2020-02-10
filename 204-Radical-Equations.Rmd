@@ -1,14 +1,42 @@
 # Radical Equations
 
+## Design a Pendulum clock
+
+```{block2, type="rmdthink"}
+
+:::: {.twocolumns}
+
+::: {.left}
+
+A pendulum clock is a clock that uses a pendulum, a swinging weight, as its timekeeping element. [Galileo Galilei](https://en.wikipedia.org/wiki/Galileo_Galilei) discovered in early 17th century the relation between the length $L$ of a pendulum and the period $T$ of th pendulum. For a pendulum clock, the relations is approximately determined by the following [rule of thumb formula](https://en.wikipedia.org/wiki/Pendulum_(mathematics)):
+$$
+T\approx 2\sqrt{L}
+$$
+given that $L$ and $T$ are measured in meters and seconds respectively. If the period of a pendulum clock is 2 seconds, how long should be the pendulum?
+
+:::
+
+::: {.right style="vertical-align: middle;"}
+
+![a demonstration of a design of a pendulum clock](figs/pendulum-clock.gif)\
+
+:::
+
+::::
+
+```
+
+<!--
 ## Why is The Square Root of Two Irrational
 
 ```{block2, type="rmdthink"}
 
 We know that the number $\sqrt{2}$ is not a rational number. But why? Can you give an explanation?
 
-<!-- [^square]: Watch the youtube video <https://www.youtube.com/watch?v=f1yDExNAEMg> for interesting explanation. -->
+[^square]: Watch the youtube video <https://www.youtube.com/watch?v=f1yDExNAEMg> for interesting explanation.
 
 ```
+-->
 
 ## Solving Radical Equations by Taking a Power
 

@@ -2,11 +2,11 @@
 
 # Solving Polynomial Equations by Factoring
 
-## Do You Know How Many People In The Room
+## Handshaking Problem
 
 ```{block2, type="rmdthink"}
 
-In meeting room, a group of people all shook hands with one another. In total, 15 handshake occurred. Do you know how many people in the group?
+In meeting room, a group of people all shook hands with one another. In total, 15 handshakes occurred. Do you know how many people in the group?
 
 ```
 

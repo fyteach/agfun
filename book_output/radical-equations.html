@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-04" />
+<meta name="date" content="2020-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -376,10 +376,11 @@ $(document).ready(function () {
 <li class="chapter" data-level="11" data-path="introduction-to-functions.html"><a href="introduction-to-functions.html"><i class="fa fa-check"></i><b>11</b> Introduction to Functions</a></li>
 <li class="chapter" data-level="12" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>12</b> Linear Functions</a></li>
 <li class="chapter" data-level="13" data-path="quadratic-functions.html"><a href="quadratic-functions.html"><i class="fa fa-check"></i><b>13</b> Quadratic Functions</a></li>
-<li class="chapter" data-level="14" data-path="rational-and-radical-functions.html"><a href="rational-and-radical-functions.html"><i class="fa fa-check"></i><b>14</b> Rational and Radical Functions</a></li>
-<li class="chapter" data-level="15" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>15</b> Exponential Functions</a></li>
-<li class="chapter" data-level="16" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>16</b> Logarithmic Functions</a></li>
-<li class="chapter" data-level="17" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Applications of Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="14" data-path="rational-functions.html"><a href="rational-functions.html"><i class="fa fa-check"></i><b>14</b> Rational Functions</a></li>
+<li class="chapter" data-level="15" data-path="radical-functions.html"><a href="radical-functions.html"><i class="fa fa-check"></i><b>15</b> Radical Functions</a></li>
+<li class="chapter" data-level="16" data-path="exponential-functions.html"><a href="exponential-functions.html"><i class="fa fa-check"></i><b>16</b> Exponential Functions</a></li>
+<li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
+<li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -412,13 +413,33 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div id="radical-equations" class="section level1" number="8">
 <h1><span class="header-section-number">Topic 8</span> Radical Equations</h1>
-<div id="why-is-the-square-root-of-two-irrational" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Why is The Square Root of Two Irrational</h2>
+<div id="design-a-pendulum-clock" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Design a Pendulum clock</h2>
 
 <div class="rmdthink">
-<p>We know that the number <span class="math inline">\(\sqrt{2}\)</span> is not a rational number. But why? Can you give an explanation?</p>
-<!-- [^square]: Watch the youtube video <https://www.youtube.com/watch?v=f1yDExNAEMg> for interesting explanation. -->
+<div class="twocolumns">
+<div class="left">
+<p>A pendulum clock is a clock that uses a pendulum, a swinging weight, as its timekeeping element. <a href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> discovered in early 17th century the relation between the length <span class="math inline">\(L\)</span> of a pendulum and the period <span class="math inline">\(T\)</span> of th pendulum. For a pendulum clock, the relations is approximately determined by the following <a href="https://en.wikipedia.org/wiki/Pendulum_(mathematics)">rule of thumb formula</a>:
+<span class="math display">\[
+T\approx 2\sqrt{L}
+\]</span>
+given that <span class="math inline">\(L\)</span> and <span class="math inline">\(T\)</span> are measured in meters and seconds respectively. If the period of a pendulum clock is 2 seconds, how long should be the pendulum?</p>
 </div>
+<div class="right" style="vertical-align: middle;">
+<p><img src="figs/pendulum-clock.gif" alt="a demonstration of a design of a pendulum clock" /><br />
+</p>
+</div>
+</div>
+</div>
+<!--
+## Why is The Square Root of Two Irrational
+
+\BeginKnitrBlock{rmdthink}<div class="rmdthink">
+We know that the number $\sqrt{2}$ is not a rational number. But why? Can you give an explanation?
+
+[^square]: Watch the youtube video <https://www.youtube.com/watch?v=f1yDExNAEMg> for interesting explanation.
+</div>\EndKnitrBlock{rmdthink}
+-->
 </div>
 <div id="solving-radical-equations-by-taking-a-power" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Solving Radical Equations by Taking a Power</h2>
@@ -430,7 +451,7 @@ The goal to solve a single variable equation is to isolate the variable. When an
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-180" class="example"><strong>Example 8.1  </strong></span>
+<p><span id="exm:unnamed-chunk-182" class="example"><strong>Example 8.1  </strong></span>
 Solve the equation <span class="math inline">\(x-\sqrt{x+1}=1.\)</span></p>
 </div>
 
@@ -463,7 +484,7 @@ Plug <span class="math inline">\(x=0\)</span> into the original equation, we see
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-182" class="example"><strong>Example 8.2  </strong></span>
+<p><span id="exm:unnamed-chunk-184" class="example"><strong>Example 8.2  </strong></span>
 Solve the equation <span class="math inline">\(\sqrt{x-1}-\sqrt{x-6}=1.\)</span></p>
 </div>
 
@@ -500,7 +521,7 @@ Since <span class="math inline">\(10-1&gt;0\)</span> and <span class="math inlin
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-184" class="example"><strong>Example 8.3  </strong></span>
+<p><span id="exm:unnamed-chunk-186" class="example"><strong>Example 8.3  </strong></span>
 Solve the equation <span class="math inline">\(-2\sqrt[3]{x-4}=6.\)</span></p>
 </div>
 
@@ -529,7 +550,7 @@ The solution is <span class="math inline">\(x=-23\)</span>.</li>
 <p>Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}\)</span>. When <span class="math inline">\(m\)</span> is even and <span class="math inline">\(n\)</span> is odd, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=|X|\)</span>. Otherwise, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=X\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-186" class="example"><strong>Example 8.4  </strong></span>
+<p><span id="exm:unnamed-chunk-188" class="example"><strong>Example 8.4  </strong></span>
 Solve the equation <span class="math inline">\((x+2)^{\frac12}-(x-3)^{\frac12}=1\)</span>.</p>
 </div>
 
@@ -555,7 +576,7 @@ Check:
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-188" class="example"><strong>Example 8.5  </strong></span>
+<p><span id="exm:unnamed-chunk-190" class="example"><strong>Example 8.5  </strong></span>
 Solve the equation <span class="math inline">\((x-1)^{\frac{2}{3}}=4\)</span>.</p>
 </div>
 
@@ -582,7 +603,7 @@ Check:
 <h2><span class="header-section-number">8.4</span> Learn from Mistakes</h2>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-190" class="example"><strong>Example 8.6  </strong></span>
+<p><span id="exm:unnamed-chunk-192" class="example"><strong>Example 8.6  </strong></span>
 Can you find the mistakes made in the solution and fix it?</p>
 <p>Solve the radical equation.
 <span class="math display">\[\sqrt{x-1}+2=x\]</span></p>
@@ -626,7 +647,7 @@ Because squaring is not an equivalent transformation in general, the solutions o
 <h2><span class="header-section-number">8.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-192" class="exercise"><strong>Problem 8.1  </strong></span>
+<p><span id="exr:unnamed-chunk-194" class="exercise"><strong>Problem 8.1  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{3x+1}=4\)</span></li>
@@ -635,7 +656,7 @@ Solve each radical equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-193" class="exercise"><strong>Problem 8.2  </strong></span>
+<p><span id="exr:unnamed-chunk-195" class="exercise"><strong>Problem 8.2  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{5x+1}=x+1\)</span></li>
@@ -644,7 +665,7 @@ Solve each radical equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-194" class="exercise"><strong>Problem 8.3  </strong></span>
+<p><span id="exr:unnamed-chunk-196" class="exercise"><strong>Problem 8.3  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{6x+7}-x=2\)</span></li>
@@ -653,7 +674,7 @@ Solve each radical equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-195" class="exercise"><strong>Problem 8.4  </strong></span>
+<p><span id="exr:unnamed-chunk-197" class="exercise"><strong>Problem 8.4  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{x+5}-\sqrt{x-3}=2\)</span></li>
@@ -662,7 +683,7 @@ Solve each radical equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-196" class="exercise"><strong>Problem 8.5  </strong></span>
+<p><span id="exr:unnamed-chunk-198" class="exercise"><strong>Problem 8.5  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((x+3)^{\frac12}=x+1\)</span></li>
@@ -671,7 +692,7 @@ Solve each radical equation.</p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-197" class="exercise"><strong>Problem 8.6  </strong></span>
+<p><span id="exr:unnamed-chunk-199" class="exercise"><strong>Problem 8.6  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((x-1)^{\frac32}=8\)</span></li>

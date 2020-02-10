@@ -106,10 +106,14 @@ div.solution>p:first-of-type {
     display:block 
 }
 
-img, caption {
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+p.caption {
+    text-align: center;
 }
 
 div.riddle ol li {
@@ -124,4 +128,31 @@ div.riddle ol li::marker {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
+}
+
+.pullleft{
+    display: block;
+    float: left;
+    width: 45%;
+}
+
+.pullright {
+    display: block;
+    float: right;
+    width: 45%;
+}
+
+.listimg ol {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.listimg ol li {
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+    flex-grow: 1;
 }

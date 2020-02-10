@@ -1,5 +1,17 @@
 # Exponential Functions
 
+## Half-life
+
+```{block2, type="rmdthink"}
+
+Half-life is the time required for a quantity to reduce to half of its initial value.
+
+A certain pesticide is used against insects. The half life of the pesticide is about 12 days. After a month how much would left if the initial amount of the pesticide is 10 g? Can you write a function for the remaining quantity of the pesticide after $t$ days?
+
+```
+
+More examples on exponential functions can be found on <http://passyworldofmathematics.com/exponents-in-the-real-world/>.
+
 ## Definition and Graphs of Exponential Functions
 
 Let $b$ be a positive number other than $1$ (i.e. $b>0$ and $b\neq 1$). The exponential function $f$ of $x$ with the base $b$ is defined as

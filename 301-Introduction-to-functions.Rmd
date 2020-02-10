@@ -2,16 +2,32 @@
 
 # Introduction to Functions
 
-## Functions as Relations
+## It is a Flu Season
+
+```{block2, type="rmdthink"}
+
+The following graph shows a relation between the week number from 2019/09/30 to 2020/01/27, and the number of people being tested for flu, and the number of people whose tests were positive.
+
+- Can you describe this relation?
+- Can you draw conclusions based on the graph?
+- Can you estimate how many people in total had positive tests on 2020/01/01?
+- What do think the trending will be after 2020/1/27? Why?
+
+![a trending line summarize data from a flu season](figs/flu-season.png)\
+
+```
+
+## Definition and Notations
 
 A ***relation*** is a set of ordered pairs. The set of all first components of the ordered pairs is called the ***domain***. The set of all second components of the ordered pairs is called the ***range***.
 
 A ***function*** is a relation such that each element in the domain corresponds to **exactly one** element in the range.
 
-## Function Notation
-
 For a function, we usually use the variable $x$ to represent an element from the domain and call it the ***independent variable***. The variable $y$ is used to represent the value  corresponding to $x$ and is called the ***dependent variable***. We say $y$ is a function of $x$. When we consider several functions together, to distinguish them we named functions by a letter such as $f$, $g$, or $F$. The notation $f(x)$, read as **"$f$ of $x$" or "$f$ at $x$"**, represents the output of the function $f$ when the input is  $x$.
-To find the value of a function at a given number, we substitute the independent variable $x$ by the given number and then evaluate the expression. We call the procedure evaluating a function.
+
+The domain of a function is the set of all allowed inputs. The range of a function is the set of all outputs.
+
+To find the value of a function define by an equation at a given number, we substitute the independent variable $x$ by the given number and then evaluate the expression. We call the procedure evaluating a function.
 
 ```{example}
 
@@ -34,13 +50,37 @@ Find the indicated function value.
 
 ## Graphs of Functions
 
-***The graph of a function*** is the graph of its ordered pairs.
-A graph of ordered pairs $(x,y)$ in the rectangular system defines $y$ as a function of $x$ if any vertical line crosses the graph at most once. This test is called the ***vertical line test***.
+***The graph of a function*** is the graph of its ordered pairs. A graph of ordered pairs $(x,y)$ in the rectangular coordinate system defines $y$ as a function of $x$ if any vertical line crosses the graph at most once. This test is called the ***vertical line test***.
 
-## Domain and Range
+```{example}
 
-The domain of a graph is the set of all inputs ($x$-coordinates). The range of a graph is the set of all outputs ($y$-coordinates).
-To find the domain of a graph, we look for the left and the right endpoints. To find the range of a graph, we look for the highest and the lowest positioned points.
+Determine which of the following graphs defines a function.
+
+::: {.twocolumns}
+
+![A.](figs/Graph-rotated-V.png){width=60%}
+
+![B.](figs/Graph-not-function-deg4.png){width=60%}
+
+![C.](figs/Graph-not-function-piecewise.png){width=60%}
+
+![D.](figs/Graph-tanx.png){width=60%}
+
+:::
+
+```
+
+```{solution}
+
+Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don't define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.
+
+```
+
+## Graph Reading
+
+The domain of a graph is the set of $x$-coordinates of all points on the graph. The range of a graph is the set of $y$-coordinates of all points on the graph. To find the domain of a graph, we look for the left and the right endpoints. To find the range of a graph, we look for the highest and the lowest positioned points.
+
+To find the coordinates of a point on a graph, one draw a horizontal line and a vertical line through the point. The number on the $x$-axis where the vertical line passing through is the $x$-coordinate of the point. The number on the $y$-axis where the horizontal line passing through is the $y$-coordinate of the point.
 
 ```{example}
 
@@ -52,6 +92,7 @@ Use the graph in the picture to answer the following questions.
 1. Find the interval where the graph is above $2$.  
 1. Find the interval where the graph is is decreasing.  
 2. Find all maximum and minimum values of the function if they exist.  
+1. Find the value of $y$ such that the point $(3, y)$ is on the graph.  
 3. Find the value of $x$ such that $(x, 0)$ is on the graph.
 
 ![the graph of a function](figs/function-example-quadratic.png){width=60%}\
@@ -67,7 +108,8 @@ Use the graph in the picture to answer the following questions.
 4. The graph is above 2 over the interval $(3, \infty)$.  
 5. The graph is decreasing over the interval $(1,2)$.  
 6. The graph has minima at $(-2,1)$ and $(2,1)$.  
-7. The point $(x, 0)$ is on the $x$-axis. If $x=-0.5$, then it will be on the graph.
+7. The $y$-value of the point $(3, y)$ on the graph is $2$.
+8. The $x$-value of the point $(x, 0)$ on the graph is $-0.5$.
 
 ```
 
