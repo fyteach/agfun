@@ -4,11 +4,11 @@
 
 ## Handshaking Problem
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 In meeting room, a group of people all shook hands with one another. In total, 15 handshakes occurred. Do you know how many people in the group?
 
-```
+:::
 
 ## Properties of Equations
 
@@ -20,7 +20,7 @@ An ***identity*** is an equation that is true for all possible values of the var
 
 ***Solving an equation*** consists of determining values of the variables that make the equality true. Two equations are said to be ***equivalent*** if and only if they have the same solution set, that is, a solution of one equation is also a solution of the other equation. For example $2x-6=0$ and $x-1=2$ are equivalent.
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 When solving an equation, the following operations can be used to transform an equation to an equivalent one:
 
@@ -30,13 +30,13 @@ When solving an equation, the following operations can be used to transform an e
 
 - Applying an identity to transform one side of the equation. For example, $x^2-1=0$ is equivalent to $(x-1)(x+1)=0$, where the identity $x^2-1=(x-1)(x+1)$ was applied.
 
-```
+:::
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called  extraneous solutions. For example, taking squares of both sides of the equation $x=1$ produces the equation $x^2=1$. The new equation $x^2=1$ has two solutions $x=-1$ and $x=1$, but the original equation $x=1$ only has one solution. The solution $x=-1$ of the equation $x^2=1$ is an extraneous solution of the equation $x=1$.
 
-```
+:::
 
 ## Quadratic Equations
 
@@ -72,10 +72,8 @@ $$2x^2+5x=3.$$
         (2x-1)(x+3)&=0
     \end{aligned}
     $$
-
 2. Apply the zero product property.
     $$2x-1=0\quad\text{or}\quad x+3=0.$$
-
 3. Solve each equation.
     $$
     \begin{aligned}
@@ -108,10 +106,8 @@ $$(x-2)(x+3)=-4.$$
         (x-1)(x+2)&=0
     \end{aligned}
     $$
-
 1. Apply the zero product property.
     $$x-1=0\quad\text{or}\quad x+2=0.$$
-
 1. Solve each equation.
     $$
     \begin{aligned}
@@ -119,7 +115,6 @@ $$(x-2)(x+3)=-4.$$
         x   =1 & \qquad\text{or} & x   =-2
     \end{aligned}
     $$
-
 1. The solution set is $\{-2, 1\}$.
 
 ```
@@ -135,11 +130,10 @@ A rectangular garden is surrounded by a path of uniform width. If the dimension 
 ```{solution}
 \
 
-1. Suppose that the width of the frame is $x$ meters. Translate given information into expressions in $x$ and build an equation.  
-Total Width: $2x+10$ \ Total Length: $2x+16$  
+1. Suppose that the width of the frame is $x$ meters. Translate given information into expressions in $x$ and build an equation.\
+Total Width: $2x+10$ \ Total Length: $2x+16$\
 Width $\times$ Length=Total Area:
 $$(2x+10)(2x+16)=216.$$
-
 1. Solve the equation.
     $$
     \begin{aligned}
@@ -153,41 +147,18 @@ $$(2x+10)(2x+16)=216.$$
     $$
     x = -14\quad \text{or}\quad x = 1
     $$
-
 1. So the width of the path is $1$ meter.
 
 ```
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Understand the Problem**  
 When solving a word problem, you may first outline what's known and what's unknown, and restate the problem using algebraic expressions. Once you reformulated the problem algebraically, you may solve it using your mathematical knowledge.
 
-```
+:::
 
 ## Practice
-
-```{exercise}
-
-Factor the trinomial.
-
-1. $x^2+4x+3$
-2. $x^2+6x-7$
-3. $x^2-3x-10$
-4. $x^2-5x+6$
-
-```
-
-```{exercise}
-
-Factor the trinomial.
-
-1. $5x^2+7x+2$
-1. $2x^2+5x-12$
-1. $3x^2-10x-8$
-1. $4x^2-12x+5$
-
-```
 
 ```{exercise}
 
@@ -210,15 +181,6 @@ Find all real solutions of the equation by factoring.
 1. $x^3-3x^2-4x+12=0$
 
 ```
-<!-- 
-```{exercise}
-
-Find the $x$-intercepts for each of the the following functions.
-
-1. $f(x)=2x^2-x-21$
-1. $g(x)=(x+1)(x-2)-4$
-
-``` -->
 
 ```{exercise}
 

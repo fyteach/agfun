@@ -124,7 +124,7 @@ div.riddle ol li::marker {
     font-weight: bold;
 }
 
-.twocolumns {
+.twocols {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;

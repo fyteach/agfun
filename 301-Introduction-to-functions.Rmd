@@ -4,7 +4,7 @@
 
 ## It is a Flu Season
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 The following graph shows a relation between the week number from 2019/09/30 to 2020/01/27, and the number of people being tested for flu, and the number of people whose tests were positive.
 
@@ -13,9 +13,14 @@ The following graph shows a relation between the week number from 2019/09/30 to 
 - Can you estimate how many people in total had positive tests on 2020/01/01?
 - What do think the trending will be after 2020/1/27? Why?
 
-![a trending line summarize data from a flu season](figs/flu-season.png)\
-
+```{r flu-season, echo=FALSE, out.width="90%"}
+# if (knitr::is_latex_output()) {
+#    knitr::opts_chunk$set(out.width="50%")
+# }
+knitr::include_graphics("figs/flu-season.png")
 ```
+
+:::
 
 ## Definition and Notations
 
@@ -56,21 +61,25 @@ Find the indicated function value.
 
 Determine which of the following graphs defines a function.
 
-::: {.twocolumns}
+```
 
-![A.](figs/Graph-rotated-V.png){width=60%}
+```{r fig-ABCD-LaTeX, echo=FALSE, fig.cap=" ", include=knitr::is_latex_output(), fig.ncol=4, fig.align="center", out.width="23%", fig.subcap=c('A', 'B', 'C', 'D')}
 
-![B.](figs/Graph-not-function-deg4.png){width=60%}
+knitr::include_graphics("figs/Graph-rotated-V.png")
+knitr::include_graphics("figs/Graph-not-function-deg4.png")
+knitr::include_graphics("figs/Graph-not-function-piecewise.png")
+knitr::include_graphics("figs/Graph-tanx.png")
 
-![C.](figs/Graph-not-function-piecewise.png){width=60%}
+```
 
-![D.](figs/Graph-tanx.png){width=60%}
+```{r fig-ABCD-html, echo=FALSE, include=knitr::is_html_output()}
 
-:::
+knitr::include_graphics("figs/four-graphs.png")
 
 ```
 
 ```{solution}
+\
 
 Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don't define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.
 
@@ -95,8 +104,12 @@ Use the graph in the picture to answer the following questions.
 1. Find the value of $y$ such that the point $(3, y)$ is on the graph.  
 3. Find the value of $x$ such that $(x, 0)$ is on the graph.
 
-![the graph of a function](figs/function-example-quadratic.png){width=60%}\
+<!-- ![the graph of a function](figs/function-example-quadratic.png){width=60%}\ -->
 
+```
+
+```{r echo=FALSE, outwidth="40%"}
+knitr::include_graphics("figs/function-example-quadratic.png")
 ```
 
 ```{solution}
@@ -152,8 +165,12 @@ Use the graph in the picture to answer the following questions.
 5. Find all points where the graph reaches a maximum or a minimum.
 6. Find the values of the $x$-coordinate of all points on the graph whose $y$-coordinate is $1$.
 
-![the graph of a piecewise function](figs/function-exercise-ray-cubic.png){width=60%}\
+<!-- ![the graph of a piecewise function](figs/function-exercise-ray-cubic.png){width=60%}\ -->
 
+```
+
+```{r echo=FALSE, outwidth="40%"}
+knitr::include_graphics("figs/function-exercise-ray-cubic.png")
 ```
 
 ```{exercise}
@@ -166,8 +183,12 @@ Use the graph of the function $f$ in the picture to answer the following questio
 3. Find the values $x$ such that $f(x)=0$.
 4. Find the solution to the inequality $f(x)>0$. Write in interval notation.
 
-![the graph of a cubic function](figs/function-exercise-cubic.png){width=60%}\
+<!-- ![the graph of a cubic function](figs/function-exercise-cubic.png){width=60%}\ -->
 
+```
+
+```{r echo=FALSE, outwidth="40%"}
+knitr::include_graphics("figs/function-exercise-cubic.png")
 ```
 
 ```{exercise}

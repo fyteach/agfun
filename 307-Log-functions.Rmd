@@ -2,11 +2,11 @@
 
 ## Estimate the Number of Digits
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 Can you estimate the number of digits in the integer part of the number $2^{15}\times \sqrt{2020}\div 2021$?
 
-```
+:::
 
 ## Definition and Graphs of Logarithmic Function
 
@@ -18,11 +18,15 @@ The function $f(x)=\log_bx$ is called the logarithmic function $f$ of $x$ with t
 
 Graphs of logarithmic functions:
 
-::: {.twocolumns}
+::: {.twocols}
 
-![a log function with b>1](figs/tikz-example-log-function-graph-1.png){width=60%}\
+```{r echo=FALSE}
 
-![a log function with b<1](figs/tikz-example-log-function-graph-2.png){width=60%}\
+knitr::include_graphics("figs/tikz-example-log-function-graph-1.png")
+
+knitr::include_graphics("figs/tikz-example-log-function-graph-2.png")
+
+```
 
 :::
 
@@ -250,7 +254,6 @@ Expand the logarithm and simplify.
 Expand the logarithm and simplify.
 
 1. $\log_b\sqrt{\frac{x^2y}{5}}$
-% 1. $\log_2(\frac{\sqrt{x}}{y-1})$
 1. $\ln(\sqrt[3]{(x^2+1)y^{-2}})$
 1. $\log(x\sqrt{10x}-\sqrt{10x})$
 
@@ -280,8 +283,8 @@ Write as a single logarithm.
 
 Evaluate the logarithm and round it to the nearest hundredth.
 
-1. $\log_2 10 $
-2. $\log_3 5  $
+1. $\log_2 10$
+2. $\log_3 5$
 3. $\dfrac{1}{\log_52}$
 4. $\log_45-\log_29$
 

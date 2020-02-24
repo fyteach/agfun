@@ -4,23 +4,19 @@
 
 ## Don't Be Tricked
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
-A pizza shop sales 12-inches pizza and 8-inches pizza at the price \$12/each and \$6/each respectively.  With \$12, would you like to order one 12-inches and two 8-inches. Why?
+1. A pizza shop sales 12-inches pizza and 8-inches pizza at the price \$12/each and \$6/each respectively.  With \$12, would you like to order one 12-inches and two 8-inches. Why?
 
-```
+2. A sheet of everyday copy paper is about 0.01 millimeter thick. Repeat folding along a different side 20 times. Now, how thick do you think the folded paper is?
 
-```{block2, type="rmdthink"}
-
-A sheet of everyday copy paper is about 0.01 millimeter thick. Repeat folding along a different side 20 times. Now, how thick do you think the folded paper is?
-
-```
+:::
 
 ## Properties of Exponents
 
 For an integer $n$, and an expression $x$, the mathematical operation of the $n$-times repeated multiplication of $x$  is call exponentiation, written as $x^n$, that is,
 $$
-x^n=\underbrace{x\cdot x \cdots x}_{n \text{factors of} x}.
+x^n=\underbrace{x\cdot x \cdots x}_{n~\text{factors of}~x}.
 $$
 
 In the notation $x^n$, $n$ is called ***the exponent***, $x$ is called ***the base***, and $x^n$ is called ***the power***, read as "$x$ raised to the $n$-th power",  "$x$ to the $n$-th power", "$x$ to the $n$-th", "$x$ to the power of $n$" or "$x$ to the $n$".
@@ -35,7 +31,7 @@ In the notation $x^n$, $n$ is called ***the exponent***, $x$ is called ***the ba
 | The product raised to a power rule $$(xy)^n=x^ny^n.$$ | $$\left(-2x\right)^{2}=(-2)^2x^2=4x^2.$$ |
 | The quotient raised to a power rule (for $y\neq 0$.) $$\left(\dfrac{x}{y}\right)^n=\dfrac{x^n}{y^n}.$$ | $$    \left(\dfrac{x}{-2}\right)^{3}=\dfrac{x^3}{(-2)^3}=-\dfrac{x^3}{8}.$$ |
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 **Order of Basic Mathematical Operations**
 
@@ -45,7 +41,7 @@ In mathematics, the order of operations reflects conventions about which procedu
 
 Within the same level, the convention is to perform from the left to the right.
 
-```
+:::
 
 ```{example}
 
@@ -57,42 +53,43 @@ $$
 ```
 
 ```{solution}
-\
+
+The idea is to simplify the base first and rewrite using positive exponents only.
 
 $$
-\left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}
-=\left(\dfrac{x^3}{2z^{5}y^8}\right)^{-4}
-=\left(\dfrac{2z^{5}y^8}{x^3}\right)^4
-=\dfrac{2^4(z^{5})^4(y^8)^4}{(x^3)^4}
-=\dfrac{16y^{32}z^{20}}{x^{12}}.
+\begin{aligned}
+    \left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}
+=&\left(\dfrac{x^3}{2z^{5}y^8}\right)^{-4}\\
+=&\left(\dfrac{2z^{5}y^8}{x^3}\right)^4\\
+=&\dfrac{2^4(z^{5})^4(y^8)^4}{(x^3)^4}\\
+=&\dfrac{16y^{32}z^{20}}{x^{12}}.\\
+\end{aligned}
 $$
 
 ```
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Simplify (at least partially) the problem first**
 
 To avoid mistakes when working with negative exponents, it's better to apply the negative exponent rule to change negative exponents to positive exponents and simplify the base first.
 
-```
+:::
 
 ## Practice
 
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
-
 1. $(3a^2b^3c^2)(4abc^2)(2b^2c^3)$
-1. $\dfrac{4y^3z^0}{x^2y^2}$
-1. $(-2)^{-3}$
+2. $\dfrac{4y^3z^0}{x^2y^2}$
+3. $(-2)^{-3}$
 
 ```
 
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
-
 1. $\dfrac{-u^0v^{15}}{v^{16}}$
 1. $(-2a^3b^2c^0)^3$
 1. $\dfrac{m^5 n^{2}}{(mn)^3}$
@@ -102,7 +99,6 @@ Simplify. **Write with positive exponents.**
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
-
 1. $(-3a^2x^3)^{-2}$
 1. $\left(\dfrac{-x^0y^3}{2wz^2}\right)^3$
 1. $\dfrac{3^{-2}a^{-3}b^5}{x^{-3}y^{-4}}$

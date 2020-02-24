@@ -2,11 +2,11 @@
 
 ## The Direction of a Number
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 Can you determine the value of the expression $\dfrac{|x|}{x}$ for all nonzero real number $x$ and explain the meaning of the value?
 
-```
+:::
 
 ## Properties of Absolute Values
 

@@ -2,11 +2,11 @@
 
 ## Cost, Revenue and Profit
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 A company has fixed costs of \$10,000 for equipment and variable costs of \$15 for each unit of output. The sale price for each unit is $25. What is total cost, total revenue and total profit at varying levels of output?
 
-```
+:::
 
 ## The Slope-Intercept Form Equation
 
@@ -51,7 +51,6 @@ Find the slope-intercept form equation for the linear function $f$ such that $f(
 
 ```{solution}
 \
-
 
 1. Find the slope $m$: $m=\frac{f(2)-f(-1)}{2-(-1)}=\frac{5-2}{2-(-1)}=\frac{3}{3}=1$.
 2. Plug one of the points, say $(2, 5)$ in the point-slope form equation, we get $y=1\cdot(x-2)+5$

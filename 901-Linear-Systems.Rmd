@@ -1,10 +1,11 @@
 # Methods to solve a linear systems
 
-	A ***system of linear equations*** of two variables consists of two equations.  A ***solution of a system*** of linear equations of two variables is an ordered pair that satisfies both equations.
+A ***system of linear equations*** of two variables consists of two equations.  A ***solution of a system*** of linear equations of two variables is an ordered pair that satisfies both equations.
 
-	Two methods to solve a linear system are the substitution method and the elimination method. The idea of the substitution method is to view each equation as an implicitly defined function. It's less efficient than the elimination method in general. The idea of elimination is to reduce the number of variables using properties of equations.
+Two methods to solve a linear system are the substitution method and the elimination method. The idea of the substitution method is to view each equation as an implicitly defined function. It's less efficient than the elimination method in general. The idea of elimination is to reduce the number of variables using properties of equations.
 
 ## Substitution Method
+
 ```{example}
 Solve the system of linear equations using the substitution method.
 $$
@@ -14,7 +15,10 @@ $$
 \end{aligned}
 $$
 ```
+
 ```{solution}
+\
+
 **Step 1.:** Solve one variable from one equation. For example, one may solve $y$ from equation \eqref{ex-1-1}.
 $$y=3-x.$$
 
@@ -45,7 +49,7 @@ $$
 $$
 
 ```
-		
+
 ## Elimination Method
 
 ```{example}
@@ -59,6 +63,7 @@ $$
 ```
 
 ```{solution}
+\
 
 **Step 1.:** Eliminate one variable and solve for the other. For example, one may choose to eliminate $y$.
 In order to eliminate $y$, we \emph{add the opposite}. We multiply both sides of the second equation by $2$ to get the opposite $-2y$.
@@ -90,22 +95,24 @@ y            & =-4
 $$
 
 **Step 3.:** Check the proposed solution.
-Plug $(3, -4)$ into the first equation: 
+Plug $(3, -4)$ into the first equation:  
 $$5\cdot 3+2\cdot(-4)=15-8=7.$$
-Plug $(3, -4)$ into the second equation: 
+Plug $(3, -4)$ into the second equation:  
 $$3\cdot 3-\cdot(-4)=9+4=13.$$
 
 ```
 
-	
-```{note}
+::: {.rmdnote}
+
 A linear system may have ***one solution***, ***no solution*** or ***infinitely many solutions***.
 
 If the lines defined by equations in the linear system have the same slope but different $y$-intercepts or the elimination method ends up with $0=c$, where $c$ is a nonzero constant, then the system has no solution.
 
 If the lines defined by equations in the linear system have the same slope and the same $y$-intercept or the elimination method ends up with $0=0$, then the system has infinitely many solutions. In this case, we say that the system is ***dependent*** and a solution can be expressed in the form $(x, f(x))=(x, mx+b)$.
-```
 
+:::
+
+## Practice
 
 ```{exercise}
 Solve.
@@ -116,7 +123,6 @@ $$
 \end{aligned}
 $$
 ```
-
 
 ```{exercise}
 Solve.
@@ -137,7 +143,6 @@ $$
 \end{aligned}
 $$
 ```
-
 
 ```{exercise}
 Solve.
@@ -177,7 +182,6 @@ $$
 $$
 ```
 
-
 ```{exercise}
 Solve.
 $$
@@ -191,7 +195,6 @@ $$
 ```{exercise} Last week, Mike got 5 apples and 4 oranges for \$7. The week the prices are still the same and he got 3 apples and 6 oranges for \$6. What's the price for 1 apple and 1 orange? 
 ```
 
-
-```{exercise} The sum of the digits of a certain two-digit number is 7. Reversing its digits increases the number by 27.
-	What is the number?
+```{exercise} The sum of the digits of a certain two-digit number is 7. Reversing its digits increases the number by 27.  
+What is the number?
 ```

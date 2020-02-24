@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-09" />
+<meta name="date" content="2020-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="rational-equations.html"/>
 <link rel="next" href="absolute-value-equations.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -341,8 +340,6 @@ $(document).ready(function () {
 
 
 
-
-
 <link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
@@ -411,13 +408,12 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="radical-equations" class="section level1" number="8">
+<div id="radical-equations" class="section level1">
 <h1><span class="header-section-number">Topic 8</span> Radical Equations</h1>
-<div id="design-a-pendulum-clock" class="section level2" number="8.1">
+<div id="design-a-pendulum-clock" class="section level2">
 <h2><span class="header-section-number">8.1</span> Design a Pendulum clock</h2>
-
 <div class="rmdthink">
-<div class="twocolumns">
+<div class="twocols">
 <div class="left">
 <p>A pendulum clock is a clock that uses a pendulum, a swinging weight, as its timekeeping element. <a href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> discovered in early 17th century the relation between the length <span class="math inline">\(L\)</span> of a pendulum and the period <span class="math inline">\(T\)</span> of th pendulum. For a pendulum clock, the relations is approximately determined by the following <a href="https://en.wikipedia.org/wiki/Pendulum_(mathematics)">rule of thumb formula</a>:
 <span class="math display">\[
@@ -426,8 +422,7 @@ T\approx 2\sqrt{L}
 given that <span class="math inline">\(L\)</span> and <span class="math inline">\(T\)</span> are measured in meters and seconds respectively. If the period of a pendulum clock is 2 seconds, how long should be the pendulum?</p>
 </div>
 <div class="right" style="vertical-align: middle;">
-<p><img src="figs/pendulum-clock.gif" alt="a demonstration of a design of a pendulum clock" /><br />
-</p>
+<p><img src="figs/pendulum-clock.gif" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </div>
@@ -441,19 +436,19 @@ We know that the number $\sqrt{2}$ is not a rational number. But why? Can you gi
 </div>\EndKnitrBlock{rmdthink}
 -->
 </div>
-<div id="solving-radical-equations-by-taking-a-power" class="section level2" number="8.2">
+<div id="solving-radical-equations-by-taking-a-power" class="section level2">
 <h2><span class="header-section-number">8.2</span> Solving Radical Equations by Taking a Power</h2>
 <p>The idea to solve a radical equation <span class="math inline">\(\sqrt[n]{X}=a\)</span> is to first take <span class="math inline">\(n\)</span>-th power of both sides to get rid of the radical sign, that is <span class="math inline">\(X=a^n\)</span> and then solve the resulting equation.</p>
-
 <div class="rmdtip">
 <p><strong>Solve by Reduction</strong><br />
 The goal to solve a single variable equation is to isolate the variable. When an equation involves radical expressions, you can not isolate the variable arithmetically without eliminating the radical sign unless the radicand is a perfect power. To remove a radical sign, you make take a power. However, you’d better to isolate it first. Because simply taking powers of both sides may create new radical expressions.</p>
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-182" class="example"><strong>Example 8.1  </strong></span>
+<p><span id="exm:unnamed-chunk-156" class="example"><strong>Example 8.1  </strong></span>
 Solve the equation <span class="math inline">\(x-\sqrt{x+1}=1.\)</span></p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -483,10 +478,12 @@ Plug <span class="math inline">\(x=0\)</span> into the original equation, we see
 </ol>
 </div>
 
+
 <div class="example">
-<p><span id="exm:unnamed-chunk-184" class="example"><strong>Example 8.2  </strong></span>
+<p><span id="exm:unnamed-chunk-158" class="example"><strong>Example 8.2  </strong></span>
 Solve the equation <span class="math inline">\(\sqrt{x-1}-\sqrt{x-6}=1.\)</span></p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -520,10 +517,12 @@ Since <span class="math inline">\(10-1&gt;0\)</span> and <span class="math inlin
 </ol>
 </div>
 
+
 <div class="example">
-<p><span id="exm:unnamed-chunk-186" class="example"><strong>Example 8.3  </strong></span>
+<p><span id="exm:unnamed-chunk-160" class="example"><strong>Example 8.3  </strong></span>
 Solve the equation <span class="math inline">\(-2\sqrt[3]{x-4}=6.\)</span></p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -544,15 +543,17 @@ Solve the equation <span class="math inline">\(-2\sqrt[3]{x-4}=6.\)</span></p>
 The solution is <span class="math inline">\(x=-23\)</span>.</li>
 </ol>
 </div>
+
 </div>
-<div id="equations-involving-rational-exponents" class="section level2" number="8.3">
+<div id="equations-involving-rational-exponents" class="section level2">
 <h2><span class="header-section-number">8.3</span> Equations Involving Rational Exponents</h2>
 <p>Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}\)</span>. When <span class="math inline">\(m\)</span> is even and <span class="math inline">\(n\)</span> is odd, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=|X|\)</span>. Otherwise, <span class="math inline">\(\left(X^{\frac mn}\right)^{\frac nm}=X\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-188" class="example"><strong>Example 8.4  </strong></span>
+<p><span id="exm:unnamed-chunk-162" class="example"><strong>Example 8.4  </strong></span>
 Solve the equation <span class="math inline">\((x+2)^{\frac12}-(x-3)^{\frac12}=1\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -575,10 +576,12 @@ Check:
 <p>So the equation has one solution <span class="math inline">\(x=7\)</span>.</p>
 </div>
 
+
 <div class="example">
-<p><span id="exm:unnamed-chunk-190" class="example"><strong>Example 8.5  </strong></span>
+<p><span id="exm:unnamed-chunk-164" class="example"><strong>Example 8.5  </strong></span>
 Solve the equation <span class="math inline">\((x-1)^{\frac{2}{3}}=4\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -598,12 +601,13 @@ Check:
 <span class="math display">\[(-7-1)^{\frac23}=(-8)^{\frac23}=((-8)^{\frac13})^2=(-2)^2=4.\]</span></p>
 <p>So the equation has two solutions <span class="math inline">\(x=9\)</span> and <span class="math inline">\(x=-7\)</span>.</p>
 </div>
+
 </div>
-<div id="learn-from-mistakes" class="section level2" number="8.4">
+<div id="learn-from-mistakes" class="section level2">
 <h2><span class="header-section-number">8.4</span> Learn from Mistakes</h2>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-192" class="example"><strong>Example 8.6  </strong></span>
+<p><span id="exm:unnamed-chunk-166" class="example"><strong>Example 8.6  </strong></span>
 Can you find the mistakes made in the solution and fix it?</p>
 <p>Solve the radical equation.
 <span class="math display">\[\sqrt{x-1}+2=x\]</span></p>
@@ -625,6 +629,7 @@ Answer: the equation has two solutions <span class="math inline">\(x=2\)</span> 
 </div>
 </div>
 
+
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
 </p>
@@ -642,12 +647,13 @@ x=2 \qquad\text{or}&amp;\qquad x=3
 \]</span>
 Because squaring is not an equivalent transformation in general, the solutions of the resulting equations must be checked. When <span class="math inline">\(x=2\)</span>, the left side of the original equation is <span class="math inline">\(\sqrt{2-2}+2=0+2=2\)</span>. When <span class="math inline">\(x=3\)</span>, the left side is <span class="math inline">\(\sqrt{3-2}+2=1+2=3\)</span>. So both <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span> are solutions of the function <span class="math inline">\(\sqrt{x-1}+2=x\)</span>.</p>
 </div>
+
 </div>
-<div id="practice-7" class="section level2" number="8.5">
+<div id="practice-7" class="section level2">
 <h2><span class="header-section-number">8.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-194" class="exercise"><strong>Problem 8.1  </strong></span>
+<p><span id="exr:unnamed-chunk-168" class="exercise"><strong>Problem 8.1  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{3x+1}=4\)</span></li>
@@ -655,8 +661,9 @@ Solve each radical equation.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-195" class="exercise"><strong>Problem 8.2  </strong></span>
+<p><span id="exr:unnamed-chunk-169" class="exercise"><strong>Problem 8.2  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{5x+1}=x+1\)</span></li>
@@ -664,8 +671,9 @@ Solve each radical equation.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-196" class="exercise"><strong>Problem 8.3  </strong></span>
+<p><span id="exr:unnamed-chunk-170" class="exercise"><strong>Problem 8.3  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{6x+7}-x=2\)</span></li>
@@ -673,8 +681,9 @@ Solve each radical equation.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-197" class="exercise"><strong>Problem 8.4  </strong></span>
+<p><span id="exr:unnamed-chunk-171" class="exercise"><strong>Problem 8.4  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{x+5}-\sqrt{x-3}=2\)</span></li>
@@ -682,8 +691,9 @@ Solve each radical equation.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-198" class="exercise"><strong>Problem 8.5  </strong></span>
+<p><span id="exr:unnamed-chunk-172" class="exercise"><strong>Problem 8.5  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((x+3)^{\frac12}=x+1\)</span></li>
@@ -691,14 +701,16 @@ Solve each radical equation.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-199" class="exercise"><strong>Problem 8.6  </strong></span>
+<p><span id="exr:unnamed-chunk-173" class="exercise"><strong>Problem 8.6  </strong></span>
 Solve each radical equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((x-1)^{\frac32}=8\)</span></li>
 <li><span class="math inline">\((x+1)^{\frac23}=4\)</span></li>
 </ol>
 </div>
+
 
 </div>
 </div>

@@ -2,19 +2,16 @@
 
 ## Can You Beat a Calculator
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 Do you know a faster way to find the values?
 
 1. Find the value of the polynomial $2x^3-98x$ when $x=-7$.
-
 2. Find the value of the polynomial $x^2-9x-22$ when $x=11$.
-
 3. Find the value of the polynomial $x^3-2x^2-9x+18$ when $x=-3$.
-
 4. Find the value of $16^2-14^2$.
 
-```
+:::
 
 ## Factor by Removing the GCF
 
@@ -29,15 +26,13 @@ Factor $4x^3y-8x^2y^2+12x^3y^3$.
 ```
 
 ```{solution}  
-\
+\  
 
-1. Find the GCF of all terms.  
+1. Find the GCF of all terms.\
    The GCF of $4x^3y$, $-8x^2y^2$ and $12x^4y^3$ is $4x^2y$.
-
-2. Write each term as the product of the GCF and the remaining factor.  
+2. Write each term as the product of the GCF and the remaining factor.\
    $4x^3y=(4x^2y)\cdot x$, $-8x^2y^2=(4x^2y)\cdot (-2y)$, and $12x^4y^3=(4x^2y)(3xy^2)$.
-
-3. Factor out the GCF from each term.  
+3. Factor out the GCF from each term.\
    $4x^3y-8x^2y^2+12x^3y^3=4x^2y\cdot(x-2y+3xy^2)$.
 
 ```
@@ -53,7 +48,8 @@ Factor $2x^2-6xy+xz-3yz$.
 ```
 
 ```{solution}  
-\
+\  
+It can be factored using the grouping method.
 
 1. Group the first two terms and the last two terms.
    $$
@@ -62,20 +58,18 @@ Factor $2x^2-6xy+xz-3yz$.
     =&(2x^2-6xy)+(xz-3yz)
     \end{aligned}
    $$
-
 2. Factor out the GCF from each group.  
    $$
     \begin{aligned}
     =&2x(x-3y)+z(x-3y)
     \end{aligned}
    $$
-
 3. Factor out the binomial GCF.
-$$
-\begin{aligned}
-=&(x-3y)(2x+z).
-\end{aligned}
-$$
+   $$
+    \begin{aligned}
+    =&(x-3y)(2x+z).
+    \end{aligned}
+   $$
 
 ```
 
@@ -86,38 +80,38 @@ Factor $ax+4b-2a-2bx$.
 ```
 
 ```{solution}  
-\
 
+The trick is to group the terms that have common factors.
+  
 1. Group the first term with the third term and group the second term with the last term.
-$$
-\begin{aligned}
-&ax+4b-2a-2bx\\
-=&(ax-2a)+(-2bx+4b)
-\end{aligned}
-$$
-
+    $$
+    \begin{aligned}
+    &ax+4b-2a-2bx\\
+    =&(ax-2a)+(-2bx+4b)
+    \end{aligned}
+    $$
 2. Factor out the GCF from each group.
-$$
-\begin{aligned}
-=&a(x-2)+(-2b)(x-2)
-\end{aligned}
-$$
-
+    $$
+    \begin{aligned}
+    =&a(x-2)+(-2b)(x-2)
+    \end{aligned}
+    $$
 3. Factor out the binomial GCF.
-$$
-\begin{aligned}
-=&(x-2)(a-2b).
-\end{aligned}
-$$
+    $$
+    \begin{aligned}
+    =&(x-2)(a-2b).
+    \end{aligned}
+    $$
 
 ```
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Guess and check.**  
+
 Once you factored one group, you may expect that the other group has the same binomial factor so that factoring may be continued.
 
-```
+:::
 
 ## Factor Difference of Powers
 
@@ -138,7 +132,8 @@ Factor $25x^2-16$.
 ```
 
 ```{solution}
-\
+
+This binomial can be factoring using the difference of squares formula.
 
 1. Recognize the binomial as a difference of squares.
 $$\begin{aligned}
@@ -146,7 +141,6 @@ $$\begin{aligned}
 =&(5x)^2-4^2
 \end{aligned}
 $$
-
 2. Apply the formula.
 $$
 \begin{aligned}
@@ -166,31 +160,37 @@ Factor $32x^3y-2xy^5$ completely.
 \
 
 $$
-32x^3y-2xy^3=2xy(16x^2-y^4)=2xy((4x)^2-(y^2)^2)=2xy(4x+y^2)(4x-y^2).
+\begin{aligned}
+    32x^3y-2xy^3
+    =&2xy(16x^2-y^4)\\
+    =&2xy((4x)^2-(y^2)^2)\\
+    =&2xy(4x+y^2)(4x-y^2).
+\end{aligned}
 $$
 
 ```
 
 ## Factor Trinomials
 
-If a trinomial $ax^2+bx+c$, $A\neq 0$, can be factored, then it can be expressed as a product of two binomials: 
+If a trinomial $ax^2+bx+c$, $A\neq 0$, can be factored, then it can be expressed as a product of two binomials:  
 $$ax^2+bx+c=(mx+n)(px+q).$$
-By simplify the product using the FOIL method and comparing coefficients, we observe that 
+By simplify the product using the FOIL method and comparing coefficients, we observe that  
 $$
 a=\underbrace{mn}_{\mathrm{F}}\quad\quad\quad
 b=\underbrace{mq}_{\mathrm{O}}~\underset{+}{\underset{}{+}}~\underbrace{np}_{\mathrm{I}}
-\quad\quad\quad 
+\quad\quad\quad
 c=\underbrace{nq}_{\mathrm{F}}
 $$
 
 A trinomial $ax^2+bx+c$ is also called a ***quadratic polynomial***. The function defined by $f(x)=ax^2+bx+c$ is called a ***quadratic function***.
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Trial and error.**  
+
 The observation suggests to use trial and error to find the undetermined coefficients $m$, $n$, $p$, and $q$ from factors of $a$ and $c$ such that the sum of cross products $mq+np$ is $b$. A diagram as shown in the following examples will be helpful to check a trial.
 
-```
+:::
 
 ```{example}
 
@@ -198,8 +198,9 @@ Factor $x^2+6x+8$.
 
 ```
 
-```{solution}
-\
+````{solution}
+
+One may factor the trinomial in the following way.
 
 1. Factor $a=1$:
    $$1=1\cdot 1.$$
@@ -210,12 +211,12 @@ Factor $x^2+6x+8$.
 3. Choose a proper combination of pairs of factors and check if the sum of cross product equals $b=6$:
    $$1\cdot 4+ 1\cdot 2=6.$$  
    This step can be checked easily using the following diagram.  
-   ![A picture showing the factoring of x^2+6x+8](figs/tikz-factoring-x^2+6x+8.png){width=60%}
+   ![](figs/tikz-factoring-x2.png)
 
 4. Factor the trinomial
     $$x^2+6x+8=(x+2)(x+4).$$
 
-```
+````
 
 ```{example}
 
@@ -223,8 +224,9 @@ Factor $2x^2+5x-3$.
 
 ```
 
-```{solution}
-\
+````{solution}
+
+One may factor the trinomial in the following way.
 
 1. Factor $a=2$:
    $$1=1\cdot 2.$$
@@ -234,20 +236,21 @@ Factor $2x^2+5x-3$.
 
 3. Choose a proper combination of pairs of factors and if the sum of cross products equals $b=5$:  
    $$2\cdot 3+1\cdot(-1)=5.$$  
-   This step can be checked easily using the following diagram.  
-   ![A picture showing the factoring of 2x^2+5x-3](figs/tikz-factoring-2x^2+5x-3.png){width=60%}  
+   This step can be checked easily using the following diagram.
+    ![](figs/tikz-factoring-2x2.png)
 
 4. Factor the trinomial
    $$2x^2+5x-3=(x+3)(2x-1).$$
 
-```
+````
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Use Auxiliary Problem.**  
+
 Some higher degree polynomials may be rewrite as a trinomial after a  substitution. Factoring the trinomial helps factor the polynomial.
 
-```
+:::
 
 ```{example}
 
@@ -258,12 +261,11 @@ $$4x^4-x^2-3$$
 ```
 
 ```{solution}
-\
+
+One idea is to use a substitute.
 
 1. Let $x^2=y$. Then $4x^4-x^2-3=4y^2-y-3$.
-
 2. Factor the trinomial in $y$:   $4y^2-y-3=(4y+3)(y-1)$.
-
 3. Replace $y$ by $x^2$ and factor further.
 $$
     \begin{split}

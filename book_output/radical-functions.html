@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-09" />
+<meta name="date" content="2020-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="rational-functions.html"/>
 <link rel="next" href="exponential-functions.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -341,8 +340,6 @@ $(document).ready(function () {
 
 
 
-
-
 <link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
@@ -411,42 +408,10 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="radical-functions" class="section level1" number="15">
+<div id="radical-functions" class="section level1">
 <h1><span class="header-section-number">Topic 15</span> Radical Functions</h1>
-<!-- 
-## The Law of Lever
-</div>\EndKnitrBlock{exercise}
-\BeginKnitrBlock{rmdthink}<div class="rmdthink">
- > “Give me a fulcrum and a place to stand, I will move the world.” by [Archimedes of Syracuse](https://en.wikipedia.org/wiki/Archimedes#Mathematics)
-
- In volume I of his book "On the Equilibrium of Planes", Archimedes proved that magnitudes are in equilibrium at distances reciprocally proportional to their weights. See the video [Law of the Lever](https://youtu.be/yhrR4384SGE?t=8) on youtube for an animated explanation.
-
-Suppose there is a infinite long lever with a load 100 newton that is placed 1 meters away the fulcrum, the pivoting point.
-
-- Can you find the force needed to balance the load in terms of the distance away from the fulcrum?
-- How much force will be needed if it is place 5 meters away from the fulcrum?
-</div>\EndKnitrBlock{rmdthink}
-
-## The Domain of a Rational Function
-
-A ***rational function*** $f$ is defined by an equation $f(x)=\frac{p(x)}{q(x)}$, where $p(x)$ and $q(x)$ are polynomials and the degree of $q(x)$ is at least one. Since the denominator cannot be zero, the domain of $f$ consists all real numbers except the numbers such that $q(x)=0$
-
-\BeginKnitrBlock{example}<div class="example"><span class="example" id="exm:unnamed-chunk-310"><strong>(\#exm:unnamed-chunk-310) </strong></span>
-Find the domain of the function $f(x)=\frac{1}{x-1}$.
-</div>\EndKnitrBlock{example}
-
-\BeginKnitrBlock{solution}<div class="solution">\iffalse{} <span class="solution"><em>Solution. </em></span>  \fi{}\
-
-Solve the equation $x-1=0$, we get $x=1$. Then the domain is $\{x\mid x\neq 1\}$. In interval notation, the domain is
-$$
-(-\infty, 1)\cup (1,\infty).
-$$
-
-``` -->
-<div id="speed-of-a-tsunami" class="section level2" number="15.1">
+<div id="speed-of-a-tsunami" class="section level2">
 <h2><span class="header-section-number">15.1</span> Speed of a Tsunami</h2>
-</div>
-
 <div class="rmdthink">
 <p>A <a href="https://en.wikipedia.org/wiki/Tsunami">tsunami</a> is generally referred to is a series of waves on the ocean caused by earthquakes or other events that cause sudden displacements of large volumes of water. In ideal situation, the velocity <span class="math inline">\(v\)</span> of a wave at where the water depth is <span class="math inline">\(d\)</span> meters is approximately
 <span class="math display">\[
@@ -461,14 +426,15 @@ The wave will slow down when closer to the coast but will be higher.</p>
 </ul>
 </div>
 </div>
-<div id="the-domain-of-a-radical-function" class="section level2" number="15.2">
+<div id="the-domain-of-a-radical-function" class="section level2">
 <h2><span class="header-section-number">15.2</span> The Domain of a Radical Function</h2>
 <p>A <strong><em>radical function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\sqrt[n]{r(x)}\)</span>, where <span class="math inline">\(r(x)\)</span> is an algebraic expression. For example <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. When <span class="math inline">\(n\)</span> is odd number, <span class="math inline">\(r(x)\)</span> can be any real number. When <span class="math inline">\(n\)</span> is even, <span class="math inline">\(r(x)\)</span> has to be nonnegative, that is <span class="math inline">\(r(x)\geq 0\)</span> so that <span class="math inline">\(f(x)\)</span> is a real number.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-313" class="example"><strong>Example 15.1  </strong></span>
+<p><span id="exm:unnamed-chunk-273" class="example"><strong>Example 15.1  </strong></span>
 Find the domain of the function <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>.</p>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -479,23 +445,13 @@ Solve the inequality, we get <span class="math inline">\(x\geq -1\)</span>. In i
 [-1,\infty).
 \]</span></p>
 </div>
+
 </div>
-<div id="practice-14" class="section level2" number="15.3">
+<div id="practice-14" class="section level2">
 <h2><span class="header-section-number">15.3</span> Practice</h2>
-<!-- 
-\BeginKnitrBlock{exercise}<div class="exercise"><span class="exercise" id="exr:unnamed-chunk-315"><strong>(\#exr:unnamed-chunk-315) </strong></span>
-Find the domain of each function. Write in interval notation.
-
-1. $f(x)=\frac{x^2}{x-2}$
-1. $f(x)=\frac{x}{x^2-1}$
-1. $f(x)=\sqrt{2x-3}$
-1. $f(x)=\sqrt{x^2+1}$
-
-``` -->
-</div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-316" class="exercise"><strong>Problem 15.1  </strong></span>
+<p><span id="exr:unnamed-chunk-275" class="exercise"><strong>Problem 15.1  </strong></span>
 Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=1-\frac{2x}{x+3}\)</span></li>
@@ -504,6 +460,7 @@ Find the domain of each function. Write in interval notation.</p>
 <li><span class="math inline">\(f(x)=-\sqrt{\frac{1}{x-5}}\)</span></li>
 </ol>
 </div>
+
 
 </div>
 </div>

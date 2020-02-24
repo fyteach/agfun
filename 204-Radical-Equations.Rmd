@@ -2,9 +2,9 @@
 
 ## Design a Pendulum clock
 
-```{block2, type="rmdthink"}
+::::: {.rmdthink}
 
-:::: {.twocolumns}
+:::: {.twocols}
 
 ::: {.left}
 
@@ -18,13 +18,26 @@ given that $L$ and $T$ are measured in meters and seconds respectively. If the p
 
 ::: {.right style="vertical-align: middle;"}
 
-![a demonstration of a design of a pendulum clock](figs/pendulum-clock.gif)\
+```{r echo=FALSE, include=knitr::is_latex_output()}
+
+if (knitr::is_latex_output()) {
+    knitr::opts_chunk$set(out.width="50%")
+    knitr::include_graphics("figs/pendulum-clock.pdf")
+}
+
+```
+
+```{r echo=FALSE, include=knitr::is_html_output()}
+
+    knitr::include_graphics("figs/pendulum-clock.gif")
+
+```
 
 :::
 
 ::::
 
-```
+:::::
 
 <!--
 ## Why is The Square Root of Two Irrational
@@ -42,12 +55,12 @@ We know that the number $\sqrt{2}$ is not a rational number. But why? Can you gi
 
 The idea to solve a radical equation $\sqrt[n]{X}=a$ is to first take $n$-th power of both sides to get rid of the radical sign, that is $X=a^n$ and then solve the resulting equation.
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Solve by Reduction**  
 The goal to solve a single variable equation is to isolate the variable. When an equation involves radical expressions, you can not isolate the variable arithmetically without eliminating the radical sign unless the radicand is a perfect power. To remove a radical sign, you make take a power. However, you'd better to isolate it first. Because simply taking powers of both sides may create new radical expressions.
 
-```
+:::
 
 ```{example}
 

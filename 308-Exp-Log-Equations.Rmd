@@ -2,7 +2,7 @@
 
 ## Newton’s Law of Cooling
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 Suppose an object with an initial temperature $T(0)$ is placed in an environment with surrounding temperature $T_{\text{env}}$. By [Newton's Law of Cooling](https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling), after $t$ minutes, the temperature of the object $T(t)$ is given by the exponential function
 $$
@@ -15,7 +15,7 @@ A cup of coffee is brewed with a temperature 195°F and placed in a room with th
 1. After 30 minutes, what is the temperature of the coffee?
 2. How long it takes for the coffee to cool down to the room temperature?
 
-```
+:::
 
 ## Exponential and Logarithmic Equations
 
@@ -87,11 +87,11 @@ So it takes about 3 years for the savings to raise by 20\%.
 
 ```
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 When solving exponential and logarithmic equations, you may also use the one-to-one property if both sides are powers with the same base or logarithms with the same base.
 
-```
+:::
 
 ## More Applications
 
@@ -168,8 +168,8 @@ Newton's Law of Cooling states that the temperature $T$ of an object at any time
 where $T_s$ is the the temperature of the surrounding environment,
 $T_0$ is the initial temperature of the object,
 and $r$ is positive constant characteristic of the system,
-which is in units of ${\displaystyle {\text{time}}^{-1}}{\displaystyle {\text{time}}^{-1}}$.
-In a room with a temperature of $22 ^\circ C$, a cup of tea of $97 ^\circ C$ was freshly brewed. 
-Suppose that $r=\ln 5/20~~\text{minute}^{-1} $. In how many minutes, the temperature of the tea will be $37 ^\circ C$?
+which is in units of ${\displaystyle \text{time}^{-1}}$.
+In a room with a temperature of $22 ^\circ C$, a cup of tea of $97 ^\circ C$ was freshly brewed.
+Suppose that $r=\ln 5/20~~\text{minute}^{-1}$. In how many minutes, the temperature of the tea will be $37 ^\circ C$?
 
 ```

@@ -2,11 +2,11 @@
 
 ## Maximize the Revenue
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
 When price increases, demand decreases and vice verse. A retail store found that the price $p$ as a function of the demand $x$ for a certain product is $p(x)=100-\frac12 x$. The revenue $R$ of selling $x$ units is $R=x\cdot p(x)=x(100-\frac12x)$. To maximize the revenue, what should be the price?
 
-```
+:::
 
 ## The Graph of a Quadratic Function
 

@@ -2,15 +2,13 @@
 
 ## Is There Enough Time
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
-Matt is kayaking upstream on a river with his best effort. After 30 minutes, he received an emergency call and has to return in 20 minute. The speed of the current of the river is 1 mph.  Under normal condition, a paddler's average paddling speed is between 2 and 5 mph. Do you think Matt can return on time? Why?
+1. Matt is kayaking upstream on a river with his best effort. After 30 minutes, he received an emergency call and has to return in 20 minute. The speed of the current of the river is 1 mph.  Under normal condition, a paddler's average paddling speed is between 2 and 5 mph. Do you think Matt can return on time? Why?
 
-```{block2, type="rmdthink"}
+2. A construction team is building a house. After half of the work was done, to expedite the construction process, the another team joins in the construction. The first team normally takes 7-10 days to build a hours. The second team normally takes 2 extra days to build a house. How many days it takes to build the house?
 
-A construction team is building a house. After half of the work was done, to expedite the construction process, the another team joins in the construction. The first team normally takes 7-10 days to build a hours. The second team normally takes 2 extra days to build a house. How many days it takes to build the house?
-
-```
+:::
 
 ## Rational Expressions
 
@@ -133,7 +131,6 @@ $$
 $$
 \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot \dfrac{2x^2-x-3}{6x-2}
 $$
-
 1. Factor and simplify.  
 $$
 \dfrac{2x+6}{x^2-6x-7}\cdot\dfrac{2x^2-x-3}{6x-2}
@@ -197,12 +194,12 @@ $$
 
 To add or subtract rational expressions with different denominators, we need to rewrite the rational expressions to equivalent rational expressions with the same denominator, say the LCD.
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Equivalent Reduction.**  
 What if all denominators are the same? How to make denominators the same? Reducing the problem to an easier one using equivalent operations helps solve the problem.
 
-```
+:::
 
 ```{example}
 
@@ -217,7 +214,6 @@ Find the LCD of $\dfrac{3}{x^2-x-6}$ and $\dfrac{6}{x^2-4}$.
 $$
     x^2-x-6=(x+2)(x-3)\qquad x^2-4=(x-2)(x+2)
 $$
-
 1. List the factors of the first denominator and add unlisted factors of the second factor to get the final list.
 
     ||||
@@ -254,12 +250,10 @@ $$\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}$$
         | Final list  | $(x+2)$ | $(x-2)$ | $(x-4)$ |
 
     The LCD is $(x+2)(x-2)(x-4)$.
-
 2. Rewrite each rational expression into an equivalent expression with the LCD as the new denominator.  
     $$
         \dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}=\dfrac{(x-3)(x-2)}{(x+2)(x-2)(x-4)}-\dfrac{(x-4)}{(x+2)(x-2)(x-4)}
     $$
-
 1. Subtract and simplify.  
     $$
         \dfrac{(x-3)(x-2)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{(x^2-5x+6)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{x^2-6x+10}{(x+2)(x-2)(x-4)}
@@ -273,11 +267,11 @@ A ***complex rational expression*** is a rational expression whose denominator o
 
 A complex rational expression is equivalent to the quotient of its numerator by its denominator. That suggests the following strategy to simplify a complex rational expression.
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Simplify and Change the Viewpoint.** A complex rational expression is a quotient of two rational expressions. You may rewrite it as an multiplication by flipping the denominator. However, it's better to simply the numerator and denominator or you won't see a good looking new expression.
 
-```
+:::
 
 ```{example}
 
@@ -317,7 +311,6 @@ $$
             }
         \end{aligned}
     $$
-
 1. Rewrite as a product.
     $$
         \dfrac{
@@ -327,7 +320,6 @@ $$
         }
         =\dfrac{x^2}{(x-1)(x+1)}\cdot \dfrac{(x-1)(x+1)}{x^2+2x}
     $$
-
 1. Multiply and simplify.
     $$
         \begin{aligned}
@@ -340,11 +332,11 @@ $$
 
 ```
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 Another way to simplify a complex rational expression is to multiply the LCD to both the denominator and numerator and then simplify.
 
-```
+:::
 
 ```{example}
 
@@ -358,7 +350,6 @@ $$\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}
 
 1. Find the LCD of all denominators.  
     In this case, the LCD is $(x-1)(x+1)$.
-
 2. Multiply the complex rational expression by $\dfrac{(x-1)(x+1)}{(x-1)(x+1)}$ and simplify.
 $$
 \begin{aligned}

@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-02-09" />
+<meta name="date" content="2020-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 <link rel="prev" href="linear-inequalities.html"/>
 <link rel="next" href="linear-functions.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -341,8 +340,6 @@ $(document).ready(function () {
 
 
 
-
-
 <link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
@@ -411,11 +408,10 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="introduction-to-functions" class="section level1" number="11">
+<div id="introduction-to-functions" class="section level1">
 <h1><span class="header-section-number">Topic 11</span> Introduction to Functions</h1>
-<div id="it-is-a-flu-season" class="section level2" number="11.1">
+<div id="it-is-a-flu-season" class="section level2">
 <h2><span class="header-section-number">11.1</span> It is a Flu Season</h2>
-
 <div class="rmdthink">
 <p>The following graph shows a relation between the week number from 2019/09/30 to 2020/01/27, and the number of people being tested for flu, and the number of people whose tests were positive.</p>
 <ul>
@@ -424,11 +420,10 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <li>Can you estimate how many people in total had positive tests on 2020/01/01?</li>
 <li>What do think the trending will be after 2020/1/27? Why?</li>
 </ul>
-<p><img src="figs/flu-season.png" alt="a trending line summarize data from a flu season" /><br />
-</p>
+<p><img src="figs/flu-season.png" width="90%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="definition-and-notations" class="section level2" number="11.2">
+<div id="definition-and-notations" class="section level2">
 <h2><span class="header-section-number">11.2</span> Definition and Notations</h2>
 <p>A <strong><em>relation</em></strong> is a set of ordered pairs. The set of all first components of the ordered pairs is called the <strong><em>domain</em></strong>. The set of all second components of the ordered pairs is called the <strong><em>range</em></strong>.</p>
 <p>A <strong><em>function</em></strong> is a relation such that each element in the domain corresponds to <strong>exactly one</strong> element in the range.</p>
@@ -437,7 +432,7 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <p>To find the value of a function define by an equation at a given number, we substitute the independent variable <span class="math inline">\(x\)</span> by the given number and then evaluate the expression. We call the procedure evaluating a function.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-251" class="example"><strong>Example 11.1  </strong></span>
+<p><span id="exm:unnamed-chunk-219" class="example"><strong>Example 11.1  </strong></span>
 Find the indicated function value.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(-2)\)</span>, <span class="math inline">\(f(x)=2x+1\)</span></li>
@@ -445,6 +440,7 @@ Find the indicated function value.</p>
 <li><span class="math inline">\(h(a-t)\)</span>, <span class="math inline">\(h(x)=3x+5\)</span>.</li>
 </ol>
 </div>
+
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -455,46 +451,33 @@ Find the indicated function value.</p>
 <li><span class="math inline">\(h(a-t)=3\cdot(a-t)+5=3a-3t+5\)</span>.</li>
 </ol>
 </div>
+
 </div>
-<div id="graphs-of-functions" class="section level2" number="11.3">
+<div id="graphs-of-functions" class="section level2">
 <h2><span class="header-section-number">11.3</span> Graphs of Functions</h2>
 <p><strong><em>The graph of a function</em></strong> is the graph of its ordered pairs. A graph of ordered pairs <span class="math inline">\((x,y)\)</span> in the rectangular coordinate system defines <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(x\)</span> if any vertical line crosses the graph at most once. This test is called the <strong><em>vertical line test</em></strong>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-253" class="example"><strong>Example 11.2  </strong></span>
+<p><span id="exm:unnamed-chunk-221" class="example"><strong>Example 11.2  </strong></span>
 Determine which of the following graphs defines a function.</p>
-<div class="twocolumns">
-<div class="figure">
-<img src="figs/Graph-rotated-V.png" style="width:60.0%" alt="" />
-<p class="caption">A.</p>
-</div>
-<div class="figure">
-<img src="figs/Graph-not-function-deg4.png" style="width:60.0%" alt="" />
-<p class="caption">B.</p>
-</div>
-<div class="figure">
-<img src="figs/Graph-not-function-piecewise.png" style="width:60.0%" alt="" />
-<p class="caption">C.</p>
-</div>
-<div class="figure">
-<img src="figs/Graph-tanx.png" style="width:60.0%" alt="" />
-<p class="caption">D.</p>
-</div>
-</div>
 </div>
 
+<p><img src="figs/four-graphs.png" width="80%" style="display: block; margin: auto;" /></p>
+
 <div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> 
-Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don’t define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.</p>
+<p> <span class="solution"><em>Solution. </em></span> <br />
+</p>
+<p>Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don’t define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.</p>
 </div>
+
 </div>
-<div id="graph-reading" class="section level2" number="11.4">
+<div id="graph-reading" class="section level2">
 <h2><span class="header-section-number">11.4</span> Graph Reading</h2>
 <p>The domain of a graph is the set of <span class="math inline">\(x\)</span>-coordinates of all points on the graph. The range of a graph is the set of <span class="math inline">\(y\)</span>-coordinates of all points on the graph. To find the domain of a graph, we look for the left and the right endpoints. To find the range of a graph, we look for the highest and the lowest positioned points.</p>
 <p>To find the coordinates of a point on a graph, one draw a horizontal line and a vertical line through the point. The number on the <span class="math inline">\(x\)</span>-axis where the vertical line passing through is the <span class="math inline">\(x\)</span>-coordinate of the point. The number on the <span class="math inline">\(y\)</span>-axis where the horizontal line passing through is the <span class="math inline">\(y\)</span>-coordinate of the point.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-255" class="example"><strong>Example 11.3  </strong></span>
+<p><span id="exm:unnamed-chunk-223" class="example"><strong>Example 11.3  </strong></span>
 Use the graph in the picture to answer the following questions.</p>
 <ol style="list-style-type: decimal">
 <li>Determine whether the graph is a function and explain your answer.<br />
@@ -513,9 +496,10 @@ Use the graph in the picture to answer the following questions.</p>
 </li>
 <li>Find the value of <span class="math inline">\(x\)</span> such that <span class="math inline">\((x, 0)\)</span> is on the graph.</li>
 </ol>
-<p><img src="figs/function-example-quadratic.png" style="width:60.0%" alt="the graph of a function" /><br />
-</p>
+<!-- ![the graph of a function](figs/function-example-quadratic.png){width=60%}\ -->
 </div>
+
+<p><img src="figs/function-example-quadratic.png" width="80%" style="display: block; margin: auto;" /></p>
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -537,12 +521,13 @@ Use the graph in the picture to answer the following questions.</p>
 <li>The <span class="math inline">\(x\)</span>-value of the point <span class="math inline">\((x, 0)\)</span> on the graph is <span class="math inline">\(-0.5\)</span>.</li>
 </ol>
 </div>
+
 </div>
-<div id="practice-10" class="section level2" number="11.5">
+<div id="practice-10" class="section level2">
 <h2><span class="header-section-number">11.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-257" class="exercise"><strong>Problem 11.1  </strong></span>
+<p><span id="exr:unnamed-chunk-226" class="exercise"><strong>Problem 11.1  </strong></span>
 Find the indicated function values for the functions <span class="math inline">\(f(x)=-x^2+x-1\)</span> and <span class="math inline">\(g(x)=2x-1\)</span>. Simplify your answer.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(2)\)</span></li>
@@ -552,8 +537,9 @@ Find the indicated function values for the functions <span class="math inline">\
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-258" class="exercise"><strong>Problem 11.2  </strong></span>
+<p><span id="exr:unnamed-chunk-227" class="exercise"><strong>Problem 11.2  </strong></span>
 Suppose <span class="math inline">\(g(x) = -3x + 1\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li>Compute <span class="math inline">\(\dfrac{g(4)-g(1)}{4-1}\)</span></li>
@@ -561,13 +547,15 @@ Suppose <span class="math inline">\(g(x) = -3x + 1\)</span>.</p>
 </ol>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-259" class="exercise"><strong>Problem 11.3  </strong></span>
+<p><span id="exr:unnamed-chunk-228" class="exercise"><strong>Problem 11.3  </strong></span>
 Suppose the domain of the linear function <span class="math inline">\(l(x)=1-2x\)</span> is <span class="math inline">\((0, 1)\)</span>. Find the range of the function.</p>
 </div>
 
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-260" class="exercise"><strong>Problem 11.4  </strong></span>
+<p><span id="exr:unnamed-chunk-229" class="exercise"><strong>Problem 11.4  </strong></span>
 Use the graph in the picture to answer the following questions.</p>
 <ol style="list-style-type: decimal">
 <li>Determine whether the graph is a function and explain your answer.</li>
@@ -577,12 +565,13 @@ Use the graph in the picture to answer the following questions.</p>
 <li>Find all points where the graph reaches a maximum or a minimum.</li>
 <li>Find the values of the <span class="math inline">\(x\)</span>-coordinate of all points on the graph whose <span class="math inline">\(y\)</span>-coordinate is <span class="math inline">\(1\)</span>.</li>
 </ol>
-<p><img src="figs/function-exercise-ray-cubic.png" style="width:60.0%" alt="the graph of a piecewise function" /><br />
-</p>
+<!-- ![the graph of a piecewise function](figs/function-exercise-ray-cubic.png){width=60%}\ -->
 </div>
 
+<p><img src="figs/function-exercise-ray-cubic.png" width="80%" style="display: block; margin: auto;" /></p>
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-261" class="exercise"><strong>Problem 11.5  </strong></span>
+<p><span id="exr:unnamed-chunk-231" class="exercise"><strong>Problem 11.5  </strong></span>
 Use the graph of the function <span class="math inline">\(f\)</span> in the picture to answer the following questions.</p>
 <ol style="list-style-type: decimal">
 <li>Find the <span class="math inline">\(y\)</span>-intercept.</li>
@@ -591,12 +580,13 @@ Use the graph of the function <span class="math inline">\(f\)</span> in the pict
 <li>Find the values <span class="math inline">\(x\)</span> such that <span class="math inline">\(f(x)=0\)</span>.</li>
 <li>Find the solution to the inequality <span class="math inline">\(f(x)&gt;0\)</span>. Write in interval notation.</li>
 </ol>
-<p><img src="figs/function-exercise-cubic.png" style="width:60.0%" alt="the graph of a cubic function" /><br />
-</p>
+<!-- ![the graph of a cubic function](figs/function-exercise-cubic.png){width=60%}\ -->
 </div>
 
+<p><img src="figs/function-exercise-cubic.png" width="80%" style="display: block; margin: auto;" /></p>
+
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-262" class="exercise"><strong>Problem 11.6  </strong></span>
+<p><span id="exr:unnamed-chunk-233" class="exercise"><strong>Problem 11.6  </strong></span>
 Today Matt drove from home to school in 30 minutes. He spent 6 minutes on local streets before driving on the highway and 4 minutes on local streets towards school after getting off the highway. On local streets, his average speed is 30 miles per hour. On the highway, his average speed is 60 miles per hours.</p>
 <ol style="list-style-type: decimal">
 <li>Write the distance <span class="math inline">\(d\)</span> (in miles) he drove as a function of the time <span class="math inline">\(t\)</span> (in minutes)?</li>
@@ -604,6 +594,7 @@ Today Matt drove from home to school in 30 minutes. He spent 6 minutes on local 
 <li>How far did he drive from home to school?</li>
 </ol>
 </div>
+
 
 </div>
 </div>

@@ -2,17 +2,15 @@
 
 ## A Problem of the Father of Algebra
 
-```{block2, type="rmdthink"}
+::: {.rmdthink}
 
-The father of algebra, [Muḥammad ibn Mūsā al-Khwārizmī](https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi#Algebra), in his book "[Algebra](https://archive.org/details/algebraofmohamme00khuwrich/page/44/mode/2up)", answered the following problem:
+The father of algebra, [Muḥammad ibn Musa al-Khwarizmi](https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi#Algebra), in his book "[Algebra](https://archive.org/details/algebraofmohamme00khuwrich/page/44/mode/2up)", answered the following problem:
 
 >  "... I have divided ten into two parts; and have divided the first by the second, and the second by the first, and the sum of the quotient is two and one-sixth;..."
 
 Do you know what are those two parts?
 
-<!-- [^1]: It might be the earliest problem on rational equation appeared in a book. -->
-
-```
+:::
 
 ## Solving Rational Equations
 
@@ -56,12 +54,12 @@ $$
 
 ```
 
-```{block2, type="rmdtip"}
+::: {.rmdtip}
 
 **Reduction With Auxiliary Conditions**  
 Clearing denominator uses the strategy "**reduction with auxiliary conditions**". The auxiliary condition used when clearing the denominators is that the LCD is non-zero. Generally, if you don't know how to solve a problem under the given condition, you may try solve the problem by adding extra conditions first and then try to eliminate the extra conditions and/or their consequences.
 
-```
+:::
 
 ## Literal Equations
 
@@ -100,11 +98,11 @@ $$
 
 ```
 
-```{block2, type="rmdnote"}
+::: {.rmdnote}
 
 Another way to solve a rational equation is to rewrite and simplify the equation into the form $\dfrac{\text{A}}{B}=0$ where $\dfrac{A}{B}$ is a **reduced fraction**. Then the rational equation is equivalent to the equation $A=0$.
 
-```
+:::
 
 ## Practice
 

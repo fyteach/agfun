@@ -10,39 +10,46 @@ function Span(el)
 end
 
 function Div(el)
-  if el.classes:includes("sidebar") then
+  if el.classes:includes("rmdthink") then
     return {
-      pandoc.RawBlock("latex", "\\begin{shaded}"),
+      pandoc.RawBlock("latex", "\\begin{rmdthink}"),
       el,
-      pandoc.RawBlock("latex", "\\end{shaded}")
+      pandoc.RawBlock("latex", "\\end{rmdthink}")
     }
   end
-  if el.classes:includes("lstlisting") then
+  if el.classes:includes("rmdnote") then
     return {
-      pandoc.RawBlock("latex", "\\begin{lstlisting}"),
+      pandoc.RawBlock("latex", "\\begin{rmdnote}"),
       el,
-      pandoc.RawBlock("latex", "\\end{lstlisting}")
+      pandoc.RawBlock("latex", "\\end{rmdnote}")
     }
   end
-  if el.classes:includes("note") then
+  if el.classes:includes("rmdtip") then
     return {
-      pandoc.RawBlock("latex", "\\begin{note}"),
+      pandoc.RawBlock("latex", "\\begin{rmdtip}"),
       el,
-      pandoc.RawBlock("latex", "\\end{note}")
+      pandoc.RawBlock("latex", "\\end{rmdtip}")
     }
   end
-  if el.classes:includes("remark") then
+  if el.classes:includes("twocols") then
     return {
-      pandoc.RawBlock("latex", "\\begin{remark}"),
+      pandoc.RawBlock("latex", "\\begin{multicols}{2}"),
       el,
-      pandoc.RawBlock("latex", "\\end{remark}")
+      pandoc.RawBlock("latex", "\\end{multicols}")
     }
   end
-  if el.classes:includes("introduction") then
-    return {
-      pandoc.RawBlock("latex", "\\begin{introduction}"),
-      el,
-      pandoc.RawBlock("latex", "\\end{introduction}")
-    }
-  end
+--   if el.classes:includes("remark") then
+--     return {
+--       pandoc.RawBlock("latex", "\\begin{remark}"),
+--       el,
+--       pandoc.RawBlock("latex", "\\end{remark}")
+--     }
+--   end
+--   if el.classes:includes("introduction") then
+--     return {
+--       pandoc.RawBlock("latex", "\\begin{introduction}"),
+--       el,
+--       pandoc.RawBlock("latex", "\\end{introduction}")
+--     }
+--   end
 end
