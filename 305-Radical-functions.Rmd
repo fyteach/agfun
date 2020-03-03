@@ -39,6 +39,8 @@ $$
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}

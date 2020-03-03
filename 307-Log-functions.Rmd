@@ -177,6 +177,8 @@ $$
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}

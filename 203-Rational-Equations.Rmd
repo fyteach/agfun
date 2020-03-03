@@ -104,6 +104,8 @@ Another way to solve a rational equation is to rewrite and simplify the equation
 
 :::
 
+\newpage
+
 ## Practice
 
 ```{exercise}

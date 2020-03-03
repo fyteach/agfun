@@ -95,6 +95,8 @@ When solving exponential and logarithmic equations, you may also use the one-to-
 
 ## More Applications
 
+\newpage
+
 ## Practice
 
 ```{exercise}

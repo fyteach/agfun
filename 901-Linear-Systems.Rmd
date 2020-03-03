@@ -112,6 +112,8 @@ If the lines defined by equations in the linear system have the same slope and t
 
 :::
 
+\newpage
+
 ## Practice
 
 ```{exercise}

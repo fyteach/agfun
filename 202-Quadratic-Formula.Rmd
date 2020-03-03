@@ -193,6 +193,8 @@ The height and base of the triangle are approximately $1.6$ inches and 6.2 inche
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}
@@ -254,11 +256,5 @@ A **triangle** whose area is $7.5$ square meters has a base that is one meter le
 ```{exercise}
 
 A **rectangular** garden whose length is $2$ feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.
-
-```
-
-```{exercise}
-
-A 2 hour river cruise goes in a constant speed 16 miles upstream and then back again. The river has a current of 3 miles an hour. What is the boat's speed, rounded to the nearest hundredth of a mile/hour? How long is the journey upstream, rounded to the nearest tenth of a hour?
 
 ```

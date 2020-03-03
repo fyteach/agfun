@@ -163,6 +163,8 @@ Find an equation of the line that is perpendicular to the line $4x-2y=1$ and pas
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}

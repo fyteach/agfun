@@ -265,6 +265,8 @@ Because squaring is not an equivalent transformation in general, the solutions o
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}

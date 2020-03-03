@@ -1,5 +1,15 @@
 \usepackage{framed,color}
+
+\definecolor{shadecolor}{RGB}{248,248,248} %%% for shaded environments
+
 \usepackage{subfig}
+
+\usepackage{geometry}
+
+\geometry{
+letterpaper,
+margin=1in
+}
 
 %%%%%%%%%%%%%%%%%%% Packages for Math %%%%%%%%%%%%%%%%%%%%%%%%%%
 % \usepackage{mathtools}
@@ -28,49 +38,49 @@
 
 %%%%%%%%%%%%%% Spacing for Baseline and Parskip  %%%%%%%%%%%%%%
 \renewcommand{\baselinestretch}{1.1}
+\parindent=0pt
+% \parskip=0.2\baselineskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%% Packages for Fine Tune Content %%%%%%%%%%%
 \usepackage[english]{babel}
-% \usepackage{indentfirst,bm}
+% \usepackage{indentfirst}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%% Enumerate Style %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[inline]{enumitem}
 \setenumerate{
-	% label=\textup{(\arabic*)},
-	% afterlabel={\quad},
-	%%vertical
-	topsep=0pt,
-	partopsep=0pt,
-	itemsep=2pt,
-	parsep=0pt,
-	labelindent=0em,
-	itemindent = *,
-	itemindent=1ex,
-	wide,
-	itemjoin={\hspace{\fill}},
+    label=\textup{(\arabic*)},
+    afterlabel={\,\,\,},
+    %%vertical
+    topsep=0pt,
+    partopsep=2pt,
+% 	itemsep=5pt,
+% 	parsep=2pt,
+% 	labelindent=0em,
+    itemindent = *,
+    wide,
+    itemjoin={\hfill},
+    after={\hfill\null}
 	%%Horizontal
 }
-\setitemize{
-	%%vertical
-	topsep=0pt,
-	partopsep=0pt,
-	itemsep=0pt,
-	parsep=0pt,
-	%%Horizontal
-	labelindent=0em,
-	leftmargin =!,
-	itemindent = 0pt,
-	labelsep= 2pt,
-	labelwidth=1em,
-}
+% \setitemize{
+% 	%%vertical
+% 	topsep=0pt,
+% 	partopsep=0pt,
+% 	itemsep=0pt,
+% 	parsep=0pt,
+% 	%%Horizontal
+% 	labelindent=0em,
+% 	% leftmargin =!,
+% 	itemindent = 0pt,
+% 	labelsep= 2pt,
+% 	% labelwidth=1em,
+% }
 % \setlist{topsep=0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%% include files/Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \usepackage{import}
-% \usepackage{subfiles}
 \usepackage[verbose]{wrapfig}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -78,28 +88,7 @@
 \usepackage[makeroom]{cancel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%% Remove Vertical Some Spacing%%%%%%%%%%%%%%%
-\makeatletter
-\def\example@space@setup{
-	\example@preskip=2pt
-	\example@postskip=0
-}
-\makeatother
-
-\makeatletter
-\def\exercise@space@setup{%
-  \exercise@preskip=0 \exercise@postskip=\exercise@preskip
-}
-\makeatother
-
-\makeatletter
-\def\solution@space@setup{
-	\solution@preskip=-\medskip
-	\solution@postskip=0
-}
-\makeatother
-
+\usepackage{mathtools}
 %%%%%%%%%%%%%% Math mode without vertical spacing %%%%%%%%%%%%%%%%%
 \makeatletter
 \g@addto@macro\normalsize{%
@@ -110,7 +99,6 @@
 }
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%% Customized Commands %%%%%%%%%%
 \newcommand{\ZZ}{\mathbf{Z}}
@@ -145,19 +133,15 @@
 \usepackage{fontawesome,manfnt,bbding}
 \usepackage{textcomp}
 
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+
 \definecolor{main}{RGB}{59,180,5}%
 \definecolor{second}{RGB}{175,153,8}%
 \definecolor{third}{RGB}{244,105,102}%
 
 \renewenvironment{example}[1][]{
   \refstepcounter{exam}
-  \par\noindent
-  \makebox[\width][l]{
-    \textbf{
-        \color{main}{\examplename} 
-        \theexam #1
-    }
-  }
+  \par\noindent\textbf{\color{main}{\examplename} \theexam #1}
   \rmfamily
 }{
   \par\ignorespacesafterend
@@ -166,105 +150,86 @@
 \renewenvironment{exercise}[1][]{
     \refstepcounter{exer}
     \par\noindent
-    \makebox[-\width][r]{
-        \footnotesize\color{red!90}
-        \HandPencilLeft
-        \hspace*{1pt}
-    }
-    \makebox[\width][l]{
-        \hspace*{3pt}
-        \textbf{
-            \color{main}{\exercisename}  
-            \theexer #1
-        }
-    }
+    \makebox[-3pt][r]{\color{red!90}\size{12}{\HandPencilLeft}}
+	\textbf{\color{main}{\exercisename} \theexer #1}
     \rmfamily
 }{\par\ignorespacesafterend}
 
-\definecolor{shadecolor}{RGB}{248,248,248}
+\usepackage{tcolorbox}
+
+\tcbset{
+	noparskip/.style={before={\pagebreak[0]\parskip=0pt\parindent=0pt}},
+	before skip=-\baselineskip,
+    box align=top,
+    enhanced,
+    breakable,
+    left=0pt,
+    right=0pt,
+    top=2pt,
+    bottom=2pt,
+    opacityframe=0,
+    opacitybacktitle=0.5,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+}
 
 \newenvironment{rmdnote}{
-    % \begin{shaded}
+	\vspace*{0.5\baselineskip}
     \par\noindent
-    \makebox[-\width][r]{
-    \tiny\color{red!90}
-    \textdbend
-    \hspace*{2pt}
-    }
-    \makebox[\width][l]{
-        \hspace*{3pt}
-        \textbf{
-            \color{second}
-            Note 
-        }
-    }
-    \begin{shaded}
+    \makebox[-3pt][r]{\color{red!90}\size{8}{\textdbend}\,\,}
+    \begin{tcolorbox}[
+    title={\textbf{\color{second}Note}},
+    title style={left color=blue!10!green!20!white,right color=yellow!20!blue!20!white},
+    colback=red!10!white,
+    ]
     \itshape
 }{
-    \par
-    \end{shaded}
+    \end{tcolorbox}
+    \par\ignorespacesafterend
 }
 
 \newenvironment{rmdtip}{
-    % \begin{shaded}
+	\vspace*{0.5\baselineskip}
 	\par\noindent
-	{
-		\makebox[-\width][r]{
-			\footnotesize\color{red!90}
-            \HandRight
-			\hspace*{1pt}
-		}
-		% \makebox[\width][l]{
-			\textbf{
-				\color{second}
-				\hspace*{3pt}
-				Tips 
-			}
-		% }
-    }
-    \begin{shaded}
+	\makebox[-3pt][r]{\color{red!90}\size{12}{\HandRight}\,\,}
+    \begin{tcolorbox}[
+    enhanced,
+    title={\textbf{\color{second}Tips}},
+    title style={left color=blue!10!green!20!white,right color=yellow!20!blue!20!white},
+    colback=cyan!10!white,
+    ]
     \sffamily
 }{
-    \par\medskip\ignorespacesafterend
-    \end{shaded}
+    \end{tcolorbox}
+    \par\ignorespacesafterend
 }
 
 \newenvironment{rmdthink}{
-    % \begin{shaded}
+	\vspace*{0.5\baselineskip}
 	\par\noindent
-	{
-		\makebox[-\width][r]{
-			\footnotesize
-			\color{green!90}\faLightbulbO
-			\hspace*{3pt}
-		}
-		% \makebox[\width][l]{
-			\textbf{
-				\color{second}
-				% \hspace*{1pt}
-				Think 
-			}
-		% }
-    }
-    \begin{shaded}
+	\makebox[-4pt][r]{\color{green!90}\size{12}{\faLightbulbO}\,\,}
+    \begin{tcolorbox}[
+    enhanced,
+    title={\textbf{\color{second}Think}},
+    title style={left color=blue!10!green!20!white,right color=yellow!20!blue!20!white},
+    colback=green!20!white,
+    ]
     \sffamily
 }{
-    \par\medskip\ignorespacesafterend
-    \end{shaded}
+    \end{tcolorbox}
+	\par\ignorespacesafterend
 }
+
 
 \newenvironment{rmdsol}{
     \par\noindent
-    \textbf{\color{main} Solution} \itshape
-    }{\par}
+    \textbf{\color{main}Solution} \itshape
+}{\par}
 \newenvironment{rmdrmk}{
-    \noindent\textbf{\color{second} Remark}
-    }{\par}
+    \noindent\textbf{\color{second}Remark}
+}{\par}
 
 \usepackage{multicol}
-
-\usepackage{lmodern}
-\usepackage{amssymb}
 
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -274,7 +239,6 @@
 \else % if luatex or xetex
   \usepackage{unicode-math}
 \fi
-
 
 \usepackage{microtype}
 
@@ -316,9 +280,6 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.5,0.5,0.5}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textbf{\textit{#1}}}}
 
-\usepackage{longtable,booktabs}
-
-\usepackage{etoolbox}
 \makeatletter
 \patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
 \makeatother
@@ -337,8 +298,6 @@
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 
 \usepackage{caption}
@@ -348,17 +307,21 @@
 \renewcommand{\bottomfraction}{0.8}
 \renewcommand{\floatpagefraction}{0.75}
 
-\usepackage{makeidx}
-\makeindex
+% \usepackage{makeidx}
+% \makeindex
 
 \urlstyle{tt}
 
-\makeatletter
-\def\thm@space@setup{%
-  \thm@preskip=8pt plus 2pt minus 4pt
-  \thm@postskip=\thm@preskip
-}
-\makeatother
+% \makeatletter
+% \def\thm@space@setup{%
+%   \thm@preskip=8pt plus 2pt minus 4pt
+%   \thm@postskip=\thm@preskip
+% }
+% \makeatother
+
+%%%% Fix elagantbook chapter title issue.
+\titleformat{\chapter}[\style]{\bfseries}
+{\filcenter\LARGE\enspace\bfseries{\color{structurecolor}\IfAppendix{\appendixname}{Topic\,\,\thechapter}\enspace}}{1pt}{\bfseries\color{structurecolor}\LARGE\filcenter}[\ifdefstring{\ELEGANT@base}{hide}{}{\filcenter\base{structurecolor}{88}}]
 
 \frontmatter
 

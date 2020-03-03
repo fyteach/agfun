@@ -2,33 +2,40 @@
 title: "Algebra and Geometry of Elementary Functions"
 author: "Fei Ye"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-documentclass: "elegantbook"
-version: "0.90"
-logo: ''
-cover: 'figs/Algebra-Word-Cloud-2.jpg'
+output: pdf_document
+description: This notebook is designed to give a concise introduction to algebra and
+  geometry of elementary functions which can be served as a textbook for a College
+  Algebra course.
+documentclass: elegantbook
 github-repo: fyemath/agfun
-classoption: "en,12pt"
-description: "This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course."
+logo: ''
+cover: figs/algebrawordcloud.pdf
+site: bookdown::bookdown_site
+classoption: en,11pt
+version: '0.90'
 ---
+
 
 ```{r remove_amsmath, include=FALSE}
 
 options(bookdown.post.latex = function(x) {
-  # x is the content of the LaTeX output file
-  x=gsub('^\\\\usepackage\\{amsthm\\}', '', x)
-  x=gsub('^\\\\theoremstyle\\{+.+\\}', '', x)
-  x=gsub('^\\\\newtheorem\\*\\{+.+\\}', '', x)
-  x=gsub('^\\\\newtheorem\\{+.+[[:punct:]]', '', x)
-  x=gsub('^\\[chapter\\]', '', x)
-  x=gsub('^\\\\iffalse+.+\\\\', '', x)
+  # x is the content of the LaTeX output file  
+  # The following codes is another way to removes amsthm environments
+  
+  start_row <- grep("package\\{amsthm", x)
+  end_row <- grep("newtheorem\\*\\{solution", x)
+  x<-x[-c(start_row:end_row)]
+  
+  # Remove \iffalse \fi\\
+  x<-gsub('^\\\\iffalse.\\\\fi\\{\\}+?(\\\\)', '', x)
+  x<-gsub('^\\\\tightlist', '', x)
+  
 })
-
 ```
 
 ```{r fig_setting, include=FALSE}
 library("knitr")
-knitr::opts_chunk$set(out.width="80%", fig.align="center")
+knitr::opts_chunk$set(out.width="60%", fig.align="center")
 ```
 
 \mainmatter

@@ -175,6 +175,8 @@ The original equation only has one solution $x=-2$. In set-builder notation, the
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}

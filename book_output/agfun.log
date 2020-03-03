@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.20)  24 FEB 2020 00:47
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.20)  25 FEB 2020 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,35 +1306,41 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 
 Writing index file agfun.idx
 LaTeX Font Info:    Trying to load font information for TU+ntxtlf on input line
- 412.
-LaTeX Font Info:    No file TUntxtlf.fd. on input line 412.
+ 409.
+LaTeX Font Info:    No file TUntxtlf.fd. on input line 409.
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 412.
+(Font)              using `TU/lmr/m/n' instead on input line 409.
 
-(./agfun.aux)
+(./agfun.aux
+! Undefined control sequence.
+l.219 \newla
+            
+? s
+OK, entering \scrollmode...
+)
 \openout1 = `agfun.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 412.
-LaTeX Font Info:    ... okay on input line 412.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1400,7 +1406,7 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box134
-Package hyperref Info: Link coloring ON on input line 412.
+Package hyperref Info: Link coloring ON on input line 409.
 
 (c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1413,29 +1419,33 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count401
 )
-LaTeX Info: Redefining \ref on input line 412.
-LaTeX Info: Redefining \pageref on input line 412.
-LaTeX Info: Redefining \nameref on input line 412.
+LaTeX Info: Redefining \ref on input line 409.
+LaTeX Info: Redefining \pageref on input line 409.
+LaTeX Info: Redefining \nameref on input line 409.
 
 (./agfun.out) (./agfun.out)
 \@outlinefile=\write9
 \openout9 = `agfun.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 \c@lstlisting=\count402
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/ntxtlf/m/n on input line 412.
+(Font)                  OT1/lmr/m/n --> TU/ntxtlf/m/n on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/ntxtlf/m/it on input line 412.
+(Font)                  OT1/lmr/m/it --> TU/ntxtlf/m/it on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/ntxtlf/b/n on input line 412.
+(Font)                  OT1/lmr/bx/n --> TU/ntxtlf/b/n on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 412.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 412.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 412.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 409.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 412.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 409.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -1476,16 +1486,16 @@ flt;"<7.2-10.2>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 412.
+(Font)              `operators' in the math version `normal' on input line 409.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 412.
+ line 409.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 412.
+(Font)              `operators' in the math version `bold' on input line 409.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 412.
+t line 409.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1556,15 +1566,15 @@ uage=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 412.
+(Font)              `symbols' in the math version `normal' on input line 409.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 412.
+t line 409.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 412.
+(Font)              `symbols' in the math version `bold' on input line 409.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 412.
+t line 409.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1618,23 +1628,22 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 4
-12.
+09.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 412.
+t line 409.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 412
+(Font)              `largesymbols' in the math version `bold' on input line 409
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 412.
-LaTeX Info: Redefining \microtypecontext on input line 412.
+t line 409.
+LaTeX Info: Redefining \microtypecontext on input line 409.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
-
 (c:/texlive/2019/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
@@ -1642,7 +1651,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtlf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Option `pageanchor' set `false' on input line 414.
+Package hyperref Info: Option `pageanchor' set `false' on input line 411.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1675,45 +1684,41 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 414.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-
-Overfull \hbox (331.64102pt too wide) in paragraph at lines 414--414
-[][]    [][][][][][] 
- []
+File: figs/Algebra-Word-Cloud-2.jpg Graphic file (type bmp)
+<figs/Algebra-Word-Cloud-2.jpg>
 
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
-(Font)              using `TU/ntxtlf/m/n' instead on input line 414.
+(Font)              using `TU/ntxtlf/m/n' instead on input line 411.
 
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `latinmodern-math.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-14.
+11.
 (c:/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 414.
+(Font)              scaled to size 12.00128pt on input line 411.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.40088pt on input line 414.
+(Font)              scaled to size 8.40088pt on input line 411.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 414.
+(Font)              scaled to size 6.00064pt on input line 411.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 414.
+(Font)              scaled to size 11.99872pt on input line 411.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.3991pt on input line 414.
+(Font)              scaled to size 8.3991pt on input line 411.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 414.
+(Font)              scaled to size 5.99936pt on input line 411.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 41
-4.
+1.
 
 (c:/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 414
+LaTeX Font Info:    Trying to load font information for U+msa on input line 411
 .
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1722,7 +1727,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (c:/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 414
+LaTeX Font Info:    Trying to load font information for U+msb on input line 411
 .
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1733,7 +1738,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/m/it' undefined
-(Font)              using `TU/ntxtlf/m/n' instead on input line 414.
+(Font)              using `TU/ntxtlf/m/n' instead on input line 411.
 
 [1
 
@@ -1742,17 +1747,15 @@ LaTeX Font Warning: Font shape `TU/ntxtlf/m/it' undefined
 
 ]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-(./agfun.toc [1
-
-
-])
+(./agfun.toc)
 \tf@toc=\write10
 \openout10 = `agfun.toc'.
 
+ [1
 
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[2]
-Package hyperref Info: Option `pageanchor' set `true' on input line 427.
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 424.
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 File: figs/by-nc-sa.png Graphic file (type bmp)
@@ -1936,411 +1939,270 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/it' undefined
-(Font)              using `TU/ntxtlf/b/n' instead on input line 481.
+(Font)              using `TU/ntxtlf/b/n' instead on input line 483.
 
 [3
 
 ]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[4]
 LaTeX Font Info:    Trying to load font information for U+ding on input line 56
-5.
+7.
  (c:/texlive/2019/texmf-dist/tex/latex/bbding/Uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[4]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [5]
 Chapter 2.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 810--812
+Underfull \hbox (badness 10000) in paragraph at lines 828--829
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 826--827
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 827--829
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
 
  []
 
 File: figs/tikz-factoring-x2.png Graphic file (type bmp)
 <figs/tikz-factoring-x2.png>
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 892--893
+
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
 
  []
 
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[8]
 File: figs/tikz-factoring-2x2.png Graphic file (type bmp)
 <figs/tikz-factoring-2x2.png>
 
-Overfull \hbox (94.97382pt too wide) in paragraph at lines 893--897
-\TU/ntxtlf/b/it/12 This step can be checked easily using the following diagram.
+Overfull \hbox (94.97382pt too wide) in paragraph at lines 895--899
+\TU/ntxtlf/m/it/12 This step can be checked easily using the following diagram.
  [] 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1061
-[]\TU/ntxtlf/b/it/12 “$[]$ $[]$, $[]$ $[]$ $[]$; [] $[]$ $[]$,
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1063
+[]\TU/ntxtlf/m/it/12 “$[]$ $[]$, $[]$ $[]$ $[]$; [] $[]$ $[]$,
  []
 
 
-Overfull \hbox (45.18506pt too wide) in paragraph at lines 1058--1061
-[]$ $[]$ $[]$\TU/ntxtlf/b/it/12 ; [] $[]$ $[]$, $[]$ $[]$ $[]$.” 
+Overfull \hbox (45.18506pt too wide) in paragraph at lines 1060--1063
+[]$ $[]$ $[]$\TU/ntxtlf/m/it/12 ; [] $[]$ $[]$, $[]$ $[]$ $[]$.” 
  []
 
 
-Overfull \hbox (8.75948pt too wide) in alignment at lines 1062--1064
+Overfull \hbox (1.64801pt too wide) in alignment at lines 1064--1066
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.75948pt too wide) in alignment at lines 1064--1070
+Overfull \hbox (8.75948pt too wide) in alignment at lines 1066--1072
  [] [] [] [] [] [] [] 
  []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2.1 on input line 1072.
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [10]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[11]
 Chapter 3.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1168
-
- []
-
-[12
+[11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1196
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
-
- []
-
-
-Overfull \hbox (2.60274pt too wide) detected at line 1227
+Overfull \hbox (2.60274pt too wide) detected at line 1229
 [] [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1241
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+
+ []
+
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1281
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.1 on input line 1359.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1279
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1286
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1310
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3.2 on input line 1397.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1402--1403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1339
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1372
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1435
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1501--1503
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [17]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[18]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[19]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[20]
 Chapter 4.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 File: figs/Aerial-Apparatus-Positioning.png Graphic file (type bmp)
 <figs/Aerial-Apparatus-Positioning.png>
 
-[21
+[18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1769--1771
+Underfull \hbox (badness 10000) in paragraph at lines 1806--1808
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1804--1806
+Underfull \hbox (badness 10000) in paragraph at lines 1812--1813
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1810--1811
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1831--1833
-
- []
-
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[19]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[20]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[21]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1883--1885
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1910--1912
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1931--1933
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1964--1966
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 2018--2020
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2061--2063
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[25]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[26]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[27]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[28]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[29] [30
+[24] [25
 
 ]
 Chapter 5.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[31
+[26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2556--2558
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 2593--2595
-
- []
-
+[27]
 File: figs/tikz-rectangular-uniform-width.png Graphic file (type bmp)
 <figs/tikz-rectangular-uniform-width.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2629--2630
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2632--2634
+Underfull \hbox (badness 10000) in paragraph at lines 2631--2632
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[33]
+[28]
 File: figs/tikz-paint-uniform-width.png Graphic file (type bmp)
 <figs/tikz-paint-uniform-width.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2712--2713
+Underfull \hbox (badness 10000) in paragraph at lines 2714--2715
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[34]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[35]
+[29]
 Chapter 6.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 2786--2788
-
- []
-
-[36
+[30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2822--2824
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2887
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 2919--2921
+[31]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[32]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[33]
+Chapter 7.
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[34
 
- []
+]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[35]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[36]
+Chapter 8.
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+File: figs/pendulum-clock.pdf Graphic file (type pdf)
+<use figs/pendulum-clock.pdf>
 
+[37
 
-Underfull \hbox (badness 10000) in paragraph at lines 2953--2955
-
- []
-
+]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [38]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [39]
-Chapter 7.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 3112--3114
-
- []
-
-[40
+[40]
+Chapter 9.
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[41
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3168--3170
+Underfull \hbox (badness 10000) in paragraph at lines 3755--3756
 
  []
 
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[41]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [42]
-Chapter 8.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-
-! LaTeX Error: File `figs/pendulum-clock' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3288 ...idth=0.8\linewidth]{figs/pendulum-clock}
-                                                   \end{center}
-? s
-OK, entering \scrollmode...
-
-Underfull \hbox (badness 10000) in paragraph at lines 3309--3311
-
- []
-
-[43
+[43]
+Chapter 10.
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[44
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3348--3350
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3390--3392
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 3424--3426
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3451--3453
-
- []
+File: figs/linear-inequalities.pdf Graphic file (type pdf)
+<use figs/linear-inequalities.pdf>
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 3497--3499
+Underfull \hbox (badness 10000) in paragraph at lines 4057--4059
 
  []
 
@@ -2348,122 +2210,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3497--3499
 [46]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 [47]
-Chapter 9.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 3641--3643
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3662--3664
-
- []
-
-[48
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 3690--3692
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3718--3720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3746--3748
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3749--3750
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 3768--3770
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[50]
-Chapter 10.
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[51
-
-]
-
-LaTeX Font Warning: Font shape `U/manual/m/it' undefined
-(Font)              using `U/manual/m/n' instead on input line 3940.
-
-
-Overfull \hbox (1290.76137pt too wide) in alignment at lines 3977--3981
- [] [] [] [] 
- []
-
-File: figs/Interval-number-line-less-than.png Graphic file (type bmp)
-<figs/Interval-number-line-less-than.png>
-File: figs/Interval-number-line-greater-than.png Graphic file (type bmp)
-<figs/Interval-number-line-greater-than.png>
-File: figs/Interval-number-line-between.png Graphic file (type bmp)
-<figs/Interval-number-line-between.png>
-File: figs/Interval-number-line-beyond.png Graphic file (type bmp)
-<figs/Interval-number-line-beyond.png>
-
-Overfull \hbox (1290.76137pt too wide) in alignment at lines 3981--3985
- [] [] [] [] 
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 4007--4009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4028--4030
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4049--4051
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 4063--4065
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4070--4072
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4091--4093
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4113--4115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4132--4134
-
- []
-
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[54]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[55]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[56] [57
+[48] [49
 
 ]
 Chapter 11.
@@ -2471,249 +2219,207 @@ Chapter 11.
 File: figs/flu-season.png Graphic file (type bmp)
 <figs/flu-season.png>
 
-[58
+[50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4330--4332
-
- []
-
 File: figs/Graph-rotated-V.png Graphic file (type bmp)
 <figs/Graph-rotated-V.png>
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
 File: figs/Graph-not-function-deg4.png Graphic file (type bmp)
 <figs/Graph-not-function-deg4.png>
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
 File: figs/Graph-not-function-piecewise.png Graphic file (type bmp)
 <figs/Graph-not-function-piecewise.png>
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
 File: figs/Graph-tanx.png Graphic file (type bmp)
 <figs/Graph-tanx.png>
 
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4395--4397
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 4416--4418
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 4379--4381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4418--4420
+Underfull \hbox (badness 10000) in paragraph at lines 4381--4383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4420--4422
+Underfull \hbox (badness 10000) in paragraph at lines 4383--4385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4422--4424
+Underfull \hbox (badness 10000) in paragraph at lines 4385--4387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4424--4426
+Underfull \hbox (badness 10000) in paragraph at lines 4387--4389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4426--4428
+Underfull \hbox (badness 10000) in paragraph at lines 4389--4391
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4428--4430
+Underfull \hbox (badness 10000) in paragraph at lines 4391--4393
 
  []
 
 File: figs/function-example-quadratic.png Graphic file (type bmp)
 <figs/function-example-quadratic.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4436--4438
+Underfull \hbox (badness 10000) in paragraph at lines 4406--4408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4443--4445
+Underfull \hbox (badness 10000) in paragraph at lines 4408--4410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4445--4447
+Underfull \hbox (badness 10000) in paragraph at lines 4410--4412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4447--4449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4449--4451
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4451--4453
+Underfull \hbox (badness 10000) in paragraph at lines 4412--4414
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 4453--4455
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 4414--4416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4416--4418
 
  []
 
 File: figs/function-exercise-ray-cubic.png Graphic file (type bmp)
 <figs/function-exercise-ray-cubic.png>
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[61]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4499   \[\dfrac{f(3)-f(0)}{3}
+                               .\]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\genfrac  ...fi #3\relax #6}\genfrac@choice c{#2}}
+                                                  
+l.4499   \[\dfrac{f(3)-f(0)}{3}
+                               .\]
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4499   \[\dfrac{f(3)-f(0)}{3}.\]
+                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.4499   \[\dfrac{f(3)-f(0)}{3}.\]
+                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 File: figs/function-exercise-cubic.png Graphic file (type bmp)
 <figs/function-exercise-cubic.png>
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[62]
+[53]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[54]
 Chapter 12.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[63
+[55
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4618--4620
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4641--4643
-
- []
-
 File: figs/tikz-linear-function-example-a.png Graphic file (type bmp)
 <figs/tikz-linear-function-example-a.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4657--4658
+Underfull \hbox (badness 10000) in paragraph at lines 4620--4621
 
  []
 
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[64]
 File: figs/tikz-linear-function-example-b.png Graphic file (type bmp)
 <figs/tikz-linear-function-example-b.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4672--4673
+Underfull \hbox (badness 10000) in paragraph at lines 4635--4636
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 4716--4718
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4743--4745
-
- []
-
+[56]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[66]
+[57]
+(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
+[58]
 File: figs/tikz-perp-prll-exercise.png Graphic file (type bmp)
 <figs/tikz-perp-prll-exercise.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4891--4892
+Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[67]
+[59]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[68]
+[60]
 Chapter 13.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 4960--4962
-
- []
-
-[69
+[61
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4985--4987
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5005--5007
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[70]
+[62]
 File: figs/tikz-exercise-graph-quadratic-1.png Graphic file (type bmp)
 <figs/tikz-exercise-graph-quadratic-1.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5085--5086
+Underfull \hbox (badness 10000) in paragraph at lines 5048--5049
 
  []
 
 File: figs/tikz-exercise-graph-quadratic-2.png Graphic file (type bmp)
 <figs/tikz-exercise-graph-quadratic-2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5107--5108
+Underfull \hbox (badness 10000) in paragraph at lines 5070--5071
 
  []
 
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[71]
+[63]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[72]
+[64]
 Chapter 14.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 5157--5159
-
- []
-
-[73
+[65
 
 ]
 Chapter 15.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 5225--5227
-
- []
-
-[74
+[66
 
 ]
-(c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[75]
 Chapter 16.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2725,30 +2431,21 @@ File: figs/tikz-example-exp-function-1.png Graphic file (type bmp)
 File: figs/tikz-example-exp-function-2.png Graphic file (type bmp)
 <figs/tikz-example-exp-function-2.png>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.28183pt on input line 5297.
+(Font)              scaled to size 17.28183pt on input line 5260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 5297.
+(Font)              scaled to size 10.00107pt on input line 5260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.27815pt on input line 5297.
+(Font)              scaled to size 17.27815pt on input line 5260.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 5297.
+(Font)              scaled to size 9.99893pt on input line 5260.
 
-[76
+[67
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5333--5335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5379--5381
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[77]
+[68]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[78]
+[69]
 Chapter 17.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
 File: figs/tikz-example-log-function-graph-1.png Graphic file (type bmp)
@@ -2756,90 +2453,56 @@ File: figs/tikz-example-log-function-graph-1.png Graphic file (type bmp)
 File: figs/tikz-example-log-function-graph-2.png Graphic file (type bmp)
 <figs/tikz-example-log-function-graph-2.png>
 
-[79
+[70
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5509--5511
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5542--5544
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5564--5566
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5596--5598
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[80]
-Underfull \hbox (badness 10000) in paragraph at lines 5613--5615
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5626--5628
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5640--5642
-
- []
-
+[71]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[81]
+[72]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[82]
+[73]
 Chapter 18.
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-Underfull \hbox (badness 10000) in paragraph at lines 5872--5874
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5894--5896
-
- []
-
-[83
+[74
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5921--5923
-
- []
-
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[84]
+[75]
 (c:/texlive/2019/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pgf)
-[85]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6058.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6058.
- (./agfun.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 6058.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6058.
+[76]
 
-Package rerunfilecheck Info: File `agfun.out' has not changed.
-(rerunfilecheck)             Checksum: 6F9E93AB24D0DD5379C1920EAE4FCD58;1657.
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6021.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 6021.
+(./agfun.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 6021.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6021.
+
+
+
+Package rerunfilecheck Warning: File `agfun.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `agfun.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  6F9E93AB24D0DD5379C1920EAE4FCD58;1657.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 42472 strings out of 481752
- 829180 string characters out of 5936555
- 1532818 words of memory out of 5000000
- 58411 multiletter control sequences out of 15000+600000
- 546199 words of font info for 117 fonts, out of 8000000 for 9000
+ 42368 strings out of 481752
+ 826084 string characters out of 5936555
+ 1538769 words of memory out of 5000000
+ 58359 multiletter control sequences out of 15000+600000
+ 546046 words of font info for 115 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 76i,19n,126p,843b,1508s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,19n,126p,843b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on agfun.pdf (88 pages).
+Output written on agfun.pdf (78 pages).

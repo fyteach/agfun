@@ -5,7 +5,6 @@
 ::: {.rmdthink}
 
 1. A course has three types of assessments: homework, monthly test and the final exam. The grading policy of the course says that homework counts 20%, monthly test counts 45% and the final exam counts for 35%. At the last day of class a student wants to know the minimum grade needed on the final to get a grade C or better, equivalently, overall grade 74 or above. The student earned 100 on homework and 80 on monthly test.
-
     1. What the minimum grade the student must earn on the final to get a C or better?
     2. If, in addition, the final exam must be at least 55 to earn a C or better, what would be the minimum grade needed?
 
@@ -31,11 +30,11 @@ An inequality defines a relationship between two expressions. The following prop
 |**The negative multiplication property**  <br/> If $a<b$ and $c$ is negative, then $ac>bc$.  <br/>  If $a<b$ and $c$ is negative, then $\frac ac>\frac bc$. |If $1<2$, then $-2=1\cdot(-2)>2\cdot(-2)=-4$. <br/>  If $-2x<4$, then $\frac{-2x}{-2}>\frac{4}{-2}$.  <br/>  Simplifying both sides, we get $x>2$.|
 
 ::: {.rmdnote}
-These properties also apply to $a\leq b$, $a>b$ and $a\geq b$.
-:::
 
-::: {.rmdnote}
+These properties also apply to $a\leq b$, $a>b$ and $a\geq b$.
+
 It's always better to view $a-c$ as $a+(-c)$. Because addition has the commutative property.
+
 :::
 
 ### Compound Inequalities {-}
@@ -63,13 +62,6 @@ Solutions to an inequality normally form an interval which has boundaries and sh
 ```{r echo=FALSE, include=knitr::is_html_output()}
     knitr::include_graphics("figs/linear-inequalities.png")
 ```
-
-<!-- 
-| $x<a$ |$x\ge b$ |$a\le x<b$ |$x\le a$ or $x>b$ |
-|:---:|:---:|:---:|:---:|
-| ![less than](figs/Interval-number-line-less-than.png){width=25%} | ![greater than](figs/Interval-number-line-greater-than.png){width=25%} |![between](figs/Interval-number-line-between.png){width=25%} | ![beyond](figs/Interval-number-line-beyond.png){width=25%}|
-|$(-\infty, a)$|$[b,\infty)$|$[a, b)$|$(-\infty, a]\cup (b,\infty)$|
--->
 
 ## Examples
 
@@ -248,6 +240,8 @@ The range of $5-3x$ is $(-1, 8]$.
 Understanding the known, the unknown and the condition of the given problem is the key to solve the problem. Normally, by comparing the known and unknown, you will find the way to solve the problem.
 
 :::
+
+\newpage
 
 ## Practice
 

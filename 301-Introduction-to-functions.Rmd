@@ -95,16 +95,14 @@ To find the coordinates of a point on a graph, one draw a horizontal line and a 
 
 Use the graph in the picture to answer the following questions.
 
-1. Determine whether the graph is a function and explain your answer.  
-1. Find the domain (in interval notation) of the graph.  
-1. Find the range (in interval notation) of the graph.  
-1. Find the interval where the graph is above $2$.  
-1. Find the interval where the graph is is decreasing.  
-2. Find all maximum and minimum values of the function if they exist.  
-1. Find the value of $y$ such that the point $(3, y)$ is on the graph.  
-3. Find the value of $x$ such that $(x, 0)$ is on the graph.
-
-<!-- ![the graph of a function](figs/function-example-quadratic.png){width=60%}\ -->
+1. Determine whether the graph is a function and explain your answer.
+1. Find the domain (in interval notation) of the graph.
+1. Find the range (in interval notation) of the graph.
+1. Find the interval where the graph is above $2$.
+1. Find the interval where the graph is is decreasing.
+1. Find all maximum and minimum values of the function if they exist.
+1. Find the value of $y$ such that the point $(3, y)$ is on the graph.
+1. Find the value of $x$ such that $(x, 0)$ is on the graph.
 
 ```
 
@@ -115,22 +113,24 @@ knitr::include_graphics("figs/function-example-quadratic.png")
 ```{solution}
 \
 
-1. The graph is a function. Because every vertical line crosses the graph at most once.  
-2. The graph has the left endpoint  at $(-2, -2)$ and but no right endpoint. So the domain is $[-2, +\infty)$.  
-3. The graph has a lowest positioned point $(-2, -2)$ but no highest positioned point. So the range is $[-2, +\infty)$.  
-4. The graph is above 2 over the interval $(3, \infty)$.  
-5. The graph is decreasing over the interval $(1,2)$.  
-6. The graph has minima at $(-2,1)$ and $(2,1)$.  
+1. The graph is a function. Because every vertical line crosses the graph at most once.
+2. The graph has the left endpoint  at $(-2, -2)$ and but no right endpoint. So the domain is $[-2, +\infty)$.
+3. The graph has a lowest positioned point $(-2, -2)$ but no highest positioned point. So the range is $[-2, +\infty)$.
+4. The graph is above 2 over the interval $(3, \infty)$.
+5. The graph is decreasing over the interval $(1,2)$.
+6. The graph has minima at $(-2,1)$ and $(2,1)$.
 7. The $y$-value of the point $(3, y)$ on the graph is $2$.
 8. The $x$-value of the point $(x, 0)$ on the graph is $-0.5$.
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}
 
-Find the indicated function values for the functions $f(x)=-x^2+x-1$ and  $g(x)=2x-1$. Simplify your answer.
+Find the indicated function values for the functions $f(x)=-x^2+x-1$ and $g(x)=2x-1$. Simplify your answer.
 
 1. $f(2)$
 1. $f(-x)$
@@ -165,8 +165,6 @@ Use the graph in the picture to answer the following questions.
 5. Find all points where the graph reaches a maximum or a minimum.
 6. Find the values of the $x$-coordinate of all points on the graph whose $y$-coordinate is $1$.
 
-<!-- ![the graph of a piecewise function](figs/function-exercise-ray-cubic.png){width=60%}\ -->
-
 ```
 
 ```{r echo=FALSE, outwidth="40%"}
@@ -178,12 +176,9 @@ knitr::include_graphics("figs/function-exercise-ray-cubic.png")
 Use the graph of the function $f$ in the picture to answer the following questions.
 
 1. Find the $y$-intercept.
-2. Find the value
-   $$\dfrac{f(3)-f(0)}{3}.$$
+2. Find the value $\dfrac{f(3)-f(0)}{3}.$
 3. Find the values $x$ such that $f(x)=0$.
 4. Find the solution to the inequality $f(x)>0$. Write in interval notation.
-
-<!-- ![the graph of a cubic function](figs/function-exercise-cubic.png){width=60%}\ -->
 
 ```
 

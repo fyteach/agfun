@@ -12,12 +12,9 @@ In meeting room, a group of people all shook hands with one another. In total, 1
 
 ## Properties of Equations
 
-An ***equation*** is an statement that asserts an equality containing unknown variables. For example, $2x+3=1$ is an equation of the unknown variable $x$.
-
-Equations often contain variable other than the unknowns. Those variables, which are assumed to be known, are usually called ***constants***, ***coefficients*** or ***parameters***. For example, in the linear equation $ax+b=c$ of (the unknown) $x$, the variables $a$, $b$ and $c$ are referred as known coefficients or constants.
-
-An ***identity*** is an equation that is true for all possible values of the variable(s) it contains. For example, $x^2-y^2=(x+y)(x-y)$ is an identity.
-
+An ***equation*** is an statement that asserts an equality containing unknown variables. For example, $2x+3=1$ is an equation of the unknown variable $x$.  
+Equations often contain variables other than the unknowns. Those variables, which are assumed to be known, are usually called ***constants***, ***coefficients*** or ***parameters***. For example, in the linear equation $ax+b=c$ of (the unknown) $x$, the variables $a$, $b$ and $c$ are referred as known coefficients or constants.  
+An ***identity*** is an equation that is true for all possible values of the variable(s) it contains. For example, $x^2-y^2=(x+y)(x-y)$ is an identity.  
 ***Solving an equation*** consists of determining values of the variables that make the equality true. Two equations are said to be ***equivalent*** if and only if they have the same solution set, that is, a solution of one equation is also a solution of the other equation. For example $2x-6=0$ and $x-1=2$ are equivalent.
 
 ::: {.rmdnote}
@@ -25,16 +22,10 @@ An ***identity*** is an equation that is true for all possible values of the var
 When solving an equation, the following operations can be used to transform an equation to an equivalent one:
 
 - Adding or subtracting the same quantity to both sides of an equation. For example, $x-1=2$ is equivalent to $x-1+1=2+1$.
-
 - Multiplying or dividing both sides of an equation **by a non-zero quantity**. For example $2x=4$ is equivalent to $\frac{2x}{2}=\frac{4}{2}$.
-
 - Applying an identity to transform one side of the equation. For example, $x^2-1=0$ is equivalent to $(x-1)(x+1)=0$, where the identity $x^2-1=(x-1)(x+1)$ was applied.
 
-:::
-
-::: {.rmdnote}
-
-In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called  extraneous solutions. For example, taking squares of both sides of the equation $x=1$ produces the equation $x^2=1$. The new equation $x^2=1$ has two solutions $x=-1$ and $x=1$, but the original equation $x=1$ only has one solution. The solution $x=-1$ of the equation $x^2=1$ is an extraneous solution of the equation $x=1$.
+In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called ***extraneous solutions***. For example, taking squares of both sides of the equation $x=1$ produces the equation $x^2=1$. The new equation $x^2=1$ has two solutions $x=-1$ and $x=1$, but the original equation $x=1$ only has one solution. The solution $x=-1$ of the equation $x^2=1$ is an extraneous solution of the equation $x=1$.
 
 :::
 
@@ -158,6 +149,8 @@ When solving a word problem, you may first outline what's known and what's unkno
 
 :::
 
+\newpage
+
 ## Practice
 
 ```{exercise}
@@ -165,9 +158,9 @@ When solving a word problem, you may first outline what's known and what's unkno
 Solve the equation by factoring.
 
 1. $x^2-3x+2=0$
-1. $2x^2-3x=5$
-1. $(x-1)(x+3)=5$
-1. $\frac13(2-x)(x+5)=4$
+2. $2x^2-3x=5$
+3. $(x-1)(x+3)=5$
+4. $\frac13(2-x)(x+5)=4$
 
 ```
 

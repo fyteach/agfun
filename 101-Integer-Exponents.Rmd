@@ -33,11 +33,11 @@ In the notation $x^n$, $n$ is called ***the exponent***, $x$ is called ***the ba
 
 ::: {.rmdnote}
 
-**Order of Basic Mathematical Operations**
+**Order of Basic Mathematical Operations**  
 
 In mathematics, the order of operations reflects conventions about which procedure should be performed first. There are four levels (from the highest to the lowest):
 
-**Parenthesis**; **Exponentiation**; **Multiplication and Division**; **Addition and Subtraction**.
+**Parenthesis**; **Exponentiation**; **Multiplication and Division**; **Addition and Subtraction**.  
 
 Within the same level, the convention is to perform from the left to the right.
 
@@ -70,17 +70,19 @@ $$
 
 ::: {.rmdtip}
 
-**Simplify (at least partially) the problem first**
-
+**Simplify (at least partially) the problem first**  
 To avoid mistakes when working with negative exponents, it's better to apply the negative exponent rule to change negative exponents to positive exponents and simplify the base first.
 
 :::
+
+\newpage
 
 ## Practice
 
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
+
 1. $(3a^2b^3c^2)(4abc^2)(2b^2c^3)$
 2. $\dfrac{4y^3z^0}{x^2y^2}$
 3. $(-2)^{-3}$
@@ -90,6 +92,7 @@ Simplify. **Write with positive exponents.**
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
+
 1. $\dfrac{-u^0v^{15}}{v^{16}}$
 1. $(-2a^3b^2c^0)^3$
 1. $\dfrac{m^5 n^{2}}{(mn)^3}$
@@ -99,6 +102,7 @@ Simplify. **Write with positive exponents.**
 ```{exercise}
 
 Simplify. **Write with positive exponents.**
+
 1. $(-3a^2x^3)^{-2}$
 1. $\left(\dfrac{-x^0y^3}{2wz^2}\right)^3$
 1. $\dfrac{3^{-2}a^{-3}b^5}{x^{-3}y^{-4}}$

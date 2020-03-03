@@ -232,7 +232,7 @@ then the complex number $a+b\ii=a$ is just the real number.
 If $b\neq 0$, then we call the complex number $a+b\ii$ an imaginary number.
 If $a=0$ and $b\neq 0$, then the complex number $a+b\ii=b\ii$ is called a purely imaginary number.
 
-Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.
+**Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.**
 
 ```{example}
 
@@ -283,7 +283,7 @@ $$
 
 ```{example}
 
-Evaluate $f(1+\ii)$ for the function $f(z)=z^2+\frac{z-1}{z+1}$. Write your answer in the form $a+b\ii$.
+Evaluate the express $z^2+\frac{z-1}{z+1}$ for  $z=1+\ii$. Write your answer in the form $a+b\ii$.
 
 ```
 
@@ -300,6 +300,8 @@ f(1+\ii)=&(1+\ii)^2+\frac{\ii}{2+\ii}\\
 $$
 
 ```
+
+\newpage
 
 ## Practice
 
@@ -540,7 +542,7 @@ Divide the complex number and write your answer in the form $a+b\ii$.
 
 ```{exercise}
 
-Simplify the expression. %where $\ii=\sqrt{-1}$ is the imaginary unit.
+Simplify the expression.
 
 1. $(-\ii)^{8}$
 1. $\ii^{15}$

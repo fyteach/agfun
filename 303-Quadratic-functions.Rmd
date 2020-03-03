@@ -85,6 +85,8 @@ A quadratic function $f$ whose the vertex is $(1, 2)$ has a $y$-intercept $(0, -
 
 ```
 
+\newpage
+
 ## Practice
 
 ```{exercise}
@@ -147,7 +149,23 @@ A store owner estimates that by charging $x$ dollars each for a certain cell pho
 
 ```{exercise}
 
+A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet. How long it will take the ball to hit the ground?
+
+```
+
+```{exercise}
+
 A ball is thrown upward from the ground with an initial velocity $v_0$ ft/sec. The height $h(t)$ of the ball after $t$ seconds is $h(t)= -16t^2 + v_0t$. The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.
+
+```
+
+```{exercise}
+
+A toy factory estimates that the demand of a particular toy is  $300 -x$ units each week if the price is \$$x$ dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
+The weekly revenue is a function of the price given by $R(x)=x(30-x)$
+
+1. Find the function that models the weekly revenue, $R$, received when the selling price is \$$x$ per unit.
+2. What the price range so the the revenue is nonnegative.
 
 ```
