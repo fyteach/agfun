@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://agfun.netlify.com/* https://agfun.yfei.page/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://agfun.netlify.com/* https://agfun.yfei.page/:splat 301!

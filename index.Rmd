@@ -2,7 +2,6 @@
 title: "Algebra and Geometry of Elementary Functions"
 author: "Fei Ye"
 date: "`r Sys.Date()`"
-output: pdf_document
 description: This notebook is designed to give a concise introduction to algebra and
   geometry of elementary functions which can be served as a textbook for a College
   Algebra course.
@@ -36,6 +35,9 @@ options(bookdown.post.latex = function(x) {
 ```{r fig_setting, include=FALSE}
 library("knitr")
 knitr::opts_chunk$set(out.width="60%", fig.align="center")
+```
+
+```{r child = 'redirect.R'}
 ```
 
 \mainmatter
