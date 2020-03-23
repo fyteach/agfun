@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 13 Quadratic Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 13 Quadratic Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="linear-functions.html"/>
 <link rel="next" href="rational-functions.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,15 +445,15 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="quadratic-functions" class="section level1">
+<div id="quadratic-functions" class="section level1" number="13">
 <h1><span class="header-section-number">Topic 13</span> Quadratic Functions</h1>
-<div id="maximize-the-revenue" class="section level2">
+<div id="maximize-the-revenue" class="section level2" number="13.1">
 <h2><span class="header-section-number">13.1</span> Maximize the Revenue</h2>
 <div class="rmdthink">
 <p>When price increases, demand decreases and vice verse. A retail store found that the price <span class="math inline">\(p\)</span> as a function of the demand <span class="math inline">\(x\)</span> for a certain product is <span class="math inline">\(p(x)=100-\frac12 x\)</span>. The revenue <span class="math inline">\(R\)</span> of selling <span class="math inline">\(x\)</span> units is <span class="math inline">\(R=x\cdot p(x)=x(100-\frac12x)\)</span>. To maximize the revenue, what should be the price?</p>
 </div>
 </div>
-<div id="the-graph-of-a-quadratic-function" class="section level2">
+<div id="the-graph-of-a-quadratic-function" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> The Graph of a Quadratic Function</h2>
 <p>The graph of a quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>, is called a <strong><em>parabola</em></strong>.</p>
 <p>By completing the square, a quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> can always be written in the form <span class="math inline">\(f(x)=a(x-h)^2+k\)</span>, where <span class="math inline">\(h=-\dfrac{b}{2a}\)</span> and <span class="math inline">\(k=f(h)=f\left(-\dfrac{b}{2a}\right)\)</span>.</p>
@@ -425,7 +462,7 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <li>The point <span class="math inline">\((h, k)=\left(-\dfrac{b}{2a}, f\left(-\dfrac{b}{2a}\right)\right)\)</span> is called the <strong><em>vertex</em></strong> of the parabola.</li>
 </ol>
 </div>
-<div id="the-minimum-or-maximum-of-a-quadratic-function" class="section level2">
+<div id="the-minimum-or-maximum-of-a-quadratic-function" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> The Minimum or Maximum of a Quadratic Function</h2>
 <p>Consider the quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>.</p>
 <ol style="list-style-type: decimal">
@@ -433,7 +470,7 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <li>If <span class="math inline">\(a&lt;0\)</span>, then the parabola opens downward and <span class="math inline">\(f\)</span> has a maximum <span class="math inline">\(f\left(-\dfrac{b}{2a}\right)\)</span> at the vertex.</li>
 </ol>
 </div>
-<div id="intercepts-of-a-quadratic-function" class="section level2">
+<div id="intercepts-of-a-quadratic-function" class="section level2" number="13.4">
 <h2><span class="header-section-number">13.4</span> Intercepts of a Quadratic Function</h2>
 <p>Consider the quadratic function <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, <span class="math inline">\(a\neq 0\)</span>.</p>
 <ol style="list-style-type: decimal">
@@ -442,10 +479,9 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-257" class="example"><strong>Example 13.1  </strong></span>
+<p><span id="exm:unnamed-chunk-258" class="example"><strong>Example 13.1  </strong></span>
 Does the function <span class="math inline">\(f(x)=2x^2-4x-6\)</span> have a maximum or minimum? Find it.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -462,12 +498,10 @@ The minimum is
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-259" class="example"><strong>Example 13.2  </strong></span>
+<p><span id="exm:unnamed-chunk-260" class="example"><strong>Example 13.2  </strong></span>
 Consider the function <span class="math inline">\(f(x)=-x^2+3x+6\)</span>. Find values of <span class="math inline">\(x\)</span> such that <span class="math inline">\(f(x)=2\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -480,12 +514,10 @@ The values of <span class="math inline">\(x\)</span> such that <span class="math
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-261" class="example"><strong>Example 13.3  </strong></span>
+<p><span id="exm:unnamed-chunk-262" class="example"><strong>Example 13.3  </strong></span>
 A quadratic function <span class="math inline">\(f\)</span> whose the vertex is <span class="math inline">\((1, 2)\)</span> has a <span class="math inline">\(y\)</span>-intercept <span class="math inline">\((0, -3)\)</span>. Find the equation that defines the function.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -499,14 +531,13 @@ Since <span class="math inline">\((0, -3)\)</span> is on the graph of the functi
 The quadratic function <span class="math inline">\(f\)</span> is given by <span class="math inline">\(f(x)=-5(x-1)^2+2\)</span>.</li>
 </ol>
 </div>
-
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-12" class="section level2">
+<div id="practice-12" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-263" class="exercise"><strong>Problem 13.1  </strong></span>
+<p><span id="exr:unnamed-chunk-264" class="exercise"><strong>Problem 13.1  </strong></span>
 Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=-(x-2)^2+4\)</span> and find</p>
 <ol style="list-style-type: decimal">
 <li>the coordinates of the <span class="math inline">\(x\)</span>-intercepts,</li>
@@ -517,9 +548,8 @@ Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=-(x
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-264" class="exercise"><strong>Problem 13.2  </strong></span>
+<p><span id="exr:unnamed-chunk-265" class="exercise"><strong>Problem 13.2  </strong></span>
 Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=x^2+2x-3\)</span> and find</p>
 <ol style="list-style-type: decimal">
 <li>the coordinates of the <span class="math inline">\(x\)</span>-intercepts,</li>
@@ -530,9 +560,8 @@ Sketch the graph of the quadratic functions <span class="math inline">\(f(x)=x^2
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-265" class="exercise"><strong>Problem 13.3  </strong></span>
+<p><span id="exr:unnamed-chunk-266" class="exercise"><strong>Problem 13.3  </strong></span>
 Consider the parabola in the graph.</p>
 <ol style="list-style-type: decimal">
 <li>Determine the coordinates of the <span class="math inline">\(x\)</span>-intercepts.</li>
@@ -545,9 +574,8 @@ Consider the parabola in the graph.</p>
 </p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-266" class="exercise"><strong>Problem 13.4  </strong></span>
+<p><span id="exr:unnamed-chunk-267" class="exercise"><strong>Problem 13.4  </strong></span>
 Consider the parabola in the graph.</p>
 <ol style="list-style-type: decimal">
 <li>Determine the coordinates of the <span class="math inline">\(x\)</span>-intercepts.</li>
@@ -560,28 +588,24 @@ Consider the parabola in the graph.</p>
 </p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-267" class="exercise"><strong>Problem 13.5  </strong></span>
+<p><span id="exr:unnamed-chunk-268" class="exercise"><strong>Problem 13.5  </strong></span>
 A store owner estimates that by charging <span class="math inline">\(x\)</span> dollars each for a certain cell phone case, he can sell <span class="math inline">\(d(x)=40 - x\)</span> phone cases each week. The revenue in dollars is <span class="math inline">\(R(x)=xd(x)\)</span> when the selling price of a computer is <span class="math inline">\(x\)</span>, Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-268" class="exercise"><strong>Problem 13.6  </strong></span>
+<p><span id="exr:unnamed-chunk-269" class="exercise"><strong>Problem 13.6  </strong></span>
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height <span class="math inline">\(h(t)\)</span> of the ball from the ground after time <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)=-16t^2 + 48t + 160\)</span> feet. How long it will take the ball to hit the ground?</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-269" class="exercise"><strong>Problem 13.7  </strong></span>
+<p><span id="exr:unnamed-chunk-270" class="exercise"><strong>Problem 13.7  </strong></span>
 A ball is thrown upward from the ground with an initial velocity <span class="math inline">\(v_0\)</span> ft/sec. The height <span class="math inline">\(h(t)\)</span> of the ball after <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)= -16t^2 + v_0t\)</span>. The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-270" class="exercise"><strong>Problem 13.8  </strong></span>
+<p><span id="exr:unnamed-chunk-271" class="exercise"><strong>Problem 13.8  </strong></span>
 A toy factory estimates that the demand of a particular toy is <span class="math inline">\(300 -x\)</span> units each week if the price is $<span class="math inline">\(x\)</span> dollars per unit. Each week there is a fixed cost $40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by <span class="math inline">\(R(x)=x(30-x)\)</span></p>
 <ol style="list-style-type: decimal">
@@ -589,7 +613,6 @@ The weekly revenue is a function of the price given by <span class="math inline"
 <li>What the price range so the the revenue is nonnegative.</li>
 </ol>
 </div>
-
 
 </div>
 </div>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 4 Radicals and Rational Exponents | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="algebra-of-rational-expressions.html"/>
 <link rel="next" href="solving-polynomial-equations-by-factoring.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,16 +445,16 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="radicals-and-rational-exponents" class="section level1">
+<div id="radicals-and-rational-exponents" class="section level1" number="4">
 <h1><span class="header-section-number">Topic 4</span> Radicals and Rational Exponents</h1>
-<div id="do-you-want-to-be-a-fire-fighter" class="section level2">
+<div id="do-you-want-to-be-a-fire-fighter" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Do You Want to Be a Fire Fighter</h2>
 <div class="rmdthink">
 <p>To reach the 5th floor window of a building that is 25 feet from the location of the turntable aerial ladder truck. How long should the ladder be placed to reach the window? The hight of that window is 50 feet.</p>
 <p><img src="figs/Aerial-Apparatus-Positioning.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="radical-expressions" class="section level2">
+<div id="radical-expressions" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Radical Expressions</h2>
 <p>If <span class="math inline">\(b^2=a\)</span>, then we say that <span class="math inline">\(b\)</span> is a <strong><em>square root</em></strong> of <span class="math inline">\(a\)</span>. We denote the positive square root of <span class="math inline">\(a\)</span> as <span class="math inline">\(\sqrt{a}\)</span>, called the <strong><em>principal square root</em></strong>.</p>
 <p>For any real number <span class="math inline">\(a\)</span>, the expression <span class="math inline">\(\sqrt{a^2}\)</span> can be simplified as
@@ -440,14 +477,13 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <p>A radical is simplified if the radicand has no perfect power factors against the radical.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-69" class="example"><strong>Example 4.1  </strong></span>
+<p><span id="exm:unnamed-chunk-70" class="example"><strong>Example 4.1  </strong></span>
 Simplify the radical expression using the definition.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{4(y-1)^2}\)</span></li>
 <li><span class="math inline">\(\sqrt[3]{-8x^3y^6}\)</span></li>
 </ol>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -457,9 +493,8 @@ Simplify the radical expression using the definition.</p>
 <li><span class="math inline">\(\sqrt[3]{-8x^3y^6}=\sqrt[3]{(-2xy^2)^2}=-2xy^2\)</span>.</li>
 </ol>
 </div>
-
 </div>
-<div id="rational-exponents" class="section level2">
+<div id="rational-exponents" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Rational Exponents</h2>
 <p>If <span class="math inline">\(\sqrt[n]{a}\)</span> is a real number, then we define <span class="math inline">\(a^{\frac mn}\)</span> as
 <span class="math display">\[
@@ -482,7 +517,7 @@ a^{\frac mn}=\sqrt[n]{a^m}=(\sqrt[n]{a})^m.
 </div>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-71" class="example"><strong>Example 4.2  </strong></span>
+<p><span id="exm:unnamed-chunk-72" class="example"><strong>Example 4.2  </strong></span>
 Simplify the radical expression or the expression with rational exponents. <strong>Write in radical notation</strong>.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{x}\sqrt[3]{x^2}\)</span></li>
@@ -491,7 +526,6 @@ Simplify the radical expression or the expression with rational exponents. <stro
 <li><span class="math inline">\(\sqrt{\frac{x^{-\frac12}y^2}{x^{\frac32}}}\)</span></li>
 </ol>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -509,12 +543,11 @@ Simplify the radical expression or the expression with rational exponents. <stro
 \]</span></li>
 </ol>
 </div>
-
 <div class="rmdnote">
 <p>In general, rewriting radical in rational exponents helps simplify calculations.</p>
 </div>
 </div>
-<div id="product-and-quotient-rules-for-radicals" class="section level2">
+<div id="product-and-quotient-rules-for-radicals" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Product and Quotient Rules for Radicals</h2>
 <p>If <span class="math inline">\(\sqrt[n]{a}\)</span> and <span class="math inline">\(\sqrt[n]{b}\)</span> are real numbers, then
 <span class="math display">\[{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{ab}.\]</span></p>
@@ -522,14 +555,13 @@ Simplify the radical expression or the expression with rational exponents. <stro
 <span class="math display">\[\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.\]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-73" class="example"><strong>Example 4.3  </strong></span>
+<p><span id="exm:unnamed-chunk-74" class="example"><strong>Example 4.3  </strong></span>
 Simplify the expression.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}\)</span>.</li>
 <li><span class="math inline">\(\dfrac{\sqrt[5]{96x^9y^3}}{\sqrt[5]{3x^{-1}y}}\)</span>.</li>
 </ol>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -539,20 +571,18 @@ Simplify the expression.</p>
 <li><span class="math inline">\(\dfrac{ \sqrt[5]{96x^9y^3} }{ \sqrt[5]{3x^{-1}y} }=\sqrt[5]{\dfrac{96x^9y^3}{3x^{-1}y}}=\sqrt[5]{32x^{10}y^2}=\sqrt[5]{(2x^2)^5\cdot y^2}=2x^2\sqrt[5]{y^2}\)</span>.</li>
 </ol>
 </div>
-
 </div>
-<div id="combining-like-radicals" class="section level2">
+<div id="combining-like-radicals" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Combining Like Radicals</h2>
 <p>Two radicals are called <strong><em>like radicals</em></strong> if they have the same index and the same radicand. We add or subtract like radicals by combining their coefficients.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-75" class="example"><strong>Example 4.4  </strong></span>
+<p><span id="exm:unnamed-chunk-76" class="example"><strong>Example 4.4  </strong></span>
 Simplify the expression.</p>
 <p><span class="math display">\[
 \sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}.
 \]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -561,20 +591,18 @@ Simplify the expression.</p>
 \sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}=2x\sqrt{2x}-2x^2+x^2\sqrt{2x}=(x^2+2x)\sqrt{2x}-2x^2.
 \]</span></p>
 </div>
-
 </div>
-<div id="multiplying-radicals" class="section level2">
+<div id="multiplying-radicals" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Multiplying Radicals</h2>
 <p>Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-77" class="example"><strong>Example 4.5  </strong></span>
+<p><span id="exm:unnamed-chunk-78" class="example"><strong>Example 4.5  </strong></span>
 Simplify the expression.
 <span class="math display">\[
 (\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x}).
 \]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -589,21 +617,19 @@ Simplify the expression.
 \end{aligned}
 \]</span></p>
 </div>
-
 </div>
-<div id="rationalizing-denominators" class="section level2">
+<div id="rationalizing-denominators" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Rationalizing Denominators</h2>
 <p>Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-79" class="example"><strong>Example 4.6  </strong></span>
+<p><span id="exm:unnamed-chunk-80" class="example"><strong>Example 4.6  </strong></span>
 Rationalize the denominator.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{1}{2\sqrt{x^3}}\)</span></li>
 <li><span class="math inline">\(\dfrac{\sqrt{x}+\sqrt{y}}{\sqrt{x}-\sqrt{y}}\)</span></li>
 </ol>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -619,9 +645,8 @@ Rationalize the denominator.</p>
  \]</span></li>
 </ol>
 </div>
-
 </div>
-<div id="complex-numbers" class="section level2">
+<div id="complex-numbers" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Complex Numbers</h2>
 <p>The imaginary unit <span class="math inline">\(\ii\)</span> is defined as <span class="math inline">\(\ii=\sqrt{-1}\)</span>. Hence <span class="math inline">\(\ii^2=-1\)</span>.</p>
 <p>If <span class="math inline">\(b\)</span> is a positive number, then <span class="math inline">\(\sqrt{-b}=\ii\sqrt{b}\)</span>.</p>
@@ -633,7 +658,7 @@ If <span class="math inline">\(a=0\)</span> and <span class="math inline">\(b\ne
 <p><strong>Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.</strong></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-81" class="example"><strong>Example 4.7  </strong></span>
+<p><span id="exm:unnamed-chunk-82" class="example"><strong>Example 4.7  </strong></span>
 Simplify and write your answer in the form <span class="math inline">\(a+b\ii\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(\ii\)</span> is the imaginary unit.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{-3}\sqrt{-4}\)</span></li>
@@ -643,7 +668,6 @@ Simplify and write your answer in the form <span class="math inline">\(a+b\ii\)<
 <li><span class="math inline">\(\ii^{2018}\)</span></li>
 </ol>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -676,12 +700,10 @@ Simplify and write your answer in the form <span class="math inline">\(a+b\ii\)<
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-83" class="example"><strong>Example 4.8  </strong></span>
+<p><span id="exm:unnamed-chunk-84" class="example"><strong>Example 4.8  </strong></span>
 Evaluate the express <span class="math inline">\(z^2+\frac{z-1}{z+1}\)</span> for <span class="math inline">\(z=1+\ii\)</span>. Write your answer in the form <span class="math inline">\(a+b\ii\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -695,14 +717,13 @@ f(1+\ii)=&amp;(1+\ii)^2+\frac{\ii}{2+\ii}\\
 \end{aligned}
 \]</span></p>
 </div>
-
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-3" class="section level2">
+<div id="practice-3" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-85" class="exercise"><strong>Problem 4.1  </strong></span>
+<p><span id="exr:unnamed-chunk-86" class="exercise"><strong>Problem 4.1  </strong></span>
 Evaluate the square root. If the square root is not a real number, state so.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(-\sqrt{\frac{4}{25}}\)</span></li>
@@ -711,9 +732,8 @@ Evaluate the square root. If the square root is not a real number, state so.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-86" class="exercise"><strong>Problem 4.2  </strong></span>
+<p><span id="exr:unnamed-chunk-87" class="exercise"><strong>Problem 4.2  </strong></span>
 Simplify the radical expression.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{(-7x^2)^2}\)</span></li>
@@ -722,9 +742,8 @@ Simplify the radical expression.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-87" class="exercise"><strong>Problem 4.3  </strong></span>
+<p><span id="exr:unnamed-chunk-88" class="exercise"><strong>Problem 4.3  </strong></span>
 Simplify the radical expression.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[3]{-27x^3}\)</span></li>
@@ -733,9 +752,8 @@ Simplify the radical expression.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-88" class="exercise"><strong>Problem 4.4  </strong></span>
+<p><span id="exr:unnamed-chunk-89" class="exercise"><strong>Problem 4.4  </strong></span>
 Simplify the radical expression. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{50}\)</span></li>
@@ -744,9 +762,8 @@ Simplify the radical expression. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-89" class="exercise"><strong>Problem 4.5  </strong></span>
+<p><span id="exr:unnamed-chunk-90" class="exercise"><strong>Problem 4.5  </strong></span>
 Write the radical expression with rational exponents.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[3]{(2x)^5}\)</span></li>
@@ -755,9 +772,8 @@ Write the radical expression with rational exponents.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-90" class="exercise"><strong>Problem 4.6  </strong></span>
+<p><span id="exr:unnamed-chunk-91" class="exercise"><strong>Problem 4.6  </strong></span>
 Write in radical notation and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(4^{\frac32}\)</span></li>
@@ -766,9 +782,8 @@ Write in radical notation and simplify.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-91" class="exercise"><strong>Problem 4.7  </strong></span>
+<p><span id="exr:unnamed-chunk-92" class="exercise"><strong>Problem 4.7  </strong></span>
 Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{12x^{\frac12}}{4x^{\frac23}}\)</span></li>
@@ -777,9 +792,8 @@ Simplify the expression. Write with radical notations. Assume all variables repr
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-92" class="exercise"><strong>Problem 4.8  </strong></span>
+<p><span id="exr:unnamed-chunk-93" class="exercise"><strong>Problem 4.8  </strong></span>
 Simplify the expression. Write in radical notation. Assume <span class="math inline">\(x\)</span> is nonnegative.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{\sqrt{x}}{\sqrt[3]{x}}\)</span></li>
@@ -788,9 +802,8 @@ Simplify the expression. Write in radical notation. Assume <span class="math inl
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-93" class="exercise"><strong>Problem 4.9  </strong></span>
+<p><span id="exr:unnamed-chunk-94" class="exercise"><strong>Problem 4.9  </strong></span>
 Simplify the expression. Write in radical notation. Assume <span class="math inline">\(x\)</span> is nonnegative.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[5]{32x^{\frac13}}\)</span></li>
@@ -799,9 +812,8 @@ Simplify the expression. Write in radical notation. Assume <span class="math inl
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-94" class="exercise"><strong>Problem 4.10  </strong></span>
+<p><span id="exr:unnamed-chunk-95" class="exercise"><strong>Problem 4.10  </strong></span>
 Simplify the expression. Write in radical notation. Assume all variables are nonnegative.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\left(\dfrac{8a^{-\frac{5}{2}}b}{a^{\frac12}b^{-5}}\right)^{-\frac23}\)</span></li>
@@ -810,9 +822,8 @@ Simplify the expression. Write in radical notation. Assume all variables are non
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-95" class="exercise"><strong>Problem 4.11  </strong></span>
+<p><span id="exr:unnamed-chunk-96" class="exercise"><strong>Problem 4.11  </strong></span>
 Multiply and simplify.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[3]{4}\sqrt[3]{5}\)</span></li>
@@ -821,9 +832,8 @@ Multiply and simplify.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-96" class="exercise"><strong>Problem 4.12  </strong></span>
+<p><span id="exr:unnamed-chunk-97" class="exercise"><strong>Problem 4.12  </strong></span>
 Simplify the radical expression. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{20xy}\cdot\sqrt{4xy^2}\)</span></li>
@@ -832,9 +842,8 @@ Simplify the radical expression. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-97" class="exercise"><strong>Problem 4.13  </strong></span>
+<p><span id="exr:unnamed-chunk-98" class="exercise"><strong>Problem 4.13  </strong></span>
 Divide. Assume all variables are positive. Answers must be simplified.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{\dfrac{9x^3}{y^8}}\)</span></li>
@@ -844,9 +853,8 @@ Divide. Assume all variables are positive. Answers must be simplified.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-98" class="exercise"><strong>Problem 4.14  </strong></span>
+<p><span id="exr:unnamed-chunk-99" class="exercise"><strong>Problem 4.14  </strong></span>
 Add or subtract, and simplify. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(5\sqrt6+3\sqrt6\)</span></li>
@@ -855,9 +863,8 @@ Add or subtract, and simplify. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-99" class="exercise"><strong>Problem 4.15  </strong></span>
+<p><span id="exr:unnamed-chunk-100" class="exercise"><strong>Problem 4.15  </strong></span>
 Add or subtract, and simplify. Assume all variables are positive</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(7\sqrt{4x^2}+2\sqrt{25x}-\sqrt{16x}\)</span></li>
@@ -866,9 +873,8 @@ Add or subtract, and simplify. Assume all variables are positive</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-100" class="exercise"><strong>Problem 4.16  </strong></span>
+<p><span id="exr:unnamed-chunk-101" class="exercise"><strong>Problem 4.16  </strong></span>
 Multiply and simplify. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt2(3\sqrt3-2\sqrt2)\)</span></li>
@@ -877,9 +883,8 @@ Multiply and simplify. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-101" class="exercise"><strong>Problem 4.17  </strong></span>
+<p><span id="exr:unnamed-chunk-102" class="exercise"><strong>Problem 4.17  </strong></span>
 Multiply and simplify. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((\sqrt6-\sqrt5)(\sqrt6+\sqrt5)\)</span></li>
@@ -888,9 +893,8 @@ Multiply and simplify. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-102" class="exercise"><strong>Problem 4.18  </strong></span>
+<p><span id="exr:unnamed-chunk-103" class="exercise"><strong>Problem 4.18  </strong></span>
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt[3]{\dfrac2{25}}\)</span></li>
@@ -900,9 +904,8 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-103" class="exercise"><strong>Problem 4.19  </strong></span>
+<p><span id="exr:unnamed-chunk-104" class="exercise"><strong>Problem 4.19  </strong></span>
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{6\sqrt3}{\sqrt3-1}\)</span></li>
@@ -912,9 +915,8 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-104" class="exercise"><strong>Problem 4.20  </strong></span>
+<p><span id="exr:unnamed-chunk-105" class="exercise"><strong>Problem 4.20  </strong></span>
 Simplify and rationalize the denominator. Assume all variables are positive.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{\sqrt{x}}{\sqrt x-1}+\dfrac{1}{\sqrt{x}+1}\)</span></li>
@@ -922,9 +924,8 @@ Simplify and rationalize the denominator. Assume all variables are positive.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-105" class="exercise"><strong>Problem 4.21  </strong></span>
+<p><span id="exr:unnamed-chunk-106" class="exercise"><strong>Problem 4.21  </strong></span>
 Add, subtract, multiply complex numbers and write your answer in the form <span class="math inline">\(a+b\ii\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\sqrt{-2}\cdot\sqrt{-3}\)</span></li>
@@ -934,9 +935,8 @@ Add, subtract, multiply complex numbers and write your answer in the form <span 
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-106" class="exercise"><strong>Problem 4.22  </strong></span>
+<p><span id="exr:unnamed-chunk-107" class="exercise"><strong>Problem 4.22  </strong></span>
 Add, subtract, multiply complex numbers and write your answer in the form <span class="math inline">\(a+b\ii\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((3+\ii)(4+5\ii)\)</span></li>
@@ -946,9 +946,8 @@ Add, subtract, multiply complex numbers and write your answer in the form <span 
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-107" class="exercise"><strong>Problem 4.23  </strong></span>
+<p><span id="exr:unnamed-chunk-108" class="exercise"><strong>Problem 4.23  </strong></span>
 Divide the complex number and write your answer in the form <span class="math inline">\(a+b\ii\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{2\ii}{1+\ii}\)</span></li>
@@ -958,9 +957,8 @@ Divide the complex number and write your answer in the form <span class="math in
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-108" class="exercise"><strong>Problem 4.24  </strong></span>
+<p><span id="exr:unnamed-chunk-109" class="exercise"><strong>Problem 4.24  </strong></span>
 Simplify the expression.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((-\ii)^{8}\)</span></li>
@@ -970,20 +968,17 @@ Simplify the expression.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<span id="exr:unnamed-chunk-109" class="exercise"><strong>Problem 4.25  </strong></span>
+<span id="exr:unnamed-chunk-110" class="exercise"><strong>Problem 4.25  </strong></span>
 Evaluate the function polynomial <span class="math inline">\(2x^2-3x+5\)</span> for <span class="math inline">\(x=1-\ii\)</span>.
 Write your answer in the form <span class="math inline">\(a+b\ii\)</span>.
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-110" class="exercise"><strong>Problem 4.26  </strong></span>
+<p><span id="exr:unnamed-chunk-111" class="exercise"><strong>Problem 4.26  </strong></span>
 Evaluate the polynomial <span class="math inline">\(\ii x^2-x+\frac{2}{x-1}\)</span> for <span class="math inline">\(x=\ii-1\)</span>.
 Write your answer in the form <span class="math inline">\(a+b\ii\)</span>.</p>
 </div>
-
 
 </div>
 </div>

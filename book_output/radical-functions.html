@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 15 Radical Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 15 Radical Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="rational-functions.html"/>
 <link rel="next" href="exponential-functions.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,9 +445,9 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="radical-functions" class="section level1">
+<div id="radical-functions" class="section level1" number="15">
 <h1><span class="header-section-number">Topic 15</span> Radical Functions</h1>
-<div id="speed-of-a-tsunami" class="section level2">
+<div id="speed-of-a-tsunami" class="section level2" number="15.1">
 <h2><span class="header-section-number">15.1</span> Speed of a Tsunami</h2>
 <div class="rmdthink">
 <p>A <a href="https://en.wikipedia.org/wiki/Tsunami">tsunami</a> is generally referred to is a series of waves on the ocean caused by earthquakes or other events that cause sudden displacements of large volumes of water. In ideal situation, the velocity <span class="math inline">\(v\)</span> of a wave at where the water depth is <span class="math inline">\(d\)</span> meters is approximately
@@ -426,15 +463,14 @@ The wave will slow down when closer to the coast but will be higher.</p>
 </ul>
 </div>
 </div>
-<div id="the-domain-of-a-radical-function" class="section level2">
+<div id="the-domain-of-a-radical-function" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> The Domain of a Radical Function</h2>
 <p>A <strong><em>radical function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\sqrt[n]{r(x)}\)</span>, where <span class="math inline">\(r(x)\)</span> is an algebraic expression. For example <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. When <span class="math inline">\(n\)</span> is odd number, <span class="math inline">\(r(x)\)</span> can be any real number. When <span class="math inline">\(n\)</span> is even, <span class="math inline">\(r(x)\)</span> has to be nonnegative, that is <span class="math inline">\(r(x)\geq 0\)</span> so that <span class="math inline">\(f(x)\)</span> is a real number.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-274" class="example"><strong>Example 15.1  </strong></span>
+<p><span id="exm:unnamed-chunk-275" class="example"><strong>Example 15.1  </strong></span>
 Find the domain of the function <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -445,14 +481,13 @@ Solve the inequality, we get <span class="math inline">\(x\geq -1\)</span>. In i
 [-1,\infty).
 \]</span></p>
 </div>
-
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-14" class="section level2">
+<div id="practice-14" class="section level2" number="15.3">
 <h2><span class="header-section-number">15.3</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-276" class="exercise"><strong>Problem 15.1  </strong></span>
+<p><span id="exr:unnamed-chunk-277" class="exercise"><strong>Problem 15.1  </strong></span>
 Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=1-\frac{2x}{x+3}\)</span></li>
@@ -461,7 +496,6 @@ Find the domain of each function. Write in interval notation.</p>
 <li><span class="math inline">\(f(x)=-\sqrt{\frac{1}{x-5}}\)</span></li>
 </ol>
 </div>
-
 
 </div>
 </div>

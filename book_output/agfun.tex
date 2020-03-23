@@ -1,40 +1,72 @@
-\documentclass[en,11pt]{elegantbook}
-
-
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  en,11pt]{elegantbook}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdfcreator={LaTeX via pandoc}
-}
-
-
+  pdftitle={Algebra and Geometry of Elementary Functions},
+  pdfauthor={Fei Ye},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs}
-
-
-
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
 \setcounter{secnumdepth}{5}
-
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-  \title{Algebra and Geometry of Elementary Functions}
-
-
-  \author{Fei Ye}
-
-  \date{2020-03-03}
-
-% logo 图案
-% 封面图片
-  \cover{figs/algebrawordcloud.pdf}
-% 版本号
-  \version{0.90}
-% 机构名
-% 引用格言
-% 导言区 preamble
 \usepackage{framed,color}
 
 \definecolor{shadecolor}{RGB}{248,248,248} %%% for shaded environments
@@ -321,15 +353,40 @@ margin=1in
 \patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
 \makeatother
 
-\usepackage{graphicx}
+
+\usepackage{graphicx}% Needed for \includegraphics{}
+\usepackage[export]{adjustbox} %Needed for max width
+\usepackage{etoolbox} %Needed for \pathcmd
+%\patchcmd{<command>}{<code to replace>}{<code>}{<success>}{<failure>}
+%The following codes add max dimension option to includegraphics
+%Gin@ii is from graphicx package and looks for a second optional argument
+\expandafter\patchcmd\csname Gin@ii\endcsname 
+{\setkeys{Gin}{#1}}
+{\setkeys{Gin}{max width=\textwidth, max height=.5\textwidth,keepaspectratio,#1}}
+{}
+{}
+% See the answer to the question 
+%Set default value for “max width” of “includegraphics” on stackoverflow
+
+%The following codes scale images in mainmatter if necessary
+%It will be overwrite by local setting in \includegraphics[width, height, ...]{}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\def\maxwidth{\ifdim\Gin@nat@width>\textwidth \textwidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>0.4\textheight 0.4\textheight\else\Gin@nat@height\fi}
 \makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\makeatletter
+\ifboolexpr{   test {\@ifclassloaded{book}}
+            or test {\@ifclassloaded{elagantbook}}
+            or test {\@ifclassloaded{memoir}}}
+{\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}}
+{
+    \if@mainmatter
+        \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+    \fi
+}
+\makeatother
+
 % Set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
@@ -363,21 +420,28 @@ margin=1in
 \frontmatter
 
 \renewcommand{\baselinestretch}{0.975}
+\institute{QCC-CUNY}
+\version{1.0}
+% \bioinfo{自定义}{信息}
+% \extrainfo{Victory won\rq t come to us unless we go to it. --- M. Moore}
+
+% \logo{logo-blue.png}
+\cover{figs/algebrawordcloud.pdf}
+
+\title{Algebra and Geometry of Elementary Functions}
+\author{Fei Ye}
+\date{2020-03-23}
 
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
-% 封面
 \maketitle
-% 插入 before_body.tex
 
-% 目录
 {
 \setcounter{tocdepth}{0}
 \tableofcontents
 }
-% 表目录
-% 图目录
-% 书籍主体部分
+file.copy('\_redirects', 'book\_output/\_redirects', overwrite = TRUE)
+
 \mainmatter
 
 \hypersetup{pageanchor=true}
@@ -501,7 +565,7 @@ Within the same level, the convention is to perform from the left to the right.
 \end{rmdnote}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-1}{}{\label{exm:unnamed-chunk-1} }
+\protect\hypertarget{exm:unnamed-chunk-2}{}{\label{exm:unnamed-chunk-2} }
 Simplify. \textbf{Write with positive exponents.}
 \[
 \left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}.
@@ -536,7 +600,7 @@ To avoid mistakes when working with negative exponents, it's better to apply the
 \section{Practice}\label{practice}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-3}{}{\label{exr:unnamed-chunk-3} }
+\protect\hypertarget{exr:unnamed-chunk-4}{}{\label{exr:unnamed-chunk-4} }
 Simplify. \textbf{Write with positive exponents.}
 
 \begin{enumerate}
@@ -552,7 +616,7 @@ Simplify. \textbf{Write with positive exponents.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-4}{}{\label{exr:unnamed-chunk-4} }
+\protect\hypertarget{exr:unnamed-chunk-5}{}{\label{exr:unnamed-chunk-5} }
 Simplify. \textbf{Write with positive exponents.}
 
 \begin{enumerate}
@@ -568,7 +632,7 @@ Simplify. \textbf{Write with positive exponents.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-5}{}{\label{exr:unnamed-chunk-5} }
+\protect\hypertarget{exr:unnamed-chunk-6}{}{\label{exr:unnamed-chunk-6} }
 Simplify. \textbf{Write with positive exponents.}
 
 \begin{enumerate}
@@ -584,7 +648,7 @@ Simplify. \textbf{Write with positive exponents.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-6}{}{\label{exr:unnamed-chunk-6} }
+\protect\hypertarget{exr:unnamed-chunk-7}{}{\label{exr:unnamed-chunk-7} }
 Simplify. \textbf{Write with positive exponents.}
 
 \begin{enumerate}
@@ -600,7 +664,7 @@ Simplify. \textbf{Write with positive exponents.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-7}{}{\label{exr:unnamed-chunk-7} }
+\protect\hypertarget{exr:unnamed-chunk-8}{}{\label{exr:unnamed-chunk-8} }
 A store has large size and small size watermelons. A large one cost \$4 and a small one \$1. Putting on the same table, a smaller watermelons has only half the height of the larger one. Given \$4, will you buy a large watermelon or 4 smaller ones? Why?
 \EndKnitrBlock{exercise}
 
@@ -637,7 +701,7 @@ Do you know a faster way to find the values?
 To \textbf{\emph{factor a polynomial}} is to \textbf{express the polynomial as a product} of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-8}{}{\label{exm:unnamed-chunk-8} }
+\protect\hypertarget{exm:unnamed-chunk-9}{}{\label{exm:unnamed-chunk-9} }
 Factor \(4x^3y-8x^2y^2+12x^3y^3\).
 \EndKnitrBlock{example}
 
@@ -665,7 +729,7 @@ Factor \(4x^3y-8x^2y^2+12x^3y^3\).
 For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-10}{}{\label{exm:unnamed-chunk-10} }
+\protect\hypertarget{exm:unnamed-chunk-11}{}{\label{exm:unnamed-chunk-11} }
 Factor \(2x^2-6xy+xz-3yz\).
 \EndKnitrBlock{example}
 
@@ -703,7 +767,7 @@ For a polynomial with four terms, one can normally try the grouping method.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-12}{}{\label{exm:unnamed-chunk-12} }
+\protect\hypertarget{exm:unnamed-chunk-13}{}{\label{exm:unnamed-chunk-13} }
 Factor \(ax+4b-2a-2bx\).
 \EndKnitrBlock{example}
 
@@ -760,7 +824,7 @@ In particular,
 \[a^2-b^2=(a-b)(a+b).\]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-14}{}{\label{exm:unnamed-chunk-14} }
+\protect\hypertarget{exm:unnamed-chunk-15}{}{\label{exm:unnamed-chunk-15} }
 Factor \(25x^2-16\).
 \EndKnitrBlock{example}
 
@@ -788,7 +852,7 @@ Factor \(25x^2-16\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-16}{}{\label{exm:unnamed-chunk-16} }
+\protect\hypertarget{exm:unnamed-chunk-17}{}{\label{exm:unnamed-chunk-17} }
 Factor \(32x^3y-2xy^5\) completely.
 \EndKnitrBlock{example}
 
@@ -829,7 +893,7 @@ The observation suggests to use trial and error to find the undetermined coeffic
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-18}{}{\label{exm:unnamed-chunk-18} }
+\protect\hypertarget{exm:unnamed-chunk-19}{}{\label{exm:unnamed-chunk-19} }
 Factor \(x^2+6x+8\).
 \EndKnitrBlock{example}
 
@@ -858,7 +922,7 @@ One may factor the trinomial in the following way.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-20}{}{\label{exm:unnamed-chunk-20} }
+\protect\hypertarget{exm:unnamed-chunk-21}{}{\label{exm:unnamed-chunk-21} }
 Factor \(2x^2+5x-3\).
 \EndKnitrBlock{example}
 
@@ -895,7 +959,7 @@ Some higher degree polynomials may be rewrite as a trinomial after a substitutio
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-22}{}{\label{exm:unnamed-chunk-22} }
+\protect\hypertarget{exm:unnamed-chunk-23}{}{\label{exm:unnamed-chunk-23} }
 Factor the trinomial completely.
 
 \[4x^4-x^2-3\]
@@ -931,7 +995,7 @@ One idea is to use a substitute.
 \section{Practice}\label{practice-1}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-24}{}{\label{exr:unnamed-chunk-24} }
+\protect\hypertarget{exr:unnamed-chunk-25}{}{\label{exr:unnamed-chunk-25} }
 Factor out the GCF.
 
 \begin{enumerate}
@@ -947,7 +1011,7 @@ Factor out the GCF.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-25}{}{\label{exr:unnamed-chunk-25} }
+\protect\hypertarget{exr:unnamed-chunk-26}{}{\label{exr:unnamed-chunk-26} }
 Factor by grouping.
 
 \begin{enumerate}
@@ -963,7 +1027,7 @@ Factor by grouping.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-26}{}{\label{exr:unnamed-chunk-26} }
+\protect\hypertarget{exr:unnamed-chunk-27}{}{\label{exr:unnamed-chunk-27} }
 Factor completely.
 
 \begin{enumerate}
@@ -979,7 +1043,7 @@ Factor completely.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-27}{}{\label{exr:unnamed-chunk-27} }
+\protect\hypertarget{exr:unnamed-chunk-28}{}{\label{exr:unnamed-chunk-28} }
 Factor completely.
 
 \begin{enumerate}
@@ -993,7 +1057,7 @@ Factor completely.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-28}{}{\label{exr:unnamed-chunk-28} }
+\protect\hypertarget{exr:unnamed-chunk-29}{}{\label{exr:unnamed-chunk-29} }
 Factor the trinomial.
 
 \begin{enumerate}
@@ -1009,7 +1073,7 @@ Factor the trinomial.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-29}{}{\label{exr:unnamed-chunk-29} }
+\protect\hypertarget{exr:unnamed-chunk-30}{}{\label{exr:unnamed-chunk-30} }
 Factor the trinomial.
 
 \begin{enumerate}
@@ -1025,7 +1089,7 @@ Factor the trinomial.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-30}{}{\label{exr:unnamed-chunk-30} }
+\protect\hypertarget{exr:unnamed-chunk-31}{}{\label{exr:unnamed-chunk-31} }
 Factor completely into polynomials with integer coefficients.
 
 \begin{enumerate}
@@ -1041,7 +1105,7 @@ Factor completely into polynomials with integer coefficients.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-31}{}{\label{exr:unnamed-chunk-31} }
+\protect\hypertarget{exr:unnamed-chunk-32}{}{\label{exr:unnamed-chunk-32} }
 Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.
 
 ``\(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{10~~2~~9~~15}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{4~~3~~15~~7~~2~~1}\);
@@ -1129,7 +1193,7 @@ Let \(p(x)\), \(q(x)\) be polynomials with \(q(x)\neq 0\) and \(c(x)\) be a nonz
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-32}{}{\label{exm:unnamed-chunk-32} }
+\protect\hypertarget{exm:unnamed-chunk-33}{}{\label{exm:unnamed-chunk-33} }
 Simplify \(\dfrac{x^2+4x+3}{x^2+3x+2}\).
 \EndKnitrBlock{example}
 
@@ -1152,7 +1216,7 @@ Simplify \(\dfrac{x^2+4x+3}{x^2+3x+2}\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-34}{}{\label{exm:unnamed-chunk-34} }
+\protect\hypertarget{exm:unnamed-chunk-35}{}{\label{exm:unnamed-chunk-35} }
 Simplify \(\dfrac{2x^2-x-3}{2x^2-3x-5}\).
 \EndKnitrBlock{example}
 
@@ -1179,7 +1243,7 @@ If \(p\), \(q\), \(s\), \(t\) are polynomials with \(q\neq 0\) and \(t\neq 0\), 
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-36}{}{\label{exm:unnamed-chunk-36} }
+\protect\hypertarget{exm:unnamed-chunk-37}{}{\label{exm:unnamed-chunk-37} }
 Multiply and then simplify.
 \[\dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}.\]
 \EndKnitrBlock{example}
@@ -1203,7 +1267,7 @@ Multiply and then simplify.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-38}{}{\label{exm:unnamed-chunk-38} }
+\protect\hypertarget{exm:unnamed-chunk-39}{}{\label{exm:unnamed-chunk-39} }
 Multiply and then simplify.
 \[
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}.
@@ -1229,7 +1293,7 @@ If \(p\), \(q\), \(s\), \(t\) are polynomials where \(q\neq 0\), \(s\neq 0\) and
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-40}{}{\label{exm:unnamed-chunk-40} }
+\protect\hypertarget{exm:unnamed-chunk-41}{}{\label{exm:unnamed-chunk-41} }
 Divide and then simplify.\\
 \[
 \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}.
@@ -1267,7 +1331,7 @@ If \(P\), \(Q\) and \(R\) are polynomials with \(R\neq 0\), then
 \]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-42}{}{\label{exm:unnamed-chunk-42} }
+\protect\hypertarget{exm:unnamed-chunk-43}{}{\label{exm:unnamed-chunk-43} }
 Add and simplify\\
 \[
 \dfrac{x^2+4}{x^2+3x+2}+\dfrac{5x}{x^2+3x+2}.
@@ -1294,7 +1358,7 @@ Add and simplify\\
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-44}{}{\label{exm:unnamed-chunk-44} }
+\protect\hypertarget{exm:unnamed-chunk-45}{}{\label{exm:unnamed-chunk-45} }
 Subtract and simplify \(\dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}\).
 \EndKnitrBlock{example}
 
@@ -1323,7 +1387,7 @@ What if all denominators are the same? How to make denominators the same? Reduci
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-46}{}{\label{exm:unnamed-chunk-46} }
+\protect\hypertarget{exm:unnamed-chunk-47}{}{\label{exm:unnamed-chunk-47} }
 Find the LCD of \(\dfrac{3}{x^2-x-6}\) and \(\dfrac{6}{x^2-4}\).
 \EndKnitrBlock{example}
 
@@ -1355,7 +1419,7 @@ Find the LCD of \(\dfrac{3}{x^2-x-6}\) and \(\dfrac{6}{x^2-4}\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-48}{}{\label{exm:unnamed-chunk-48} }
+\protect\hypertarget{exm:unnamed-chunk-49}{}{\label{exm:unnamed-chunk-49} }
 Subtract and simplify\\
 \[\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}\]
 \EndKnitrBlock{example}
@@ -1416,7 +1480,7 @@ A complex rational expression is equivalent to the quotient of its numerator by 
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-50}{}{\label{exm:unnamed-chunk-50} }
+\protect\hypertarget{exm:unnamed-chunk-51}{}{\label{exm:unnamed-chunk-51} }
 Simplify
 \[
 \dfrac{~\dfrac{2x-1}{x^2-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{1}{x^2-1}~}
@@ -1486,7 +1550,7 @@ Another way to simplify a complex rational expression is to multiply the LCD to 
 \end{rmdnote}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-52}{}{\label{exm:unnamed-chunk-52} }
+\protect\hypertarget{exm:unnamed-chunk-53}{}{\label{exm:unnamed-chunk-53} }
 Simplify
 \[\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}\]
 \EndKnitrBlock{example}
@@ -1520,7 +1584,7 @@ Simplify
 \section{Practice}\label{practice-2}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-54}{}{\label{exr:unnamed-chunk-54} }
+\protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55} }
 Simplify.
 
 \begin{enumerate}
@@ -1535,7 +1599,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55} }
+\protect\hypertarget{exr:unnamed-chunk-56}{}{\label{exr:unnamed-chunk-56} }
 Multiply and simplify.
 
 \begin{enumerate}
@@ -1550,7 +1614,7 @@ Multiply and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-56}{}{\label{exr:unnamed-chunk-56} }
+\protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57} }
 Divide and simplify.
 
 \begin{enumerate}
@@ -1565,7 +1629,7 @@ Divide and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57} }
+\protect\hypertarget{exr:unnamed-chunk-58}{}{\label{exr:unnamed-chunk-58} }
 Simplify.
 \[
 \frac{-x^2+11x-18}{x^2-4x+4}\div \frac{x^2-5x-36}{x^2-7x+12}\cdot \frac{2x^2+7x-4}{x^2+2x-15}
@@ -1573,7 +1637,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-58}{}{\label{exr:unnamed-chunk-58} }
+\protect\hypertarget{exr:unnamed-chunk-59}{}{\label{exr:unnamed-chunk-59} }
 Add/subtract and simplify.
 
 \begin{enumerate}
@@ -1589,7 +1653,7 @@ Add/subtract and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-59}{}{\label{exr:unnamed-chunk-59} }
+\protect\hypertarget{exr:unnamed-chunk-60}{}{\label{exr:unnamed-chunk-60} }
 Find the LCD of rational expressions.
 
 \begin{enumerate}
@@ -1603,7 +1667,7 @@ Find the LCD of rational expressions.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-60}{}{\label{exr:unnamed-chunk-60} }
+\protect\hypertarget{exr:unnamed-chunk-61}{}{\label{exr:unnamed-chunk-61} }
 Add and simplify.
 
 \begin{enumerate}
@@ -1619,7 +1683,7 @@ Add and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-61}{}{\label{exr:unnamed-chunk-61} }
+\protect\hypertarget{exr:unnamed-chunk-62}{}{\label{exr:unnamed-chunk-62} }
 Subtract and simplify.
 
 \begin{enumerate}
@@ -1635,7 +1699,7 @@ Subtract and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-62}{}{\label{exr:unnamed-chunk-62} }
+\protect\hypertarget{exr:unnamed-chunk-63}{}{\label{exr:unnamed-chunk-63} }
 Simplify.
 \[
 \frac{x+11}{7x^2-2x-5}+\frac{x-2}{x-1}-\frac{x}{7x+5}
@@ -1643,7 +1707,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-63}{}{\label{exr:unnamed-chunk-63} }
+\protect\hypertarget{exr:unnamed-chunk-64}{}{\label{exr:unnamed-chunk-64} }
 Subtract and simplify.
 \[
 \frac{x-1}{x^2-3x}+\frac{4}{x^2-2\:x-3}-\frac{1}{x\left(x+1\right)}
@@ -1651,7 +1715,7 @@ Subtract and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-64}{}{\label{exr:unnamed-chunk-64} }
+\protect\hypertarget{exr:unnamed-chunk-65}{}{\label{exr:unnamed-chunk-65} }
 Simplify.
 
 \begin{enumerate}
@@ -1665,7 +1729,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-65}{}{\label{exr:unnamed-chunk-65} }
+\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66} }
 Simplify.
 
 \begin{enumerate}
@@ -1679,7 +1743,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66} }
+\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67} }
 Simplify.
 
 \begin{enumerate}
@@ -1693,7 +1757,7 @@ Simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67} }
+\protect\hypertarget{exr:unnamed-chunk-68}{}{\label{exr:unnamed-chunk-68} }
 Tim and Jim refill their cars at the same gas station twice last month. Each time Tim got \$20 gas and Jim got 8 gallon. Suppose they refill their cars on same days. The price was \$2.5 per gallon the first time. The price on the second time changed. Can you find out who had the better average price?
 \EndKnitrBlock{exercise}
 
@@ -1748,7 +1812,7 @@ For any real number \(a\), the expression \(\sqrt[n]{a^n}\) can be simplified as
 A radical is simplified if the radicand has no perfect power factors against the radical.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-69}{}{\label{exm:unnamed-chunk-69} }
+\protect\hypertarget{exm:unnamed-chunk-70}{}{\label{exm:unnamed-chunk-70} }
 Simplify the radical expression using the definition.
 
 \begin{enumerate}
@@ -1806,7 +1870,7 @@ Rational exponents have the same properties as integral exponents:
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-71}{}{\label{exm:unnamed-chunk-71} }
+\protect\hypertarget{exm:unnamed-chunk-72}{}{\label{exm:unnamed-chunk-72} }
 Simplify the radical expression or the expression with rational exponents. \textbf{Write in radical notation}.
 
 \begin{enumerate}
@@ -1862,7 +1926,7 @@ If \(\sqrt[n]a\) and \(\sqrt[n]b\) are real numbers and \(b\neq 0\), then
 \[\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.\]
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-73}{}{\label{exm:unnamed-chunk-73} }
+\protect\hypertarget{exm:unnamed-chunk-74}{}{\label{exm:unnamed-chunk-74} }
 Simplify the expression.
 
 \begin{enumerate}
@@ -1894,7 +1958,7 @@ Simplify the expression.
 Two radicals are called \textbf{\emph{like radicals}} if they have the same index and the same radicand. We add or subtract like radicals by combining their coefficients.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-75}{}{\label{exm:unnamed-chunk-75} }
+\protect\hypertarget{exm:unnamed-chunk-76}{}{\label{exm:unnamed-chunk-76} }
 Simplify the expression.
 
 \[
@@ -1916,7 +1980,7 @@ Simplify the expression.
 Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-77}{}{\label{exm:unnamed-chunk-77} }
+\protect\hypertarget{exm:unnamed-chunk-78}{}{\label{exm:unnamed-chunk-78} }
 Simplify the expression.
 \[
 (\sqrt{2x}+2\sqrt{x})(\sqrt{2x}-3\sqrt{x}).
@@ -1943,7 +2007,7 @@ Simplify the expression.
 Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-79}{}{\label{exm:unnamed-chunk-79} }
+\protect\hypertarget{exm:unnamed-chunk-80}{}{\label{exm:unnamed-chunk-80} }
 Rationalize the denominator.
 
 \begin{enumerate}
@@ -1991,7 +2055,7 @@ If \(a=0\) and \(b\neq 0\), then the complex number \(a+b\ii=b\ii\) is called a 
 \textbf{Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-81}{}{\label{exm:unnamed-chunk-81} }
+\protect\hypertarget{exm:unnamed-chunk-82}{}{\label{exm:unnamed-chunk-82} }
 Simplify and write your answer in the form \(a+b\ii\), where \(a\) and \(b\) are real numbers and \(\ii\) is the imaginary unit.
 
 \begin{enumerate}
@@ -2049,7 +2113,7 @@ Simplify and write your answer in the form \(a+b\ii\), where \(a\) and \(b\) are
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-83}{}{\label{exm:unnamed-chunk-83} }
+\protect\hypertarget{exm:unnamed-chunk-84}{}{\label{exm:unnamed-chunk-84} }
 Evaluate the express \(z^2+\frac{z-1}{z+1}\) for \(z=1+\ii\). Write your answer in the form \(a+b\ii\).
 \EndKnitrBlock{example}
 
@@ -2072,7 +2136,7 @@ f(1+\ii)=&(1+\ii)^2+\frac{\ii}{2+\ii}\\
 \section{Practice}\label{practice-3}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-85}{}{\label{exr:unnamed-chunk-85} }
+\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86} }
 Evaluate the square root. If the square root is not a real number, state so.
 
 \begin{enumerate}
@@ -2088,7 +2152,7 @@ Evaluate the square root. If the square root is not a real number, state so.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86} }
+\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87} }
 Simplify the radical expression.
 
 \begin{enumerate}
@@ -2104,7 +2168,7 @@ Simplify the radical expression.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87} }
+\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88} }
 Simplify the radical expression.
 
 \begin{enumerate}
@@ -2120,7 +2184,7 @@ Simplify the radical expression.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88} }
+\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89} }
 Simplify the radical expression. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2136,7 +2200,7 @@ Simplify the radical expression. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89} }
+\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90} }
 Write the radical expression with rational exponents.
 
 \begin{enumerate}
@@ -2152,7 +2216,7 @@ Write the radical expression with rational exponents.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90} }
+\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91} }
 Write in radical notation and simplify.
 
 \begin{enumerate}
@@ -2168,7 +2232,7 @@ Write in radical notation and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91} }
+\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92} }
 Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.
 
 \begin{enumerate}
@@ -2184,7 +2248,7 @@ Simplify the expression. Write with radical notations. Assume all variables repr
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92} }
+\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93} }
 Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
 
 \begin{enumerate}
@@ -2200,7 +2264,7 @@ Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93} }
+\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94} }
 Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
 
 \begin{enumerate}
@@ -2216,7 +2280,7 @@ Simplify the expression. Write in radical notation. Assume \(x\) is nonnegative.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94} }
+\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95} }
 Simplify the expression. Write in radical notation. Assume all variables are nonnegative.
 
 \begin{enumerate}
@@ -2232,7 +2296,7 @@ Simplify the expression. Write in radical notation. Assume all variables are non
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95} }
+\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96} }
 Multiply and simplify.
 
 \begin{enumerate}
@@ -2248,7 +2312,7 @@ Multiply and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96} }
+\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97} }
 Simplify the radical expression. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2264,7 +2328,7 @@ Simplify the radical expression. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97} }
+\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98} }
 Divide. Assume all variables are positive. Answers must be simplified.
 
 \begin{enumerate}
@@ -2282,7 +2346,7 @@ Divide. Assume all variables are positive. Answers must be simplified.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98} }
+\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99} }
 Add or subtract, and simplify. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2298,7 +2362,7 @@ Add or subtract, and simplify. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99} }
+\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100} }
 Add or subtract, and simplify. Assume all variables are positive
 
 \begin{enumerate}
@@ -2314,7 +2378,7 @@ Add or subtract, and simplify. Assume all variables are positive
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100} }
+\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101} }
 Multiply and simplify. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2330,7 +2394,7 @@ Multiply and simplify. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101} }
+\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102} }
 Multiply and simplify. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2346,7 +2410,7 @@ Multiply and simplify. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102} }
+\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103} }
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2364,7 +2428,7 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103} }
+\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104} }
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2382,7 +2446,7 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104} }
+\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105} }
 Simplify and rationalize the denominator. Assume all variables are positive.
 
 \begin{enumerate}
@@ -2396,7 +2460,7 @@ Simplify and rationalize the denominator. Assume all variables are positive.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105} }
+\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106} }
 Add, subtract, multiply complex numbers and write your answer in the form \(a+b\ii\).
 
 \begin{enumerate}
@@ -2414,7 +2478,7 @@ Add, subtract, multiply complex numbers and write your answer in the form \(a+b\
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106} }
+\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107} }
 Add, subtract, multiply complex numbers and write your answer in the form \(a+b\ii\).
 
 \begin{enumerate}
@@ -2432,7 +2496,7 @@ Add, subtract, multiply complex numbers and write your answer in the form \(a+b\
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107} }
+\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108} }
 Divide the complex number and write your answer in the form \(a+b\ii\).
 
 \begin{enumerate}
@@ -2450,7 +2514,7 @@ Divide the complex number and write your answer in the form \(a+b\ii\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108} }
+\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109} }
 Simplify the expression.
 
 \begin{enumerate}
@@ -2468,13 +2532,13 @@ Simplify the expression.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109} }
+\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110} }
 Evaluate the function polynomial \(2x^2-3x+5\) for \(x=1-\ii\).
 Write your answer in the form \(a+b\ii\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110} }
+\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111} }
 Evaluate the polynomial \(\ii x^2-x+\frac{2}{x-1}\) for \(x=\ii-1\).
 Write your answer in the form \(a+b\ii\).
 \EndKnitrBlock{exercise}
@@ -2539,7 +2603,7 @@ When solving linear equations, arithmetic operations are enough. In general, one
 one can transform a polynomial equation into smaller degree polynomial equations. In particular, if \(ax^2+bx+c=(mx-p)(nx-q)\), then a solution of the quadratic equation \(ax^2+bx+c=0\) is a solution of either \(mx-p=0\) or \(nx-q=0\).
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-111}{}{\label{exm:unnamed-chunk-111} }
+\protect\hypertarget{exm:unnamed-chunk-112}{}{\label{exm:unnamed-chunk-112} }
 Solve the equation
 \[2x^2+5x=3.\]
 \EndKnitrBlock{example}
@@ -2576,7 +2640,7 @@ Solve the equation
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-113}{}{\label{exm:unnamed-chunk-113} }
+\protect\hypertarget{exm:unnamed-chunk-114}{}{\label{exm:unnamed-chunk-114} }
 Solve the equation
 \[(x-2)(x+3)=-4.\]
 \EndKnitrBlock{example}
@@ -2614,7 +2678,7 @@ Solve the equation
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-115}{}{\label{exm:unnamed-chunk-115} }
+\protect\hypertarget{exm:unnamed-chunk-116}{}{\label{exm:unnamed-chunk-116} }
 A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is \(10\) meters by \(16\) meters and the total area is 216 square meters, determine the width of the path.
 
 \includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-rectangular-uniform-width.png}\\
@@ -2663,7 +2727,7 @@ When solving a word problem, you may first outline what's known and what's unkno
 \section{Practice}\label{practice-4}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117} }
+\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118} }
 Solve the equation by factoring.
 
 \begin{enumerate}
@@ -2681,7 +2745,7 @@ Solve the equation by factoring.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118} }
+\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119} }
 Find all real solutions of the equation by factoring.
 
 \begin{enumerate}
@@ -2699,34 +2763,34 @@ Find all real solutions of the equation by factoring.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119} }
+\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120} }
 A paint measuring \(3\) inches by \(4\) inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is \(30\) square inches, determine the width of the frame.
 
 \includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-paint-uniform-width.png}\\
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120} }
+\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121} }
 A rectangle whose length is \(2\) meters longer than its width has an area \(8\) square meters. Find the width and the length of the rectangle.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121} }
+\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122} }
 The product of two \textbf{consecutive negative odd} numbers is \(35\). Find the numbers.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122} }
+\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123} }
 In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123} }
+\protect\hypertarget{exr:unnamed-chunk-124}{}{\label{exr:unnamed-chunk-124} }
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height \(h(t)\) of the ball from the ground after time \(t\) seconds is \(h(t)=-16t^2 + 48t + 160\) feet. How long it will take the ball to hit the ground?
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-124}{}{\label{exr:unnamed-chunk-124} }
+\protect\hypertarget{exr:unnamed-chunk-125}{}{\label{exr:unnamed-chunk-125} }
 A toy factory estimates that the demand of a particular toy is \(300 -x\) units each week if the price is \$\(x\) dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by \(R(x)=x(30-x)\)
 
@@ -2772,7 +2836,7 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
 The procedure to rewrite a trinomial as the sum of a perfect square and a constant is called \textbf{\emph{completing the square}}.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-125}{}{\label{exm:unnamed-chunk-125} }
+\protect\hypertarget{exm:unnamed-chunk-126}{}{\label{exm:unnamed-chunk-126} }
 Solve the equation \(x^2+2x-1=0\).
 \EndKnitrBlock{example}
 
@@ -2808,7 +2872,7 @@ Note that the solution can also be written as \(x=-1\pm\sqrt2\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-127}{}{\label{exm:unnamed-chunk-127} }
+\protect\hypertarget{exm:unnamed-chunk-128}{}{\label{exm:unnamed-chunk-128} }
 Solve the equation \(-2x^2+8x-9=0\).
 \EndKnitrBlock{example}
 
@@ -2871,7 +2935,7 @@ The quantity \(b^2-4ac\) is called the \textbf{\emph{discriminant}} of the quadr
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-129}{}{\label{exm:unnamed-chunk-129} }
+\protect\hypertarget{exm:unnamed-chunk-130}{}{\label{exm:unnamed-chunk-130} }
 Determine the type and the number of solutions of the equation \((x-1)(x+2)=-3\).
 \EndKnitrBlock{example}
 
@@ -2905,7 +2969,7 @@ The equation has two imaginary solutions.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-131}{}{\label{exm:unnamed-chunk-131} }
+\protect\hypertarget{exm:unnamed-chunk-132}{}{\label{exm:unnamed-chunk-132} }
 Solve the equation \(2x^2-4x+7=0\).
 \EndKnitrBlock{example}
 
@@ -2939,7 +3003,7 @@ Solve the equation \(2x^2-4x+7=0\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-133}{}{\label{exm:unnamed-chunk-133} }
+\protect\hypertarget{exm:unnamed-chunk-134}{}{\label{exm:unnamed-chunk-134} }
 Find the base and the height of a \textbf{triangle} whose base is three inches more than twice its height and whose area is \(5\) square inches. Round your answer to the nearest tenth of an inch.
 \EndKnitrBlock{example}
 
@@ -2979,7 +3043,7 @@ The height and base of the triangle are approximately \(1.6\) inches and 6.2 inc
 \section{Practice}\label{practice-5}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-135}{}{\label{exr:unnamed-chunk-135} }
+\protect\hypertarget{exr:unnamed-chunk-136}{}{\label{exr:unnamed-chunk-136} }
 Solve the quadratic equation by the square root property.
 
 \begin{enumerate}
@@ -2995,7 +3059,7 @@ Solve the quadratic equation by the square root property.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-136}{}{\label{exr:unnamed-chunk-136} }
+\protect\hypertarget{exr:unnamed-chunk-137}{}{\label{exr:unnamed-chunk-137} }
 Solve the quadratic equation by completing the square.
 
 \begin{enumerate}
@@ -3011,7 +3075,7 @@ Solve the quadratic equation by completing the square.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-137}{}{\label{exr:unnamed-chunk-137} }
+\protect\hypertarget{exr:unnamed-chunk-138}{}{\label{exr:unnamed-chunk-138} }
 Determine the number and the type of solutions of the given equation.
 
 \begin{enumerate}
@@ -3027,7 +3091,7 @@ Determine the number and the type of solutions of the given equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-138}{}{\label{exr:unnamed-chunk-138} }
+\protect\hypertarget{exr:unnamed-chunk-139}{}{\label{exr:unnamed-chunk-139} }
 Solve using the quadratic formula.
 
 \begin{enumerate}
@@ -3043,7 +3107,7 @@ Solve using the quadratic formula.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-139}{}{\label{exr:unnamed-chunk-139} }
+\protect\hypertarget{exr:unnamed-chunk-140}{}{\label{exr:unnamed-chunk-140} }
 Solve using the quadratic formula.
 
 \begin{enumerate}
@@ -3059,12 +3123,12 @@ Solve using the quadratic formula.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-140}{}{\label{exr:unnamed-chunk-140} }
+\protect\hypertarget{exr:unnamed-chunk-141}{}{\label{exr:unnamed-chunk-141} }
 A \textbf{triangle} whose area is \(7.5\) square meters has a base that is one meter less than triple the height. Find the length of its base and height. Round to the nearest hundredth of a meter.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-141}{}{\label{exr:unnamed-chunk-141} }
+\protect\hypertarget{exr:unnamed-chunk-142}{}{\label{exr:unnamed-chunk-142} }
 A \textbf{rectangular} garden whose length is \(2\) feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.
 \EndKnitrBlock{exercise}
 
@@ -3092,7 +3156,7 @@ Do you know what are those two parts?
 A \textbf{\emph{rational equation}} is an equation that contains a rational expression. One way to solve rational equations is to clear all denominators by multiplying the LCD to both sides. Note that because there are values such that the LCD has the value zero. Clearing denominator in general is not an equivalent transformation, rather a functional transformation. So don't forget to check possible extraneous solutions.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-142}{}{\label{exm:unnamed-chunk-142} }
+\protect\hypertarget{exm:unnamed-chunk-143}{}{\label{exm:unnamed-chunk-143} }
 Solve
 \[
 \dfrac{5}{x^2-9}=\dfrac{3}{x-3}-\dfrac{2}{x+3}.
@@ -3148,7 +3212,7 @@ Clearing denominator uses the strategy ``\textbf{reduction with auxiliary condit
 A \textbf{\emph{literal equation}} is an equation involving two or more variables. When solving a literal equation for one variable, other variables can be viewed as constants.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-144}{}{\label{exm:unnamed-chunk-144} }
+\protect\hypertarget{exm:unnamed-chunk-145}{}{\label{exm:unnamed-chunk-145} }
 Solve for \(x\) from the equation
 \[
 \frac{1}{x}+\frac{1}{y}=\dfrac{1}{z}.
@@ -3198,7 +3262,7 @@ Another way to solve a rational equation is to rewrite and simplify the equation
 \section{Practice}\label{practice-6}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-146}{}{\label{exr:unnamed-chunk-146} }
+\protect\hypertarget{exr:unnamed-chunk-147}{}{\label{exr:unnamed-chunk-147} }
 Solve.
 
 \begin{enumerate}
@@ -3212,7 +3276,7 @@ Solve.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-147}{}{\label{exr:unnamed-chunk-147} }
+\protect\hypertarget{exr:unnamed-chunk-148}{}{\label{exr:unnamed-chunk-148} }
 Solve.
 
 \begin{enumerate}
@@ -3226,7 +3290,7 @@ Solve.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-148}{}{\label{exr:unnamed-chunk-148} }
+\protect\hypertarget{exr:unnamed-chunk-149}{}{\label{exr:unnamed-chunk-149} }
 Solve a variable from a formula.
 
 \begin{enumerate}
@@ -3240,7 +3304,7 @@ Solve a variable from a formula.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-149}{}{\label{exr:unnamed-chunk-149} }
+\protect\hypertarget{exr:unnamed-chunk-150}{}{\label{exr:unnamed-chunk-150} }
 Solve for \(x\) from the equation.
 
 \begin{enumerate}
@@ -3254,12 +3318,12 @@ Solve for \(x\) from the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-150}{}{\label{exr:unnamed-chunk-150} }
+\protect\hypertarget{exr:unnamed-chunk-151}{}{\label{exr:unnamed-chunk-151} }
 David can row 3 miles per hour in still water. It takes him 90 minutes to row 2 miles upstream and then back. How fast is the current?
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-151}{}{\label{exr:unnamed-chunk-151} }
+\protect\hypertarget{exr:unnamed-chunk-152}{}{\label{exr:unnamed-chunk-152} }
 The size of a A0 paper is defined to have an area of 1 square meter with the longer dimension \(\sqrt[4]{2}\) meters. Successive paper sizes in the series A1, A2, A3, and so forth, are defined by halving the preceding paper size across the larger dimension. Can you find the dimension of a A4 paper?
 \EndKnitrBlock{exercise}
 
@@ -3298,7 +3362,7 @@ The goal to solve a single variable equation is to isolate the variable. When an
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-155}{}{\label{exm:unnamed-chunk-155} }
+\protect\hypertarget{exm:unnamed-chunk-156}{}{\label{exm:unnamed-chunk-156} }
 Solve the equation \(x-\sqrt{x+1}=1.\)
 \EndKnitrBlock{example}
 
@@ -3337,7 +3401,7 @@ Solve the equation \(x-\sqrt{x+1}=1.\)
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-157}{}{\label{exm:unnamed-chunk-157} }
+\protect\hypertarget{exm:unnamed-chunk-158}{}{\label{exm:unnamed-chunk-158} }
 Solve the equation \(\sqrt{x-1}-\sqrt{x-6}=1.\)
 \EndKnitrBlock{example}
 
@@ -3379,7 +3443,7 @@ Solve the equation \(\sqrt{x-1}-\sqrt{x-6}=1.\)
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-159}{}{\label{exm:unnamed-chunk-159} }
+\protect\hypertarget{exm:unnamed-chunk-160}{}{\label{exm:unnamed-chunk-160} }
 Solve the equation \(-2\sqrt[3]{x-4}=6.\)
 \EndKnitrBlock{example}
 
@@ -3413,7 +3477,7 @@ Solve the equation \(-2\sqrt[3]{x-4}=6.\)
 Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression \(\left(X^{\frac mn}\right)^{\frac nm}\). When \(m\) is even and \(n\) is odd, \(\left(X^{\frac mn}\right)^{\frac nm}=|X|\). Otherwise, \(\left(X^{\frac mn}\right)^{\frac nm}=X\).
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-161}{}{\label{exm:unnamed-chunk-161} }
+\protect\hypertarget{exm:unnamed-chunk-162}{}{\label{exm:unnamed-chunk-162} }
 Solve the equation \((x+2)^{\frac12}-(x-3)^{\frac12}=1\).
 \EndKnitrBlock{example}
 
@@ -3440,7 +3504,7 @@ So the equation has one solution \(x=7\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-163}{}{\label{exm:unnamed-chunk-163} }
+\protect\hypertarget{exm:unnamed-chunk-164}{}{\label{exm:unnamed-chunk-164} }
 Solve the equation \((x-1)^{\frac{2}{3}}=4\).
 \EndKnitrBlock{example}
 
@@ -3468,7 +3532,7 @@ So the equation has two solutions \(x=9\) and \(x=-7\).
 \section{Learn from Mistakes}\label{learn-from-mistakes}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-165}{}{\label{exm:unnamed-chunk-165} }
+\protect\hypertarget{exm:unnamed-chunk-166}{}{\label{exm:unnamed-chunk-166} }
 Can you find the mistakes made in the solution and fix it?
 
 Solve the radical equation.
@@ -3514,7 +3578,7 @@ Because squaring is not an equivalent transformation in general, the solutions o
 \section{Practice}\label{practice-7}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-167}{}{\label{exr:unnamed-chunk-167} }
+\protect\hypertarget{exr:unnamed-chunk-168}{}{\label{exr:unnamed-chunk-168} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3528,7 +3592,7 @@ Solve each radical equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-168}{}{\label{exr:unnamed-chunk-168} }
+\protect\hypertarget{exr:unnamed-chunk-169}{}{\label{exr:unnamed-chunk-169} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3542,7 +3606,7 @@ Solve each radical equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-169}{}{\label{exr:unnamed-chunk-169} }
+\protect\hypertarget{exr:unnamed-chunk-170}{}{\label{exr:unnamed-chunk-170} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3556,7 +3620,7 @@ Solve each radical equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-170}{}{\label{exr:unnamed-chunk-170} }
+\protect\hypertarget{exr:unnamed-chunk-171}{}{\label{exr:unnamed-chunk-171} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3570,7 +3634,7 @@ Solve each radical equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-171}{}{\label{exr:unnamed-chunk-171} }
+\protect\hypertarget{exr:unnamed-chunk-172}{}{\label{exr:unnamed-chunk-172} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3584,7 +3648,7 @@ Solve each radical equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-172}{}{\label{exr:unnamed-chunk-172} }
+\protect\hypertarget{exr:unnamed-chunk-173}{}{\label{exr:unnamed-chunk-173} }
 Solve each radical equation.
 
 \begin{enumerate}
@@ -3631,7 +3695,7 @@ More generally, \(|X|=|Y|\) is equivalent to \(X=Y\) or \(X=-Y\).
 The equation \(|X|=0\) is equivalent to \(X=0\).
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-173}{}{\label{exm:unnamed-chunk-173} }
+\protect\hypertarget{exm:unnamed-chunk-174}{}{\label{exm:unnamed-chunk-174} }
 Solve the equation
 \[|2x-3|=7.\]
 \EndKnitrBlock{example}
@@ -3652,7 +3716,7 @@ The solutions are \(x=-2\) or \(x=5\). In set-builder notation, the solution set
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-175}{}{\label{exm:unnamed-chunk-175} }
+\protect\hypertarget{exm:unnamed-chunk-176}{}{\label{exm:unnamed-chunk-176} }
 Solve the equation
 \[|2x-1|-3=8.\]
 \EndKnitrBlock{example}
@@ -3680,7 +3744,7 @@ The solutions are \(x=-5\) or \(x=6\). In set-builder notation, the solution set
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-177}{}{\label{exm:unnamed-chunk-177} }
+\protect\hypertarget{exm:unnamed-chunk-178}{}{\label{exm:unnamed-chunk-178} }
 Solve the equation
 \[3|2x-5|=9.\]
 \EndKnitrBlock{example}
@@ -3708,7 +3772,7 @@ The solutions are \(x=1\) or \(x=4\). In set-builder notation, the solution set 
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-179}{}{\label{exm:unnamed-chunk-179} }
+\protect\hypertarget{exm:unnamed-chunk-180}{}{\label{exm:unnamed-chunk-180} }
 Solve the equation
 \[2|1-2x|-3=7.\]
 \EndKnitrBlock{example}
@@ -3736,7 +3800,7 @@ The solutions are \(x=-2\) or \(x=3\). In set-builder notation, the solution set
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-181}{}{\label{exm:unnamed-chunk-181} }
+\protect\hypertarget{exm:unnamed-chunk-182}{}{\label{exm:unnamed-chunk-182} }
 Solve the equation
 \[|3x-2|=|x+2|.\]
 \EndKnitrBlock{example}
@@ -3758,7 +3822,7 @@ The solutions are \(x=2\) and \(x=0\). In set-builder notation, the solution set
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-183}{}{\label{exm:unnamed-chunk-183} }
+\protect\hypertarget{exm:unnamed-chunk-184}{}{\label{exm:unnamed-chunk-184} }
 Solve the equation
 \[2|1-x|=|2x+10|.\]
 \EndKnitrBlock{example}
@@ -3785,7 +3849,7 @@ The original equation only has one solution \(x=-2\). In set-builder notation, t
 \section{Practice}\label{practice-8}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-185}{}{\label{exr:unnamed-chunk-185} }
+\protect\hypertarget{exr:unnamed-chunk-186}{}{\label{exr:unnamed-chunk-186} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3799,7 +3863,7 @@ Find the solution set for the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-186}{}{\label{exr:unnamed-chunk-186} }
+\protect\hypertarget{exr:unnamed-chunk-187}{}{\label{exr:unnamed-chunk-187} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3813,7 +3877,7 @@ Find the solution set for the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-187}{}{\label{exr:unnamed-chunk-187} }
+\protect\hypertarget{exr:unnamed-chunk-188}{}{\label{exr:unnamed-chunk-188} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3827,7 +3891,7 @@ Find the solution set for the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-188}{}{\label{exr:unnamed-chunk-188} }
+\protect\hypertarget{exr:unnamed-chunk-189}{}{\label{exr:unnamed-chunk-189} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3841,7 +3905,7 @@ Find the solution set for the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-189}{}{\label{exr:unnamed-chunk-189} }
+\protect\hypertarget{exr:unnamed-chunk-190}{}{\label{exr:unnamed-chunk-190} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3855,7 +3919,7 @@ Find the solution set for the equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-190}{}{\label{exr:unnamed-chunk-190} }
+\protect\hypertarget{exr:unnamed-chunk-191}{}{\label{exr:unnamed-chunk-191} }
 Find the solution set for the equation.
 
 \begin{enumerate}
@@ -3982,7 +4046,7 @@ An inequality (equation) is solved if the unknown variable is isolated. That's w
 \end{rmdtip}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-193}{}{\label{exm:unnamed-chunk-193} }
+\protect\hypertarget{exm:unnamed-chunk-194}{}{\label{exm:unnamed-chunk-194} }
 Solve the linear inequality
 \[
 2x+4>0.
@@ -4003,7 +4067,7 @@ The solution set is \((-2, \infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-195}{}{\label{exm:unnamed-chunk-195} }
+\protect\hypertarget{exm:unnamed-chunk-196}{}{\label{exm:unnamed-chunk-196} }
 Solve the linear inequality
 \[
 -3x-4<2.
@@ -4024,7 +4088,7 @@ The solution set is \((-2, +\infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-197}{}{\label{exm:unnamed-chunk-197} }
+\protect\hypertarget{exm:unnamed-chunk-198}{}{\label{exm:unnamed-chunk-198} }
 Solve the compound linear inequality
 \[
 x+2<3\quad \text{and}\quad -2x-3<1.
@@ -4045,7 +4109,7 @@ That is \(-2<x<1\). The solution set is \((-2, 1)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-199}{}{\label{exm:unnamed-chunk-199} }
+\protect\hypertarget{exm:unnamed-chunk-200}{}{\label{exm:unnamed-chunk-200} }
 Solve the compound linear inequality\\
 \[
 -x+4>2 \quad \text{or} \quad 2x-5\geq -3.
@@ -4066,7 +4130,7 @@ That is \(x\geq 1\) or \(x< 2\). The solution set is \((-\infty, +\infty)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-201}{}{\label{exm:unnamed-chunk-201} }
+\protect\hypertarget{exm:unnamed-chunk-202}{}{\label{exm:unnamed-chunk-202} }
 Solve the compound linear inequality
 \[
 -4\leq\dfrac{2x-4}{3}<2.
@@ -4088,7 +4152,7 @@ The solution set is \([-4, 5)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-203}{}{\label{exm:unnamed-chunk-203} }
+\protect\hypertarget{exm:unnamed-chunk-204}{}{\label{exm:unnamed-chunk-204} }
 Solve the compound linear inequality
 \[
 -1\leq \dfrac{-3x+4}{2}<3.
@@ -4110,7 +4174,7 @@ The solution set is \((-\frac23, 2]\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-205}{}{\label{exm:unnamed-chunk-205} }
+\protect\hypertarget{exm:unnamed-chunk-206}{}{\label{exm:unnamed-chunk-206} }
 Suppose that \(-1\le x < 2\). Find the range of \(5-3x\). Write your answer in interval notation.
 \EndKnitrBlock{example}
 
@@ -4141,7 +4205,7 @@ Understanding the known, the unknown and the condition of the given problem is t
 \section{Practice}\label{practice-9}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-207}{}{\label{exr:unnamed-chunk-207} }
+\protect\hypertarget{exr:unnamed-chunk-208}{}{\label{exr:unnamed-chunk-208} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4155,7 +4219,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-208}{}{\label{exr:unnamed-chunk-208} }
+\protect\hypertarget{exr:unnamed-chunk-209}{}{\label{exr:unnamed-chunk-209} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4169,7 +4233,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-209}{}{\label{exr:unnamed-chunk-209} }
+\protect\hypertarget{exr:unnamed-chunk-210}{}{\label{exr:unnamed-chunk-210} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4183,7 +4247,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-210}{}{\label{exr:unnamed-chunk-210} }
+\protect\hypertarget{exr:unnamed-chunk-211}{}{\label{exr:unnamed-chunk-211} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4197,7 +4261,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-211}{}{\label{exr:unnamed-chunk-211} }
+\protect\hypertarget{exr:unnamed-chunk-212}{}{\label{exr:unnamed-chunk-212} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4211,7 +4275,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-212}{}{\label{exr:unnamed-chunk-212} }
+\protect\hypertarget{exr:unnamed-chunk-213}{}{\label{exr:unnamed-chunk-213} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 
 \begin{enumerate}
@@ -4225,7 +4289,7 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-213}{}{\label{exr:unnamed-chunk-213} }
+\protect\hypertarget{exr:unnamed-chunk-214}{}{\label{exr:unnamed-chunk-214} }
 Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \[
 \frac13x+1<\frac12(2x-3)-1
@@ -4233,7 +4297,7 @@ Solve the linear inequality. \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-214}{}{\label{exr:unnamed-chunk-214} }
+\protect\hypertarget{exr:unnamed-chunk-215}{}{\label{exr:unnamed-chunk-215} }
 Solve the compound linear inequality. \textbf{Write your answer in interval notation.}
 \[
 0\le \frac25-\frac{x+1}{3}< 1
@@ -4241,17 +4305,17 @@ Solve the compound linear inequality. \textbf{Write your answer in interval nota
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-215}{}{\label{exr:unnamed-chunk-215} }
+\protect\hypertarget{exr:unnamed-chunk-216}{}{\label{exr:unnamed-chunk-216} }
 Suppose \(0< x \le 1\). Find the range of \(-2x+1\). \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-216}{}{\label{exr:unnamed-chunk-216} }
+\protect\hypertarget{exr:unnamed-chunk-217}{}{\label{exr:unnamed-chunk-217} }
 Suppose that \(x+2y=1\) and \(1\leq x< 3\). Find the range of \(y\). \textbf{Write your answer in interval notation.}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-217}{}{\label{exr:unnamed-chunk-217} }
+\protect\hypertarget{exr:unnamed-chunk-218}{}{\label{exr:unnamed-chunk-218} }
 A toy store has a promotion ``Buy one get the second one half price'' on a certain popular toy. The sale price of the toy is \$20 each. Suppose the store makes more profit when you buy two. What do you think the store's purchasing price of the toy is?
 \EndKnitrBlock{exercise}
 
@@ -4299,7 +4363,7 @@ The domain of a function is the set of all allowed inputs. The range of a functi
 To find the value of a function define by an equation at a given number, we substitute the independent variable \(x\) by the given number and then evaluate the expression. We call the procedure evaluating a function.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-218}{}{\label{exm:unnamed-chunk-218} }
+\protect\hypertarget{exm:unnamed-chunk-219}{}{\label{exm:unnamed-chunk-219} }
 Find the indicated function value.
 
 \begin{enumerate}
@@ -4335,7 +4399,7 @@ Find the indicated function value.
 \textbf{\emph{The graph of a function}} is the graph of its ordered pairs. A graph of ordered pairs \((x,y)\) in the rectangular coordinate system defines \(y\) as a function of \(x\) if any vertical line crosses the graph at most once. This test is called the \textbf{\emph{vertical line test}}.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-220}{}{\label{exm:unnamed-chunk-220} }
+\protect\hypertarget{exm:unnamed-chunk-221}{}{\label{exm:unnamed-chunk-221} }
 Determine which of the following graphs defines a function.
 \EndKnitrBlock{example}
 
@@ -4362,7 +4426,7 @@ The domain of a graph is the set of \(x\)-coordinates of all points on the graph
 To find the coordinates of a point on a graph, one draw a horizontal line and a vertical line through the point. The number on the \(x\)-axis where the vertical line passing through is the \(x\)-coordinate of the point. The number on the \(y\)-axis where the horizontal line passing through is the \(y\)-coordinate of the point.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-222}{}{\label{exm:unnamed-chunk-222} }
+\protect\hypertarget{exm:unnamed-chunk-223}{}{\label{exm:unnamed-chunk-223} }
 Use the graph in the picture to answer the following questions.
 
 \begin{enumerate}
@@ -4420,7 +4484,7 @@ Use the graph in the picture to answer the following questions.
 \section{Practice}\label{practice-10}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-225}{}{\label{exr:unnamed-chunk-225} }
+\protect\hypertarget{exr:unnamed-chunk-226}{}{\label{exr:unnamed-chunk-226} }
 Find the indicated function values for the functions \(f(x)=-x^2+x-1\) and \(g(x)=2x-1\). Simplify your answer.
 
 \begin{enumerate}
@@ -4438,7 +4502,7 @@ Find the indicated function values for the functions \(f(x)=-x^2+x-1\) and \(g(x
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-226}{}{\label{exr:unnamed-chunk-226} }
+\protect\hypertarget{exr:unnamed-chunk-227}{}{\label{exr:unnamed-chunk-227} }
 Suppose \(g(x) = -3x + 1\).
 
 \begin{enumerate}
@@ -4452,12 +4516,12 @@ Suppose \(g(x) = -3x + 1\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-227}{}{\label{exr:unnamed-chunk-227} }
+\protect\hypertarget{exr:unnamed-chunk-228}{}{\label{exr:unnamed-chunk-228} }
 Suppose the domain of the linear function \(l(x)=1-2x\) is \((0, 1)\). Find the range of the function.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-228}{}{\label{exr:unnamed-chunk-228} }
+\protect\hypertarget{exr:unnamed-chunk-229}{}{\label{exr:unnamed-chunk-229} }
 Use the graph in the picture to answer the following questions.
 
 \begin{enumerate}
@@ -4481,7 +4545,7 @@ Use the graph in the picture to answer the following questions.
 \begin{center}\includegraphics[width=0.5\linewidth]{figs/function-exercise-ray-cubic} \end{center}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-230}{}{\label{exr:unnamed-chunk-230} }
+\protect\hypertarget{exr:unnamed-chunk-231}{}{\label{exr:unnamed-chunk-231} }
 Use the graph of the function \(f\) in the picture to answer the following questions.
 
 \begin{enumerate}
@@ -4501,7 +4565,7 @@ Use the graph of the function \(f\) in the picture to answer the following quest
 \begin{center}\includegraphics[width=0.5\linewidth]{figs/function-exercise-cubic} \end{center}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-232}{}{\label{exr:unnamed-chunk-232} }
+\protect\hypertarget{exr:unnamed-chunk-233}{}{\label{exr:unnamed-chunk-233} }
 Today Matt drove from home to school in 30 minutes. He spent 6 minutes on local streets before driving on the highway and 4 minutes on local streets towards school after getting off the highway. On local streets, his average speed is 30 miles per hour. On the highway, his average speed is 60 miles per hours.
 
 \begin{enumerate}
@@ -4568,7 +4632,7 @@ for any three distinct points \((x_1, y_1)\), \((x_2, y_2)\) and \((x_3, y_3)\) 
 \section{Equations of Linear Functions}\label{equations-of-linear-functions}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-233}{}{\label{exm:unnamed-chunk-233} }
+\protect\hypertarget{exm:unnamed-chunk-234}{}{\label{exm:unnamed-chunk-234} }
 Find the slope-intercept form equation for the linear function \(f\) such that \(f(2)=5\) and \(f(-1) = 2\).
 \EndKnitrBlock{example}
 
@@ -4591,7 +4655,7 @@ Find the slope-intercept form equation for the linear function \(f\) such that \
 \section{Graph a Linear Function by Plotting Points}\label{graph-a-linear-function-by-plotting-points}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-235}{}{\label{exm:unnamed-chunk-235} }
+\protect\hypertarget{exm:unnamed-chunk-236}{}{\label{exm:unnamed-chunk-236} }
 Sketch the graph of the linear function \(f(x)=-\frac12 x + 1\).
 \EndKnitrBlock{example}
 
@@ -4666,7 +4730,7 @@ A line that is perpendicular to the line \(y=mx+a\) has an equation \(y=-\frac1m
 \section{Finding Equations for Perpendicular or Parallel Lines}\label{finding-equations-for-perpendicular-or-parallel-lines}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-237}{}{\label{exm:unnamed-chunk-237} }
+\protect\hypertarget{exm:unnamed-chunk-238}{}{\label{exm:unnamed-chunk-238} }
 Find an equation of the line that is parallel to the line \(4x+2y=1\) and passes through the point \((-3, 1)\).
 \EndKnitrBlock{example}
 
@@ -4693,7 +4757,7 @@ Find an equation of the line that is parallel to the line \(4x+2y=1\) and passes
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-239}{}{\label{exm:unnamed-chunk-239} }
+\protect\hypertarget{exm:unnamed-chunk-240}{}{\label{exm:unnamed-chunk-240} }
 Find an equation of the line that is perpendicular to the line \(4x-2y=1\) and passes through the point \((-2,3)\).
 \EndKnitrBlock{example}
 
@@ -4725,7 +4789,7 @@ Find an equation of the line that is perpendicular to the line \(4x-2y=1\) and p
 \section{Practice}\label{practice-11}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-241}{}{\label{exr:unnamed-chunk-241} }
+\protect\hypertarget{exr:unnamed-chunk-242}{}{\label{exr:unnamed-chunk-242} }
 Find the slope of the line passing through
 
 \begin{enumerate}
@@ -4739,32 +4803,32 @@ Find the slope of the line passing through
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-242}{}{\label{exr:unnamed-chunk-242} }
+\protect\hypertarget{exr:unnamed-chunk-243}{}{\label{exr:unnamed-chunk-243} }
 Find the point-slope form equation of the line with slope \(5\) that passes though \((-2, 1)\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-243}{}{\label{exr:unnamed-chunk-243} }
+\protect\hypertarget{exr:unnamed-chunk-244}{}{\label{exr:unnamed-chunk-244} }
 Find the point-slope form equation of the line passing thought \((3, -2)\) and \((1,4)\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-244}{}{\label{exr:unnamed-chunk-244} }
+\protect\hypertarget{exr:unnamed-chunk-245}{}{\label{exr:unnamed-chunk-245} }
 Find the slope-intercept form equation of the line passing through \((6, 3)\) and \((2, 5)\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-245}{}{\label{exr:unnamed-chunk-245} }
+\protect\hypertarget{exr:unnamed-chunk-246}{}{\label{exr:unnamed-chunk-246} }
 Determine whether the linear functions \(f(x)\) and \(h(x)\) with the following values \(f(-2)=-4\) \(f(0)=h(0)=2\) and \(h(2)=8\) define the same function. Explain your answer.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-246}{}{\label{exr:unnamed-chunk-246} }
+\protect\hypertarget{exr:unnamed-chunk-247}{}{\label{exr:unnamed-chunk-247} }
 Suppose the points \((5, -1)\) and \((2, 5)\) are on the graph of a linear function \(f\). Find \(f(-3)\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-247}{}{\label{exr:unnamed-chunk-247} }
+\protect\hypertarget{exr:unnamed-chunk-248}{}{\label{exr:unnamed-chunk-248} }
 Graph the functions.
 
 \begin{enumerate}
@@ -4778,7 +4842,7 @@ Graph the functions.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-248}{}{\label{exr:unnamed-chunk-248} }
+\protect\hypertarget{exr:unnamed-chunk-249}{}{\label{exr:unnamed-chunk-249} }
 A storage rental company charges a base fee of \$15 and \$\(x\) per day for a small cube. Suppose the cost is \$20 dollars for 10 days.
 
 \begin{enumerate}
@@ -4792,7 +4856,7 @@ A storage rental company charges a base fee of \$15 and \$\(x\) per day for a sm
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-249}{}{\label{exr:unnamed-chunk-249} }
+\protect\hypertarget{exr:unnamed-chunk-250}{}{\label{exr:unnamed-chunk-250} }
 Find an equation for each of the following two lines which pass through the same point \((-1, 2)\).\textbackslash{}
 
 \begin{enumerate}
@@ -4806,34 +4870,34 @@ Find an equation for each of the following two lines which pass through the same
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-250}{}{\label{exr:unnamed-chunk-250} }
+\protect\hypertarget{exr:unnamed-chunk-251}{}{\label{exr:unnamed-chunk-251} }
 Line \(L\) is defined by the equation \(2x-5y=-3\).
 What is the slope \(m_\parallel\) of the line that is parallel to the line \(L\)?
 What is the slope \(m_\perp\) of the line that is perpendicular to the line \(L\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-251}{}{\label{exr:unnamed-chunk-251} }
+\protect\hypertarget{exr:unnamed-chunk-252}{}{\label{exr:unnamed-chunk-252} }
 Line \(L_1\) is defined by \(3y+5x=7\). Line \(L_2\) passes through \((-1, -3)\) and \((4, -8)\). Determine whether \(L_1\) and \(L_2\) are parallel, perpendicular or neither.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-252}{}{\label{exr:unnamed-chunk-252} }
+\protect\hypertarget{exr:unnamed-chunk-253}{}{\label{exr:unnamed-chunk-253} }
 Find the point-slope form and then the slope-intercept form equations of the line parallel to \(3x-y=4\) and passing through the point \((2,-3)\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-253}{}{\label{exr:unnamed-chunk-253} }
+\protect\hypertarget{exr:unnamed-chunk-254}{}{\label{exr:unnamed-chunk-254} }
 Find the slope-intercept form equation of the line that is perpendicular to \(4y-2x+3=0\) and passing through the point \((2, -5)\)
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-254}{}{\label{exr:unnamed-chunk-254} }
+\protect\hypertarget{exr:unnamed-chunk-255}{}{\label{exr:unnamed-chunk-255} }
 The line \(L_1\) is defined \(Ax+By=3\). The line \(L_2\) is defined by the equation \(Ax+By=2\). The line \(L_3\) is defined by \(Bx-Ay=1\). Determine whether \(L_1\), \(L_2\) and \(L_3\) are parallel or perpendicular to each other.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-255}{}{\label{exr:unnamed-chunk-255} }
+\protect\hypertarget{exr:unnamed-chunk-256}{}{\label{exr:unnamed-chunk-256} }
 Use the graph of the line \(L\) to answer the following questions
 
 \begin{enumerate}
@@ -4851,7 +4915,7 @@ Use the graph of the line \(L\) to answer the following questions
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-256}{}{\label{exr:unnamed-chunk-256} }
+\protect\hypertarget{exr:unnamed-chunk-257}{}{\label{exr:unnamed-chunk-257} }
 Determine whether the points \((-3,1)\), \((-2,6)\), \((3,5)\) and \((2, 0)\) form a square. Please explain your conclusion.
 \EndKnitrBlock{exercise}
 
@@ -4912,7 +4976,7 @@ Consider the quadratic function \(f(x)=ax^2+bx+c\), \(a\neq 0\).
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-257}{}{\label{exm:unnamed-chunk-257} }
+\protect\hypertarget{exm:unnamed-chunk-258}{}{\label{exm:unnamed-chunk-258} }
 Does the function \(f(x)=2x^2-4x-6\) have a maximum or minimum? Find it.
 \EndKnitrBlock{example}
 
@@ -4937,7 +5001,7 @@ Does the function \(f(x)=2x^2-4x-6\) have a maximum or minimum? Find it.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-259}{}{\label{exm:unnamed-chunk-259} }
+\protect\hypertarget{exm:unnamed-chunk-260}{}{\label{exm:unnamed-chunk-260} }
 Consider the function \(f(x)=-x^2+3x+6\). Find values of \(x\) such that \(f(x)=2\).
 \EndKnitrBlock{example}
 
@@ -4957,7 +5021,7 @@ Consider the function \(f(x)=-x^2+3x+6\). Find values of \(x\) such that \(f(x)=
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-261}{}{\label{exm:unnamed-chunk-261} }
+\protect\hypertarget{exm:unnamed-chunk-262}{}{\label{exm:unnamed-chunk-262} }
 A quadratic function \(f\) whose the vertex is \((1, 2)\) has a \(y\)-intercept \((0, -3)\). Find the equation that defines the function.
 \EndKnitrBlock{example}
 
@@ -4985,7 +5049,7 @@ A quadratic function \(f\) whose the vertex is \((1, 2)\) has a \(y\)-intercept 
 \section{Practice}\label{practice-12}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-263}{}{\label{exr:unnamed-chunk-263} }
+\protect\hypertarget{exr:unnamed-chunk-264}{}{\label{exr:unnamed-chunk-264} }
 Sketch the graph of the quadratic functions \(f(x)=-(x-2)^2+4\) and find
 
 \begin{enumerate}
@@ -5005,7 +5069,7 @@ Sketch the graph of the quadratic functions \(f(x)=-(x-2)^2+4\) and find
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-264}{}{\label{exr:unnamed-chunk-264} }
+\protect\hypertarget{exr:unnamed-chunk-265}{}{\label{exr:unnamed-chunk-265} }
 Sketch the graph of the quadratic functions \(f(x)=x^2+2x-3\) and find
 
 \begin{enumerate}
@@ -5025,7 +5089,7 @@ Sketch the graph of the quadratic functions \(f(x)=x^2+2x-3\) and find
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-265}{}{\label{exr:unnamed-chunk-265} }
+\protect\hypertarget{exr:unnamed-chunk-266}{}{\label{exr:unnamed-chunk-266} }
 Consider the parabola in the graph.
 
 \begin{enumerate}
@@ -5047,7 +5111,7 @@ Consider the parabola in the graph.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-266}{}{\label{exr:unnamed-chunk-266} }
+\protect\hypertarget{exr:unnamed-chunk-267}{}{\label{exr:unnamed-chunk-267} }
 Consider the parabola in the graph.
 
 \begin{enumerate}
@@ -5069,23 +5133,23 @@ Consider the parabola in the graph.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-267}{}{\label{exr:unnamed-chunk-267} }
+\protect\hypertarget{exr:unnamed-chunk-268}{}{\label{exr:unnamed-chunk-268} }
 A store owner estimates that by charging \(x\) dollars each for a certain cell phone case, he can sell \(d(x)=40 - x\) phone cases each week. The revenue in dollars is \(R(x)=xd(x)\) when the selling price of a computer is \(x\), Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-268}{}{\label{exr:unnamed-chunk-268} }
+\protect\hypertarget{exr:unnamed-chunk-269}{}{\label{exr:unnamed-chunk-269} }
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height \(h(t)\) of the ball from the ground after time \(t\) seconds is \(h(t)=-16t^2 + 48t + 160\) feet. How long it will take the ball to hit the ground?
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-269}{}{\label{exr:unnamed-chunk-269} }
+\protect\hypertarget{exr:unnamed-chunk-270}{}{\label{exr:unnamed-chunk-270} }
 A ball is thrown upward from the ground with an initial velocity \(v_0\) ft/sec.~The height \(h(t)\) of the ball after \(t\) seconds is \(h(t)= -16t^2 + v_0t\). The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-270}{}{\label{exr:unnamed-chunk-270} }
+\protect\hypertarget{exr:unnamed-chunk-271}{}{\label{exr:unnamed-chunk-271} }
 A toy factory estimates that the demand of a particular toy is \(300 -x\) units each week if the price is \$\(x\) dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by \(R(x)=x(30-x)\)
 
@@ -5131,7 +5195,7 @@ Suppose there is a infinite long lever with a load 100 newton that is placed 1 m
 A \textbf{\emph{rational function}} \(f\) is defined by an equation \(f(x)=\frac{p(x)}{q(x)}\), where \(p(x)\) and \(q(x)\) are polynomials and the degree of \(q(x)\) is at least one. Since the denominator cannot be zero, the domain of \(f\) consists all real numbers except the numbers such that \(q(x)=0\)
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-271}{}{\label{exm:unnamed-chunk-271} }
+\protect\hypertarget{exm:unnamed-chunk-272}{}{\label{exm:unnamed-chunk-272} }
 Find the domain of the function \(f(x)=\frac{1}{x-1}\).
 \EndKnitrBlock{example}
 
@@ -5150,7 +5214,7 @@ Solve the equation \(x-1=0\), we get \(x=1\). Then the domain is \(\{x\mid x\neq
 \section{Practice}\label{practice-13}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-273}{}{\label{exr:unnamed-chunk-273} }
+\protect\hypertarget{exr:unnamed-chunk-274}{}{\label{exr:unnamed-chunk-274} }
 Find the domain of each function. Write in interval notation.
 
 \begin{enumerate}
@@ -5201,7 +5265,7 @@ Suppose a tsunami was caused by earthquake somewhere 10000 meters away the coast
 A \textbf{\emph{radical function}} \(f\) is defined by an equation \(f(x)=\sqrt[n]{r(x)}\), where \(r(x)\) is an algebraic expression. For example \(f(x)=\sqrt{x+1}\). When \(n\) is odd number, \(r(x)\) can be any real number. When \(n\) is even, \(r(x)\) has to be nonnegative, that is \(r(x)\geq 0\) so that \(f(x)\) is a real number.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-274}{}{\label{exm:unnamed-chunk-274} }
+\protect\hypertarget{exm:unnamed-chunk-275}{}{\label{exm:unnamed-chunk-275} }
 Find the domain of the function \(f(x)=\sqrt{x+1}\).
 \EndKnitrBlock{example}
 
@@ -5221,7 +5285,7 @@ Solve the inequality, we get \(x\geq -1\). In interval notation, the domain is
 \section{Practice}\label{practice-14}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-276}{}{\label{exr:unnamed-chunk-276} }
+\protect\hypertarget{exr:unnamed-chunk-277}{}{\label{exr:unnamed-chunk-277} }
 Find the domain of each function. Write in interval notation.
 
 \begin{enumerate}
@@ -5298,7 +5362,7 @@ After \(t\) years, the balance \(A\) in an account with a principal \(P\) and an
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-278}{}{\label{exm:unnamed-chunk-278} }
+\protect\hypertarget{exm:unnamed-chunk-279}{}{\label{exm:unnamed-chunk-279} }
 A sum of \(\$10,000\) is invested at an annual rate of \(8\%\), Find the balance, to the nearest hundredth dollar, in the account after \(5\) years if the interest is compounded
 
 \begin{enumerate}
@@ -5326,17 +5390,17 @@ A sum of \(\$10,000\) is invested at an annual rate of \(8\%\), Find the balance
 \item
   Plug the values in the formula and calculate.
 \item
-  ``Monthly'' means \(n=12\). Then
+  ``Monthly'\,' means \(n=12\). Then
   \[
    A=10000\left(1+\frac{0.08}{12}\right)^{5\cdot 12}\approx 14898.46.
    \]
 \item
-  ``Quarterly'' means \(n=4\). Then
+  ``Quarterly'\,' means \(n=4\). Then
   \[
    A=10000\left(1+\frac{0.08}{4}\right)^{5\cdot 4}\approx 14859.47.
    \]
 \item
-  ``semiannually'' means \(n=2\). Then
+  ``semiannually'\,' means \(n=2\). Then
   \[
    A=10000\left(1+\frac{0.08}{2}\right)^{5\cdot 2}\approx 14802.44.
    \]
@@ -5355,7 +5419,7 @@ In the compounded investment module, the \(\frac rn\) is an approximation of the
 \end{rmdnote}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-280}{}{\label{exm:unnamed-chunk-280} }
+\protect\hypertarget{exm:unnamed-chunk-281}{}{\label{exm:unnamed-chunk-281} }
 The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4\%.
 The predicted population is \(P(t)=0.78(1.004)^t\) billions after \(t\) years since 2015.
 To the nearest thousandth of a billion, what will the predicted population of the country be in 2030?
@@ -5376,14 +5440,14 @@ P(15)=0.78(1.004)^{15}\approx 0.828 \quad \text{billions}.
 \section{Practice}\label{practice-15}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-282}{}{\label{exr:unnamed-chunk-282} }
+\protect\hypertarget{exr:unnamed-chunk-283}{}{\label{exr:unnamed-chunk-283} }
 The value of a car is depreciating according to the formula: \(V=25000(3.2)^{-0.05x}\),
 where \(x\) is the age of the car in years.
 Find the value of the car, to the nearest dollar, when it is five years old.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-283}{}{\label{exr:unnamed-chunk-283} }
+\protect\hypertarget{exr:unnamed-chunk-284}{}{\label{exr:unnamed-chunk-284} }
 A sum of \$20,000 is invested at an annual rate of 5.5\%, Find the balance, to the nearest dollar,
 in the account after 5 years subject to
 
@@ -5398,7 +5462,7 @@ in the account after 5 years subject to
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-284}{}{\label{exr:unnamed-chunk-284} }
+\protect\hypertarget{exr:unnamed-chunk-285}{}{\label{exr:unnamed-chunk-285} }
 Sketch the graph of the function and find its range.
 
 \begin{enumerate}
@@ -5412,7 +5476,7 @@ Sketch the graph of the function and find its range.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-285}{}{\label{exr:unnamed-chunk-285} }
+\protect\hypertarget{exr:unnamed-chunk-286}{}{\label{exr:unnamed-chunk-286} }
 Use the given function to compare the values of \(f(-1.05)\), \(f(0)\) and \(f(2.4)\) and determine which value is the largest and which value is the smallest. Explain your answer.
 
 \begin{enumerate}
@@ -5480,7 +5544,7 @@ When \(b>0\) and \(b\neq 1\), and \(x>0\), we have
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-287}{}{\label{exm:unnamed-chunk-287} }
+\protect\hypertarget{exm:unnamed-chunk-288}{}{\label{exm:unnamed-chunk-288} }
 Convert between exponential and logarithmic forms.
 
 \begin{enumerate}
@@ -5511,7 +5575,7 @@ When converting between exponential and logarithmic forms, we move the base from
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-289}{}{\label{exm:unnamed-chunk-289} }
+\protect\hypertarget{exm:unnamed-chunk-290}{}{\label{exm:unnamed-chunk-290} }
 Evaluate the logarithms.
 
 \begin{enumerate}
@@ -5544,7 +5608,7 @@ The key is to rewrite the log and the power so that they have the same base.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-291}{}{\label{exm:unnamed-chunk-291} }
+\protect\hypertarget{exm:unnamed-chunk-292}{}{\label{exm:unnamed-chunk-292} }
 Find the domain of the function \(f(x)=\ln(2-3x)\).
 \EndKnitrBlock{example}
 
@@ -5576,7 +5640,7 @@ For \(M>0\), \(N>0\), \(b>0\) and \(b\neq 1\), we have
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-293}{}{\label{exm:unnamed-chunk-293} }
+\protect\hypertarget{exm:unnamed-chunk-294}{}{\label{exm:unnamed-chunk-294} }
 Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
 \EndKnitrBlock{example}
 
@@ -5593,7 +5657,7 @@ Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-295}{}{\label{exm:unnamed-chunk-295} }
+\protect\hypertarget{exm:unnamed-chunk-296}{}{\label{exm:unnamed-chunk-296} }
 Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
 \EndKnitrBlock{example}
 
@@ -5606,7 +5670,7 @@ Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-297}{}{\label{exm:unnamed-chunk-297} }
+\protect\hypertarget{exm:unnamed-chunk-298}{}{\label{exm:unnamed-chunk-298} }
 Evaluate the logarithm \(\log_34\) and round it to the nearest tenth.
 \EndKnitrBlock{example}
 
@@ -5617,7 +5681,7 @@ On most scientific calculator, there are only the common logarithmic function \t
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-299}{}{\label{exm:unnamed-chunk-299} }
+\protect\hypertarget{exm:unnamed-chunk-300}{}{\label{exm:unnamed-chunk-300} }
 Simplify the logarithmic expression
 \[
 \log_2(x^{\log 3})\log_32.
@@ -5639,7 +5703,7 @@ Simplify the logarithmic expression
 \section{Practice}\label{practice-16}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-301}{}{\label{exr:unnamed-chunk-301} }
+\protect\hypertarget{exr:unnamed-chunk-302}{}{\label{exr:unnamed-chunk-302} }
 Write each equation into equivalent exponential form.
 
 \begin{enumerate}
@@ -5657,7 +5721,7 @@ Write each equation into equivalent exponential form.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-302}{}{\label{exr:unnamed-chunk-302} }
+\protect\hypertarget{exr:unnamed-chunk-303}{}{\label{exr:unnamed-chunk-303} }
 Write each equation into equivalent logarithmic form.
 
 \begin{enumerate}
@@ -5675,7 +5739,7 @@ Write each equation into equivalent logarithmic form.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-303}{}{\label{exr:unnamed-chunk-303} }
+\protect\hypertarget{exr:unnamed-chunk-304}{}{\label{exr:unnamed-chunk-304} }
 Evaluate.
 
 \begin{enumerate}
@@ -5693,7 +5757,7 @@ Evaluate.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-304}{}{\label{exr:unnamed-chunk-304} }
+\protect\hypertarget{exr:unnamed-chunk-305}{}{\label{exr:unnamed-chunk-305} }
 Evaluate.
 
 \begin{enumerate}
@@ -5711,12 +5775,12 @@ Evaluate.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-305}{}{\label{exr:unnamed-chunk-305} }
+\protect\hypertarget{exr:unnamed-chunk-306}{}{\label{exr:unnamed-chunk-306} }
 Find the domain of the function \(f(x)=\log(x-5)\). Write in interval notation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-306}{}{\label{exr:unnamed-chunk-306} }
+\protect\hypertarget{exr:unnamed-chunk-307}{}{\label{exr:unnamed-chunk-307} }
 Sketch the graph of each function and find its range.
 
 \begin{enumerate}
@@ -5730,7 +5794,7 @@ Sketch the graph of each function and find its range.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-307}{}{\label{exr:unnamed-chunk-307} }
+\protect\hypertarget{exr:unnamed-chunk-308}{}{\label{exr:unnamed-chunk-308} }
 Expand the logarithm and simplify.
 
 \begin{enumerate}
@@ -5748,7 +5812,7 @@ Expand the logarithm and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-308}{}{\label{exr:unnamed-chunk-308} }
+\protect\hypertarget{exr:unnamed-chunk-309}{}{\label{exr:unnamed-chunk-309} }
 Expand the logarithm and simplify.
 
 \begin{enumerate}
@@ -5764,7 +5828,7 @@ Expand the logarithm and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-309}{}{\label{exr:unnamed-chunk-309} }
+\protect\hypertarget{exr:unnamed-chunk-310}{}{\label{exr:unnamed-chunk-310} }
 Write as a single logarithm.
 
 \begin{enumerate}
@@ -5780,7 +5844,7 @@ Write as a single logarithm.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-310}{}{\label{exr:unnamed-chunk-310} }
+\protect\hypertarget{exr:unnamed-chunk-311}{}{\label{exr:unnamed-chunk-311} }
 Write as a single logarithm.
 
 \begin{enumerate}
@@ -5796,7 +5860,7 @@ Write as a single logarithm.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-311}{}{\label{exr:unnamed-chunk-311} }
+\protect\hypertarget{exr:unnamed-chunk-312}{}{\label{exr:unnamed-chunk-312} }
 Evaluate the logarithm and round it to the nearest hundredth.
 
 \begin{enumerate}
@@ -5814,7 +5878,7 @@ Evaluate the logarithm and round it to the nearest hundredth.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-312}{}{\label{exr:unnamed-chunk-312} }
+\protect\hypertarget{exr:unnamed-chunk-313}{}{\label{exr:unnamed-chunk-313} }
 Simplify the logarithmic expression
 \[
 \frac{\log_3(x^2)\log_y\sqrt{3}}{\log x}.
@@ -5854,7 +5918,7 @@ A cup of coffee is brewed with a temperature 195°F and placed in a room with th
 To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-313}{}{\label{exm:unnamed-chunk-313} }
+\protect\hypertarget{exm:unnamed-chunk-314}{}{\label{exm:unnamed-chunk-314} }
 Solve the equation \(10^{2x-1}-5=0\).
 \EndKnitrBlock{example}
 
@@ -5876,7 +5940,7 @@ Solve the equation \(10^{2x-1}-5=0\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-315}{}{\label{exm:unnamed-chunk-315} }
+\protect\hypertarget{exm:unnamed-chunk-316}{}{\label{exm:unnamed-chunk-316} }
 Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
 \EndKnitrBlock{example}
 
@@ -5903,7 +5967,7 @@ Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
 \section{Solving Compound Interest Model}\label{solving-compound-interest-model}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-317}{}{\label{exm:unnamed-chunk-317} }
+\protect\hypertarget{exm:unnamed-chunk-318}{}{\label{exm:unnamed-chunk-318} }
 A check of \$5000 was deposited in a savings account with an annual interest rate \(6\%\) which is compounded monthly. How many years will it take for the money to raise by 20\%?
 \EndKnitrBlock{example}
 
@@ -5943,7 +6007,7 @@ When solving exponential and logarithmic equations, you may also use the one-to-
 \section{Practice}\label{practice-17}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-319}{}{\label{exr:unnamed-chunk-319} }
+\protect\hypertarget{exr:unnamed-chunk-320}{}{\label{exr:unnamed-chunk-320} }
 Solve the exponential equation.
 
 \begin{enumerate}
@@ -5957,7 +6021,7 @@ Solve the exponential equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-320}{}{\label{exr:unnamed-chunk-320} }
+\protect\hypertarget{exr:unnamed-chunk-321}{}{\label{exr:unnamed-chunk-321} }
 Solve the exponential equation.
 
 \begin{enumerate}
@@ -5971,7 +6035,7 @@ Solve the exponential equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-321}{}{\label{exr:unnamed-chunk-321} }
+\protect\hypertarget{exr:unnamed-chunk-322}{}{\label{exr:unnamed-chunk-322} }
 Solve the logarithmic equation.
 
 \begin{enumerate}
@@ -5985,7 +6049,7 @@ Solve the logarithmic equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-322}{}{\label{exr:unnamed-chunk-322} }
+\protect\hypertarget{exr:unnamed-chunk-323}{}{\label{exr:unnamed-chunk-323} }
 Solve the logarithmic equation.
 
 \begin{enumerate}
@@ -5999,7 +6063,7 @@ Solve the logarithmic equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-323}{}{\label{exr:unnamed-chunk-323} }
+\protect\hypertarget{exr:unnamed-chunk-324}{}{\label{exr:unnamed-chunk-324} }
 For the given function, find values of \(x\) satisfying the given equation.
 
 \begin{enumerate}
@@ -6013,7 +6077,7 @@ For the given function, find values of \(x\) satisfying the given equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-324}{}{\label{exr:unnamed-chunk-324} }
+\protect\hypertarget{exr:unnamed-chunk-325}{}{\label{exr:unnamed-chunk-325} }
 Find intersections of the given pairs of curves.
 
 \begin{enumerate}
@@ -6027,12 +6091,12 @@ Find intersections of the given pairs of curves.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-325}{}{\label{exr:unnamed-chunk-325} }
+\protect\hypertarget{exr:unnamed-chunk-326}{}{\label{exr:unnamed-chunk-326} }
 Using the formula \(A=P(1+\frac rn)^{nt}\) to determine how many years, to the nearest hundredth, it will take to double an investment \$20,000 at the interest rate 5\% compounded monthly.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-326}{}{\label{exr:unnamed-chunk-326} }
+\protect\hypertarget{exr:unnamed-chunk-327}{}{\label{exr:unnamed-chunk-327} }
 Newton's Law of Cooling states that the temperature \(T\) of an object at any time \(t\) satisfying the equation \(T=T_s+(T_0-T_s)e^{-rt}\),
 where \(T_s\) is the the temperature of the surrounding environment,
 \(T_0\) is the initial temperature of the object,
@@ -6041,9 +6105,5 @@ which is in units of \({\displaystyle \text{time}^{-1}}\).
 In a room with a temperature of \(22 ^\circ C\), a cup of tea of \(97 ^\circ C\) was freshly brewed.
 Suppose that \(r=\ln 5/20~~\text{minute}^{-1}\). In how many minutes, the temperature of the tea will be \(37 ^\circ C\)?
 \EndKnitrBlock{exercise}
-% 参考文献
-
-
-% 插入 after_body.tex
 
 \end{document}

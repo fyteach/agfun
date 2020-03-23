@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 9 Absolute Value Equations | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 9 Absolute Value Equations | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="radical-equations.html"/>
 <link rel="next" href="linear-inequalities.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,21 +445,20 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="absolute-value-equations" class="section level1">
+<div id="absolute-value-equations" class="section level1" number="9">
 <h1><span class="header-section-number">Topic 9</span> Absolute Value Equations</h1>
-<div id="the-direction-of-a-number" class="section level2">
+<div id="the-direction-of-a-number" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> The Direction of a Number</h2>
 <div class="rmdthink">
 <p>Can you determine the value of the expression <span class="math inline">\(\dfrac{|x|}{x}\)</span> for all nonzero real number <span class="math inline">\(x\)</span> and explain the meaning of the value?</p>
 </div>
 </div>
-<div id="properties-of-absolute-values" class="section level2">
+<div id="properties-of-absolute-values" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Properties of Absolute Values</h2>
 <p>The <strong><em>absolute value</em></strong> of a real number <span class="math inline">\(a\)</span>, denoted by <span class="math inline">\(|a|\)</span>, is the distance from <span class="math inline">\(0\)</span> to <span class="math inline">\(a\)</span> on the number line. In particular, <span class="math inline">\(|a|\)</span> is always greater than or equal to <span class="math inline">\(0\)</span>, that is <span class="math inline">\(|a|\geq 0\)</span>. Absolute values satisfy the following properties:
 <span class="math display">\[
 |-a|=|a|, \quad |ab|=|a||b| \quad \text{and} \quad \left|\frac{a}{b}\right|=\frac{|a|}{|b|}.
 \]</span></p>
-
 <p>An absolute value equation may be rewritten as <span class="math inline">\(|X|=c\)</span>, where <span class="math inline">\(X\)</span> represents an algebraic expression.</p>
 <p>If <span class="math inline">\(c\)</span> is <strong>positive</strong>, then the equation <span class="math inline">\(|X|=c\)</span> is equivalent to {<span class="math inline">\(X=c\)</span>or <span class="math inline">\(X=-c\)</span>.}</p>
 <p>If <span class="math inline">\(c\)</span> is <strong>negative</strong>, then the solution set of <span class="math inline">\(|X|=c\)</span> is <strong>empty</strong>.
@@ -431,11 +467,10 @@ An <strong><em>empty set</em></strong> is denoted by <span class="math inline">\
 <p>The equation <span class="math inline">\(|X|=0\)</span> is equivalent to <span class="math inline">\(X=0\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-173" class="example"><strong>Example 9.1  </strong></span>
+<p><span id="exm:unnamed-chunk-174" class="example"><strong>Example 9.1  </strong></span>
 Solve the equation
 <span class="math display">\[|2x-3|=7.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -451,13 +486,11 @@ Solve the equation
 <p>The solutions are <span class="math inline">\(x=-2\)</span> or <span class="math inline">\(x=5\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2, 5\}\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-175" class="example"><strong>Example 9.2  </strong></span>
+<p><span id="exm:unnamed-chunk-176" class="example"><strong>Example 9.2  </strong></span>
 Solve the equation
 <span class="math display">\[|2x-1|-3=8.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -477,13 +510,11 @@ Solve the equation
 <p>The solutions are <span class="math inline">\(x=-5\)</span> or <span class="math inline">\(x=6\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-5, 6\}\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-177" class="example"><strong>Example 9.3  </strong></span>
+<p><span id="exm:unnamed-chunk-178" class="example"><strong>Example 9.3  </strong></span>
 Solve the equation
 <span class="math display">\[3|2x-5|=9.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -503,13 +534,11 @@ Solve the equation
 <p>The solutions are <span class="math inline">\(x=1\)</span> or <span class="math inline">\(x=4\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{1, 4\}\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-179" class="example"><strong>Example 9.4  </strong></span>
+<p><span id="exm:unnamed-chunk-180" class="example"><strong>Example 9.4  </strong></span>
 Solve the equation
 <span class="math display">\[2|1-2x|-3=7.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -529,13 +558,11 @@ Solve the equation
 <p>The solutions are <span class="math inline">\(x=-2\)</span> or <span class="math inline">\(x=3\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2, 3\}\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-181" class="example"><strong>Example 9.5  </strong></span>
+<p><span id="exm:unnamed-chunk-182" class="example"><strong>Example 9.5  </strong></span>
 Solve the equation
 <span class="math display">\[|3x-2|=|x+2|.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -552,13 +579,11 @@ Solve the equation
 <p>The solutions are <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=0\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{0, 2\}\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-183" class="example"><strong>Example 9.6  </strong></span>
+<p><span id="exm:unnamed-chunk-184" class="example"><strong>Example 9.6  </strong></span>
 Solve the equation
 <span class="math display">\[2|1-x|=|2x+10|.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -574,14 +599,13 @@ Solve the equation
 \]</span></p>
 <p>The original equation only has one solution <span class="math inline">\(x=-2\)</span>. In set-builder notation, the solution set is <span class="math inline">\(\{-2\}\)</span>.</p>
 </div>
-
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-8" class="section level2">
+<div id="practice-8" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-185" class="exercise"><strong>Problem 9.1  </strong></span>
+<p><span id="exr:unnamed-chunk-186" class="exercise"><strong>Problem 9.1  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(|2x-1|=5\)</span></li>
@@ -589,9 +613,8 @@ Find the solution set for the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-186" class="exercise"><strong>Problem 9.2  </strong></span>
+<p><span id="exr:unnamed-chunk-187" class="exercise"><strong>Problem 9.2  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(|3x-6|+4=13\)</span></li>
@@ -599,9 +622,8 @@ Find the solution set for the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-187" class="exercise"><strong>Problem 9.3  </strong></span>
+<p><span id="exr:unnamed-chunk-188" class="exercise"><strong>Problem 9.3  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(|5x-10|+6=6\)</span></li>
@@ -609,9 +631,8 @@ Find the solution set for the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-188" class="exercise"><strong>Problem 9.4  </strong></span>
+<p><span id="exr:unnamed-chunk-189" class="exercise"><strong>Problem 9.4  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(3|5x - 2|-4 = 8\)</span></li>
@@ -619,9 +640,8 @@ Find the solution set for the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-189" class="exercise"><strong>Problem 9.5  </strong></span>
+<p><span id="exr:unnamed-chunk-190" class="exercise"><strong>Problem 9.5  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(|5x-12|=|3x-4|\)</span></li>
@@ -629,16 +649,14 @@ Find the solution set for the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-190" class="exercise"><strong>Problem 9.6  </strong></span>
+<p><span id="exr:unnamed-chunk-191" class="exercise"><strong>Problem 9.6  </strong></span>
 Find the solution set for the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(|2x-1|=5-x\)</span></li>
 <li><span class="math inline">\(-2x=|x+3|\)</span></li>
 </ol>
 </div>
-
 
 </div>
 </div>

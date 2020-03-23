@@ -1,10 +1,10 @@
 bookdown::gitbook:
   includes:
-    in_header: html/folding-solutions.html
+    in_header: [html/folding-solutions.html, html/licenseMessage.html]
     before_body: html/math-shortcuts.html 
   split_by: chapter
   toc_depth: 1
-  css: css/style.css
+  css: [css/style.css, css/licenseInfo.css]
   config:
     toc:
       before: |
@@ -21,11 +21,11 @@ bookdown::gitbook:
 
 bookdown::pdf_book:
   includes:
-    in_header: latex/preamble.tex
+    in_header: [latex/preamble.tex, latex/titlepage.tex]
     # before_body: latex/before_body.tex
   latex_engine: xelatex
   # citation_package: natbib
   keep_tex: yes
   toc_depth: 1
-  template: latex/template.tex
+  # template: latex/template.tex
   pandoc_args: ["--top-level-division=chapter", "--lua-filter=latex/lua_for_latex.lua"]

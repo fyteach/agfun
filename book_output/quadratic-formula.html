@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="solving-polynomial-equations-by-factoring.html"/>
 <link rel="next" href="rational-equations.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,16 +445,16 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="quadratic-formula" class="section level1">
+<div id="quadratic-formula" class="section level1" number="6">
 <h1><span class="header-section-number">Topic 6</span> Quadratic Formula</h1>
-<div id="estimate-a-square-root" class="section level2">
+<div id="estimate-a-square-root" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Estimate a Square Root</h2>
 <div class="rmdthink">
 <p>Can you estimate the irrational numbers <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(\sqrt{5}\)</span> and <span class="math inline">\(\sqrt{7}\)</span> without using a calculator?</p>
 <p>Can you estimate the square root <span class="math inline">\(\sqrt{m^2+n}\)</span>, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers?</p>
 </div>
 </div>
-<div id="completing-the-square" class="section level2">
+<div id="completing-the-square" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Completing the Square</h2>
 <p><strong>The square root property</strong>:<br />
 Suppose that <span class="math inline">\(X^2=d\)</span>. Then <span class="math inline">\(X=\sqrt{d}\)</span> or <span class="math inline">\(X=-\sqrt{d}\)</span>, or simply <span class="math inline">\(X=\pm\sqrt{d}\)</span>.</p>
@@ -432,10 +469,9 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
 <p>The procedure to rewrite a trinomial as the sum of a perfect square and a constant is called <strong><em>completing the square</em></strong>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-125" class="example"><strong>Example 6.1  </strong></span>
+<p><span id="exm:unnamed-chunk-126" class="example"><strong>Example 6.1  </strong></span>
 Solve the equation <span class="math inline">\(x^2+2x-1=0\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -462,12 +498,10 @@ Solve the equation <span class="math inline">\(x^2+2x-1=0\)</span>.</p>
 <p>Note that the solution can also be written as <span class="math inline">\(x=-1\pm\sqrt2\)</span>.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-127" class="example"><strong>Example 6.2  </strong></span>
+<p><span id="exm:unnamed-chunk-128" class="example"><strong>Example 6.2  </strong></span>
 Solve the equation <span class="math inline">\(-2x^2+8x-9=0\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -493,12 +527,11 @@ Solve the equation <span class="math inline">\(-2x^2+8x-9=0\)</span>.</p>
  \]</span></li>
 </ol>
 </div>
-
 <div class="rmdtip">
 <p>Another way to complete the square is to use the formula <span class="math inline">\(ax^2+bx+c=a(x-h)^2+f(h)\)</span>, where <span class="math inline">\(f(h)=ah^2+bh+c\)</span> is the value of the polynomial <span class="math inline">\(ax^2+bx+c\)</span> at <span class="math inline">\(x=h\)</span>.</p>
 </div>
 </div>
-<div id="the-quadratic-formula" class="section level2">
+<div id="the-quadratic-formula" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> The Quadratic Formula</h2>
 <p>Using the method of completing the square, we obtain the follow quadratic formula for the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> with <span class="math inline">\(a\neq 0\)</span>:
 <span class="math display">\[
@@ -512,10 +545,9 @@ Solve the equation <span class="math inline">\(-2x^2+8x-9=0\)</span>.</p>
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-129" class="example"><strong>Example 6.3  </strong></span>
+<p><span id="exm:unnamed-chunk-130" class="example"><strong>Example 6.3  </strong></span>
 Determine the type and the number of solutions of the equation <span class="math inline">\((x-1)(x+2)=-3\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -540,12 +572,10 @@ Determine the type and the number of solutions of the equation <span class="math
 <p>The equation has two imaginary solutions.</p>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-131" class="example"><strong>Example 6.4  </strong></span>
+<p><span id="exm:unnamed-chunk-132" class="example"><strong>Example 6.4  </strong></span>
 Solve the equation <span class="math inline">\(2x^2-4x+7=0\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -571,12 +601,10 @@ Solve the equation <span class="math inline">\(2x^2-4x+7=0\)</span>.</p>
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-133" class="example"><strong>Example 6.5  </strong></span>
+<p><span id="exm:unnamed-chunk-134" class="example"><strong>Example 6.5  </strong></span>
 Find the base and the height of a <strong>triangle</strong> whose base is three inches more than twice its height and whose area is <span class="math inline">\(5\)</span> square inches. Round your answer to the nearest tenth of an inch.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -600,14 +628,13 @@ Find the base and the height of a <strong>triangle</strong> whose base is three 
 <p>Since <span class="math inline">\(x\)</span> can not be negative, <span class="math inline">\(x=\frac{-3+\sqrt{89}}{4}\approx 1.6\)</span> and <span class="math inline">\(2x+3\approx 6.2\)</span>.
 The height and base of the triangle are approximately <span class="math inline">\(1.6\)</span> inches and 6.2 inches respectively.</p>
 </div>
-
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-5" class="section level2">
+<div id="practice-5" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-135" class="exercise"><strong>Problem 6.1  </strong></span>
+<p><span id="exr:unnamed-chunk-136" class="exercise"><strong>Problem 6.1  </strong></span>
 Solve the quadratic equation by the square root property.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(2x^2-6=0\)</span></li>
@@ -616,9 +643,8 @@ Solve the quadratic equation by the square root property.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-136" class="exercise"><strong>Problem 6.2  </strong></span>
+<p><span id="exr:unnamed-chunk-137" class="exercise"><strong>Problem 6.2  </strong></span>
 Solve the quadratic equation by completing the square.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2+x-1=0\)</span></li>
@@ -627,9 +653,8 @@ Solve the quadratic equation by completing the square.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-137" class="exercise"><strong>Problem 6.3  </strong></span>
+<p><span id="exr:unnamed-chunk-138" class="exercise"><strong>Problem 6.3  </strong></span>
 Determine the number and the type of solutions of the given equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2+8x+3=0\)</span></li>
@@ -638,9 +663,8 @@ Determine the number and the type of solutions of the given equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-138" class="exercise"><strong>Problem 6.4  </strong></span>
+<p><span id="exr:unnamed-chunk-139" class="exercise"><strong>Problem 6.4  </strong></span>
 Solve using the quadratic formula.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2+3x-7=0\)</span></li>
@@ -649,9 +673,8 @@ Solve using the quadratic formula.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-139" class="exercise"><strong>Problem 6.5  </strong></span>
+<p><span id="exr:unnamed-chunk-140" class="exercise"><strong>Problem 6.5  </strong></span>
 Solve using the quadratic formula.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\((x-1)(x+2)=3\)</span></li>
@@ -660,18 +683,15 @@ Solve using the quadratic formula.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-140" class="exercise"><strong>Problem 6.6  </strong></span>
+<p><span id="exr:unnamed-chunk-141" class="exercise"><strong>Problem 6.6  </strong></span>
 A <strong>triangle</strong> whose area is <span class="math inline">\(7.5\)</span> square meters has a base that is one meter less than triple the height. Find the length of its base and height. Round to the nearest hundredth of a meter.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-141" class="exercise"><strong>Problem 6.7  </strong></span>
+<p><span id="exr:unnamed-chunk-142" class="exercise"><strong>Problem 6.7  </strong></span>
 A <strong>rectangular</strong> garden whose length is <span class="math inline">\(2\)</span> feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.</p>
 </div>
-
 
 </div>
 </div>

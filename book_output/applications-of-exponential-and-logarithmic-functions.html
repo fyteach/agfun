@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 18 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 18 Applications of Exponential and Logarithmic Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="logarithmic-functions.html"/>
 
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,9 +445,9 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="applications-of-exponential-and-logarithmic-functions" class="section level1">
+<div id="applications-of-exponential-and-logarithmic-functions" class="section level1" number="18">
 <h1><span class="header-section-number">Topic 18</span> Applications of Exponential and Logarithmic Functions</h1>
-<div id="newtons-law-of-cooling" class="section level2">
+<div id="newtons-law-of-cooling" class="section level2" number="18.1">
 <h2><span class="header-section-number">18.1</span> Newton’s Law of Cooling</h2>
 <div class="rmdthink">
 <p>Suppose an object with an initial temperature <span class="math inline">\(T(0)\)</span> is placed in an environment with surrounding temperature <span class="math inline">\(T_{\text{env}}\)</span>. By <a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling">Newton’s Law of Cooling</a>, after <span class="math inline">\(t\)</span> minutes, the temperature of the object <span class="math inline">\(T(t)\)</span> is given by the exponential function
@@ -425,15 +462,14 @@ where <span class="math inline">\(r\)</span> is a positive constant characterist
 </ol>
 </div>
 </div>
-<div id="exponential-and-logarithmic-equations" class="section level2">
+<div id="exponential-and-logarithmic-equations" class="section level2" number="18.2">
 <h2><span class="header-section-number">18.2</span> Exponential and Logarithmic Equations</h2>
 <p>To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-313" class="example"><strong>Example 18.1  </strong></span>
+<p><span id="exm:unnamed-chunk-314" class="example"><strong>Example 18.1  </strong></span>
 Solve the equation <span class="math inline">\(10^{2x-1}-5=0\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -447,12 +483,10 @@ Solve the equation <span class="math inline">\(10^{2x-1}-5=0\)</span>.</p>
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-315" class="example"><strong>Example 18.2  </strong></span>
+<p><span id="exm:unnamed-chunk-316" class="example"><strong>Example 18.2  </strong></span>
 Solve the equation <span class="math inline">\(\log_2 x + \log_2 (x - 2) = 3\)</span>.</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -466,16 +500,14 @@ Solve the equation <span class="math inline">\(\log_2 x + \log_2 (x - 2) = 3\)</
 <li>Check proposed solutions. Both <span class="math inline">\(x\)</span> and <span class="math inline">\(x-2\)</span> has to be positive. So <span class="math inline">\(x=-2\)</span> is not a solution of the original equation. When <span class="math inline">\(x=4\)</span>, we have <span class="math inline">\(\log_24+\log_22=2+1=3\)</span>. So <span class="math inline">\(x=4\)</span> is a solution.</li>
 </ol>
 </div>
-
 </div>
-<div id="solving-compound-interest-model" class="section level2">
+<div id="solving-compound-interest-model" class="section level2" number="18.3">
 <h2><span class="header-section-number">18.3</span> Solving Compound Interest Model</h2>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-317" class="example"><strong>Example 18.3  </strong></span>
+<p><span id="exm:unnamed-chunk-318" class="example"><strong>Example 18.3  </strong></span>
 A check of $5000 was deposited in a savings account with an annual interest rate <span class="math inline">\(6\%\)</span> which is compounded monthly. How many years will it take for the money to raise by 20%?</p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -497,20 +529,19 @@ t&amp;=\log(1.2)\div\log(1+0.06\div 12)\div 12\approx 3.
 \]</span>
 So it takes about 3 years for the savings to raise by 20%.</p>
 </div>
-
 <div class="rmdnote">
 <p>When solving exponential and logarithmic equations, you may also use the one-to-one property if both sides are powers with the same base or logarithms with the same base.</p>
 </div>
 </div>
-<div id="more-applications" class="section level2">
+<div id="more-applications" class="section level2" number="18.4">
 <h2><span class="header-section-number">18.4</span> More Applications</h2>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-17" class="section level2">
+<div id="practice-17" class="section level2" number="18.5">
 <h2><span class="header-section-number">18.5</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-319" class="exercise"><strong>Problem 18.1  </strong></span>
+<p><span id="exr:unnamed-chunk-320" class="exercise"><strong>Problem 18.1  </strong></span>
 Solve the exponential equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(2^{x-1}=4\)</span></li>
@@ -518,9 +549,8 @@ Solve the exponential equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-320" class="exercise"><strong>Problem 18.2  </strong></span>
+<p><span id="exr:unnamed-chunk-321" class="exercise"><strong>Problem 18.2  </strong></span>
 Solve the exponential equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(3^{x^2-2x}=e^{-\ln3}\)</span></li>
@@ -528,9 +558,8 @@ Solve the exponential equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-321" class="exercise"><strong>Problem 18.3  </strong></span>
+<p><span id="exr:unnamed-chunk-322" class="exercise"><strong>Problem 18.3  </strong></span>
 Solve the logarithmic equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\log_5x+\log_5(4x-1)=1\)</span></li>
@@ -538,9 +567,8 @@ Solve the logarithmic equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-322" class="exercise"><strong>Problem 18.4  </strong></span>
+<p><span id="exr:unnamed-chunk-323" class="exercise"><strong>Problem 18.4  </strong></span>
 Solve the logarithmic equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\log_2(x+2)-\log_2(x-5)=3\)</span></li>
@@ -548,9 +576,8 @@ Solve the logarithmic equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-323" class="exercise"><strong>Problem 18.5  </strong></span>
+<p><span id="exr:unnamed-chunk-324" class="exercise"><strong>Problem 18.5  </strong></span>
 For the given function, find values of <span class="math inline">\(x\)</span> satisfying the given equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\log_4x-2\log_4(x+1)\)</span>,<span class="math inline">\(f(x)=-1\)</span></li>
@@ -558,9 +585,8 @@ For the given function, find values of <span class="math inline">\(x\)</span> sa
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-324" class="exercise"><strong>Problem 18.6  </strong></span>
+<p><span id="exr:unnamed-chunk-325" class="exercise"><strong>Problem 18.6  </strong></span>
 Find intersections of the given pairs of curves.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=e^{x^2}\)</span> and~ <span class="math inline">\(g(x)=e^x+12\)</span>.</li>
@@ -568,15 +594,13 @@ Find intersections of the given pairs of curves.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-325" class="exercise"><strong>Problem 18.7  </strong></span>
+<p><span id="exr:unnamed-chunk-326" class="exercise"><strong>Problem 18.7  </strong></span>
 Using the formula <span class="math inline">\(A=P(1+\frac rn)^{nt}\)</span> to determine how many years, to the nearest hundredth, it will take to double an investment $20,000 at the interest rate 5% compounded monthly.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-326" class="exercise"><strong>Problem 18.8  </strong></span>
+<p><span id="exr:unnamed-chunk-327" class="exercise"><strong>Problem 18.8  </strong></span>
 Newton’s Law of Cooling states that the temperature <span class="math inline">\(T\)</span> of an object at any time <span class="math inline">\(t\)</span> satisfying the equation <span class="math inline">\(T=T_s+(T_0-T_s)e^{-rt}\)</span>,
 where <span class="math inline">\(T_s\)</span> is the the temperature of the surrounding environment,
 <span class="math inline">\(T_0\)</span> is the initial temperature of the object,
@@ -585,7 +609,6 @@ which is in units of <span class="math inline">\({\displaystyle \text{time}^{-1}
 In a room with a temperature of <span class="math inline">\(22 ^\circ C\)</span>, a cup of tea of <span class="math inline">\(97 ^\circ C\)</span> was freshly brewed.
 Suppose that <span class="math inline">\(r=\ln 5/20~~\text{minute}^{-1}\)</span>. In how many minutes, the temperature of the tea will be <span class="math inline">\(37 ^\circ C\)</span>?</p>
 </div>
-
 
 </div>
 </div>

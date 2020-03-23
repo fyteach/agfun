@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 7 Rational Equations | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 7 Rational Equations | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="quadratic-formula.html"/>
 <link rel="next" href="radical-equations.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,9 +445,9 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="rational-equations" class="section level1">
+<div id="rational-equations" class="section level1" number="7">
 <h1><span class="header-section-number">Topic 7</span> Rational Equations</h1>
-<div id="a-problem-of-the-father-of-algebra" class="section level2">
+<div id="a-problem-of-the-father-of-algebra" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> A Problem of the Father of Algebra</h2>
 <div class="rmdthink">
 <p>The father of algebra, <a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi#Algebra">Muḥammad ibn Musa al-Khwarizmi</a>, in his book “<a href="https://archive.org/details/algebraofmohamme00khuwrich/page/44/mode/2up">Algebra</a>”, answered the following problem:</p>
@@ -420,18 +457,17 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <p>Do you know what are those two parts?</p>
 </div>
 </div>
-<div id="solving-rational-equations" class="section level2">
+<div id="solving-rational-equations" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Solving Rational Equations</h2>
 <p>A <strong><em>rational equation</em></strong> is an equation that contains a rational expression. One way to solve rational equations is to clear all denominators by multiplying the LCD to both sides. Note that because there are values such that the LCD has the value zero. Clearing denominator in general is not an equivalent transformation, rather a functional transformation. So don’t forget to check possible extraneous solutions.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-142" class="example"><strong>Example 7.1  </strong></span>
+<p><span id="exm:unnamed-chunk-143" class="example"><strong>Example 7.1  </strong></span>
 Solve
 <span class="math display">\[
 \dfrac{5}{x^2-9}=\dfrac{3}{x-3}-\dfrac{2}{x+3}.
 \]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -462,24 +498,22 @@ Multiply each rational expression in both sides by <span class="math inline">\((
 So <span class="math inline">\(x=-10\)</span> is a valid solution of the original equation.</li>
 </ol>
 </div>
-
 <div class="rmdtip">
 <p><strong>Reduction With Auxiliary Conditions</strong><br />
 Clearing denominator uses the strategy “<strong>reduction with auxiliary conditions</strong>”. The auxiliary condition used when clearing the denominators is that the LCD is non-zero. Generally, if you don’t know how to solve a problem under the given condition, you may try solve the problem by adding extra conditions first and then try to eliminate the extra conditions and/or their consequences.</p>
 </div>
 </div>
-<div id="literal-equations" class="section level2">
+<div id="literal-equations" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Literal Equations</h2>
 <p>A <strong><em>literal equation</em></strong> is an equation involving two or more variables. When solving a literal equation for one variable, other variables can be viewed as constants.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-144" class="example"><strong>Example 7.2  </strong></span>
+<p><span id="exm:unnamed-chunk-145" class="example"><strong>Example 7.2  </strong></span>
 Solve for <span class="math inline">\(x\)</span> from the equation
 <span class="math display">\[
 \frac{1}{x}+\frac{1}{y}=\dfrac{1}{z}.
 \]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -505,17 +539,16 @@ Solve for <span class="math inline">\(x\)</span> from the equation
 <li>The solution is <span class="math inline">\(x=\dfrac{yz}{y-z}\)</span> if <span class="math inline">\(y\neq z\)</span>. If <span class="math inline">\(y=z\)</span>, the equation has no solution.</li>
 </ol>
 </div>
-
 <div class="rmdnote">
 <p>Another way to solve a rational equation is to rewrite and simplify the equation into the form <span class="math inline">\(\dfrac{\text{A}}{B}=0\)</span> where <span class="math inline">\(\dfrac{A}{B}\)</span> is a <strong>reduced fraction</strong>. Then the rational equation is equivalent to the equation <span class="math inline">\(A=0\)</span>.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-6" class="section level2">
+<div id="practice-6" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-146" class="exercise"><strong>Problem 7.1  </strong></span>
+<p><span id="exr:unnamed-chunk-147" class="exercise"><strong>Problem 7.1  </strong></span>
 Solve.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac1{x+1}+\dfrac1{x-1}=\dfrac4{x^2-1}\)</span></li>
@@ -523,9 +556,8 @@ Solve.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-147" class="exercise"><strong>Problem 7.2  </strong></span>
+<p><span id="exr:unnamed-chunk-148" class="exercise"><strong>Problem 7.2  </strong></span>
 Solve.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\dfrac{2x-1}{x^2+2x-8}=\dfrac1{x-2}-\dfrac{2}{x+4}\)</span></li>
@@ -533,9 +565,8 @@ Solve.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-148" class="exercise"><strong>Problem 7.3  </strong></span>
+<p><span id="exr:unnamed-chunk-149" class="exercise"><strong>Problem 7.3  </strong></span>
 Solve a variable from a formula.</p>
 <ol style="list-style-type: decimal">
 <li>Solve for <span class="math inline">\(f\)</span> from<span class="math inline">\(\dfrac1p+\dfrac1q=\dfrac1f\)</span>.</li>
@@ -543,9 +574,8 @@ Solve a variable from a formula.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-149" class="exercise"><strong>Problem 7.4  </strong></span>
+<p><span id="exr:unnamed-chunk-150" class="exercise"><strong>Problem 7.4  </strong></span>
 Solve for <span class="math inline">\(x\)</span> from the equation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(2(x+1)^{-1}+x^{-1}=2\)</span>.</li>
@@ -553,18 +583,15 @@ Solve for <span class="math inline">\(x\)</span> from the equation.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-150" class="exercise"><strong>Problem 7.5  </strong></span>
+<p><span id="exr:unnamed-chunk-151" class="exercise"><strong>Problem 7.5  </strong></span>
 David can row 3 miles per hour in still water. It takes him 90 minutes to row 2 miles upstream and then back. How fast is the current?</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-151" class="exercise"><strong>Problem 7.6  </strong></span>
+<p><span id="exr:unnamed-chunk-152" class="exercise"><strong>Problem 7.6  </strong></span>
 The size of a A0 paper is defined to have an area of 1 square meter with the longer dimension <span class="math inline">\(\sqrt[4]{2}\)</span> meters. Successive paper sizes in the series A1, A2, A3, and so forth, are defined by halving the preceding paper size across the larger dimension. Can you find the dimension of a A4 paper?</p>
 </div>
-
 
 </div>
 </div>

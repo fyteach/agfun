@@ -8,7 +8,7 @@ description: This notebook is designed to give a concise introduction to algebra
 documentclass: elegantbook
 github-repo: fyemath/agfun
 logo: ''
-cover: figs/algebrawordcloud.pdf
+cover: 'figs/algebrawordcloud.pdf'
 site: bookdown::bookdown_site
 classoption: en,11pt
 version: '0.90'

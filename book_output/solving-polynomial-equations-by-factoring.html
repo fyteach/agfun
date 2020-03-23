@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-03-03" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="radicals-and-rational-exponents.html"/>
 <link rel="next" href="quadratic-formula.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -340,7 +341,43 @@ $(document).ready(function () {
 
 
 
+<div id="warningModal" style="display: none;">
+    <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
+            <span id="warningModalChild">The content being copied is CC BY-NC-SA 4.0 licensed:
+                <ul>
+                    <li>you may copy and redistribute the material in any medium or format;</li>
+                    <li>you may remix, transform, and build upon the material;</li>
+                    <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.</li>
+                    <li>You may not use the material for commercial purposes.</li>
+                    <li>If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+                </ul> 
+            Learn more about this license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a> </span>
+            <br>
+<span>
+    <button id="closeModal" class="btn default" style="background-color: inherit; padding: 12px 20px; font-size: 16px; display: block; width: 25%; margin: auto;">Close</button>
+</span>
+</div>
+</div>
+
+<script>
+    document.getElementById("closeModal").addEventListener("click", 
+        function(){
+            warningModal.style.display = "none";
+        }
+    );
+
+    document.body.addEventListener("copy", 
+        function(){
+            warningModal.style.display = "block";
+            warningModalSlide.style.display = null;
+        }
+    );
+</script>
+
+
+
 <link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -408,15 +445,15 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="solving-polynomial-equations-by-factoring" class="section level1">
+<div id="solving-polynomial-equations-by-factoring" class="section level1" number="5">
 <h1><span class="header-section-number">Topic 5</span> Solving Polynomial Equations by Factoring</h1>
-<div id="handshaking-problem" class="section level2">
+<div id="handshaking-problem" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Handshaking Problem</h2>
 <div class="rmdthink">
 <p>In meeting room, a group of people all shook hands with one another. In total, 15 handshakes occurred. Do you know how many people in the group?</p>
 </div>
 </div>
-<div id="properties-of-equations" class="section level2">
+<div id="properties-of-equations" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Properties of Equations</h2>
 <p>An <strong><em>equation</em></strong> is an statement that asserts an equality containing unknown variables. For example, <span class="math inline">\(2x+3=1\)</span> is an equation of the unknown variable <span class="math inline">\(x\)</span>.<br />
 Equations often contain variables other than the unknowns. Those variables, which are assumed to be known, are usually called <strong><em>constants</em></strong>, <strong><em>coefficients</em></strong> or <strong><em>parameters</em></strong>. For example, in the linear equation <span class="math inline">\(ax+b=c\)</span> of (the unknown) <span class="math inline">\(x\)</span>, the variables <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are referred as known coefficients or constants.<br />
@@ -432,7 +469,7 @@ An <strong><em>identity</em></strong> is an equation that is true for all possib
 <p>In general, one may apply any choice of a function to both sides of the equation to make a transformation. The resulting equation still has the solutions of the original equations as it solutions. However, the resulting equation may also have some extra solutions which are called <strong><em>extraneous solutions</em></strong>. For example, taking squares of both sides of the equation <span class="math inline">\(x=1\)</span> produces the equation <span class="math inline">\(x^2=1\)</span>. The new equation <span class="math inline">\(x^2=1\)</span> has two solutions <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=1\)</span>, but the original equation <span class="math inline">\(x=1\)</span> only has one solution. The solution <span class="math inline">\(x=-1\)</span> of the equation <span class="math inline">\(x^2=1\)</span> is an extraneous solution of the equation <span class="math inline">\(x=1\)</span>.</p>
 </div>
 </div>
-<div id="quadratic-equations" class="section level2">
+<div id="quadratic-equations" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Quadratic Equations</h2>
 <p>A <strong>polynomial equation</strong> is an equation that can be written in the form
 <span class="math display">\[
@@ -447,11 +484,10 @@ where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</s
 one can transform a polynomial equation into smaller degree polynomial equations. In particular, if <span class="math inline">\(ax^2+bx+c=(mx-p)(nx-q)\)</span>, then a solution of the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> is a solution of either <span class="math inline">\(mx-p=0\)</span> or <span class="math inline">\(nx-q=0\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-111" class="example"><strong>Example 5.1  </strong></span>
+<p><span id="exm:unnamed-chunk-112" class="example"><strong>Example 5.1  </strong></span>
 Solve the equation
 <span class="math display">\[2x^2+5x=3.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -479,13 +515,11 @@ Solve the equation
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-113" class="example"><strong>Example 5.2  </strong></span>
+<p><span id="exm:unnamed-chunk-114" class="example"><strong>Example 5.2  </strong></span>
 Solve the equation
 <span class="math display">\[(x-2)(x+3)=-4.\]</span></p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -513,14 +547,12 @@ Solve the equation
 </ol>
 </div>
 
-
 <div class="example">
-<p><span id="exm:unnamed-chunk-115" class="example"><strong>Example 5.3  </strong></span>
+<p><span id="exm:unnamed-chunk-116" class="example"><strong>Example 5.3  </strong></span>
 A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is <span class="math inline">\(10\)</span> meters by <span class="math inline">\(16\)</span> meters and the total area is 216 square meters, determine the width of the path.</p>
 <p><img src="figs/tikz-rectangular-uniform-width.png" style="width:30.0%" alt="rectangular garden with uniform width pass" /><br />
 </p>
 </div>
-
 
 <div class="solution">
 <p> <span class="solution"><em>Solution. </em></span> <br />
@@ -546,18 +578,17 @@ Width <span class="math inline">\(\times\)</span> Length=Total Area:
 <li>So the width of the path is <span class="math inline">\(1\)</span> meter.</li>
 </ol>
 </div>
-
 <div class="rmdtip">
 <p><strong>Understand the Problem</strong><br />
 When solving a word problem, you may first outline what’s known and what’s unknown, and restate the problem using algebraic expressions. Once you reformulated the problem algebraically, you may solve it using your mathematical knowledge.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-4" class="section level2">
+<div id="practice-4" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Practice</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-117" class="exercise"><strong>Problem 5.1  </strong></span>
+<p><span id="exr:unnamed-chunk-118" class="exercise"><strong>Problem 5.1  </strong></span>
 Solve the equation by factoring.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2-3x+2=0\)</span></li>
@@ -567,9 +598,8 @@ Solve the equation by factoring.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-118" class="exercise"><strong>Problem 5.2  </strong></span>
+<p><span id="exr:unnamed-chunk-119" class="exercise"><strong>Problem 5.2  </strong></span>
 Find all real solutions of the equation by factoring.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(4(x-2)^2-9=0\)</span></li>
@@ -579,41 +609,35 @@ Find all real solutions of the equation by factoring.</p>
 </ol>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-119" class="exercise"><strong>Problem 5.3  </strong></span>
+<p><span id="exr:unnamed-chunk-120" class="exercise"><strong>Problem 5.3  </strong></span>
 A paint measuring <span class="math inline">\(3\)</span> inches by <span class="math inline">\(4\)</span> inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is <span class="math inline">\(30\)</span> square inches, determine the width of the frame.</p>
 <p><img src="figs/tikz-paint-uniform-width.png" style="width:30.0%" alt="paint with uniform width path" /><br />
 </p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-120" class="exercise"><strong>Problem 5.4  </strong></span>
+<p><span id="exr:unnamed-chunk-121" class="exercise"><strong>Problem 5.4  </strong></span>
 A rectangle whose length is <span class="math inline">\(2\)</span> meters longer than its width has an area <span class="math inline">\(8\)</span> square meters. Find the width and the length of the rectangle.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-121" class="exercise"><strong>Problem 5.5  </strong></span>
+<p><span id="exr:unnamed-chunk-122" class="exercise"><strong>Problem 5.5  </strong></span>
 The product of two <strong>consecutive negative odd</strong> numbers is <span class="math inline">\(35\)</span>. Find the numbers.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-122" class="exercise"><strong>Problem 5.6  </strong></span>
+<p><span id="exr:unnamed-chunk-123" class="exercise"><strong>Problem 5.6  </strong></span>
 In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-123" class="exercise"><strong>Problem 5.7  </strong></span>
+<p><span id="exr:unnamed-chunk-124" class="exercise"><strong>Problem 5.7  </strong></span>
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height <span class="math inline">\(h(t)\)</span> of the ball from the ground after time <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)=-16t^2 + 48t + 160\)</span> feet. How long it will take the ball to hit the ground?</p>
 </div>
 
-
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-124" class="exercise"><strong>Problem 5.8  </strong></span>
+<p><span id="exr:unnamed-chunk-125" class="exercise"><strong>Problem 5.8  </strong></span>
 A toy factory estimates that the demand of a particular toy is <span class="math inline">\(300 -x\)</span> units each week if the price is $<span class="math inline">\(x\)</span> dollars per unit. Each week there is a fixed cost $40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by <span class="math inline">\(R(x)=x(30-x)\)</span></p>
 <ol style="list-style-type: decimal">
@@ -621,7 +645,6 @@ The weekly revenue is a function of the price given by <span class="math inline"
 <li>What the price range so the the revenue is nonnegative.</li>
 </ol>
 </div>
-
 
 </div>
 </div>
