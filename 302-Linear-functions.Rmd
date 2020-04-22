@@ -282,3 +282,21 @@ Use the graph of the line $L$ to answer the following questions
 Determine whether the points $(-3,1)$, $(-2,6)$, $(3,5)$ and $(2, 0)$ form a square. Please explain your conclusion.
 
 ```
+
+```{exercise}
+
+A tutoring center has fixed monthly costs of $5000 that covers rent, utilities, insurance, and advertising.
+The center charges $60 for each private lesson and each lesson has a variable cost of $35 to pay the
+instructor. Determine the number of private lessons that must be held for the tutoring center to make a profit.
+
+```
+
+```{exercise}
+
+In 2008, an elementary school population was 1011. By 2018 the population had grown to 1281. Assume the population changes linearly.
+
+1. Find an equation for the population $P$ of the school $t$ years after 2008.
+
+2. What would be the population of the school in 2021.
+
+```
