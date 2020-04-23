@@ -414,8 +414,11 @@ margin=1in
 % \makeatother
 
 %%%% Fix elagantbook chapter title issue.
+% \titleformat{\chapter}[\style]{\bfseries}
+% {\filcenter\LARGE\enspace\bfseries{\color{structurecolor}\IfAppendix{\appendixname}{Topic\,\,\thechapter}\enspace}}{1pt}{\bfseries\color{structurecolor}\LARGE\filcenter}[\ifdefstring{\ELEGANT@base}{hide}{}{\filcenter\base{structurecolor}{88}}]
+
 \titleformat{\chapter}[\style]{\bfseries}
-{\filcenter\LARGE\enspace\bfseries{\color{structurecolor}\IfAppendix{\appendixname}{Topic\,\,\thechapter}\enspace}}{1pt}{\bfseries\color{structurecolor}\LARGE\filcenter}[\ifdefstring{\ELEGANT@base}{hide}{}{\filcenter\base{structurecolor}{88}}]
+{\filcenter\LARGE\enspace\bfseries{\color{structurecolor}\IfAppendix{\appendixname}{Topic\,\,\thechapter}\enspace}}{1pt}{\bfseries\color{structurecolor}\LARGE\filcenter}[]
 
 \frontmatter
 
@@ -430,7 +433,7 @@ margin=1in
 
 \title{Algebra and Geometry of Elementary Functions}
 \author{Fei Ye}
-\date{2020-04-14}
+\date{2020-04-22}
 
 \let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
 \begin{document}
@@ -5132,7 +5135,7 @@ Consider the parabola in the graph.
 
 \BeginKnitrBlock{exercise}
 \protect\hypertarget{exr:unnamed-chunk-269}{}{\label{exr:unnamed-chunk-269} }
-Consider the parabola in the graph.
+Consider the graph of the function \(f\) shown in the picture.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5144,7 +5147,17 @@ Consider the parabola in the graph.
 \item
   Determine the coordinates of the vertex.
 \item
+  Find the domain of the function.
+\item
+  Find the range of the function.
+\item
   For what values of \(x\) is \(f(x)=\frac{3}{2}\).
+\item
+  Over which interval is the function \(f\) positive.
+\item
+  Over which interval is the function \(f\) decreasing.
+\item
+  Find an additional point on the graph.
 \item
   Find an equation for the function.
 \end{enumerate}
@@ -5154,22 +5167,65 @@ Consider the parabola in the graph.
 
 \BeginKnitrBlock{exercise}
 \protect\hypertarget{exr:unnamed-chunk-270}{}{\label{exr:unnamed-chunk-270} }
-A store owner estimates that by charging \(x\) dollars each for a certain cell phone case, he can sell \(d(x)=40 - x\) phone cases each week. The revenue in dollars is \(R(x)=xd(x)\) when the selling price of a computer is \(x\), Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
+Consider the quadratic functions \(g(x)=x^2-3x-4\) and find the following values or intervals
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+
+\item
+  the coordinates of all intercepts
+\item
+  the coordinates of the vertex
+\item
+  the equation and graph of the axis of symmetry
+\item
+  the domain and range in interval notation
+\item
+  the coordinates of an additional point on the graph
+\item
+  the maximum or minimum value
+\item
+  the value at which the max or min is reached
+\item
+  the interval over which the function is negative
+\item
+  the interval over which the function is positive
+\item
+  the interval over which the function is increasing.
+\end{enumerate}
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
 \protect\hypertarget{exr:unnamed-chunk-271}{}{\label{exr:unnamed-chunk-271} }
-A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height \(h(t)\) of the ball from the ground after time \(t\) seconds is \(h(t)=-16t^2 + 48t + 160\) feet. How long it will take the ball to hit the ground?
+A store owner estimates that by charging \(x\) dollars each for a certain cell phone case, he can sell \(d(x)=40 - x\) phone cases each week. The revenue in dollars is \(R(x)=xd(x)\) when the selling price of a computer is \(x\), Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
 \protect\hypertarget{exr:unnamed-chunk-272}{}{\label{exr:unnamed-chunk-272} }
+A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height \(h(t)\) of the ball from the ground after time \(t\) seconds is \(h(t)=-16t^2 + 48t + 160\) feet.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+
+\item
+  When will the toy rocket reach its maximum height? What will be the maximum height?
+\item
+  When will the toy rocket hit the ground?
+\item
+  How high above the ground will the toy rocket be after 2 seconds.
+\item
+  When will the toy rocket be 96 feet above the ground?
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-273}{}{\label{exr:unnamed-chunk-273} }
 A ball is thrown upward from the ground with an initial velocity \(v_0\) ft/sec.~The height \(h(t)\) of the ball after \(t\) seconds is \(h(t)= -16t^2 + v_0t\). The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-273}{}{\label{exr:unnamed-chunk-273} }
+\protect\hypertarget{exr:unnamed-chunk-274}{}{\label{exr:unnamed-chunk-274} }
 A toy factory estimates that the demand of a particular toy is \(300 -x\) units each week if the price is \$\(x\) dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by \(R(x)=x(30-x)\)
 
@@ -5215,7 +5271,7 @@ Suppose there is a infinite long lever with a load 100 newton that is placed 1 m
 A \textbf{\emph{rational function}} \(f\) is defined by an equation \(f(x)=\frac{p(x)}{q(x)}\), where \(p(x)\) and \(q(x)\) are polynomials and the degree of \(q(x)\) is at least one. Since the denominator cannot be zero, the domain of \(f\) consists all real numbers except the numbers such that \(q(x)=0\)
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-274}{}{\label{exm:unnamed-chunk-274} }
+\protect\hypertarget{exm:unnamed-chunk-275}{}{\label{exm:unnamed-chunk-275} }
 Find the domain of the function \(f(x)=\frac{1}{x-1}\).
 \EndKnitrBlock{example}
 
@@ -5234,7 +5290,7 @@ Solve the equation \(x-1=0\), we get \(x=1\). Then the domain is \(\{x\mid x\neq
 \section{Practice}\label{practice-13}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-276}{}{\label{exr:unnamed-chunk-276} }
+\protect\hypertarget{exr:unnamed-chunk-277}{}{\label{exr:unnamed-chunk-277} }
 Find the domain of each function. Write in interval notation.
 
 \begin{enumerate}
@@ -5285,7 +5341,7 @@ Suppose a tsunami was caused by earthquake somewhere 10000 meters away the coast
 A \textbf{\emph{radical function}} \(f\) is defined by an equation \(f(x)=\sqrt[n]{r(x)}\), where \(r(x)\) is an algebraic expression. For example \(f(x)=\sqrt{x+1}\). When \(n\) is odd number, \(r(x)\) can be any real number. When \(n\) is even, \(r(x)\) has to be nonnegative, that is \(r(x)\geq 0\) so that \(f(x)\) is a real number.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-277}{}{\label{exm:unnamed-chunk-277} }
+\protect\hypertarget{exm:unnamed-chunk-278}{}{\label{exm:unnamed-chunk-278} }
 Find the domain of the function \(f(x)=\sqrt{x+1}\).
 \EndKnitrBlock{example}
 
@@ -5305,7 +5361,7 @@ Solve the inequality, we get \(x\geq -1\). In interval notation, the domain is
 \section{Practice}\label{practice-14}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-279}{}{\label{exr:unnamed-chunk-279} }
+\protect\hypertarget{exr:unnamed-chunk-280}{}{\label{exr:unnamed-chunk-280} }
 Find the domain of each function. Write in interval notation.
 
 \begin{enumerate}
@@ -5382,7 +5438,7 @@ After \(t\) years, the balance \(A\) in an account with a principal \(P\) and an
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-281}{}{\label{exm:unnamed-chunk-281} }
+\protect\hypertarget{exm:unnamed-chunk-282}{}{\label{exm:unnamed-chunk-282} }
 A sum of \(\$10,000\) is invested at an annual rate of \(8\%\), Find the balance, to the nearest hundredth dollar, in the account after \(5\) years if the interest is compounded
 
 \begin{enumerate}
@@ -5439,7 +5495,7 @@ In the compounded investment module, the \(\frac rn\) is an approximation of the
 \end{rmdnote}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-283}{}{\label{exm:unnamed-chunk-283} }
+\protect\hypertarget{exm:unnamed-chunk-284}{}{\label{exm:unnamed-chunk-284} }
 The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4\%.
 The predicted population is \(P(t)=0.78(1.004)^t\) billions after \(t\) years since 2015.
 To the nearest thousandth of a billion, what will the predicted population of the country be in 2030?
@@ -5460,14 +5516,14 @@ P(15)=0.78(1.004)^{15}\approx 0.828 \quad \text{billions}.
 \section{Practice}\label{practice-15}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-285}{}{\label{exr:unnamed-chunk-285} }
+\protect\hypertarget{exr:unnamed-chunk-286}{}{\label{exr:unnamed-chunk-286} }
 The value of a car is depreciating according to the formula: \(V=25000(3.2)^{-0.05x}\),
 where \(x\) is the age of the car in years.
 Find the value of the car, to the nearest dollar, when it is five years old.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-286}{}{\label{exr:unnamed-chunk-286} }
+\protect\hypertarget{exr:unnamed-chunk-287}{}{\label{exr:unnamed-chunk-287} }
 A sum of \$20,000 is invested at an annual rate of 5.5\%, Find the balance, to the nearest dollar,
 in the account after 5 years subject to
 
@@ -5482,7 +5538,7 @@ in the account after 5 years subject to
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-287}{}{\label{exr:unnamed-chunk-287} }
+\protect\hypertarget{exr:unnamed-chunk-288}{}{\label{exr:unnamed-chunk-288} }
 Sketch the graph of the function and find its range.
 
 \begin{enumerate}
@@ -5496,7 +5552,7 @@ Sketch the graph of the function and find its range.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-288}{}{\label{exr:unnamed-chunk-288} }
+\protect\hypertarget{exr:unnamed-chunk-289}{}{\label{exr:unnamed-chunk-289} }
 Use the given function to compare the values of \(f(-1.05)\), \(f(0)\) and \(f(2.4)\) and determine which value is the largest and which value is the smallest. Explain your answer.
 
 \begin{enumerate}
@@ -5564,7 +5620,7 @@ When \(b>0\) and \(b\neq 1\), and \(x>0\), we have
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-290}{}{\label{exm:unnamed-chunk-290} }
+\protect\hypertarget{exm:unnamed-chunk-291}{}{\label{exm:unnamed-chunk-291} }
 Convert between exponential and logarithmic forms.
 
 \begin{enumerate}
@@ -5595,7 +5651,7 @@ When converting between exponential and logarithmic forms, we move the base from
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-292}{}{\label{exm:unnamed-chunk-292} }
+\protect\hypertarget{exm:unnamed-chunk-293}{}{\label{exm:unnamed-chunk-293} }
 Evaluate the logarithms.
 
 \begin{enumerate}
@@ -5628,7 +5684,7 @@ The key is to rewrite the log and the power so that they have the same base.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-294}{}{\label{exm:unnamed-chunk-294} }
+\protect\hypertarget{exm:unnamed-chunk-295}{}{\label{exm:unnamed-chunk-295} }
 Find the domain of the function \(f(x)=\ln(2-3x)\).
 \EndKnitrBlock{example}
 
@@ -5660,7 +5716,7 @@ For \(M>0\), \(N>0\), \(b>0\) and \(b\neq 1\), we have
 \end{enumerate}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-296}{}{\label{exm:unnamed-chunk-296} }
+\protect\hypertarget{exm:unnamed-chunk-297}{}{\label{exm:unnamed-chunk-297} }
 Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
 \EndKnitrBlock{example}
 
@@ -5677,7 +5733,7 @@ Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-298}{}{\label{exm:unnamed-chunk-298} }
+\protect\hypertarget{exm:unnamed-chunk-299}{}{\label{exm:unnamed-chunk-299} }
 Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
 \EndKnitrBlock{example}
 
@@ -5690,7 +5746,7 @@ Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-300}{}{\label{exm:unnamed-chunk-300} }
+\protect\hypertarget{exm:unnamed-chunk-301}{}{\label{exm:unnamed-chunk-301} }
 Evaluate the logarithm \(\log_34\) and round it to the nearest tenth.
 \EndKnitrBlock{example}
 
@@ -5701,7 +5757,7 @@ On most scientific calculator, there are only the common logarithmic function \t
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-302}{}{\label{exm:unnamed-chunk-302} }
+\protect\hypertarget{exm:unnamed-chunk-303}{}{\label{exm:unnamed-chunk-303} }
 Simplify the logarithmic expression
 \[
 \log_2(x^{\log 3})\log_32.
@@ -5723,7 +5779,7 @@ Simplify the logarithmic expression
 \section{Practice}\label{practice-16}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-304}{}{\label{exr:unnamed-chunk-304} }
+\protect\hypertarget{exr:unnamed-chunk-305}{}{\label{exr:unnamed-chunk-305} }
 Write each equation into equivalent exponential form.
 
 \begin{enumerate}
@@ -5741,7 +5797,7 @@ Write each equation into equivalent exponential form.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-305}{}{\label{exr:unnamed-chunk-305} }
+\protect\hypertarget{exr:unnamed-chunk-306}{}{\label{exr:unnamed-chunk-306} }
 Write each equation into equivalent logarithmic form.
 
 \begin{enumerate}
@@ -5759,7 +5815,7 @@ Write each equation into equivalent logarithmic form.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-306}{}{\label{exr:unnamed-chunk-306} }
+\protect\hypertarget{exr:unnamed-chunk-307}{}{\label{exr:unnamed-chunk-307} }
 Evaluate.
 
 \begin{enumerate}
@@ -5777,7 +5833,7 @@ Evaluate.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-307}{}{\label{exr:unnamed-chunk-307} }
+\protect\hypertarget{exr:unnamed-chunk-308}{}{\label{exr:unnamed-chunk-308} }
 Evaluate.
 
 \begin{enumerate}
@@ -5795,12 +5851,12 @@ Evaluate.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-308}{}{\label{exr:unnamed-chunk-308} }
+\protect\hypertarget{exr:unnamed-chunk-309}{}{\label{exr:unnamed-chunk-309} }
 Find the domain of the function \(f(x)=\log(x-5)\). Write in interval notation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-309}{}{\label{exr:unnamed-chunk-309} }
+\protect\hypertarget{exr:unnamed-chunk-310}{}{\label{exr:unnamed-chunk-310} }
 Sketch the graph of each function and find its range.
 
 \begin{enumerate}
@@ -5814,7 +5870,7 @@ Sketch the graph of each function and find its range.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-310}{}{\label{exr:unnamed-chunk-310} }
+\protect\hypertarget{exr:unnamed-chunk-311}{}{\label{exr:unnamed-chunk-311} }
 Expand the logarithm and simplify.
 
 \begin{enumerate}
@@ -5832,7 +5888,7 @@ Expand the logarithm and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-311}{}{\label{exr:unnamed-chunk-311} }
+\protect\hypertarget{exr:unnamed-chunk-312}{}{\label{exr:unnamed-chunk-312} }
 Expand the logarithm and simplify.
 
 \begin{enumerate}
@@ -5848,7 +5904,7 @@ Expand the logarithm and simplify.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-312}{}{\label{exr:unnamed-chunk-312} }
+\protect\hypertarget{exr:unnamed-chunk-313}{}{\label{exr:unnamed-chunk-313} }
 Write as a single logarithm.
 
 \begin{enumerate}
@@ -5864,7 +5920,7 @@ Write as a single logarithm.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-313}{}{\label{exr:unnamed-chunk-313} }
+\protect\hypertarget{exr:unnamed-chunk-314}{}{\label{exr:unnamed-chunk-314} }
 Write as a single logarithm.
 
 \begin{enumerate}
@@ -5880,7 +5936,7 @@ Write as a single logarithm.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-314}{}{\label{exr:unnamed-chunk-314} }
+\protect\hypertarget{exr:unnamed-chunk-315}{}{\label{exr:unnamed-chunk-315} }
 Evaluate the logarithm and round it to the nearest hundredth.
 
 \begin{enumerate}
@@ -5898,7 +5954,7 @@ Evaluate the logarithm and round it to the nearest hundredth.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-315}{}{\label{exr:unnamed-chunk-315} }
+\protect\hypertarget{exr:unnamed-chunk-316}{}{\label{exr:unnamed-chunk-316} }
 Simplify the logarithmic expression
 \[
 \frac{\log_3(x^2)\log_y\sqrt{3}}{\log x}.
@@ -5938,7 +5994,7 @@ A cup of coffee is brewed with a temperature 195°F and placed in a room with th
 To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-316}{}{\label{exm:unnamed-chunk-316} }
+\protect\hypertarget{exm:unnamed-chunk-317}{}{\label{exm:unnamed-chunk-317} }
 Solve the equation \(10^{2x-1}-5=0\).
 \EndKnitrBlock{example}
 
@@ -5960,7 +6016,7 @@ Solve the equation \(10^{2x-1}-5=0\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-318}{}{\label{exm:unnamed-chunk-318} }
+\protect\hypertarget{exm:unnamed-chunk-319}{}{\label{exm:unnamed-chunk-319} }
 Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
 \EndKnitrBlock{example}
 
@@ -5987,7 +6043,7 @@ Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
 \section{Solving Compound Interest Model}\label{solving-compound-interest-model}}
 
 \BeginKnitrBlock{example}
-\protect\hypertarget{exm:unnamed-chunk-320}{}{\label{exm:unnamed-chunk-320} }
+\protect\hypertarget{exm:unnamed-chunk-321}{}{\label{exm:unnamed-chunk-321} }
 A check of \$5000 was deposited in a savings account with an annual interest rate \(6\%\) which is compounded monthly. How many years will it take for the money to raise by 20\%?
 \EndKnitrBlock{example}
 
@@ -6027,7 +6083,7 @@ When solving exponential and logarithmic equations, you may also use the one-to-
 \section{Practice}\label{practice-17}}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-322}{}{\label{exr:unnamed-chunk-322} }
+\protect\hypertarget{exr:unnamed-chunk-323}{}{\label{exr:unnamed-chunk-323} }
 Solve the exponential equation.
 
 \begin{enumerate}
@@ -6041,7 +6097,7 @@ Solve the exponential equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-323}{}{\label{exr:unnamed-chunk-323} }
+\protect\hypertarget{exr:unnamed-chunk-324}{}{\label{exr:unnamed-chunk-324} }
 Solve the exponential equation.
 
 \begin{enumerate}
@@ -6055,7 +6111,7 @@ Solve the exponential equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-324}{}{\label{exr:unnamed-chunk-324} }
+\protect\hypertarget{exr:unnamed-chunk-325}{}{\label{exr:unnamed-chunk-325} }
 Solve the logarithmic equation.
 
 \begin{enumerate}
@@ -6069,7 +6125,7 @@ Solve the logarithmic equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-325}{}{\label{exr:unnamed-chunk-325} }
+\protect\hypertarget{exr:unnamed-chunk-326}{}{\label{exr:unnamed-chunk-326} }
 Solve the logarithmic equation.
 
 \begin{enumerate}
@@ -6083,7 +6139,7 @@ Solve the logarithmic equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-326}{}{\label{exr:unnamed-chunk-326} }
+\protect\hypertarget{exr:unnamed-chunk-327}{}{\label{exr:unnamed-chunk-327} }
 For the given function, find values of \(x\) satisfying the given equation.
 
 \begin{enumerate}
@@ -6097,7 +6153,7 @@ For the given function, find values of \(x\) satisfying the given equation.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-327}{}{\label{exr:unnamed-chunk-327} }
+\protect\hypertarget{exr:unnamed-chunk-328}{}{\label{exr:unnamed-chunk-328} }
 Find intersections of the given pairs of curves.
 
 \begin{enumerate}
@@ -6111,12 +6167,12 @@ Find intersections of the given pairs of curves.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-328}{}{\label{exr:unnamed-chunk-328} }
+\protect\hypertarget{exr:unnamed-chunk-329}{}{\label{exr:unnamed-chunk-329} }
 Using the formula \(A=P(1+\frac rn)^{nt}\) to determine how many years, to the nearest hundredth, it will take to double an investment \$20,000 at the interest rate 5\% compounded monthly.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}
-\protect\hypertarget{exr:unnamed-chunk-329}{}{\label{exr:unnamed-chunk-329} }
+\protect\hypertarget{exr:unnamed-chunk-330}{}{\label{exr:unnamed-chunk-330} }
 Newton's Law of Cooling states that the temperature \(T\) of an object at any time \(t\) satisfying the equation \(T=T_s+(T_0-T_s)e^{-rt}\),
 where \(T_s\) is the the temperature of the surrounding environment,
 \(T_0\) is the initial temperature of the object,

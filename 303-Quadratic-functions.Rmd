@@ -129,17 +129,37 @@ Consider the parabola in the graph.
 
 ```{exercise}
 
-Consider the parabola in the graph.
+Consider the graph of the function $f$ shown in the picture.
 
 1. Determine the coordinates of the $x$-intercepts.
 2. Determine the coordinates of the $y$-intercept.
 3. Determine the coordinates of the vertex.
-4. For what values of $x$ is $f(x)=\frac{3}{2}$.
-5. Find an equation for the function.
+4. Find the domain of the function.
+5. Find the range of the function.
+6. For what values of $x$ is $f(x)=\frac{3}{2}$.
+7. Over which interval is the function $f$ positive.
+8. Over which interval is the function $f$ decreasing.
+9. Find an additional point on the graph.
+10. Find an equation for the function.
 
 ![The graph of an open downward parabola](figs/tikz-exercise-graph-quadratic-2.png){width=60%}\
 
 ```
+
+```{exercise}
+
+Consider the quadratic functions $g(x)=x^2-3x-4$ and find the following values or intervals
+
+1. the coordinates of all intercepts
+1. the coordinates of the vertex
+1. the equation and graph of the axis of symmetry
+1. the domain and range in interval notation
+1. the coordinates of an additional point on the graph
+1. the maximum or minimum value
+1. the value at which the max or min is reached
+2. the interval over which the function is negative
+3. the interval over which the function is positive
+4. the interval over which the function is increasing.
 
 ```{exercise}
 
@@ -149,7 +169,13 @@ A store owner estimates that by charging $x$ dollars each for a certain cell pho
 
 ```{exercise}
 
-A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet. How long it will take the ball to hit the ground?
+A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet.
+
+1. When will the toy rocket reach its maximum height? What will be the maximum height?
+2. When will the toy rocket hit the ground?
+3. How high above the ground will the toy rocket be after 2 seconds.
+4. When will the toy rocket be 96 feet above the ground?
+
 
 ```
 
