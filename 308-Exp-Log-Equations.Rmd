@@ -93,8 +93,6 @@ When solving exponential and logarithmic equations, you may also use the one-to-
 
 :::
 
-## More Applications
-
 \newpage
 
 ## Practice
@@ -151,10 +149,8 @@ For the given function, find values of $x$ satisfying the given equation.
 
 Find intersections of the given pairs of curves.
 
-
-1. $f(x)=e^{x^2}$ and~ $g(x)=e^x+12$.
+1. $f(x)=e^{2x}$ and~ $g(x)=e^x+12$.
 1. $f(x)=\log_7\left(\frac12(x+2)\right)$ and~ $g(x)=1-\log_7(x-3)$
-
 
 ```
 
@@ -173,5 +169,17 @@ and $r$ is positive constant characteristic of the system,
 which is in units of ${\displaystyle \text{time}^{-1}}$.
 In a room with a temperature of $22 ^\circ C$, a cup of tea of $97 ^\circ C$ was freshly brewed.
 Suppose that $r=\ln 5/20~~\text{minute}^{-1}$. In how many minutes, the temperature of the tea will be $37 ^\circ C$?
+
+```
+
+```{exercise}
+
+A culture of bacteria began with 1000 bacteria and grows exponentially. An hour later there were 1320 bacteria. How many hours after starting will there be 2790 bacteria?
+
+```
+
+```{exercise}
+
+A type of virus started spreading. After 10 days, 580 infected cases was confirmed. The natural log of the number of confirmed cases approximately is a linear function of the number of days after the virus started spreading. The slope of this linear function is 0.28. Suppose the pattern continues. Estimate the number of infected cases after 20 days.
 
 ```
