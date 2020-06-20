@@ -6,7 +6,7 @@
 
 :::: {.twocols}
 
-::: {.left}
+::: {.pullleft}
 
 A pendulum clock is a clock that uses a pendulum, a swinging weight, as its timekeeping element. [Galileo Galilei](https://en.wikipedia.org/wiki/Galileo_Galilei) discovered in early 17th century the relation between the length $L$ of a pendulum and the period $T$ of th pendulum. For a pendulum clock, the relations is approximately determined by the following [rule of thumb formula](https://en.wikipedia.org/wiki/Pendulum_(mathematics)):
 $$
@@ -16,7 +16,7 @@ given that $L$ and $T$ are measured in meters and seconds respectively. If the p
 
 :::
 
-::: {.right style="vertical-align: middle;"}
+::: {.pullright style="vertical-align: middle;"}
 
 ```{r echo=FALSE, include=knitr::is_latex_output()}
 

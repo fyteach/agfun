@@ -14,7 +14,6 @@ classoption: en,11pt
 version: '0.90'
 ---
 
-
 ```{r remove_amsmath, include=FALSE}
 
 options(bookdown.post.latex = function(x) {

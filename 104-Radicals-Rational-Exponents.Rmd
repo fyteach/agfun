@@ -69,7 +69,7 @@ $$
 
 Rational exponents have the same properties as integral exponents:
 
-<div class="enuminline">
+<p class="enuminline">
 1. $a^m\cdot a^n=a^{m+n}$
 2. 1. $\dfrac{a^m}{a^n}=a^{m-n}$
 3. $a^{-\frac mn}=\dfrac{~1~}{~a^{\frac mn}~}$
@@ -78,7 +78,7 @@ Rational exponents have the same properties as integral exponents:
 5. $(ab)^m=a^m\cdot b^m$
 6. $\left(\dfrac ab\right)^m=\dfrac{a^m}{b^m}$
 \
-</div>
+</p>
 
 ```{example}
 

@@ -231,6 +231,34 @@ margin=1in
 
 \usepackage{multicol}
 
+\newenvironment{twocols}{
+    \begin{multicols}{2}
+}{
+    \end{multicols}
+}
+\newenvironment{threecols}{
+    \begin{multicols}{3}
+}{
+    \end{multicols}
+}
+\newenvironment{fourcols}{
+    \begin{multicols}{4}
+}{
+    \end{multicols}
+}
+
+
+\newenvironment{pullleft}{
+    \begin{minipage}{0.5\textwidth}
+}{
+\end{minipage}
+}
+\newenvironment{pullright}{
+    \begin{minipage}{0.5\textwidth}
+}{
+\end{minipage}
+}
+
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
