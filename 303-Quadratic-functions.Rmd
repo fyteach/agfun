@@ -31,13 +31,75 @@ Consider the quadratic function $f(x)=ax^2+bx+c$, $a\neq 0$.
 1. The $y$-intercept is $(0, f(0))=(0, c)$.
 1. The $x$-intercepts, if exist, are the solutions of the equation $ax^2+bx+c=0$.
 
-```{example}
+:::{example}
+
+Find the axis of symmetry and the vertex of the quadratic function $f(x)=x^2-4x+5$.
+
+:::
+
+:::{solution}
+
+1. The coefficients are $a=1$, $b=-4$ and $c=5$.
+   Then the axis of symmetry is
+   $$x=-\frac{b}{2a}=-\frac{-4}{2\cdot 1}=2.$$
+
+2. The vertex is given by 
+   $$(-\frac{b}{2a}, f(-\frac{b}{2a}))=(2, f(2))=(2, 1).$$
+
+:::
+
+:::{example}
+
+Find the axis of symmetry and the vertex of the quadratic function $f(x)=2(x-1)^2-1$.
+
+:::
+
+:::{solution}
+
+1. The equation is in the perfect square form $f(x)=a(x-h)^2+k$. In this case, $h=1$ and $k=-1$.
+   Then the axis of symmetry is
+   $$x=h=1.$$
+
+2. The vertex is given by
+   $$(h, k)=(1, -1).$$
+
+:::
+
+:::{example}
+
+Sketch the graph of the quadratic function $f(x)=x^2-2x+3$.
+
+:::
+
+:::{solution}
+
+1. The line of symmetry is
+   $$x=-\frac{b}{2a}=-\frac{-2}{2\cdot 1}=1.$$
+
+2. The vertex is
+   $$(-\frac{b}{2a}, f(-\frac{b}{2a}))=(1, f(1))=(1, 2).$$
+
+3. Since $k=f(1)>0$ and $a=1>0$, the parabola is above the $x$-axis and there is no $x$-intercept.
+
+4. The $y$-intercept is
+   $$(0, f(0))=(0, c)=(0, 3).$$
+
+5. To have a better graph, find an additional point on it, say
+   $$(2, f(2))=(2, 3).$$
+
+6. Using the above information to sketch the graph.
+
+![](figs/aParabola.png)
+
+:::
+
+:::{example}
 
 Does the function $f(x)=2x^2-4x-6$ have a maximum or minimum? Find it.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Since $a>2$, the function opens upward and has a minimum.
@@ -49,15 +111,15 @@ Does the function $f(x)=2x^2-4x-6$ have a maximum or minimum? Find it.
     f(-\frac{b}{2a})=f(1)=2-4-6=-8.
     $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Consider the function $f(x)=-x^2+3x+6$. Find values of $x$ such that $f(x)=2$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Set up the equation for $x$.
@@ -65,15 +127,15 @@ Consider the function $f(x)=-x^2+3x+6$. Find values of $x$ such that $f(x)=2$.
 1. Solve the equation $-x^2+3x+6=2$, we get $x=-1$ or $x=4$.
 The values of $x$ such that $f(x)=2$ are $x=-1$ and $x=44$.
 
-```
+:::
 
-```{example}
+:::{example}
 
 A quadratic function $f$ whose the vertex is $(1, 2)$ has a $y$-intercept $(0, -3)$. Find the equation that defines the function.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Write down the general form of $f$ using only the vertex.
@@ -83,13 +145,13 @@ A quadratic function $f$ whose the vertex is $(1, 2)$ has a $y$-intercept $(0, -
 2. Solving for $a$ from the equation, we get $a=-5$.
     The quadratic function $f$ is given by $f(x)=-5(x-1)^2+2$.
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Sketch the graph of the quadratic functions $f(x)=-(x-2)^2+4$ and find
 
@@ -99,9 +161,9 @@ Sketch the graph of the quadratic functions $f(x)=-(x-2)^2+4$ and find
 4. the coordinates of the vertex.
 5. the interval of $x$ values such that $f(x)\geq 0$.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Sketch the graph of the quadratic functions $f(x)=x^2+2x-3$ and find
 
@@ -111,9 +173,9 @@ Sketch the graph of the quadratic functions $f(x)=x^2+2x-3$ and find
 1. the coordinates of the vertex.
 1. the interval of $x$ values such that $f(x)>0$.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Consider the parabola in the graph.
 
@@ -125,9 +187,9 @@ Consider the parabola in the graph.
 
 ![The graph of an open upward parabola](figs/tikz-exercise-graph-quadratic-1.png){width=60%}\
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Consider the graph of the function $f$ shown in the picture.
 
@@ -144,9 +206,9 @@ Consider the graph of the function $f$ shown in the picture.
 
 ![The graph of an open downward parabola](figs/tikz-exercise-graph-quadratic-2.png){width=60%}\
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Consider the quadratic functions $g(x)=x^2-3x-4$ and find the following values or intervals
 
@@ -161,13 +223,13 @@ Consider the quadratic functions $g(x)=x^2-3x-4$ and find the following values o
 3. the interval over which the function is positive
 4. the interval over which the function is increasing.
 
-```{exercise}
+:::{exercise}
 
 A store owner estimates that by charging $x$ dollars each for a certain cell phone case, he can sell $d(x)=40 - x$ phone cases each week. The revenue in dollars is $R(x)=xd(x)$ when the selling price of a computer is $x$, Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet.
 
@@ -177,16 +239,16 @@ A ball is thrown upwards from a rooftop. It will reach a maximum vertical height
 4. When will the toy rocket be 96 feet above the ground?
 
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A ball is thrown upward from the ground with an initial velocity $v_0$ ft/sec. The height $h(t)$ of the ball after $t$ seconds is $h(t)= -16t^2 + v_0t$. The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A toy factory estimates that the demand of a particular toy is  $300 -x$ units each week if the price is \$$x$ dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by $R(x)=x(30-x)$
@@ -194,4 +256,4 @@ The weekly revenue is a function of the price given by $R(x)=x(30-x)$
 1. Find the function that models the weekly revenue, $R$, received when the selling price is \$$x$ per unit.
 2. What the price range so the the revenue is nonnegative.
 
-```
+:::

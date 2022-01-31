@@ -62,13 +62,13 @@ The goal to solve a single variable equation is to isolate the variable. When an
 
 :::
 
-```{example}
+:::{example}
 
 Solve the equation $x-\sqrt{x+1}=1.$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Arrange terms so that one radical is isolated on one side of the equation.
@@ -94,15 +94,15 @@ Solve the equation $x-\sqrt{x+1}=1.$
 
    Plug $x=3$ into the original equation, we see that the left hand side is $3-\sqrt{3+1}=3-\sqrt{4}=3-2=1$. So $x=3$ is a solution.
 
-```
+:::
 
-```{example}
+:::{example}
 
 Solve the equation $\sqrt{x-1}-\sqrt{x-6}=1.$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Isolated one radical.
@@ -131,15 +131,15 @@ Solve the equation $\sqrt{x-1}-\sqrt{x-6}=1.$
       \sqrt{10-1}-\sqrt{10-6}=\sqrt{9}-\sqrt{4}=3-2=1.
    $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Solve the equation $-2\sqrt[3]{x-4}=6.$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Isolated the radical.
@@ -156,19 +156,19 @@ Solve the equation $-2\sqrt[3]{x-4}=6.$
    $$
    The solution is $x=-23$.
 
-```
+:::
 
 ## Equations Involving Rational Exponents
 
 Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression $\left(X^{\frac mn}\right)^{\frac nm}$. When $m$ is even and $n$ is odd, $\left(X^{\frac mn}\right)^{\frac nm}=|X|$. Otherwise, $\left(X^{\frac mn}\right)^{\frac nm}=X$.
 
-```{example}
+:::{example}
 
 Solve the equation $(x+2)^{\frac12}-(x-3)^{\frac12}=1$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 Since there are more than one term involving rational exponents, to solve the equation, we isolate one term and taking power and so on so forth.
@@ -189,15 +189,15 @@ $$(7+2)^{\frac12}-(7-3)^{\frac12}=\sqrt{9}-\sqrt{4}=3-2=1.$$
 
 So the equation has one solution $x=7$.
 
-```
+:::
 
-```{example}
+:::{example}
 
 Solve the equation $(x-1)^{\frac{2}{3}}=4$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 There are different way to solve this equation. One may is to take rational powers of both sides and solve the resulting equation.
@@ -216,11 +216,11 @@ $$(-7-1)^{\frac23}=(-8)^{\frac23}=((-8)^{\frac13})^2=(-2)^2=4.$$
 
 So the equation has two solutions $x=9$ and $x=-7$.
 
-```
+:::
 
 ## Learn from Mistakes
 
-```{example}
+:::{example}
 
 Can you find the mistakes made in the solution and fix it?
 
@@ -244,9 +244,9 @@ $$
 Answer: the equation has two solutions $x=2$ and $x=-1$.
 </div>
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 When squaring one side of the equation, the other side as a whole should be squared. The mistake occurred at the squaring step. The right way to solve the equation is as follows.
@@ -263,13 +263,13 @@ x=2 \qquad\text{or}&\qquad x=3
 $$
 Because squaring is not an equivalent transformation in general, the solutions of the resulting equations must be checked. When $x=2$, the left side of the original equation is $\sqrt{2-2}+2=0+2=2$. When $x=3$, the left side is $\sqrt{3-2}+2=1+2=3$. So both $x=2$ and $x=3$ are solutions of the function $\sqrt{x-1}+2=x$.
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
@@ -277,49 +277,49 @@ Solve each radical equation.
 1. $\sqrt{2x-1}-5=0$
 
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
 1. $\sqrt{5x+1}=x+1$
 1. $x=\sqrt{3x+7}-3$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
 1. $\sqrt{6x+7}-x=2$
 1. $\sqrt{x+2}+\sqrt{x-1}=3$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
 1. $\sqrt{x+5}-\sqrt{x-3}=2$
 1. $3\sqrt[3]{3x-1}=6$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
 1. $(x+3)^{\frac12}=x+1$
 1. $2(x-1)^{\frac12}-(x-1)^{-\frac12}=1$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve each radical equation.
 
 1. $(x-1)^{\frac32}=8$
 1. $(x+1)^{\frac23}=4$
 
-```
+:::

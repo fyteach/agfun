@@ -24,13 +24,13 @@ Do you know a faster way to find the values?
 
 To ***factor a polynomial*** is to **express the polynomial as a product** of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.
 
-```{example}  
+:::{example}  
 
 Factor $4x^3y-8x^2y^2+12x^3y^3$.
 
-```
+:::
 
-```{solution}  
+:::{solution}  
 \  
 
 1. Find the GCF of all terms.\
@@ -40,19 +40,19 @@ Factor $4x^3y-8x^2y^2+12x^3y^3$.
 3. Factor out the GCF from each term.\
    $4x^3y-8x^2y^2+12x^3y^3=4x^2y\cdot(x-2y+3xy^2)$.
 
-```
+:::
 
 ## Factor by Grouping
 
 For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.
 
-```{example}
+:::{example}
 
 Factor $2x^2-6xy+xz-3yz$.
 
-```
+:::
 
-```{solution}  
+:::{solution}  
 \  
 
 For a polynomial with four terms, one can normally try the grouping method.
@@ -77,15 +77,15 @@ For a polynomial with four terms, one can normally try the grouping method.
     \end{aligned}
    $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Factor $ax+4b-2a-2bx$.
 
-```
+:::
 
-```{solution}  
+:::{solution}  
 \
   
 1. Group the first term with the third term and group the second term with the last term.
@@ -108,7 +108,7 @@ Factor $ax+4b-2a-2bx$.
     \end{aligned}
     $$
 
-```
+:::
 
 ::: {.rmdtip}
 
@@ -130,13 +130,13 @@ In particular,
 
 $$a^2-b^2=(a-b)(a+b).$$
 
-```{example}
+:::{example}
 
 Factor $25x^2-16$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Recognize the binomial as a difference of squares.
@@ -152,15 +152,15 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Factor $32x^3y-2xy^5$ completely.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
@@ -172,7 +172,7 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
 ## Factor Trinomials
 
@@ -196,13 +196,13 @@ The observation suggests to use trial and error to find the undetermined coeffic
 
 :::
 
-```{example}
+:::{example}
 
 Factor $x^2+6x+8$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 
 One may factor the trinomial in the following way.
 
@@ -221,15 +221,15 @@ One may factor the trinomial in the following way.
 4. Factor the trinomial
     $$x^2+6x+8=(x+2)(x+4).$$
 
-````
+:::`
 
-```{example}
+:::{example}
 
 Factor $2x^2+5x-3$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 
 One may factor the trinomial in the following way.
 
@@ -248,7 +248,7 @@ One may factor the trinomial in the following way.
 4. Factor the trinomial
    $$2x^2+5x-3=(x+3)(2x-1).$$
 
-```
+:::
 
 ::: {.rmdtip}
 
@@ -258,15 +258,15 @@ Some higher degree polynomials may be rewrite as a trinomial after a  substituti
 
 :::
 
-```{example}
+:::{example}
 
 Factor the trinomial completely.
 
 $$4x^4-x^2-3$$
 
-```
+:::
 
-```{solution}
+:::{solution}
 
 One idea is to use a substitute.
 
@@ -282,13 +282,13 @@ $$
     \end{split}
 $$
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Factor out the GCF.
 
@@ -296,9 +296,9 @@ Factor out the GCF.
 1. $5x(x-7)+3y(x-7)$
 1. $-2a^2(x+y)+3a(x+y)$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Factor by grouping.
 
@@ -306,9 +306,9 @@ Factor by grouping.
 1. $12ac-18bc-10ad+15bd$
 1. $5ax-4bx-5ay+4by$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Factor completely.
 
@@ -316,18 +316,18 @@ Factor completely.
 1. $8x^3-2x$
 1. $25xy^2+x$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Factor completely.
 
 1. $3x^3+6x^2-12x-24$
 1. $x^4+3x^3-4x^2-12x$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Factor the trinomial.
 
@@ -335,9 +335,9 @@ Factor the trinomial.
 2. $x^2+6x-7$
 3. $x^2-3x-10$
 
-```
+:::
 
-```{exercise}  
+:::{exercise}  
 
 Factor the trinomial.
 
@@ -345,9 +345,9 @@ Factor the trinomial.
 2. $2x^2+5x-12$
 3. $3x^2-10x-8$
 
-```
+:::
 
-```{exercise}  
+:::{exercise}  
 
 Factor completely into polynomials with integer coefficients.
 
@@ -355,9 +355,9 @@ Factor completely into polynomials with integer coefficients.
 2. $4x^4-12x^2+5$
 3. $2x^3y-9x^2y^2-5xy^3$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.
 
@@ -372,7 +372,7 @@ Each of trinomial below has a factor in the table. Match the letter on the left 
 | **O:** $x-13$ | **P:** $5x-3$ | **Q:** $4x-11$ | **R:** $x-9$ | **S:** $2x+3$ | **T:** $x+4$ | **U:** $7x+1$ |
 | **V:** $3x+5$ | **W:** $3x+4$ | **X:** $8x+3$ | **Y:** $x-14$ | **Z:** $5x-6$ | | |
 
-```
+:::
 
 ::: {.threecols .riddle}
 

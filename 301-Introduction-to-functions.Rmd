@@ -34,7 +34,7 @@ The domain of a function is the set of all allowed inputs. The range of a functi
 
 To find the value of a function define by an equation at a given number, we substitute the independent variable $x$ by the given number and then evaluate the expression. We call the procedure evaluating a function.
 
-```{example}
+:::{example}
 
 Find the indicated function value.
 
@@ -42,26 +42,26 @@ Find the indicated function value.
 2. $g(2)$,\ $g(x)=3x^2-10$
 3. $h(a-t)$,\ $h(x)=3x+5$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. $f(-2)=2\cdot(-2)+1=-4+1=-3$.
 2. $g(-2)=3\cdot(2^2)-10=3\cdot 4-10=12-10=2$.
 3. $h(a-t)=3\cdot(a-t)+5=3a-3t+5$.
 
-```
+:::
 
 ## Graphs of Functions
 
 ***The graph of a function*** is the graph of its ordered pairs. A graph of ordered pairs $(x,y)$ in the rectangular coordinate system defines $y$ as a function of $x$ if any vertical line crosses the graph at most once. This test is called the ***vertical line test***.
 
-```{example}
+:::{example}
 
 Determine which of the following graphs defines a function.
 
-```
+:::
 
 ```{r fig-ABCD-LaTeX, echo=FALSE, fig.cap=" ", include=knitr::is_latex_output(), fig.ncol=4, fig.align="center", out.width="23%", fig.subcap=c('A', 'B', 'C', 'D')}
 
@@ -78,12 +78,12 @@ knitr::include_graphics("figs/four-graphs.png")
 
 ```
 
-```{solution}
+:::{solution}
 \
 
 Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don't define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.
 
-```
+:::
 
 ## Graph Reading
 
@@ -91,7 +91,7 @@ The domain of a graph is the set of $x$-coordinates of all points on the graph. 
 
 To find the coordinates of a point on a graph, one draw a horizontal line and a vertical line through the point. The number on the $x$-axis where the vertical line passing through is the $x$-coordinate of the point. The number on the $y$-axis where the horizontal line passing through is the $y$-coordinate of the point.
 
-```{example}
+:::{example}
 
 Use the graph in the picture to answer the following questions.
 
@@ -104,13 +104,13 @@ Use the graph in the picture to answer the following questions.
 1. Find the value of $y$ such that the point $(3, y)$ is on the graph.
 1. Find the value of $x$ such that $(x, 0)$ is on the graph.
 
-```
+:::
 
 ```{r echo=FALSE, outwidth="40%"}
 knitr::include_graphics("figs/function-example-quadratic.png")
 ```
 
-```{solution}
+:::{solution}
 \
 
 1. The graph is a function. Because every vertical line crosses the graph at most once.
@@ -122,13 +122,13 @@ knitr::include_graphics("figs/function-example-quadratic.png")
 7. The $y$-value of the point $(3, y)$ on the graph is $2$.
 8. The $x$-value of the point $(x, 0)$ on the graph is $-0.5$.
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Find the indicated function values for the functions $f(x)=-x^2+x-1$ and $g(x)=2x-1$. Simplify your answer.
 
@@ -137,24 +137,24 @@ Find the indicated function values for the functions $f(x)=-x^2+x-1$ and $g(x)=2
 1. $g(-1)$
 1. $g(f(1))$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Suppose $g(x) = -3x + 1$.
 
 1. Compute $\dfrac{g(4)-g(1)}{4-1}$
 1. Compute $\dfrac{g(x+h)-g(x)}{h}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Suppose the domain of the linear function $l(x)=1-2x$ is $(0, 1)$. Find the range of the function.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Use the graph in the picture to answer the following questions.
 
@@ -165,13 +165,13 @@ Use the graph in the picture to answer the following questions.
 5. Find all points where the graph reaches a maximum or a minimum.
 6. Find the values of the $x$-coordinate of all points on the graph whose $y$-coordinate is $1$.
 
-```
+:::
 
 ```{r echo=FALSE, outwidth="40%"}
 knitr::include_graphics("figs/function-exercise-ray-cubic.png")
 ```
 
-```{exercise}
+:::{exercise}
 
 Use the graph of the function $f$ in the picture to answer the following questions.
 
@@ -180,13 +180,13 @@ Use the graph of the function $f$ in the picture to answer the following questio
 3. Find the values $x$ such that $f(x)=0$.
 4. Find the solution to the inequality $f(x)>0$. Write in interval notation.
 
-```
+:::
 
 ```{r echo=FALSE, outwidth="40%"}
 knitr::include_graphics("figs/function-exercise-cubic.png")
 ```
 
-```{exercise}
+:::{exercise}
 
 Today Matt drove from home to school in 30 minutes. He spent 6 minutes on  local streets before driving on the highway and 4 minutes on local streets towards school after getting off the highway. On local streets, his average speed is 30 miles per hour. On the highway, his average speed is 60 miles per hours.
 
@@ -194,4 +194,4 @@ Today Matt drove from home to school in 30 minutes. He spent 6 minutes on  local
 1. After 15 minutes, where was he and how far did he drive?
 1. How far did he drive from home to school?
 
-```
+:::

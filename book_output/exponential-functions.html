@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 16 Exponential Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.19.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 16 Exponential Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2022-01-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="radical-functions.html"/>
 <link rel="next" href="logarithmic-functions.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,8 +51,8 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script>
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -377,8 +378,9 @@ $(document).ready(function () {
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
-<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -481,10 +483,8 @@ f(x)=b^x\quad\quad\text{or}\quad\quad y=b^x.
 <li>For <span class="math inline">\(n\)</span> compounding periods per year: <span class="math inline">\(A=P\left(1+\dfrac{r}{n}\right)^{nt}\)</span>.</li>
 <li>For compounding continuously: <span class="math inline">\(A=Pe^{rt}\)</span>.</li>
 </ol>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-282" class="example"><strong>Example 16.1  </strong></span>
-A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual rate of <span class="math inline">\(8\%\)</span>, Find the balance, to the nearest hundredth dollar, in the account after <span class="math inline">\(5\)</span> years if the interest is compounded</p>
+<div class="{example}">
+<p>A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual rate of <span class="math inline">\(8\%\)</span>, Find the balance, to the nearest hundredth dollar, in the account after <span class="math inline">\(5\)</span> years if the interest is compounded</p>
 <ol style="list-style-type: decimal">
 <li>monthly,</li>
 <li>quarterly,</li>
@@ -492,9 +492,8 @@ A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual 
 <li>continuous.</li>
 </ol>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li>Find values of <span class="math inline">\(P\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(t\)</span> and <span class="math inline">\(n\)</span>. In this case, <span class="math inline">\(P=10,000\)</span>, <span class="math inline">\(r=8\%=0.08\)</span>, <span class="math inline">\(t=5\)</span> and <span class="math inline">\(n\)</span> depends compounding.</li>
@@ -520,16 +519,13 @@ A sum of <span class="math inline">\(\$10,000\)</span> is invested at an annual 
 <div class="rmdnote">
 <p>In the compounded investment module, the <span class="math inline">\(\frac rn\)</span> is an approximation of the period interest rate. Indeed, if the period rate <span class="math inline">\(p\)</span> satisfies the equation <span class="math inline">\((1+p)^n=1+r\)</span>, or equivalently <span class="math inline">\(p=\sqrt[n]{1+r} - 1\)</span>. Using the formula <span class="math inline">\((1+x)^n=1+nx+\frac{n(n-1)}{2}x^2+\cdots +x^n\)</span>, one may approximately replace <span class="math inline">\(1+r\)</span> by <span class="math inline">\((1+\frac rn)\)</span> and obtain the approximation <span class="math inline">\(p\approx \frac rn\)</span>.</p>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-284" class="example"><strong>Example 16.2  </strong></span>
-The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4%.
+<div class="{example}">
+<p>The population of a country was about 0.78 billion in the year 2015, with an annual growth rate of about 0.4%.
 The predicted population is <span class="math inline">\(P(t)=0.78(1.004)^t\)</span> billions after <span class="math inline">\(t\)</span> years since 2015.
 To the nearest thousandth of a billion, what will the predicted population of the country be in 2030?</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <p>The population is approximately
 <span class="math display">\[
@@ -538,38 +534,30 @@ P(15)=0.78(1.004)^{15}\approx 0.828 \quad \text{billions}.
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice" class="section level2" number="16.5">
+<div id="practice-15" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> Practice</h2>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-286" class="exercise"><strong>Problem 16.1  </strong></span>
-The value of a car is depreciating according to the formula: <span class="math inline">\(V=25000(3.2)^{-0.05x}\)</span>,
+<div class="{exercise}">
+<p>The value of a car is depreciating according to the formula: <span class="math inline">\(V=25000(3.2)^{-0.05x}\)</span>,
 where <span class="math inline">\(x\)</span> is the age of the car in years.
 Find the value of the car, to the nearest dollar, when it is five years old.</p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-287" class="exercise"><strong>Problem 16.2  </strong></span>
-A sum of $20,000 is invested at an annual rate of 5.5%, Find the balance, to the nearest dollar,
+<div class="{exercise}">
+<p>A sum of $20,000 is invested at an annual rate of 5.5%, Find the balance, to the nearest dollar,
 in the account after 5 years subject to</p>
 <ol style="list-style-type: decimal">
 <li>monthly compounding,</li>
 <li>continuously compounding.</li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-288" class="exercise"><strong>Problem 16.3  </strong></span>
-Sketch the graph of the function and find its range.</p>
+<div class="{exercise}">
+<p>Sketch the graph of the function and find its range.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=3^x\)</span></li>
 <li><span class="math inline">\(f(x)=\left(\frac13\right)^x\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-289" class="exercise"><strong>Problem 16.4  </strong></span>
-Use the given function to compare the values of <span class="math inline">\(f(-1.05)\)</span>, <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(2.4)\)</span> and determine which value is the largest and which value is the smallest. Explain your answer.</p>
+<div class="{exercise}">
+<p>Use the given function to compare the values of <span class="math inline">\(f(-1.05)\)</span>, <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(2.4)\)</span> and determine which value is the largest and which value is the smallest. Explain your answer.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\left(\frac{5}{2}\right)^x\)</span></li>
 <li><span class="math inline">\(f(x)=\left(\frac23\right)^x\)</span></li>
@@ -588,7 +576,6 @@ Use the given function to compare the values of <span class="math inline">\(f(-1
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -618,6 +605,10 @@ gitbook.start({
 "text": null
 },
 "download": ["agfun.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

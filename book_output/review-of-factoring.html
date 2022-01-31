@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 2 Review of Factoring | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.19.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 2 Review of Factoring | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2022-01-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="integer-exponents.html"/>
 <link rel="next" href="algebra-of-rational-expressions.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,8 +51,8 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script>
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -377,8 +378,9 @@ $(document).ready(function () {
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
-<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -464,14 +466,11 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <h2><span class="header-section-number">2.2</span> Factor by Removing the GCF</h2>
 <p><strong><em>The greatest common factor (GCF)</em></strong> of two terms is a polynomial with the <strong>greatest coefficient</strong> and of the <strong>highest possible degree</strong> that divides each term.</p>
 <p>To <strong><em>factor a polynomial</em></strong> is to <strong>express the polynomial as a product</strong> of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.</p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-9" class="example"><strong>Example 2.1  </strong></span>
-Factor <span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3\)</span>.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(4x^3y-8x^2y^2+12x^3y^3\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span>  </p>
+<div class="{solution}">
+<p> </p>
 <ol style="list-style-type: decimal">
 <li>Find the GCF of all terms.<br />
 The GCF of <span class="math inline">\(4x^3y\)</span>, <span class="math inline">\(-8x^2y^2\)</span> and <span class="math inline">\(12x^4y^3\)</span> is <span class="math inline">\(4x^2y\)</span>.</li>
@@ -485,14 +484,11 @@ The GCF of <span class="math inline">\(4x^3y\)</span>, <span class="math inline"
 <div id="factor-by-grouping" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Factor by Grouping</h2>
 <p>For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.</p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-11" class="example"><strong>Example 2.2  </strong></span>
-Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span>  </p>
+<div class="{solution}">
+<p> </p>
 <p>For a polynomial with four terms, one can normally try the grouping method.</p>
 <ol style="list-style-type: decimal">
 <li>Group the first two terms and the last two terms.
@@ -516,14 +512,11 @@ Factor <span class="math inline">\(2x^2-6xy+xz-3yz\)</span>.</p>
 \]</span></li>
 </ol>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-13" class="example"><strong>Example 2.3  </strong></span>
-Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li>Group the first term with the third term and group the second term with the last term.
@@ -559,14 +552,11 @@ Factor <span class="math inline">\(ax+4b-2a-2bx\)</span>.</p>
 <p><span class="math display">\[a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots +ab^{n-2}+b^{n-1})\]</span></p>
 <p>In particular,</p>
 <p><span class="math display">\[a^2-b^2=(a-b)(a+b).\]</span></p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-15" class="example"><strong>Example 2.4  </strong></span>
-Factor <span class="math inline">\(25x^2-16\)</span>.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(25x^2-16\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li>Recognize the binomial as a difference of squares.
@@ -583,14 +573,11 @@ Factor <span class="math inline">\(25x^2-16\)</span>.</p>
 \]</span></li>
 </ol>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-17" class="example"><strong>Example 2.5  </strong></span>
-Factor <span class="math inline">\(32x^3y-2xy^5\)</span> completely.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(32x^3y-2xy^5\)</span> completely.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -618,15 +605,11 @@ c=\underbrace{nq}_{\mathrm{F}}
 <p><strong>Trial and error.</strong></p>
 <p>The observation suggests to use trial and error to find the undetermined coefficients <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, and <span class="math inline">\(q\)</span> from factors of <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span> such that the sum of cross products <span class="math inline">\(mq+np\)</span> is <span class="math inline">\(b\)</span>. A diagram as shown in the following examples will be helpful to check a trial.</p>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-19" class="example"><strong>Example 2.6  </strong></span>
-Factor <span class="math inline">\(x^2+6x+8\)</span>.</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(x^2+6x+8\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> 
-One may factor the trinomial in the following way.</p>
+<p>:::{solution}</p>
+<p>One may factor the trinomial in the following way.</p>
 <ol style="list-style-type: decimal">
 <li><p>Factor <span class="math inline">\(a=1\)</span>:
 <span class="math display">\[1=1\cdot 1.\]</span></p></li>
@@ -639,16 +622,12 @@ This step can be checked easily using the following diagram.</p>
 <li><p>Factor the trinomial
 <span class="math display">\[x^2+6x+8=(x+2)(x+4).\]</span></p></li>
 </ol>
+<p>:::`</p>
+<div class="{example}">
+<p>Factor <span class="math inline">\(2x^2+5x-3\)</span>.</p>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-21" class="example"><strong>Example 2.7  </strong></span>
-Factor <span class="math inline">\(2x^2+5x-3\)</span>.</p>
-</div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> 
-One may factor the trinomial in the following way.</p>
+<div class="{solution}">
+<p>One may factor the trinomial in the following way.</p>
 <ol style="list-style-type: decimal">
 <li><p>Factor <span class="math inline">\(a=2\)</span>:
 <span class="math display">\[1=1\cdot 2.\]</span></p></li>
@@ -666,16 +645,12 @@ This step can be checked easily using the following diagram.</p>
 <p><strong>Use Auxiliary Problem.</strong></p>
 <p>Some higher degree polynomials may be rewrite as a trinomial after a substitution. Factoring the trinomial helps factor the polynomial.</p>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-23" class="example"><strong>Example 2.8  </strong></span>
-Factor the trinomial completely.</p>
+<div class="{example}">
+<p>Factor the trinomial completely.</p>
 <p><span class="math display">\[4x^4-x^2-3\]</span></p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> 
-One idea is to use a substitute.</p>
+<div class="{solution}">
+<p>One idea is to use a substitute.</p>
 <ol style="list-style-type: decimal">
 <li>Let <span class="math inline">\(x^2=y\)</span>. Then <span class="math inline">\(4x^4-x^2-3=4y^2-y-3\)</span>.</li>
 <li>Factor the trinomial in <span class="math inline">\(y\)</span>: <span class="math inline">\(4y^2-y-3=(4y+3)(y-1)\)</span>.</li>
@@ -692,81 +667,65 @@ One idea is to use a substitute.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice" class="section level2" number="2.6">
+<div id="practice-1" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Practice</h2>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-25" class="exercise"><strong>Problem 2.1  </strong></span>
-Factor out the GCF.</p>
+<div class="{exercise}">
+<p>Factor out the GCF.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(18x^2y^2-12xy^3-6x^3y^4\)</span></li>
 <li><span class="math inline">\(5x(x-7)+3y(x-7)\)</span></li>
 <li><span class="math inline">\(-2a^2(x+y)+3a(x+y)\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-26" class="exercise"><strong>Problem 2.2  </strong></span>
-Factor by grouping.</p>
+<div class="{exercise}">
+<p>Factor by grouping.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(12xy-10y+18x-15\)</span></li>
 <li><span class="math inline">\(12ac-18bc-10ad+15bd\)</span></li>
 <li><span class="math inline">\(5ax-4bx-5ay+4by\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-27" class="exercise"><strong>Problem 2.3  </strong></span>
-Factor completely.</p>
+<div class="{exercise}">
+<p>Factor completely.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(25x^2-4\)</span></li>
 <li><span class="math inline">\(8x^3-2x\)</span></li>
 <li><span class="math inline">\(25xy^2+x\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-28" class="exercise"><strong>Problem 2.4  </strong></span>
-Factor completely.</p>
+<div class="{exercise}">
+<p>Factor completely.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(3x^3+6x^2-12x-24\)</span></li>
 <li><span class="math inline">\(x^4+3x^3-4x^2-12x\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-29" class="exercise"><strong>Problem 2.5  </strong></span>
-Factor the trinomial.</p>
+<div class="{exercise}">
+<p>Factor the trinomial.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2+4x+3\)</span></li>
 <li><span class="math inline">\(x^2+6x-7\)</span></li>
 <li><span class="math inline">\(x^2-3x-10\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-30" class="exercise"><strong>Problem 2.6  </strong></span>
-Factor the trinomial.</p>
+<div class="{exercise}">
+<p>Factor the trinomial.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(5x^2+7x+2\)</span></li>
 <li><span class="math inline">\(2x^2+5x-12\)</span></li>
 <li><span class="math inline">\(3x^2-10x-8\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-31" class="exercise"><strong>Problem 2.7  </strong></span>
-Factor completely into polynomials with integer coefficients.</p>
+<div class="{exercise}">
+<p>Factor completely into polynomials with integer coefficients.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^3-5x^2+6x\)</span></li>
 <li><span class="math inline">\(4x^4-12x^2+5\)</span></li>
 <li><span class="math inline">\(2x^3y-9x^2y^2-5xy^3\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-32" class="exercise"><strong>Problem 2.8  </strong></span>
-Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.</p>
+<div class="{exercise}">
+<p>Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.</p>
 <p>“<span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{10~~2~~9~~15}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{4~~3~~15~~7~~2~~1}\)</span>;
  <span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{11~~2~~2}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{8~~5~~3~~6}\)</span>;
  <span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{14~~3}\)</span>,<span class="math inline">\(\dfrac{\phantom{A}}{9~~5~~14}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{13}\)</span><span class="math inline">\(\dfrac{\phantom{A}}{12~~5~~14~~2~~15~~11~~1~~9~~5~~14}\)</span>.”</p>
@@ -843,7 +802,6 @@ Each of trinomial below has a factor in the table. Match the letter on the left 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -873,6 +831,10 @@ gitbook.start({
 "text": null
 },
 "download": ["agfun.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

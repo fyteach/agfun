@@ -43,16 +43,16 @@ Within the same level, the convention is to perform from the left to the right.
 
 :::
 
-```{example}
+:::{example}
 
 Simplify. **Write with positive exponents.**
 $$
 \left(\dfrac{2y^{-2}z^{-5}}{4x^{-3}y^6}\right)^{-4}.
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 
 The idea is to simplify the base first and rewrite using positive exponents only.
 
@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
 ::: {.rmdtip}
 
@@ -79,7 +79,7 @@ To avoid mistakes when working with negative exponents, it's better to apply the
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -87,9 +87,9 @@ Simplify. **Write with positive exponents.**
 2. $\dfrac{4y^3z^0}{x^2y^2}$
 3. $(-2)^{-3}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -97,9 +97,9 @@ Simplify. **Write with positive exponents.**
 1. $(-2a^3b^2c^0)^3$
 1. $\dfrac{m^5 n^{2}}{(mn)^3}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -107,9 +107,9 @@ Simplify. **Write with positive exponents.**
 1. $\left(\dfrac{-x^0y^3}{2wz^2}\right)^3$
 1. $\dfrac{3^{-2}a^{-3}b^5}{x^{-3}y^{-4}}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -117,10 +117,10 @@ Simplify. **Write with positive exponents.**
 2. $\left(\dfrac{6x^{-2}y^5}{2y^{-3}z^{-11}}\right)^{-3}$
 3. $\dfrac{(3 x^{2} y^{-1})^{-3}(2 x^{-3} y^{2})^{-1}}{(x^{6} y^{-5})^{-2}}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A store has large size and small size watermelons. A large one cost \$4 and a small one \$1. Putting on the same table, a smaller watermelons has only half the height of the larger one. Given \$4, will you buy a large watermelon or 4 smaller ones? Why?
 
-```
+:::

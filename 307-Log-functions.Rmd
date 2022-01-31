@@ -44,16 +44,16 @@ When $b>0$ and $b\neq 1$, and $x>0$, we have
 1. $\log_b(b^x)=x$.
 1. $\log_bb=1$ and $\log_b1=0$.
 
-```{example}
+:::{example}
 
 Convert between exponential and logarithmic forms.
 
 1. $\log x=\frac{1}{2}$
 1. $3^{2x-1}=5$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 When converting between exponential and logarithmic forms, we move the base from one side to the other side, then add or drop the log sign.
@@ -63,9 +63,9 @@ When converting between exponential and logarithmic forms, we move the base from
 1. Move the 3 to the right and add log the the right:
     $$2x-1=\log_35$$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Evaluate the logarithms.
 
@@ -73,9 +73,9 @@ Evaluate the logarithms.
 1. $10^{\log(\frac{1}{2})}$
 1. $\log_5(e^0)$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 The key is to rewrite the log and the power so that they have the same base.
@@ -84,20 +84,20 @@ The key is to rewrite the log and the power so that they have the same base.
 1. $10^{\log\frac{1}{2}}=10^{\log_{10}\frac{1}{2}}=\frac12$
 1. $\log_5(e^0)=\log_51=0$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Find the domain of the function $f(x)=\ln(2-3x)$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 The function has a real output if $2-3x>0$. Solving the inequality, we get $x<\frac{2}{3}$. So the domain of the function is $(-\infty, \frac{2}{3})$.
 
-```
+:::
 
 ## Properties of Logarithms
 
@@ -111,13 +111,13 @@ For $M>0$, $N>0$, $b>0$ and $b\neq 1$, we have
     \log_bM=\dfrac{\log M}{\log b} \quad\text{and}\quad \log_bM=\dfrac{\ln M}{\ln b}.
     $$
 
-```{example}
+:::{example}
 
 Expand and simplify the logarithm $\log_2\left(\frac{8\sqrt{y}}{x^3}\right)$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
@@ -128,46 +128,46 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Write the expression $2\ln(x-1)-\ln(x^2+1)$ as a single logarithm.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
 2\ln(x-1)-\ln(x^2+1)=\ln((x-1)^2)-\ln(x^2+1)=\ln\left(\frac{(x-1)^2}{x^2+1}\right).
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Evaluate the logarithm $\log_34$ and round it to the nearest tenth.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 On most scientific calculator, there are only the common logarithmic function `LOG` and the natural logarithmic function `LN`. To evaluate a logarithm based on a general number, we use the change-of-base property. In this case, the value of $\log_34$ is $$\log_34=\frac{\log4}{\log3}\approx 1.3.$$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Simplify the logarithmic expression
 $$
 \log_2(x^{\log 3})\log_32.
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
@@ -175,13 +175,13 @@ $$
 =(\ln 3\log_2x)\log_32=\ln3\left(\frac{\ln x}{\ln 2}\right)\left(\frac{\ln 2}{\ln 3}\right)=\ln x.
 $$
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Write each equation into equivalent exponential form.
 
@@ -190,9 +190,9 @@ Write each equation into equivalent exponential form.
 3. $\log x=y$
 4. $\ln(x-1)=c$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Write each equation into equivalent logarithmic form.
 
@@ -201,9 +201,9 @@ Write each equation into equivalent logarithmic form.
 3. $e^{2y-1}=x$
 4. $10^x=c^2+1$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Evaluate.
 
@@ -212,9 +212,9 @@ Evaluate.
 1. $\log 10$
 1. $\ln 1$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Evaluate.
 
@@ -223,24 +223,24 @@ Evaluate.
 1. $\ln(\sqrt{e})$
 1. $\log_2(\frac12)$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Find the domain of the function $f(x)=\log(x-5)$. Write in interval notation.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Sketch the graph of each function and find its range.
 
 1. $f(x)=\log_2x$
 1. $f(x)=\log_{\frac12} x$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Expand the logarithm and simplify.
 
@@ -249,9 +249,9 @@ Expand the logarithm and simplify.
 3. $\log_b(\sqrt[3]{x})$
 4. $\log_7(\frac{x^2\sqrt{y}}{z})$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Expand the logarithm and simplify.
 
@@ -259,9 +259,9 @@ Expand the logarithm and simplify.
 1. $\ln(\sqrt[3]{(x^2+1)y^{-2}})$
 1. $\log(x\sqrt{10x}-\sqrt{10x})$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Write as a single logarithm.
 
@@ -269,9 +269,9 @@ Write as a single logarithm.
 1. $\frac12\ln(x^2+1)-2\ln x$
 1. $\frac13\log_2 x - 3\log_2(x+1)+1$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Write as a single logarithm.
 
@@ -279,9 +279,9 @@ Write as a single logarithm.
 1. $3\ln x - 5\ln y + \frac{1}{2}\ln z$
 1. $3\log_3 x-2\log_3(1-x)+\frac13\log_3 (x^2+1)$.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Evaluate the logarithm and round it to the nearest hundredth.
 
@@ -290,13 +290,13 @@ Evaluate the logarithm and round it to the nearest hundredth.
 3. $\dfrac{1}{\log_52}$
 4. $\log_45-\log_29$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify the logarithmic expression
 $$
 \frac{\log_3(x^2)\log_y\sqrt{3}}{\log x}.
 $$
 
-```
+:::

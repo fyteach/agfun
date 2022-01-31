@@ -26,13 +26,13 @@ $$
 
 The procedure to rewrite a trinomial as the sum of a perfect square and a constant is called ***completing the square***.
 
-```{example}
+:::{example}
 
 Solve the equation $x^2+2x-1=0$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Isolate the constant.
@@ -55,15 +55,15 @@ Solve the equation $x^2+2x-1=0$.
 
 Note that the solution can also be written as $x=-1\pm\sqrt2$.
 
-```
+:::
 
-```{example}
+:::{example}
 
 Solve the equation $-2x^2+8x-9=0$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Isolate the constant.
@@ -85,7 +85,7 @@ Solve the equation $-2x^2+8x-9=0$.
     \end{aligned}
     $$
 
-```
+:::
 
 ::: {.rmdtip}
 
@@ -106,13 +106,13 @@ The quantity $b^2-4ac$ is called the ***discriminant*** of the quadratic equatio
 1. If $b^2-4ac=0$, the equation has one real solution.
 1. If $b^2-4ac<0$, the equation has two imaginary solutions (no real solutions).
 
-```{example}
+:::{example}
 
 Determine the type and the number of solutions of the equation $(x-1)(x+2)=-3$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Rewrite the equation in the form $ax^2+bx+c=0$.
@@ -133,15 +133,15 @@ Determine the type and the number of solutions of the equation $(x-1)(x+2)=-3$.
 
 The equation has two imaginary solutions.
 
-```
+:::
 
-```{example}
+:::{example}
 
 Solve the equation $2x^2-4x+7=0$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Find the values of $a$, $b$ and $c$.
@@ -162,15 +162,15 @@ Solve the equation $2x^2-4x+7=0$.
     \end{aligned}
     $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Find the base and the height of a **triangle** whose base is three inches more than twice its height and whose area is $5$ square inches. Round your answer to the nearest tenth of an inch.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. We may suppose the height is $x$ inches. The base can be expressed as $2x+3$ inches.
@@ -191,13 +191,13 @@ Find the base and the height of a **triangle** whose base is three inches more t
 Since $x$ can not be negative, $x=\frac{-3+\sqrt{89}}{4}\approx 1.6$ and $2x+3\approx 6.2$.
 The height and base of the triangle are approximately $1.6$ inches and 6.2 inches respectively.
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Solve the quadratic equation by the square root property.
 
@@ -205,9 +205,9 @@ Solve the quadratic equation by the square root property.
 2. $(x-3)^2=10$
 3. $4(x+1)^2+25=0$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve the quadratic equation by completing the square.
 
@@ -215,9 +215,9 @@ Solve the quadratic equation by completing the square.
 2. $x^2+8x+12=0$
 3. $3x^2+6x-1=0$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Determine the number and the type of solutions of the given equation.
 
@@ -225,9 +225,9 @@ Determine the number and the type of solutions of the given equation.
 1. $3x^2-2x+4=0$
 1. $2x^2-4x+2=0$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve using the quadratic formula.
 
@@ -235,9 +235,9 @@ Solve using the quadratic formula.
 2. $2x^2=-4x+5$
 3. $2x^2=x-3$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Solve using the quadratic formula.
 
@@ -245,16 +245,16 @@ Solve using the quadratic formula.
 1. $2x^2-x=(x+2)(x-2)$
 1. $\frac12 x^2+x= \frac13$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A **triangle** whose area is $7.5$ square meters has a base that is one meter less than triple the height. Find the length of its base and height. Round to the nearest hundredth of a meter.
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 A **rectangular** garden whose length is $2$ feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.
 
-```
+:::

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 15 Radical Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.19.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 15 Radical Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2022-01-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="rational-functions.html"/>
 <link rel="next" href="exponential-functions.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,8 +51,8 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script>
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -377,8 +378,9 @@ $(document).ready(function () {
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
-<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -467,14 +469,11 @@ The wave will slow down when closer to the coast but will be higher.</p>
 <div id="the-domain-of-a-radical-function" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> The Domain of a Radical Function</h2>
 <p>A <strong><em>radical function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\sqrt[n]{r(x)}\)</span>, where <span class="math inline">\(r(x)\)</span> is an algebraic expression. For example <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. When <span class="math inline">\(n\)</span> is odd number, <span class="math inline">\(r(x)\)</span> can be any real number. When <span class="math inline">\(n\)</span> is even, <span class="math inline">\(r(x)\)</span> has to be nonnegative, that is <span class="math inline">\(r(x)\geq 0\)</span> so that <span class="math inline">\(f(x)\)</span> is a real number.</p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-278" class="example"><strong>Example 15.1  </strong></span>
-Find the domain of the function <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>.</p>
+<div class="{example}">
+<p>Find the domain of the function <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <p>Since the index is <span class="math inline">\(2\)</span> which is even, the function has real outputs only if the radicand <span class="math inline">\(x+1\geq 0\)</span>.
 Solve the inequality, we get <span class="math inline">\(x\geq -1\)</span>. In interval notation, the domain is
@@ -482,14 +481,35 @@ Solve the inequality, we get <span class="math inline">\(x\geq -1\)</span>. In i
 [-1,\infty).
 \]</span></p>
 </div>
+<div class="{example}">
+<p>For a pendulum clock, the period T of the pendulum is approximately modeled by the following function of the length L of the pendulum:
+<span class="math display">\[T=2\sqrt{L}\]</span>
+where <span class="math inline">\(L\)</span> and <span class="math inline">\(T\)</span> are measured in meters and seconds respectively.</p>
+<ul>
+<li>If the length of the pendulum is 4 meters, what is the period?</li>
+<li>If the period of a pendulum clock is 1 second, how long should be the pendulum?</li>
+</ul>
+</div>
+<div class="{solution}">
+<ul>
+<li>Because the length of the pendulum is 4 meters, that is <span class="math inline">\(L=4\)</span>. Then the period is <span class="math inline">\(T=2\cdot\sqrt{4}=4\)</span> seconds.</li>
+<li>Because the period of the pendulum is 1 second, that is <span class="math inline">\(T=1\)</span>. Then the length <span class="math inline">\(L\)</span> is the solution of the equations <span class="math inline">\(2\sqrt{L}=1\)</span>.
+<span class="math display">\[\begin{aligned}
+    2\sqrt{L}&amp;=1\\
+    \sqrt{L}&amp;=\frac12\\
+    L&amp;=\left(\frac12\right)^2\\
+    L&amp;=\frac14.
+\end{aligned}
+\]</span>
+So the length of the pendulum should be 1/4 in so that the period is 1 second.</li>
+</ul>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice" class="section level2" number="15.3">
+<div id="practice-14" class="section level2" number="15.3">
 <h2><span class="header-section-number">15.3</span> Practice</h2>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-280" class="exercise"><strong>Problem 15.1  </strong></span>
-Find the domain of each function. Write in interval notation.</p>
+<div class="{exercise}">
+<p>Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=1-\frac{2x}{x+3}\)</span></li>
 <li><span class="math inline">\(f(x)=\frac{x-2}{x^2-4}\)</span></li>
@@ -510,7 +530,6 @@ Find the domain of each function. Write in interval notation.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -540,6 +559,10 @@ gitbook.start({
 "text": null
 },
 "download": ["agfun.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

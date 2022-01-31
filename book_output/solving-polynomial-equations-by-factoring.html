@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.19.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 5 Solving Polynomial Equations by Factoring | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2022-01-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="radicals-and-rational-exponents.html"/>
 <link rel="next" href="quadratic-formula.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,8 +51,8 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script>
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -377,8 +378,9 @@ $(document).ready(function () {
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
-<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -483,15 +485,12 @@ where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</s
 <p>When solving linear equations, arithmetic operations are enough. In general, one may need to use identity or functional operation. Factoring is one of those frequently used identity operation. Indeed, to solve a problem, a general strategy is to to reduce the original problem to easier problems. Using factoring and the <strong><em>zero product property</em></strong>:
 <span class="math display">\[A\cdot B=0 \quad ~~\text{if and only if}~~  \quad A=0 ~~\text{or}~~ B=0,\]</span>
 one can transform a polynomial equation into smaller degree polynomial equations. In particular, if <span class="math inline">\(ax^2+bx+c=(mx-p)(nx-q)\)</span>, then a solution of the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> is a solution of either <span class="math inline">\(mx-p=0\)</span> or <span class="math inline">\(nx-q=0\)</span>.</p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-112" class="example"><strong>Example 5.1  </strong></span>
-Solve the equation
+<div class="{example}">
+<p>Solve the equation
 <span class="math display">\[2x^2+5x=3.\]</span></p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li><p>Rewrite the equation into “<em>Expression</em>=0” form and factor.
@@ -515,15 +514,12 @@ Solve the equation
 <li><p>The solution set is <span class="math inline">\(\{-3, \frac12\}\)</span>.</p></li>
 </ol>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-114" class="example"><strong>Example 5.2  </strong></span>
-Solve the equation
+<div class="{example}">
+<p>Solve the equation
 <span class="math display">\[(x-2)(x+3)=-4.\]</span></p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li>Rewrite the equation into “<em>Expression</em>=0” form and factor.
@@ -547,16 +543,13 @@ Solve the equation
 <li>The solution set is <span class="math inline">\(\{-2, 1\}\)</span>.</li>
 </ol>
 </div>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-116" class="example"><strong>Example 5.3  </strong></span>
-A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is <span class="math inline">\(10\)</span> meters by <span class="math inline">\(16\)</span> meters and the total area is 216 square meters, determine the width of the path.</p>
+<div class="{example}">
+<p>A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is <span class="math inline">\(10\)</span> meters by <span class="math inline">\(16\)</span> meters and the total area is 216 square meters, determine the width of the path.</p>
 <p><img src="figs/tikz-rectangular-uniform-width.png" style="width:30.0%" alt="rectangular garden with uniform width pass" /><br />
 </p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <ol style="list-style-type: decimal">
 <li>Suppose that the width of the frame is <span class="math inline">\(x\)</span> meters. Translate given information into expressions in <span class="math inline">\(x\)</span> and build an equation.<br />
@@ -585,12 +578,10 @@ When solving a word problem, you may first outline what’s known and what’s u
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice" class="section level2" number="5.4">
+<div id="practice-4" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Practice</h2>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-118" class="exercise"><strong>Problem 5.1  </strong></span>
-Solve the equation by factoring.</p>
+<div class="{exercise}">
+<p>Solve the equation by factoring.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(x^2-3x+2=0\)</span></li>
 <li><span class="math inline">\(2x^2-3x=5\)</span></li>
@@ -598,10 +589,8 @@ Solve the equation by factoring.</p>
 <li><span class="math inline">\(\frac13(2-x)(x+5)=4\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-119" class="exercise"><strong>Problem 5.2  </strong></span>
-Find all real solutions of the equation by factoring.</p>
+<div class="{exercise}">
+<p>Find all real solutions of the equation by factoring.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(4(x-2)^2-9=0\)</span></li>
 <li><span class="math inline">\(2x^3-18x=0\)</span></li>
@@ -609,37 +598,25 @@ Find all real solutions of the equation by factoring.</p>
 <li><span class="math inline">\(x^3-3x^2-4x+12=0\)</span></li>
 </ol>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-120" class="exercise"><strong>Problem 5.3  </strong></span>
-A paint measuring <span class="math inline">\(3\)</span> inches by <span class="math inline">\(4\)</span> inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is <span class="math inline">\(30\)</span> square inches, determine the width of the frame.</p>
+<div class="{exercise}">
+<p>A paint measuring <span class="math inline">\(3\)</span> inches by <span class="math inline">\(4\)</span> inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is <span class="math inline">\(30\)</span> square inches, determine the width of the frame.</p>
 <p><img src="figs/tikz-paint-uniform-width.png" style="width:30.0%" alt="paint with uniform width path" /><br />
 </p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-121" class="exercise"><strong>Problem 5.4  </strong></span>
-A rectangle whose length is <span class="math inline">\(2\)</span> meters longer than its width has an area <span class="math inline">\(8\)</span> square meters. Find the width and the length of the rectangle.</p>
+<div class="{exercise}">
+<p>A rectangle whose length is <span class="math inline">\(2\)</span> meters longer than its width has an area <span class="math inline">\(8\)</span> square meters. Find the width and the length of the rectangle.</p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-122" class="exercise"><strong>Problem 5.5  </strong></span>
-The product of two <strong>consecutive negative odd</strong> numbers is <span class="math inline">\(35\)</span>. Find the numbers.</p>
+<div class="{exercise}">
+<p>The product of two <strong>consecutive negative odd</strong> numbers is <span class="math inline">\(35\)</span>. Find the numbers.</p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-123" class="exercise"><strong>Problem 5.6  </strong></span>
-In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.</p>
+<div class="{exercise}">
+<p>In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.</p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-124" class="exercise"><strong>Problem 5.7  </strong></span>
-A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height <span class="math inline">\(h(t)\)</span> of the ball from the ground after time <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)=-16t^2 + 48t + 160\)</span> feet. How long it will take the ball to hit the ground?</p>
+<div class="{exercise}">
+<p>A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height <span class="math inline">\(h(t)\)</span> of the ball from the ground after time <span class="math inline">\(t\)</span> seconds is <span class="math inline">\(h(t)=-16t^2 + 48t + 160\)</span> feet. How long it will take the ball to hit the ground?</p>
 </div>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-125" class="exercise"><strong>Problem 5.8  </strong></span>
-A toy factory estimates that the demand of a particular toy is <span class="math inline">\(300 -x\)</span> units each week if the price is $<span class="math inline">\(x\)</span> dollars per unit. Each week there is a fixed cost $40,000 to produce the demanded toys.
+<div class="{exercise}">
+<p>A toy factory estimates that the demand of a particular toy is <span class="math inline">\(300 -x\)</span> units each week if the price is $<span class="math inline">\(x\)</span> dollars per unit. Each week there is a fixed cost $40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by <span class="math inline">\(R(x)=x(30-x)\)</span></p>
 <ol style="list-style-type: decimal">
 <li>Find the function that models the weekly revenue, <span class="math inline">\(R\)</span>, received when the selling price is $<span class="math inline">\(x\)</span> per unit.</li>
@@ -659,7 +636,6 @@ The weekly revenue is a function of the price given by <span class="math inline"
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -689,6 +665,10 @@ gitbook.start({
 "text": null
 },
 "download": ["agfun.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

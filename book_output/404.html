@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions</title>
+  <title>Page not found | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions" />
+  <meta property="og:title" content="Page not found | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="fyemath/agfun" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions" />
+  <meta name="twitter:title" content="Page not found | Algebra and Geometry of Elementary Functions" />
   
   <meta name="twitter:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="solving-polynomial-equations-by-factoring.html"/>
-<link rel="next" href="rational-equations.html"/>
+
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -448,234 +448,19 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="quadratic-formula" class="section level1" number="6">
-<h1><span class="header-section-number">Topic 6</span> Quadratic Formula</h1>
-<div id="estimate-a-square-root" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Estimate a Square Root</h2>
-<div class="rmdthink">
-<p>Can you estimate the irrational numbers <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(\sqrt{5}\)</span> and <span class="math inline">\(\sqrt{7}\)</span> without using a calculator?</p>
-<p>Can you estimate the square root <span class="math inline">\(\sqrt{m^2+n}\)</span>, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers?</p>
-</div>
-</div>
-<div id="completing-the-square" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Completing the Square</h2>
-<p><strong>The square root property</strong>:<br />
-Suppose that <span class="math inline">\(X^2=d\)</span>. Then <span class="math inline">\(X=\sqrt{d}\)</span> or <span class="math inline">\(X=-\sqrt{d}\)</span>, or simply <span class="math inline">\(X=\pm\sqrt{d}\)</span>.</p>
-<p>The square root property provides another method to solve a quadratic equation, completing the square. This method is based on the following observations:
-<span class="math display">\[
-x^2+{\mathbf{b}}x+{\mathbf{\left(\frac b2\right)^2}}=\left(x+{\mathbf{\frac b2}}\right)^2,
-\]</span>
-and more generally, let <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, and <span class="math inline">\(h=-\frac{b}{2a}\)</span>, then
-<span class="math display">\[
-ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
-\]</span></p>
-<p>The procedure to rewrite a trinomial as the sum of a perfect square and a constant is called <strong><em>completing the square</em></strong>.</p>
-<div class="{example}">
-<p>Solve the equation <span class="math inline">\(x^2+2x-1=0\)</span>.</p>
-</div>
-<div class="{solution}">
-<p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Isolate the constant.
-<span class="math display">\[x^2+2x=1\]</span></li>
-<li>With <span class="math inline">\(b=2\)</span>, add <span class="math inline">\(\left(\frac 22\right)^2\)</span> to both sides to complete a square for the binomial <span class="math inline">\(x^2+bx\)</span>.
-<span class="math display">\[
- \begin{aligned}
-     x^2+2x+\left(\frac22\right)^2&amp;=1+\left(\frac22\right)^2\\\
-     \left(x+\frac22\right)^2&amp;=1+1\\
-     (x+1)^2&amp;=2\\
- \end{aligned}
- \]</span></li>
-<li>Solve the resulting equation using the square root property.
-<span class="math display">\[
- \begin{aligned}
-     x+1 =\sqrt2    &amp; \qquad\text{or} &amp; x+1 =-\sqrt2   \\
-     x   =-1+\sqrt2 &amp; \qquad\text{or} &amp; x   =-1-\sqrt2
- \end{aligned}
- \]</span></li>
-</ol>
-<p>Note that the solution can also be written as <span class="math inline">\(x=-1\pm\sqrt2\)</span>.</p>
-</div>
-<div class="{example}">
-<p>Solve the equation <span class="math inline">\(-2x^2+8x-9=0\)</span>.</p>
-</div>
-<div class="{solution}">
-<p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Isolate the constant.
-<span class="math display">\[-2x^2+8x=9\]</span></li>
-<li>Divide by <span class="math inline">\(-2\)</span> to rewrite the equation in <span class="math inline">\(x^2+Bx=C\)</span> form
-<span class="math display">\[x^2-4x=-\frac{9}{2}\]</span></li>
-<li>With <span class="math inline">\(b=-4\)</span>, add <span class="math inline">\(\left(\frac{-4}{2}\right)^2=4\)</span> to both sides to complete the square for the binomial <span class="math inline">\(x^2-4x\)</span>.
-<span class="math display">\[
- \begin{aligned}
-     x^2-4x+4&amp;=-\frac{9}{2}+4\\\
-     (x-2)^2&amp;=-\frac{1}{2}
- \end{aligned}
- \]</span></li>
-<li>Solve the resulting equation and simplify.
-<span class="math display">\[
- \begin{aligned}
-     x-2 =\frac{\ii}{\sqrt{2}}    &amp; \qquad\text{or} &amp; x-2 =-\frac{\ii}{\sqrt{2}}   \\
-     x   =2+\frac{\sqrt{2}}{2}\ii &amp; \qquad\text{or} &amp; x   =2-\frac{\sqrt{2}}{2}\ii
- \end{aligned}
- \]</span></li>
-</ol>
-</div>
-<div class="rmdtip">
-<p>Another way to complete the square is to use the formula <span class="math inline">\(ax^2+bx+c=a(x-h)^2+f(h)\)</span>, where <span class="math inline">\(f(h)=ah^2+bh+c\)</span> is the value of the polynomial <span class="math inline">\(ax^2+bx+c\)</span> at <span class="math inline">\(x=h\)</span>.</p>
-</div>
-</div>
-<div id="the-quadratic-formula" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> The Quadratic Formula</h2>
-<p>Using the method of completing the square, we obtain the follow quadratic formula for the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> with <span class="math inline">\(a\neq 0\)</span>:
-<span class="math display">\[
-    x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}.
-\]</span></p>
-<p>The quantity <span class="math inline">\(b^2-4ac\)</span> is called the <strong><em>discriminant</em></strong> of the quadratic equation.</p>
-<ol style="list-style-type: decimal">
-<li>If <span class="math inline">\(b^2-4ac&gt;0\)</span>, the equation has two real solutions.</li>
-<li>If <span class="math inline">\(b^2-4ac=0\)</span>, the equation has one real solution.</li>
-<li>If <span class="math inline">\(b^2-4ac&lt;0\)</span>, the equation has two imaginary solutions (no real solutions).</li>
-</ol>
-<div class="{example}">
-<p>Determine the type and the number of solutions of the equation <span class="math inline">\((x-1)(x+2)=-3\)</span>.</p>
-</div>
-<div class="{solution}">
-<p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Rewrite the equation in the form <span class="math inline">\(ax^2+bx+c=0\)</span>.
-<span class="math display">\[
-     \begin{aligned}
-         (x-1)(x+2)&amp;=-3\\
-         x^2+x+1&amp;=0
-     \end{aligned}
- \]</span></li>
-<li>Find the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.
-<span class="math display">\[
-     a=1, b=1 ~\text{and}~ c=1.
- \]</span></li>
-<li>Find the discriminant <span class="math inline">\(b^2-4ac\)</span>.
-<span class="math display">\[
-     b^2-4ac=1^2-4\cdot 1\cdot 1=-3.
- \]</span></li>
-</ol>
-<p>The equation has two imaginary solutions.</p>
-</div>
-<div class="{example}">
-<p>Solve the equation <span class="math inline">\(2x^2-4x+7=0\)</span>.</p>
-</div>
-<div class="{solution}">
-<p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Find the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.
-<span class="math display">\[
-     a=2, b=-4 ~\text{and}~ c=7.
- \]</span></li>
-<li>Find the discriminant <span class="math inline">\(b^2-4ac\)</span>.
-<span class="math display">\[
-     b^2-4ac=(-4)^2-4\cdot 2\cdot 7=16-56=-40.
- \]</span></li>
-<li>Apply the quadratic formula and simplify.
-<span class="math display">\[
- \begin{aligned}
-     x=&amp;\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\\
-     =&amp;\dfrac{-(-4)\pm\sqrt{-40}}{2\cdot 2}\\
-     =&amp;\frac{4\pm 2\sqrt{10} \ii}{4}\\
-     =&amp;1\pm\frac{\sqrt{10}}{2}\ii.
- \end{aligned}
- \]</span></li>
-</ol>
-</div>
-<div class="{example}">
-<p>Find the base and the height of a <strong>triangle</strong> whose base is three inches more than twice its height and whose area is <span class="math inline">\(5\)</span> square inches. Round your answer to the nearest tenth of an inch.</p>
-</div>
-<div class="{solution}">
-<p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>We may suppose the height is <span class="math inline">\(x\)</span> inches. The base can be expressed as <span class="math inline">\(2x+3\)</span> inches.</li>
-<li>By the area formula for a triangle, we have an equation.
-<span class="math display">\[\frac12 x(2x+3)=5.\]</span></li>
-<li>Rewrite the equation in <span class="math inline">\(ax^2+bx+c=0\)</span> form.
-<span class="math display">\[
-     \begin{aligned}
-         x(2x+3)&amp;=10\\
-         2x^2+3x-10&amp;=0.
-     \end{aligned}
- \]</span></li>
-<li>By the quadratic formula, we have
-<span class="math display">\[
- x=\frac{-3\pm\sqrt{3^2-4\cdot 2\cdot (-10)}}{2\cdot 2}=\frac{-3\pm \sqrt{89}}{4}.
- \]</span></li>
-</ol>
-<p>Since <span class="math inline">\(x\)</span> can not be negative, <span class="math inline">\(x=\frac{-3+\sqrt{89}}{4}\approx 1.6\)</span> and <span class="math inline">\(2x+3\approx 6.2\)</span>.
-The height and base of the triangle are approximately <span class="math inline">\(1.6\)</span> inches and 6.2 inches respectively.</p>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-<div id="practice-5" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Practice</h2>
-<div class="{exercise}">
-<p>Solve the quadratic equation by the square root property.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(2x^2-6=0\)</span></li>
-<li><span class="math inline">\((x-3)^2=10\)</span></li>
-<li><span class="math inline">\(4(x+1)^2+25=0\)</span></li>
-</ol>
-</div>
-<div class="{exercise}">
-<p>Solve the quadratic equation by completing the square.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(x^2+x-1=0\)</span></li>
-<li><span class="math inline">\(x^2+8x+12=0\)</span></li>
-<li><span class="math inline">\(3x^2+6x-1=0\)</span></li>
-</ol>
-</div>
-<div class="{exercise}">
-<p>Determine the number and the type of solutions of the given equation.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(x^2+8x+3=0\)</span></li>
-<li><span class="math inline">\(3x^2-2x+4=0\)</span></li>
-<li><span class="math inline">\(2x^2-4x+2=0\)</span></li>
-</ol>
-</div>
-<div class="{exercise}">
-<p>Solve using the quadratic formula.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(x^2+3x-7=0\)</span></li>
-<li><span class="math inline">\(2x^2=-4x+5\)</span></li>
-<li><span class="math inline">\(2x^2=x-3\)</span></li>
-</ol>
-</div>
-<div class="{exercise}">
-<p>Solve using the quadratic formula.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\((x-1)(x+2)=3\)</span></li>
-<li><span class="math inline">\(2x^2-x=(x+2)(x-2)\)</span></li>
-<li><span class="math inline">\(\frac12 x^2+x= \frac13\)</span></li>
-</ol>
-</div>
-<div class="{exercise}">
-<p>A <strong>triangle</strong> whose area is <span class="math inline">\(7.5\)</span> square meters has a base that is one meter less than triple the height. Find the length of its base and height. Round to the nearest hundredth of a meter.</p>
-</div>
-<div class="{exercise}">
-<p>A <strong>rectangular</strong> garden whose length is <span class="math inline">\(2\)</span> feet longer than its width has an area 66 square feet. Find the dimensions of the garden, rounded to the nearest hundredth of a foot.</p>
-</div>
-
-</div>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="solving-polynomial-equations-by-factoring.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rational-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

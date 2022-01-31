@@ -22,13 +22,13 @@ Suppose a tsunami was caused by earthquake somewhere 10000 meters away the coast
 
 A ***radical function*** $f$ is defined by an equation $f(x)=\sqrt[n]{r(x)}$, where $r(x)$ is an algebraic expression.  For example $f(x)=\sqrt{x+1}$. When $n$ is odd number, $r(x)$ can be any real number.  When $n$ is even, $r(x)$ has to be nonnegative, that is $r(x)\geq 0$ so that $f(x)$ is a real number.
 
-```{example}
+:::{example}
 
 Find the domain of the function $f(x)=\sqrt{x+1}$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 Since the index is $2$ which is even, the function has real outputs only if the radicand $x+1\geq 0$.
@@ -37,13 +37,39 @@ $$
 [-1,\infty).
 $$
 
-```
+:::
+
+:::{example}
+
+For a pendulum clock, the period T of the pendulum is approximately modeled by the following function of the length L of the pendulum:
+$$T=2\sqrt{L}$$
+where $L$ and $T$ are measured in meters and seconds respectively.
+
+- If the length of the pendulum is 4 meters, what is the period?
+- If the period of a pendulum clock is 1 second, how long should be the pendulum?
+
+:::
+
+:::{solution}
+
+- Because the length of the pendulum is 4 meters, that is $L=4$. Then the period is $T=2\cdot\sqrt{4}=4$ seconds.
+- Because the period of the pendulum is 1 second, that is $T=1$. Then the length $L$ is the solution of the equations $2\sqrt{L}=1$.
+  $$\begin{aligned}
+      2\sqrt{L}&=1\\
+      \sqrt{L}&=\frac12\\
+      L&=\left(\frac12\right)^2\\
+      L&=\frac14.
+  \end{aligned}
+  $$
+  So the length of the pendulum should be 1/4 in so that the period is 1 second.
+
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Find the domain of each function. Write in interval notation.
 
@@ -52,4 +78,4 @@ Find the domain of each function. Write in interval notation.
 1. $f(x)=\sqrt{1-x^2}$
 1. $f(x)=-\sqrt{\frac{1}{x-5}}$
 
-```
+:::

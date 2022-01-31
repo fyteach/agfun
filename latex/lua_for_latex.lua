@@ -35,27 +35,27 @@ function Div(el)
       pandoc.RawBlock("latex", "\\end{rmdtip}")
     }
   end
---   if el.classes:includes("twocols") then
---     return {
---       pandoc.RawBlock("latex", "\\begin{multicols}{2}"),
---       el,
---       pandoc.RawBlock("latex", "\\end{multicols}")
---     }
---   end
---   if el.classes:includes("threecols") then
---     return {
---       pandoc.RawBlock("latex", "\\begin{multicols}{3}"),
---       el,
---       pandoc.RawBlock("latex", "\\end{multicols}")
---     }
---   end
---   if el.classes:includes("fourcols") then
---     return {
---       pandoc.RawBlock("latex", "\\begin{multicols}{4}"),
---       el,
---       pandoc.RawBlock("latex", "\\end{multicols}")
---     }
---   end
+  if el.classes:includes("twocols") then
+    return {
+      pandoc.RawBlock("latex", "\\begin{multicols}{2}"),
+      el,
+      pandoc.RawBlock("latex", "\\end{multicols}")
+    }
+  end
+  if el.classes:includes("threecols") then
+    return {
+      pandoc.RawBlock("latex", "\\begin{multicols}{3}"),
+      el,
+      pandoc.RawBlock("latex", "\\end{multicols}")
+    }
+  end
+  if el.classes:includes("fourcols") then
+    return {
+      pandoc.RawBlock("latex", "\\begin{multicols}{4}"),
+      el,
+      pandoc.RawBlock("latex", "\\end{multicols}")
+    }
+  end
 end
 
 function Image (el)

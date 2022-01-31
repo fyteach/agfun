@@ -12,22 +12,22 @@
 
 ## Rational Expressions
 
-Let $p$ and $q$ be polynomial functions of $x$ and $p$ is not a constant function. We call the function $r(x)=\frac{p(x)}{q(x)}$ a ***rational function***. The domain of $r$ is $\{x\mid Q(x)\neq 0\}$.
-The expression $\frac{p(x)}{q(x)}$ is called a ***rational expression***, the polynomial $q(x)$ is called the ***numerator***, and the polynomial $q(x)$ is called the ***denominator***.
+Let $P$ and $Q$ be polynomials. Suppose that $Q$ is not a constant function. The quotient $\frac{P}{Q}$ is called a ***rational expression***, the polynomial $P$ is called the ***numerator***, and the polynomial $Q$ is called the ***denominator***.
+
 A rational expression is ***simplified*** if the numerator and the denominator have no common factor other than $1$.
 
-Let $p(x)$, $q(x)$ be polynomials with $q(x)\neq 0$ and $c(x)$ be a nonzero expression. Then
+Let $P$, $Q$ be polynomials with $Q\neq 0$ and $C$ be a nonzero expression. Then
 $$
-\dfrac{~p(x)\cdot c(x)~}{~q(x)\cdot c(x)~}=\dfrac{~p(x)~}{~q(x)~}.
+\dfrac{~P\cdot C~}{~Q\cdot C~}=\dfrac{~P~}{~Q~}.
 $$
 
-```{example}
+:::{example}
 
 Simplify $\dfrac{x^2+4x+3}{x^2+3x+2}$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Factor both the top and the bottom.
@@ -40,15 +40,15 @@ $$
     \dfrac{(x+1)(x+3)}{(x+1)(x+2)}=\dfrac{x+3}{x+2}.
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Simplify $\dfrac{2x^2-x-3}{2x^2-3x-5}$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Factor both the top and the bottom.
@@ -57,23 +57,23 @@ $$\dfrac{2x^2-x-3}{2x^2-3x-5}=\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}.$$
 1. Divide out common factors.
 $$\dfrac{(x+1)(2x-3)}{(x+1)(2x-5)}=\dfrac{2x-3}{2x-5}.$$
 
-```
+:::
 
 ## Multiplying Rational Expressions
 
-If $p$, $q$, $s$, $t$ are polynomials with $q\neq 0$ and $t\neq 0$, then
+If $P$, $Q$, $S$, $T$ are polynomials with $Q\neq 0$ and $T\neq 0$, then
 $$
-\dfrac{~p~}{~q~}\cdot\dfrac{~s~}{~t~}=\dfrac{~ps~}{~qt~}.
+\dfrac{~P~}{~Q~}\cdot\dfrac{~S~}{~T~}=\dfrac{~P\cdot S~}{~Q\cdot T~}.
 $$
 
-```{example}
+:::{example}
 
 Multiply and then simplify.
 $$\dfrac{3x^2}{x^2+x-6}\cdot\dfrac{x^2-4}{6x}.$$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Factor numerators and denominators.
@@ -86,18 +86,18 @@ $$
     \dfrac{\cancel{3}\cdot \cancel{x}\cdot x\cdot\cancel{(x-2)}(x+2)}{\cancel{(x-2)}(x+3)\cdot 2\cdot\cancel{3}\cdot \cancel{x}}=\dfrac{x(x+2)}{2(x+3)}
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Multiply and then simplify.
 $$
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}.
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
@@ -106,30 +106,30 @@ $$
 =\dfrac{(3x+1)(x-4)}{(x+4)(5x+1)}
 $$
 
-```
+:::
 
 ## Dividing Rational Expressions
 
-If $p$, $q$, $s$, $t$ are polynomials where $q\neq 0$, $s\neq 0$ and $t\neq 0$, then
+If $P$, $Q$, $S$, $T$ are polynomials with $Q\neq 0$ and $T\neq 0$, then
 $$
-\dfrac{~p~}{~q~}\div\dfrac{~s~}{~t~}=\dfrac{~p~}{~q~}\cdot\dfrac{~t~}{~s~}=\dfrac{~pt~}{~qs~}.
+\dfrac{~P~}{~Q~}\div\dfrac{~S~}{~T~}=\dfrac{~P~}{~Q~}\cdot\dfrac{~T~}{~S~}=\dfrac{~P\cdot T~}{~Q\cdot S~}.
 $$
 
-```{example}
+:::{example}
 
 Divide and then simplify.  
 $$
 \dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}.
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Rewrite as a multiplication.  
 $$
-\dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot \dfrac{2x^2-x-3}{6x-2}
+\dfrac{2x+6}{x^2-6x-7}\div \dfrac{6x-2}{2x^2-x-3}=\dfrac{2x+6}{x^2-6x-7}\cdot\dfrac{2x^2-x-3}{6x-2}
 $$
 1. Factor and simplify.  
 $$
@@ -138,7 +138,7 @@ $$
 =\dfrac{(x+3)(2x-3)}{(x-7)(3x-1)}
 $$
 
-```
+:::
 
 ## Adding or Subtracting Rational Expressions with the Same Denominator
 
@@ -148,16 +148,16 @@ $$
 \dfrac{~P~}{~R~}-\dfrac{~Q~}{~R~}=\dfrac{~P-Q~}{~R~}.
 $$
 
-```{example}
+:::{example}
 
 Add and simplify  
 $$
 \dfrac{x^2+4}{x^2+3x+2}+\dfrac{5x}{x^2+3x+2}.
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Determine if the rational expressions have the same denominator. If so, the new numerator will be the sum/difference of the numerators.
@@ -169,15 +169,15 @@ $$
     \dfrac{x^2+5x+4}{x^2+3x+2}=\dfrac{(x+1)(x+4)}{(x+1)(x+2)}=\dfrac{x+4}{x+2}.
 $$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Subtract and simplify $\dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 $$
@@ -188,7 +188,7 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
 ## Adding or Subtracting Rational Expressions with Different Denominators
 
@@ -197,17 +197,19 @@ To add or subtract rational expressions with different denominators, we need to 
 ::: {.rmdtip}
 
 **Equivalent Reduction.**  
-What if all denominators are the same? How to make denominators the same? Reducing the problem to an easier one using equivalent operations helps solve the problem.
+What if all denominators are the same? How to make denominators the same?
+
+A general strategy to solve such a problem is to reduce the problem to an easier one using equivalent operations.
 
 :::
 
-```{example}
+:::{example}
 
 Find the LCD of $\dfrac{3}{x^2-x-6}$ and $\dfrac{6}{x^2-4}$.
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Factor each denominator.
@@ -225,16 +227,16 @@ $$
 1. The LCD is the product of factors in the final list.  
 $$(x+2)(x-3)(x-2).$$
 
-```
+:::
 
-```{example}
+:::{example}
 
 Subtract and simplify  
 $$\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}$$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Find the LCD.  
@@ -259,7 +261,7 @@ $$\dfrac{x-3}{x^2-2x-8}- \dfrac{1}{x^2-4}$$
         \dfrac{(x-3)(x-2)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{(x^2-5x+6)-(x-4)}{(x+2)(x-2)(x-4)}=\dfrac{x^2-6x+10}{(x+2)(x-2)(x-4)}
     $$
 
-```
+:::
 
 ## Simplifying Complex Rational Expressions
 
@@ -273,16 +275,16 @@ A complex rational expression is equivalent to the quotient of its numerator by 
 
 :::
 
-```{example}
+:::{example}
 
 Simplify
 $$
 \dfrac{~\dfrac{2x-1}{x^2-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{1}{x^2-1}~}
 $$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Simplify the numerator and the denominator.
@@ -330,7 +332,7 @@ $$
         \end{aligned}
     $$
 
-```
+:::
 
 ::: {.rmdnote}
 
@@ -338,14 +340,14 @@ Another way to simplify a complex rational expression is to multiply the LCD to 
 
 :::
 
-```{example}
+:::{example}
 
 Simplify
 $$\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}$$
 
-```
+:::
 
-```{solution}
+:::{solution}
 \
 
 1. Find the LCD of all denominators.  
@@ -361,13 +363,13 @@ $$
 \end{aligned}
 $$
 
-```
+:::
 
 \newpage
 
 ## Practice
 
-```{exercise}
+:::{exercise}
 
 Simplify.  
 
@@ -377,9 +379,9 @@ Simplify.
 
 3. $\dfrac{x^2-9}{3x^2-8x-3}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Multiply and simplify.  
 
@@ -389,9 +391,9 @@ Multiply and simplify.
 
 1. $\dfrac{6y-2}{3-y}\cdot\dfrac{y^2-6y+9}{3y^2-y}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Divide and simplify.  
 
@@ -401,18 +403,18 @@ Divide and simplify.
 
 3. $\dfrac{y-x}{xy}\div\dfrac{x^2-y^2}{y^2}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify.
 $$
 \frac{-x^2+11x-18}{x^2-4x+4}\div \frac{x^2-5x-36}{x^2-7x+12}\cdot \frac{2x^2+7x-4}{x^2+2x-15}
 $$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Add/subtract and simplify.
 
@@ -420,18 +422,18 @@ Add/subtract and simplify.
 1. $\dfrac{3x-10}{x^2-25}-\dfrac{2x-15}{x^2-25}$
 1. $\dfrac{4}{(x-3)(x+2)}+\dfrac{3x-2}{x^2-x-6}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Find the LCD of rational expressions.
 
 1. $\dfrac{2x}{2x^2-5x-3}$\quad and \quad $\dfrac{x-1}{x^2-x-6}$
 1. $\dfrac{9}{7x^2-28x}$ \quad and \quad $\dfrac{2}{x^2-8x+16}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Add and simplify.
 
@@ -439,9 +441,9 @@ Add and simplify.
 1. $\dfrac{x+2}{2x^2-x-3}+\dfrac{1}{x^2+3x+2}$
 1. $\dfrac{4}{x-3}+\dfrac{3x-2}{x^2-x-6}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Subtract and simplify.
 
@@ -449,45 +451,45 @@ Subtract and simplify.
 1. $\dfrac{y}{y^2-5y-6}-\dfrac{7}{y^2-4y-5}$
 1. $\dfrac{2x-3}{x^2+3x-10}-\dfrac{x+2}{x^2+2x-8}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify.
 $$
 \frac{x+11}{7x^2-2x-5}+\frac{x-2}{x-1}-\frac{x}{7x+5}
 $$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Subtract and simplify.
 $$
 \frac{x-1}{x^2-3x}+\frac{4}{x^2-2\:x-3}-\frac{1}{x\left(x+1\right)}
 $$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify.
 
 1. $\dfrac{~1+\dfrac{2}{x}~}{~1-\dfrac{2}{x}~}$
 1. $\dfrac{~\dfrac{1}{x^2}-1~}{~\dfrac{1}{x^2}-\dfrac{1}{x}~}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify.
 
 1. $\dfrac{~\dfrac{x^2-y^2}{y^2}~}{~\dfrac1x-\dfrac{1}{y}~}$
 1. $\dfrac{~\dfrac{2}{(x+1)^2}-\dfrac{1}{x+1}~}{~1-\dfrac{4}{(x+1)^2}~}$
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Simplify.
 
@@ -495,10 +497,10 @@ Simplify.
 2. $\dfrac{~\dfrac{x+1}{x-1}+\dfrac{x-1}{x+1}~}{~\dfrac{x+1}{x-1}-\dfrac{x-1}{x+1}~}$
 
 
-```
+:::
 
-```{exercise}
+:::{exercise}
 
 Tim and Jim refill their cars at the same gas station twice last month. Each time Tim got \$20 gas and Jim got 8 gallon. Suppose they refill their cars on same days. The price was \$2.5 per gallon the first time. The price on the second time changed. Can you find out who had the better average price?
 
-```
+:::

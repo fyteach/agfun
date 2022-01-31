@@ -14,22 +14,16 @@ classoption: en,11pt
 version: '0.90'
 ---
 
-```{r remove_amsmath, include=FALSE}
+<!-- ```{r remove_amsmath, include=FALSE} -->
 
-options(bookdown.post.latex = function(x) {
-  # x is the content of the LaTeX output file  
-  # The following codes is another way to removes amsthm environments
-  
-  start_row <- grep("package\\{amsthm", x)
-  end_row <- grep("newtheorem\\*\\{solution", x)
-  x<-x[-c(start_row:end_row)]
-  
-  # Remove \iffalse \fi\\
-  x<-gsub('^\\\\iffalse.\\\\fi\\{\\}+?(\\\\)', '', x)
-  x<-gsub('^\\\\tightlist', '', x)
-  
-})
-```
+<!-- options(bookdown.theorem.preamble = FALSE) -->
+
+<!-- options(bookdown.post.latex = function(x) { -->
+<!--   # Remove \iffalse \fi\\ -->
+<!--   x<-gsub('^\\\\iffalse.\\\\fi\\{\\}+?(\\\\)', '', x) -->
+<!-- }) -->
+<!-- ``` -->
+
 
 ```{r fig_setting, include=FALSE}
 library("knitr")

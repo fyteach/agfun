@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 14 Rational Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.19.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 14 Rational Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2022-01-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="quadratic-functions.html"/>
 <link rel="next" href="radical-functions.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,8 +51,8 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script>
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -377,8 +378,9 @@ $(document).ready(function () {
 
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
-<link rel="stylesheet" href="css\licenseInfo.css" type="text/css" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
 </head>
 
 <body>
@@ -465,28 +467,40 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <div id="the-domain-of-a-rational-function" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> The Domain of a Rational Function</h2>
 <p>A <strong><em>rational function</em></strong> <span class="math inline">\(f\)</span> is defined by an equation <span class="math inline">\(f(x)=\frac{p(x)}{q(x)}\)</span>, where <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are polynomials and the degree of <span class="math inline">\(q(x)\)</span> is at least one. Since the denominator cannot be zero, the domain of <span class="math inline">\(f\)</span> consists all real numbers except the numbers such that <span class="math inline">\(q(x)=0\)</span></p>
-
-<div class="example">
-<p><span id="exm:unnamed-chunk-275" class="example"><strong>Example 14.1  </strong></span>
-Find the domain of the function <span class="math inline">\(f(x)=\frac{1}{x-1}\)</span>.</p>
+<div class="{example}">
+<p>Find the domain of the function <span class="math inline">\(f(x)=\frac{1}{x-1}\)</span>.</p>
 </div>
-
-<div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> <br />
+<div class="{solution}">
+<p><br />
 </p>
 <p>Solve the equation <span class="math inline">\(x-1=0\)</span>, we get <span class="math inline">\(x=1\)</span>. Then the domain is <span class="math inline">\(\{x\mid x\neq 1\}\)</span>. In interval notation, the domain is
 <span class="math display">\[
 (-\infty, 1)\cup (1,\infty).
 \]</span></p>
 </div>
+<div class="{example}">
+<p>Suppose that the cost in dollars to produce x toy cars is given by C(x)=5,000+5x. How many toy cars would the factory have to produce in order for the average production cost $10 per item?</p>
+</div>
+<div class="{solution}">
+<p>The average cost is defined as
+<span class="math display">\[A(x)=\frac{C(x)}{x}.\]</span>
+The number of toy cars should be produced to get the average cost $10 is the solution of the equation <span class="math inline">\(A(x)=10\)</span>, that is
+<span class="math display">\[
+\begin{aligned}
+    \frac{5000+5x}{x}&amp;=10\\
+    5000+5x&amp;=10x\\
+    5000&amp;=5x\\
+    x&amp;=1000.
+\end{aligned}
+\]</span></p>
+<p>The factory should produce 1000 toy cars for the average cost $10 per item.</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice" class="section level2" number="14.3">
+<div id="practice-13" class="section level2" number="14.3">
 <h2><span class="header-section-number">14.3</span> Practice</h2>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-277" class="exercise"><strong>Problem 14.1  </strong></span>
-Find the domain of each function. Write in interval notation.</p>
+<div class="{exercise}">
+<p>Find the domain of each function. Write in interval notation.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=\frac{x^2}{x-2}\)</span></li>
 <li><span class="math inline">\(f(x)=\frac{x}{x^2-1}\)</span></li>
@@ -507,7 +521,6 @@ Find the domain of each function. Write in interval notation.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -537,6 +550,10 @@ gitbook.start({
 "text": null
 },
 "download": ["agfun.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
