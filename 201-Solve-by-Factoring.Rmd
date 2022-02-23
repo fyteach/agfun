@@ -45,14 +45,14 @@ When solving linear equations, arithmetic operations are enough. In general, one
 $$A\cdot B=0 \quad ~~\text{if and only if}~~  \quad A=0 ~~\text{or}~~ B=0,$$
 one can transform a polynomial equation into smaller degree polynomial equations. In particular, if $ax^2+bx+c=(mx-p)(nx-q)$, then a solution of the quadratic equation $ax^2+bx+c=0$ is a solution of either $mx-p=0$ or $nx-q=0$.
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$2x^2+5x=3.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation into "*Expression*=0" form and factor.
@@ -78,14 +78,14 @@ $$2x^2+5x=3.$$
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$(x-2)(x+3)=-4.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation into "*Expression*=0" form and factor.
@@ -110,7 +110,7 @@ $$(x-2)(x+3)=-4.$$
 
 :::
 
-:::{example}
+:::{.example}
 
 A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is  $10$ meters by $16$ meters and the total area is 216 square meters, determine the width of the path.
 
@@ -118,7 +118,7 @@ A rectangular garden is surrounded by a path of uniform width. If the dimension 
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Suppose that the width of the frame is $x$ meters. Translate given information into expressions in $x$ and build an equation.\
@@ -153,7 +153,7 @@ When solving a word problem, you may first outline what's known and what's unkno
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Solve the equation by factoring.
 
@@ -164,7 +164,7 @@ Solve the equation by factoring.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find all real solutions of the equation by factoring.
 
@@ -175,7 +175,7 @@ Find all real solutions of the equation by factoring.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A paint measuring $3$ inches by $4$ inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is $30$ square inches, determine the width of the frame.
 
@@ -183,31 +183,31 @@ A paint measuring $3$ inches by $4$ inches is surrounded by a frame of uniform w
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A rectangle whose length is $2$ meters longer than its width  has an area $8$ square meters. Find the width and the length of the rectangle.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 The product of two **consecutive negative odd** numbers is $35$. Find the numbers.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 In a right triangle, the long leg is 2 inches more than double of the short leg. The hypotenuse of the triangle is 1 inch longer than the long leg. Find the length of the shortest side.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet. How long it will take the ball to hit the ground?
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A toy factory estimates that the demand of a particular toy is  $300 -x$ units each week if the price is \$$x$ dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by $R(x)=x(30-x)$

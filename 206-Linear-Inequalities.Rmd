@@ -8,7 +8,7 @@
     1. What the minimum grade the student must earn on the final to get a C or better?
     2. If, in addition, the final exam must be at least 55 to earn a C or better, what would be the minimum grade needed?
 
-2. The college student has attempted 30 credits and a cumulated GPA 1.8. To graduate from the college, the GPA must be 2.0 or higher and the total credits must be at least 60. Now the student decides to spend more time on studying and aims at an cumulated GPA 2.5 on further courses.  
+2. The college student has attempted 30 credits and a cumulated GPA 1.8. To graduate from the college, the GPA must be 2.0 or higher and the total credits must be at least 60. Now the student decides to spend more time on studying and aims at an cumulated GPA 2.5 on further courses. 
 How many more attempted credits the student must earn to graduate?
 
 **Cumulated GPA = $\dfrac{\text{Total Quality Points Earned}}{\text{Total Attempted Credits}}$**
@@ -27,7 +27,7 @@ An inequality defines a relationship between two expressions. The following prop
 |:---|:---|
 |**The additive property** <br/>  If $a<b$, then $a+c<b+c$, for any real number $c$. <br/> If $a<b$, then $a-c<b-c$,  for any real number $c$. |If $x+3<5$, then $x+3-3<5-3$. <br/> Simplifying both sides, we get $x<2$.|
 |**The positive multiplication property**  <br/> If $a<b$ and $c$ is positive, then $ac<bc$. <br/>   If $a<b$ and $c$ is positive, then $\frac ac<\frac bc$. |If $2x<4$, then $\frac{2x}{2}<\frac{4}{2}$. <br/>  Simplifying both sides, we get $x<2$.|
-|**The negative multiplication property**  <br/> If $a<b$ and $c$ is negative, then $ac>bc$.  <br/>  If $a<b$ and $c$ is negative, then $\frac ac>\frac bc$. |If $1<2$, then $-2=1\cdot(-2)>2\cdot(-2)=-4$. <br/>  If $-2x<4$, then $\frac{-2x}{-2}>\frac{4}{-2}$.  <br/>  Simplifying both sides, we get $x>2$.|
+|**The negative multiplication property**  <br/> If $a<b$ and $c$ is negative, then $ac>bc$. <br/>  If $a<b$ and $c$ is negative, then $\frac ac>\frac bc$. |If $1<2$, then $-2=1\cdot(-2)>2\cdot(-2)=-4$. <br/>  If $-2x<4$, then $\frac{-2x}{-2}>\frac{4}{-2}$. <br/>  Simplifying both sides, we get $x>2$.|
 
 ::: {.rmdnote}
 
@@ -74,7 +74,7 @@ An inequality (equation) is solved if the unknown variable is isolated. That's w
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the linear inequality
 $$
@@ -83,7 +83,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -96,7 +96,7 @@ $$
 The solution set is $(-2, \infty)$.
 :::
 
-:::{example}
+:::{.example}
 
 Solve the linear inequality
 $$
@@ -105,7 +105,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -119,7 +119,7 @@ The solution set is $(-2, +\infty)$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the compound linear inequality
 $$
@@ -128,7 +128,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -142,7 +142,7 @@ That is $-2<x<1$. The solution set is $(-2, 1)$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the compound linear inequality  
 $$
@@ -151,7 +151,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -165,7 +165,7 @@ That is $x\geq 1$ or $x< 2$. The solution set is $(-\infty, +\infty)$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the compound linear inequality
 $$
@@ -174,7 +174,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -189,7 +189,7 @@ The solution set is $[-4, 5)$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the compound linear inequality
 $$
@@ -198,7 +198,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -213,13 +213,13 @@ The solution set is $(-\frac23, 2]$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Suppose that $-1\le x < 2$. Find the range of $5-3x$. Write your answer in interval notation.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 To get $5-3x$ from $x$, we need first multiply $x$ be $-3$ and then add $5$.
@@ -245,7 +245,7 @@ Understanding the known, the unknown and the condition of the given problem is t
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Solve the linear inequality. **Write your answer in interval notation.**
 
@@ -254,7 +254,7 @@ Solve the linear inequality. **Write your answer in interval notation.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the linear inequality. **Write your answer in interval notation.**
 
@@ -263,7 +263,7 @@ Solve the linear inequality. **Write your answer in interval notation.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the compound linear inequality. **Write your answer in interval notation.**
 
@@ -272,35 +272,34 @@ Solve the compound linear inequality. **Write your answer in interval notation.*
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the compound linear inequality. **Write your answer in interval notation.**
 
-1.  $-4\leq 3x+5<11$
-2.  $7\geq 2x-3\geq -7$
+1. $-4\leq 3x+5<11$
+2. $7\geq 2x-3\geq -7$
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the compound linear inequality. **Write your answer in interval notation.**
 
-1.  $3x-5>-2 ~\text{or}~ 10-2x\leq 4$
-2.  $2x + 7<5 ~\text{or}~ 3x-8\geq x-2$
-
+1. $3x-5>-2 ~\text{or}~ 10-2x\leq 4$
+2. $2x + 7<5 ~\text{or}~ 3x-8\geq x-2$
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the compound linear inequality. **Write your answer in interval notation.**
 
-1.  $-2\leq \dfrac{2x-5}{3}<3$
-1.  $-1< \dfrac{3x+7}{2}\leq 4$
+1. $-2\leq \dfrac{2x-5}{3}<3$
+1. $-1< \dfrac{3x+7}{2}\leq 4$
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the linear inequality. **Write your answer in interval notation.**
 $$
@@ -309,7 +308,7 @@ $$
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the compound linear inequality. **Write your answer in interval notation.**
 $$
@@ -318,19 +317,19 @@ $$
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Suppose $0< x \le 1$. Find the range of $-2x+1$. **Write your answer in interval notation.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Suppose that $x+2y=1$ and $1\leq x< 3$. Find the range of $y$. **Write your answer in interval notation.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A toy store has a promotion “Buy one get the second one half price" on a certain popular toy. The sale price of the toy is \$20 each. Suppose the store makes more profit when you buy two. What do you think the store's purchasing price of the toy is?
 

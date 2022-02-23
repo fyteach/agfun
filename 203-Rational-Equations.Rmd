@@ -16,7 +16,7 @@ Do you know what are those two parts?
 
 A ***rational equation*** is an equation that contains a rational expression. One way to solve rational equations is to clear all denominators by multiplying the LCD to both sides. Note that because there are values such that the LCD has the value zero. Clearing denominator in general is not an equivalent transformation, rather a functional transformation. So don't forget to check possible extraneous solutions.
 
-:::{example}
+:::{.example}
 
 Solve
 $$
@@ -25,7 +25,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Find the LCD.
@@ -65,7 +65,7 @@ Clearing denominator uses the strategy "**reduction with auxiliary conditions**"
 
 A ***literal equation*** is an equation involving two or more variables. When solving a literal equation for one variable, other variables can be viewed as constants.
 
-:::{example}
+:::{.example}
 
 Solve for $x$ from the equation
 $$
@@ -74,7 +74,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. The LCD is $xyz$.
@@ -108,7 +108,7 @@ Another way to solve a rational equation is to rewrite and simplify the equation
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Solve.
 
@@ -117,7 +117,7 @@ Solve.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve.
 
@@ -126,7 +126,7 @@ Solve.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve a variable from a formula.
 
@@ -135,7 +135,7 @@ Solve a variable from a formula.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve for $x$ from the equation.
 
@@ -144,13 +144,13 @@ Solve for $x$ from the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 David can row 3 miles per hour in still water. It takes him 90 minutes to row 2 miles upstream and then back. How fast is the current?
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 The size of a A0 paper is defined to have an area of 1 square meter with the longer dimension $\sqrt[4]{2}$ meters. Successive paper sizes in the series A1, A2, A3, and so forth, are defined by halving the preceding paper size across the larger dimension. Can you find the dimension of a A4 paper?
 

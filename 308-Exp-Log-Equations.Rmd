@@ -21,13 +21,13 @@ A cup of coffee is brewed with a temperature 195°F and placed in a room with th
 
 To solve an exponential or logarithmic equation, the first step is to rewrite the equation with a single exponentiation or logarithm. Then we can use the equivalent relation between exponentiation and logarithm to rewrite the equation and solve the resulting equation.
 
-:::{example}
+:::{.example}
 
 Solve the equation $10^{2x-1}-5=0$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1.  Rewrite the equation in the form $b^u=c$:
@@ -39,13 +39,13 @@ Solve the equation $10^{2x-1}-5=0$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation $\log_2 x + \log_2 (x - 2) = 3$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation in the form $\log_bu=c$:
@@ -59,13 +59,13 @@ Solve the equation $\log_2 x + \log_2 (x - 2) = 3$.
 
 ## Solving Compound Interest Model
 
-:::{example}
+:::{.example}
 
 A check of \$5000 was deposited in a savings account with an annual interest rate $6\%$ which is compounded monthly. How many years will it take for the money to raise by 20\%?
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 The question tells us the following information:
@@ -97,7 +97,7 @@ When solving exponential and logarithmic equations, you may also use the one-to-
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Solve the exponential equation.
 
@@ -106,7 +106,7 @@ Solve the exponential equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the exponential equation.
 
@@ -115,7 +115,7 @@ Solve the exponential equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the logarithmic equation.
 
@@ -124,7 +124,7 @@ Solve the logarithmic equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve the logarithmic equation.
 
@@ -134,7 +134,7 @@ Solve the logarithmic equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 For the given function, find values of $x$ satisfying the given equation.
 
@@ -145,7 +145,7 @@ For the given function, find values of $x$ satisfying the given equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find intersections of the given pairs of curves.
 
@@ -154,13 +154,13 @@ Find intersections of the given pairs of curves.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Using the formula $A=P(1+\frac rn)^{nt}$ to determine how many years, to the nearest hundredth,  it will take to double an investment \$20,000 at the interest rate 5\% compounded monthly.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Newton's Law of Cooling states that the temperature $T$ of an object at any time $t$ satisfying the equation $T=T_s+(T_0-T_s)e^{-rt}$,
 where $T_s$ is the the temperature of the surrounding environment,
@@ -172,13 +172,13 @@ Suppose that $r=\ln 5/20~~\text{minute}^{-1}$. In how many minutes, the temperat
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A culture of bacteria began with 1000 bacteria and grows exponentially. An hour later there were 1320 bacteria. How many hours after starting will there be 2790 bacteria?
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A type of virus started spreading. After 10 days, 580 infected cases was confirmed. The natural log of the number of confirmed cases approximately is a linear function of the number of days after the virus started spreading. The slope of this linear function is 0.28. Suppose the pattern continues. Estimate the number of infected cases after 20 days.
 

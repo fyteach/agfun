@@ -62,13 +62,13 @@ The goal to solve a single variable equation is to isolate the variable. When an
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation $x-\sqrt{x+1}=1.$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Arrange terms so that one radical is isolated on one side of the equation.
@@ -96,13 +96,13 @@ Solve the equation $x-\sqrt{x+1}=1.$
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation $\sqrt{x-1}-\sqrt{x-6}=1.$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Isolated one radical.
@@ -133,13 +133,13 @@ Solve the equation $\sqrt{x-1}-\sqrt{x-6}=1.$
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation $-2\sqrt[3]{x-4}=6.$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Isolated the radical.
@@ -162,13 +162,13 @@ Solve the equation $-2\sqrt[3]{x-4}=6.$
 
 Equation involving rational exponents may be solved similarly. However, one should be careful with meaning of the expression $\left(X^{\frac mn}\right)^{\frac nm}$. When $m$ is even and $n$ is odd, $\left(X^{\frac mn}\right)^{\frac nm}=|X|$. Otherwise, $\left(X^{\frac mn}\right)^{\frac nm}=X$.
 
-:::{example}
+:::{.example}
 
 Solve the equation $(x+2)^{\frac12}-(x-3)^{\frac12}=1$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 Since there are more than one term involving rational exponents, to solve the equation, we isolate one term and taking power and so on so forth.
@@ -191,13 +191,13 @@ So the equation has one solution $x=7$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation $(x-1)^{\frac{2}{3}}=4$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 There are different way to solve this equation. One may is to take rational powers of both sides and solve the resulting equation.
@@ -220,7 +220,7 @@ So the equation has two solutions $x=9$ and $x=-7$.
 
 ## Learn from Mistakes
 
-:::{example}
+:::{.example}
 
 Can you find the mistakes made in the solution and fix it?
 
@@ -246,7 +246,7 @@ Answer: the equation has two solutions $x=2$ and $x=-1$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 When squaring one side of the equation, the other side as a whole should be squared. The mistake occurred at the squaring step. The right way to solve the equation is as follows.
@@ -269,7 +269,7 @@ Because squaring is not an equivalent transformation in general, the solutions o
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 
@@ -279,7 +279,7 @@ Solve each radical equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 
@@ -288,7 +288,7 @@ Solve each radical equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 
@@ -297,7 +297,7 @@ Solve each radical equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 
@@ -306,7 +306,7 @@ Solve each radical equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 
@@ -315,7 +315,7 @@ Solve each radical equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Solve each radical equation.
 

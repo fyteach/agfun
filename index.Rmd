@@ -24,7 +24,6 @@ version: '0.90'
 <!-- }) -->
 <!-- ``` -->
 
-
 ```{r fig_setting, include=FALSE}
 library("knitr")
 knitr::opts_chunk$set(out.width="60%", fig.align="center")

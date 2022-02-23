@@ -24,13 +24,13 @@ Do you know a faster way to find the values?
 
 To ***factor a polynomial*** is to **express the polynomial as a product** of polynomials of lower degrees. The first and the easiest step is to factor out the GCF of all terms.
 
-:::{example}  
+:::{.example}  
 
 Factor $4x^3y-8x^2y^2+12x^3y^3$.
 
 :::
 
-:::{solution}  
+:::{.solution}  
 \  
 
 1. Find the GCF of all terms.\
@@ -46,13 +46,13 @@ Factor $4x^3y-8x^2y^2+12x^3y^3$.
 
 For a four-term polynomial, in general, we will group them into two groups and factor out the GCF for each group and then factor further.
 
-:::{example}
+:::{.example}
 
 Factor $2x^2-6xy+xz-3yz$.
 
 :::
 
-:::{solution}  
+:::{.solution}  
 \  
 
 For a polynomial with four terms, one can normally try the grouping method.
@@ -79,13 +79,13 @@ For a polynomial with four terms, one can normally try the grouping method.
 
 :::
 
-:::{example}
+:::{.example}
 
 Factor $ax+4b-2a-2bx$.
 
 :::
 
-:::{solution}  
+:::{.solution}  
 \
   
 1. Group the first term with the third term and group the second term with the last term.
@@ -130,13 +130,13 @@ In particular,
 
 $$a^2-b^2=(a-b)(a+b).$$
 
-:::{example}
+:::{.example}
 
 Factor $25x^2-16$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Recognize the binomial as a difference of squares.
@@ -154,13 +154,13 @@ $$
 
 :::
 
-:::{example}
+:::{.example}
 
 Factor $32x^3y-2xy^5$ completely.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -196,13 +196,13 @@ The observation suggests to use trial and error to find the undetermined coeffic
 
 :::
 
-:::{example}
+:::{.example}
 
 Factor $x^2+6x+8$.
 
 :::
 
-:::{solution}
+:::{.solution}
 
 One may factor the trinomial in the following way.
 
@@ -221,15 +221,15 @@ One may factor the trinomial in the following way.
 4. Factor the trinomial
     $$x^2+6x+8=(x+2)(x+4).$$
 
-:::`
+:::
 
-:::{example}
+:::{.example}
 
 Factor $2x^2+5x-3$.
 
 :::
 
-:::{solution}
+:::{.solution}
 
 One may factor the trinomial in the following way.
 
@@ -258,7 +258,7 @@ Some higher degree polynomials may be rewrite as a trinomial after a  substituti
 
 :::
 
-:::{example}
+:::{.example}
 
 Factor the trinomial completely.
 
@@ -266,7 +266,7 @@ $$4x^4-x^2-3$$
 
 :::
 
-:::{solution}
+:::{.solution}
 
 One idea is to use a substitute.
 
@@ -288,7 +288,7 @@ $$
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Factor out the GCF.
 
@@ -298,7 +298,7 @@ Factor out the GCF.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Factor by grouping.
 
@@ -308,7 +308,7 @@ Factor by grouping.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Factor completely.
 
@@ -318,7 +318,7 @@ Factor completely.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Factor completely.
 
@@ -327,7 +327,7 @@ Factor completely.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Factor the trinomial.
 
@@ -337,7 +337,7 @@ Factor the trinomial.
 
 :::
 
-:::{exercise}  
+:::{.exercise}  
 
 Factor the trinomial.
 
@@ -347,7 +347,7 @@ Factor the trinomial.
 
 :::
 
-:::{exercise}  
+:::{.exercise}  
 
 Factor completely into polynomials with integer coefficients.
 
@@ -357,7 +357,7 @@ Factor completely into polynomials with integer coefficients.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Each of trinomial below has a factor in the table. Match the letter on the left of a factor with a the number on the left a trinomial to decipher the following quotation.
 

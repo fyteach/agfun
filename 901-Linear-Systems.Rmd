@@ -6,7 +6,7 @@ Two methods to solve a linear system are the substitution method and the elimina
 
 ## Substitution Method
 
-:::{example}
+:::{.example}
 Solve the system of linear equations using the substitution method.
 $$
 \begin{aligned}
@@ -16,7 +16,7 @@ $$
 $$
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 **Step 1.:** Solve one variable from one equation. For example, one may solve $y$ from equation \eqref{ex-1-1}.
@@ -52,7 +52,7 @@ $$
 
 ## Elimination Method
 
-:::{example}
+:::{.example}
 Solve the system of linear equations using the addition method.
 $$
 \begin{aligned}
@@ -62,7 +62,7 @@ $$
 $$
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 **Step 1.:** Eliminate one variable and solve for the other. For example, one may choose to eliminate $y$.
@@ -116,7 +116,7 @@ If the lines defined by equations in the linear system have the same slope and t
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -126,7 +126,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -136,7 +136,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -146,7 +146,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -156,7 +156,7 @@ $$
 $$
 :::
 
-:::{exercise}Solve.
+:::{.exercise}Solve.
 $$
 \begin{aligned}
     2x+7y & =5  \\
@@ -165,7 +165,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -175,7 +175,7 @@ $$
 $$
 :::
 
-:::{exercise}Solve.
+:::{.exercise}Solve.
 $$
 \begin{aligned}
     3x+2y & =6  \\
@@ -184,7 +184,7 @@ $$
 $$
 :::
 
-:::{exercise}
+:::{.exercise}
 Solve.
 $$
 \begin{aligned}
@@ -194,9 +194,9 @@ $$
 $$
 :::
 
-:::{exercise} Last week, Mike got 5 apples and 4 oranges for \$7. The week the prices are still the same and he got 3 apples and 6 oranges for \$6. What's the price for 1 apple and 1 orange? 
+:::{.exercise} Last week, Mike got 5 apples and 4 oranges for \$7. The week the prices are still the same and he got 3 apples and 6 oranges for \$6. What's the price for 1 apple and 1 orange? 
 :::
 
-:::{exercise} The sum of the digits of a certain two-digit number is 7. Reversing its digits increases the number by 27.  
+:::{.exercise} The sum of the digits of a certain two-digit number is 7. Reversing its digits increases the number by 27.  
 What is the number?
 :::

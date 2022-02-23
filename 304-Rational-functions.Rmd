@@ -19,13 +19,13 @@ Suppose there is a infinite long lever with a load 100 newton that is placed 1 m
 
 A ***rational function*** $f$ is defined by an equation $f(x)=\frac{p(x)}{q(x)}$, where $p(x)$ and $q(x)$ are polynomials and the degree of $q(x)$ is at least one. Since the denominator cannot be zero, the domain of $f$ consists all real numbers except the numbers such that $q(x)=0$
 
-:::{example}
+:::{.example}
 
 Find the domain of the function $f(x)=\frac{1}{x-1}$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 Solve the equation $x-1=0$, we get $x=1$. Then the domain is $\{x\mid x\neq 1\}$. In interval notation, the domain is
@@ -35,13 +35,13 @@ $$
 
 :::
 
-:::{example}
+:::{.example}
 
 Suppose that the cost in dollars to produce x toy cars is given by C(x)=5,000+5x. How many toy cars would the factory have to produce in order for the average production cost $10 per item?
 
 :::
 
-:::{solution} 
+:::{.solution} 
 
 The average cost is defined as
 $$A(x)=\frac{C(x)}{x}.$$
@@ -63,7 +63,7 @@ The factory should produce 1000 toy cars for the average cost $10 per item.
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Find the domain of each function. Write in interval notation.
 

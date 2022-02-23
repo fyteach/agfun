@@ -43,7 +43,7 @@ Within the same level, the convention is to perform from the left to the right.
 
 :::
 
-:::{example}
+:::{.example}
 
 Simplify. **Write with positive exponents.**
 $$
@@ -52,7 +52,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 
 The idea is to simplify the base first and rewrite using positive exponents only.
 
@@ -79,7 +79,7 @@ To avoid mistakes when working with negative exponents, it's better to apply the
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -89,7 +89,7 @@ Simplify. **Write with positive exponents.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -99,7 +99,7 @@ Simplify. **Write with positive exponents.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -109,7 +109,7 @@ Simplify. **Write with positive exponents.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify. **Write with positive exponents.**
 
@@ -119,7 +119,7 @@ Simplify. **Write with positive exponents.**
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A store has large size and small size watermelons. A large one cost \$4 and a small one \$1. Putting on the same table, a smaller watermelons has only half the height of the larger one. Given \$4, will you buy a large watermelon or 4 smaller ones? Why?
 

@@ -16,7 +16,7 @@ bookdown::gitbook:
       # github: no
       # facebook: no
       # twitter: no
-  mathjax: local
+  # mathjax: local
   self_contained: false
 
 bookdown::pdf_book:

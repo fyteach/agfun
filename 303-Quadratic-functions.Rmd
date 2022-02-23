@@ -31,13 +31,13 @@ Consider the quadratic function $f(x)=ax^2+bx+c$, $a\neq 0$.
 1. The $y$-intercept is $(0, f(0))=(0, c)$.
 1. The $x$-intercepts, if exist, are the solutions of the equation $ax^2+bx+c=0$.
 
-:::{example}
+:::{.example}
 
 Find the axis of symmetry and the vertex of the quadratic function $f(x)=x^2-4x+5$.
 
 :::
 
-:::{solution}
+:::{.solution}
 
 1. The coefficients are $a=1$, $b=-4$ and $c=5$.
    Then the axis of symmetry is
@@ -48,13 +48,13 @@ Find the axis of symmetry and the vertex of the quadratic function $f(x)=x^2-4x+
 
 :::
 
-:::{example}
+:::{.example}
 
 Find the axis of symmetry and the vertex of the quadratic function $f(x)=2(x-1)^2-1$.
 
 :::
 
-:::{solution}
+:::{.solution}
 
 1. The equation is in the perfect square form $f(x)=a(x-h)^2+k$. In this case, $h=1$ and $k=-1$.
    Then the axis of symmetry is
@@ -65,13 +65,13 @@ Find the axis of symmetry and the vertex of the quadratic function $f(x)=2(x-1)^
 
 :::
 
-:::{example}
+:::{.example}
 
 Sketch the graph of the quadratic function $f(x)=x^2-2x+3$.
 
 :::
 
-:::{solution}
+:::{.solution}
 
 1. The line of symmetry is
    $$x=-\frac{b}{2a}=-\frac{-2}{2\cdot 1}=1.$$
@@ -93,13 +93,13 @@ Sketch the graph of the quadratic function $f(x)=x^2-2x+3$.
 
 :::
 
-:::{example}
+:::{.example}
 
 Does the function $f(x)=2x^2-4x-6$ have a maximum or minimum? Find it.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Since $a>2$, the function opens upward and has a minimum.
@@ -113,13 +113,13 @@ Does the function $f(x)=2x^2-4x-6$ have a maximum or minimum? Find it.
 
 :::
 
-:::{example}
+:::{.example}
 
 Consider the function $f(x)=-x^2+3x+6$. Find values of $x$ such that $f(x)=2$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Set up the equation for $x$.
@@ -129,13 +129,13 @@ The values of $x$ such that $f(x)=2$ are $x=-1$ and $x=44$.
 
 :::
 
-:::{example}
+:::{.example}
 
 A quadratic function $f$ whose the vertex is $(1, 2)$ has a $y$-intercept $(0, -3)$. Find the equation that defines the function.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Write down the general form of $f$ using only the vertex.
@@ -151,7 +151,7 @@ A quadratic function $f$ whose the vertex is $(1, 2)$ has a $y$-intercept $(0, -
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Sketch the graph of the quadratic functions $f(x)=-(x-2)^2+4$ and find
 
@@ -163,7 +163,7 @@ Sketch the graph of the quadratic functions $f(x)=-(x-2)^2+4$ and find
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Sketch the graph of the quadratic functions $f(x)=x^2+2x-3$ and find
 
@@ -175,7 +175,7 @@ Sketch the graph of the quadratic functions $f(x)=x^2+2x-3$ and find
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Consider the parabola in the graph.
 
@@ -189,7 +189,7 @@ Consider the parabola in the graph.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Consider the graph of the function $f$ shown in the picture.
 
@@ -208,7 +208,7 @@ Consider the graph of the function $f$ shown in the picture.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Consider the quadratic functions $g(x)=x^2-3x-4$ and find the following values or intervals
 
@@ -223,13 +223,13 @@ Consider the quadratic functions $g(x)=x^2-3x-4$ and find the following values o
 3. the interval over which the function is positive
 4. the interval over which the function is increasing.
 
-:::{exercise}
+:::{.exercise}
 
 A store owner estimates that by charging $x$ dollars each for a certain cell phone case, he can sell $d(x)=40 - x$ phone cases each week. The revenue in dollars is $R(x)=xd(x)$ when the selling price of a computer is $x$, Find the selling price that will maximize revenue, and then find the amount of the maximum revenue.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A ball is thrown upwards from a rooftop. It will reach a maximum vertical height and then fall back to the ground. The height $h(t)$ of the ball from the ground after time $t$ seconds is $h(t)=-16t^2 + 48t + 160$ feet.
 
@@ -241,14 +241,14 @@ A ball is thrown upwards from a rooftop. It will reach a maximum vertical height
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A ball is thrown upward from the ground with an initial velocity $v_0$ ft/sec. The height $h(t)$ of the ball after $t$ seconds is $h(t)= -16t^2 + v_0t$. The ball hits the ground after 4 seconds.
 Find the maximum height and how long it will take the ball to reach the maximum height.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 A toy factory estimates that the demand of a particular toy is  $300 -x$ units each week if the price is \$$x$ dollars per unit. Each week there is a fixed cost \$40,000 to produce the demanded toys.
 The weekly revenue is a function of the price given by $R(x)=x(30-x)$

@@ -26,14 +26,14 @@ More generally, $|X|=|Y|$ is equivalent to $X=Y$ or $X=-Y$.
 
 The equation $|X|=0$ is equivalent to $X=0$.
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$|2x-3|=7.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 The equation is equivalent to
@@ -49,14 +49,14 @@ The solutions are $x=-2$ or $x=5$. In set-builder notation, the solution set is 
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$|2x-1|-3=8.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation into $|X|=c$ form.
@@ -75,14 +75,14 @@ The solutions are $x=-5$ or $x=6$. In set-builder notation, the solution set is 
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$3|2x-5|=9.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation into $|X|=c$ form.
@@ -101,14 +101,14 @@ The solutions are $x=1$ or $x=4$. In set-builder notation, the solution set is $
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$2|1-2x|-3=7.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. Rewrite the equation into $|X|=c$ form.
@@ -127,14 +127,14 @@ The solutions are $x=-2$ or $x=3$. In set-builder notation, the solution set is 
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$|3x-2|=|x+2|.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 Note that two numbers have the same absolute value only if they are the same or opposite to each other. Then the equation is equivalent to  
@@ -151,14 +151,14 @@ The solutions are $x=2$ and $x=0$. In set-builder notation, the solution set is 
 
 :::
 
-:::{example}
+:::{.example}
 
 Solve the equation
 $$2|1-x|=|2x+10|.$$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 Since $2$ is positive, $2|1-x|=|2||1-x|=|2-2x|$. Moreover, because $|-X|=|X|$, the equation is equivalent to
@@ -179,7 +179,7 @@ The original equation only has one solution $x=-2$. In set-builder notation, the
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 
@@ -188,7 +188,7 @@ Find the solution set for the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 
@@ -197,7 +197,7 @@ Find the solution set for the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 
@@ -206,7 +206,7 @@ Find the solution set for the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 
@@ -215,7 +215,7 @@ Find the solution set for the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 
@@ -224,7 +224,7 @@ Find the solution set for the equation.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Find the solution set for the equation.
 

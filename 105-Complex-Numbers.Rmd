@@ -41,7 +41,7 @@ For any real number $a$, the expression $\sqrt[n]{a^n}$ can be simplified as
 
 A radical is simplified if the radicand has no perfect power factors against the radical.
 
-:::{example}
+:::{.example}
 
 Simplify the radical expression using the definition.
 
@@ -50,7 +50,7 @@ Simplify the radical expression using the definition.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. $\sqrt{4(y-1)^2}=\sqrt{[2(y-1)]^2}=2|y-1|$.
@@ -78,7 +78,7 @@ Rational exponents have the same properties as integral exponents:
 \
 </div>
 
-:::{example}
+:::{.example}
 
 Simplify the radical expression or the expression with rational exponents. **Write in radical notation**.
 
@@ -89,7 +89,7 @@ Simplify the radical expression or the expression with rational exponents. **Wri
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1.
@@ -125,7 +125,7 @@ $${\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{ab}.$$
 If $\sqrt[n]a$ and $\sqrt[n]b$ are real numbers and $b\neq 0$, then
 $$\dfrac{\sqrt[n]a}{\sqrt[n]b}=\sqrt[n]{\dfrac ab}.$$
 
-:::{example}
+:::{.example}
 
 Simplify the expression.
 
@@ -134,7 +134,7 @@ Simplify the expression.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. $\sqrt[4]{8xy^4}\sqrt[4]{2x^7y}=\sqrt[4]{(8xy^4)\cdot (2x^7y)}=\sqrt[4]{16x^8y^5}=\sqrt[4]{2^4(x^2)^4y^4\cdot y}=2x^2y\sqrt[4]{y}$.
@@ -146,7 +146,7 @@ Simplify the expression.
 
 Two radicals are called ***like radicals*** if they have the same index and the same radicand.  We add or subtract like radicals by combining their coefficients.
 
-:::{example}
+:::{.example}
 
 Simplify the expression.
 
@@ -156,7 +156,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -169,7 +169,7 @@ $$
 
 Multiplying radical expressions with many terms is similar to that multiplying polynomials with many terms.
 
-:::{example}
+:::{.example}
 
 Simplify the expression.
 $$
@@ -178,7 +178,7 @@ $$
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -197,7 +197,7 @@ $$
 
 Rationalizing denominator means rewriting a radical expression into an equivalent expression in which the denominator no longer contains radicals.
 
-:::{example}
+:::{.example}
 
 Rationalize the denominator.
 
@@ -206,7 +206,7 @@ Rationalize the denominator.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1. In this case, to get rid of the radical in the bottom, we multiply the expression by $\dfrac{\sqrt{x}}{\sqrt{x}}$ so that the radicand in the bottom becomes a perfect power.
@@ -222,7 +222,7 @@ Rationalize the denominator.
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Evaluate the square root. If the square root is not a real number, state so.
 
@@ -232,7 +232,7 @@ Evaluate the square root. If the square root is not a real number, state so.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression.
 
@@ -242,7 +242,7 @@ Simplify the radical expression.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression.
 
@@ -252,7 +252,7 @@ Simplify the radical expression.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression. Assume all variables are positive.
 
@@ -262,7 +262,7 @@ Simplify the radical expression. Assume all variables are positive.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Write the radical expression with rational exponents.
 
@@ -272,7 +272,7 @@ Write the radical expression with rational exponents.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Write in radical notation and simplify.
 
@@ -282,7 +282,7 @@ Write in radical notation and simplify.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the expression. Write with radical notations. Assume all variables represent nonnegative numbers.
 
@@ -292,7 +292,7 @@ Simplify the expression. Write with radical notations. Assume all variables repr
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the expression. Write  in radical notation.  Assume $x$ is nonnegative.
 
@@ -302,7 +302,7 @@ Simplify the expression. Write  in radical notation.  Assume $x$ is nonnegative.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the expression. Write in radical notation. Assume $x$ is nonnegative.
 
@@ -312,7 +312,7 @@ Simplify the expression. Write in radical notation. Assume $x$ is nonnegative.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the expression. Write in radical notation. Assume all variables are nonnegative.
 
@@ -322,7 +322,7 @@ Simplify the expression. Write in radical notation. Assume all variables are non
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Multiply and simplify.
 
@@ -332,7 +332,7 @@ Multiply and simplify.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression. Assume all variables are positive.
 
@@ -342,7 +342,7 @@ Simplify the radical expression. Assume all variables are positive.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Divide. Assume all variables are positive. Answers must be simplified.
 
@@ -353,7 +353,7 @@ Divide. Assume all variables are positive. Answers must be simplified.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Add or subtract, and simplify. Assume all variables are positive.
 
@@ -363,7 +363,7 @@ Add or subtract, and simplify. Assume all variables are positive.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Add or subtract, and simplify. Assume all variables are positive
 
@@ -373,7 +373,7 @@ Add or subtract, and simplify. Assume all variables are positive
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Multiply and simplify. Assume all variables are positive.
 
@@ -383,7 +383,7 @@ Multiply and simplify. Assume all variables are positive.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Multiply and simplify. Assume all variables are positive.
 
@@ -393,7 +393,7 @@ Multiply and simplify. Assume all variables are positive.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
 
@@ -404,7 +404,7 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the radical expression and rationalize the denominator. Assume all variables are positive.
 
@@ -415,7 +415,7 @@ Simplify the radical expression and rationalize the denominator. Assume all vari
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify and rationalize the denominator. Assume all variables are positive.
 
@@ -438,7 +438,7 @@ If $a=0$ and $b\neq 0$, then the complex number $a+b\ii=b\ii$ is called a purely
 
 Adding, subtracting, multiplying, dividing or simplifying complex numbers are similar to those for radical expressions. In particular, adding and subtracting become similar to combining like terms.
 
-:::{example}
+:::{.example}
 
 Simplify and write your answer in the form $a+b\ii$, where $a$ and $b$ are real numbers and $\ii$ is the imaginary unit.
 
@@ -450,7 +450,7 @@ Simplify and write your answer in the form $a+b\ii$, where $a$ and $b$ are real 
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 1.
@@ -485,13 +485,13 @@ $$
 
 :::
 
-:::{example}
+:::{.example}
 
 Evaluate $f(1+\ii)$ for the function $f(z)=z^2+\frac{z-1}{z+1}$. Write your answer in the form $a+b\ii$.
 
 :::
 
-:::{solution}
+:::{.solution}
 \
 
 $$
@@ -509,7 +509,7 @@ $$
 
 ## Practice
 
-:::{exercise}
+:::{.exercise}
 
 Add, subtract, multiply complex numbers and write your answer in the form $a+b\ii$.
 
@@ -520,7 +520,7 @@ Add, subtract, multiply complex numbers and write your answer in the form $a+b\i
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Add, subtract, multiply complex numbers and write your answer in the form $a+b\ii$.
 
@@ -531,7 +531,7 @@ Add, subtract, multiply complex numbers and write your answer in the form $a+b\i
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Divide the complex number and write your answer in the form $a+b\ii$.
 
@@ -542,7 +542,7 @@ Divide the complex number and write your answer in the form $a+b\ii$.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Simplify the expression. %where $\ii=\sqrt{-1}$ is the imaginary unit.
 
@@ -553,13 +553,13 @@ Simplify the expression. %where $\ii=\sqrt{-1}$ is the imaginary unit.
 
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Evaluate the function polynomial $2x^2-3x+5$ for $x=1-\ii$.
 Write your answer in the form $a+b\ii$.
 :::
 
-:::{exercise}
+:::{.exercise}
 
 Evaluate the polynomial $\ii x^2-x+\frac{2}{x-1}$ for $x=\ii-1$.
 Write your answer in the form $a+b\ii$.
