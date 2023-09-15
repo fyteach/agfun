@@ -3,8 +3,8 @@
 
 x <- xfun::read_utf8("book_output/agfun.tex")
 
-exer_start <- which(x=="\\BeginKnitrBlock{exercise}")
-exer_end <- which(x=="\\EndKnitrBlock{exercise}")
+exer_start <- which(x=="\\begin{exercise}")
+exer_end <- which(x=="\\end{exercise}")
 
 enum_start <- grep("begin\\{enum", x)
 enum_end <- grep("end\\{enum", x)
@@ -24,4 +24,4 @@ for (i in 1:num_of_exer) {
 
 xfun::write_utf8(x,"book_output/agfun.tex")
 
-tinytex::xelatex("book_output/agfun.tex")
+# tinytex::xelatex("book_output/agfun.tex")

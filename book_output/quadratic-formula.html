@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 6 Quadratic Formula | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="github-repo" content="fyemath/agfun" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2022-02-23" />
+<meta name="date" content="2023-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="solving-polynomial-equations-by-factoring.html"/>
 <link rel="next" href="rational-equations.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,297 +49,66 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script>
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-/* jshint latedef: false */
-
-+function ($) {
-  'use strict';
-
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
-
-  var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
-    this.transitioning = null
-
-    if (this.options.parent) {
-      this.$parent = this.getParent()
-    } else {
-      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
-    }
-
-    if (this.options.toggle) this.toggle()
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<style>
+  div.solution {
+    display: none;
   }
 
-  Collapse.VERSION  = '3.3.7'
-
-  Collapse.TRANSITION_DURATION = 350
-
-  Collapse.DEFAULTS = {
-    toggle: true
+  div.SolutionWrapper {
+    margin: 1em 0;
   }
 
-  Collapse.prototype.dimension = function () {
-    var hasWidth = this.$element.hasClass('width')
-    return hasWidth ? 'width' : 'height'
+  button.SolutionToggleBtn {
+    border: none;
+    color: rgb(127, 54, 223);
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
   }
 
-  Collapse.prototype.show = function () {
-    if (this.transitioning || this.$element.hasClass('in')) return
-
-    var activesData
-    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
-
-    if (actives && actives.length) {
-      activesData = actives.data('bs.collapse')
-      if (activesData && activesData.transitioning) return
-    }
-
-    var startEvent = $.Event('show.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    if (actives && actives.length) {
-      Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.collapse', null)
-    }
-
-    var dimension = this.dimension()
-
-    this.$element
-      .removeClass('collapse')
-      .addClass('collapsing')[dimension](0)
-      .attr('aria-expanded', true)
-
-    this.$trigger
-      .removeClass('collapsed')
-      .attr('aria-expanded', true)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse in')[dimension]('')
-      this.transitioning = 0
-      this.$element
-        .trigger('shown.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
-
-    this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  .solution>p:first-of-type {
+    display: none;
   }
-
-  Collapse.prototype.hide = function () {
-    if (this.transitioning || !this.$element.hasClass('in')) return
-
-    var startEvent = $.Event('hide.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    var dimension = this.dimension()
-
-    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
-
-    this.$element
-      .addClass('collapsing')
-      .removeClass('collapse in')
-      .attr('aria-expanded', false)
-
-    this.$trigger
-      .addClass('collapsed')
-      .attr('aria-expanded', false)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.transitioning = 0
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse')
-        .trigger('hidden.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    this.$element
-      [dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
-  }
-
-  Collapse.prototype.toggle = function () {
-    this[this.$element.hasClass('in') ? 'hide' : 'show']()
-  }
-
-  Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
-      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
-      .each($.proxy(function (i, element) {
-        var $element = $(element)
-        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
-      }, this))
-      .end()
-  }
-
-  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
-    var isOpen = $element.hasClass('in')
-
-    $element.attr('aria-expanded', isOpen)
-    $trigger
-      .toggleClass('collapsed', !isOpen)
-      .attr('aria-expanded', isOpen)
-  }
-
-  function getTargetFromTrigger($trigger) {
-    var href
-    var target = $trigger.attr('data-target')
-      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
-
-    return $(target)
-  }
-
-
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.collapse')
-      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
-
-      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
-      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  var old = $.fn.collapse
-
-  $.fn.collapse             = Plugin
-  $.fn.collapse.Constructor = Collapse
-
-
-  // COLLAPSE NO CONFLICT
-  // ====================
-
-  $.fn.collapse.noConflict = function () {
-    $.fn.collapse = old
-    return this
-  }
-
-
-  // COLLAPSE DATA-API
-  // =================
-
-  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this   = $(this)
-
-    if (!$this.attr('data-target')) e.preventDefault()
-
-    var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
-
-    Plugin.call($target, option)
-  })
-
-}(jQuery);
-
-</script>
+</style>
 
 <script>
-// Folding solutions.
-// Code modified from the answer for the question on stackoverflow
-// https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+  document.addEventListener('DOMContentLoaded', function () {
+  // Select all solution blocks
+  var solutions = document.querySelectorAll('div.solution');
+  
+  solutions.forEach(function (solution) {
+    // Create a collapsible div to wrap the solution in
+    var solutionWrapper = document.createElement('div');
+    solutionWrapper.classList.add('SolutionWrapper');
 
-window.initializeSolutionFolding = function(show) {
+    // Add a show solution button right above
+    var solutionButton = document.createElement('button');
+    solutionButton.type = 'button';
+    solutionButton.classList.add('SolutionToggleBtn');
+    solutionButton.textContent = 'Solution'; // Initial text
 
-// handlers for show-all and hide all
-$("#rmd-show-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('show');
+    // Add a click event listener to the button
+    solutionButton.addEventListener('click', function () {
+      if (solution.style.display === 'block') {
+        solution.style.display = 'none';
+        // solutionButton.textContent = 'Show Solution';
+      } else {
+        solution.style.display = 'block';
+        // solutionButton.textContent = 'Hide Solution';
+      }
+    });
+
+    // Insert the button and the solution into the wrapper
+    solution.parentNode.insertBefore(solutionWrapper, solution);
+    solutionWrapper.appendChild(solutionButton);
+    // Insert the wrapper before the original solution div
   });
 });
-$("#rmd-hide-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('hide');
-  });
-});
-
-// index for unique solution element ids
-var currentIndex = 1;
-
-// select all solution blocks
-var rSolutionBlocks = $('div.solution');
-rSolutionBlocks.each(function() {
-
-  // create a collapsable div to wrap the solution in
-  var div = $('<div class="collapse solution-collapse"></div>');
-  if (show)
-    div.addClass('in');
-  var id = 'solution-643E0F36' + currentIndex++;
-  div.attr('id', id);
-  $(this).before(div);
-  $(this).detach().appendTo(div);
-
-  // add a show solution button right above
-  var showSolutionText = $('<span>' + (show ? 'Hide' : 'Solution') + '</span>');
-  var showSolutionButton = $('<button type="button" class="btn btn-default btn-xs solution-folding-btn pull-right"></button>');
-  showSolutionButton.append(showSolutionText);
-  showSolutionButton
-      .attr('data-toggle', 'collapse')
-      .attr('data-target', '#' + id)
-      .attr('aria-expanded', show)
-      .attr('aria-controls', id);
-
-  var buttonRow = $('<div class="solution-button-row"></div>');
-  var buttonCol = $('<div class="col-md-12"></div>');
-
-  buttonCol.append(showSolutionButton);
-  buttonRow.append(buttonCol);
-
-  div.before(buttonRow);
-
-  // update state of button on show/hide
-  // div.on('hidden.bs.collapse', function () {
-  //   showSolutionText.text('Show');
-  // });
-  // div.on('show.bs.collapse', function () {
-  //   showSolutionText.text('Hide');
-  // });
-});
-
-}
-
 </script>
-
-<script>
-$(document).ready(function () {
-  window.initializeSolutionFolding("show" === "hide");
-});
-</script>
-
-
 
 <div id="warningModal" style="display: none;">
     <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
@@ -378,6 +145,10 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
@@ -419,7 +190,7 @@ $(document).ready(function () {
 <li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
 <li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li>Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a></li>
 
 </ul>
 
@@ -448,17 +219,17 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="quadratic-formula" class="section level1" number="6">
-<h1><span class="header-section-number">Topic 6</span> Quadratic Formula</h1>
-<div id="estimate-a-square-root" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Estimate a Square Root</h2>
+<div id="quadratic-formula" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Topic 6</span> Quadratic Formula<a href="quadratic-formula.html#quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="estimate-a-square-root" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Estimate a Square Root<a href="quadratic-formula.html#estimate-a-square-root" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="rmdthink">
 <p>Can you estimate the irrational numbers <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\sqrt{3}\)</span>, <span class="math inline">\(\sqrt{5}\)</span> and <span class="math inline">\(\sqrt{7}\)</span> without using a calculator?</p>
 <p>Can you estimate the square root <span class="math inline">\(\sqrt{m^2+n}\)</span>, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers?</p>
 </div>
 </div>
-<div id="completing-the-square" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Completing the Square</h2>
+<div id="completing-the-square" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Completing the Square<a href="quadratic-formula.html#completing-the-square" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>The square root property</strong>:<br />
 Suppose that <span class="math inline">\(X^2=d\)</span>. Then <span class="math inline">\(X=\sqrt{d}\)</span> or <span class="math inline">\(X=-\sqrt{d}\)</span>, or simply <span class="math inline">\(X=\pm\sqrt{d}\)</span>.</p>
 <p>The square root property provides another method to solve a quadratic equation, completing the square. This method is based on the following observations:
@@ -481,19 +252,19 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
 <span class="math display">\[x^2+2x=1\]</span></li>
 <li>With <span class="math inline">\(b=2\)</span>, add <span class="math inline">\(\left(\frac 22\right)^2\)</span> to both sides to complete a square for the binomial <span class="math inline">\(x^2+bx\)</span>.
 <span class="math display">\[
- \begin{aligned}
+\begin{aligned}
      x^2+2x+\left(\frac22\right)^2&amp;=1+\left(\frac22\right)^2\\\
      \left(x+\frac22\right)^2&amp;=1+1\\
      (x+1)^2&amp;=2\\
- \end{aligned}
- \]</span></li>
+\end{aligned}
+\]</span></li>
 <li>Solve the resulting equation using the square root property.
 <span class="math display">\[
- \begin{aligned}
+\begin{aligned}
      x+1 =\sqrt2    &amp; \qquad\text{or} &amp; x+1 =-\sqrt2   \\
      x   =-1+\sqrt2 &amp; \qquad\text{or} &amp; x   =-1-\sqrt2
- \end{aligned}
- \]</span></li>
+\end{aligned}
+\]</span></li>
 </ol>
 <p>Note that the solution can also be written as <span class="math inline">\(x=-1\pm\sqrt2\)</span>.</p>
 </div>
@@ -510,26 +281,26 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
 <span class="math display">\[x^2-4x=-\frac{9}{2}\]</span></li>
 <li>With <span class="math inline">\(b=-4\)</span>, add <span class="math inline">\(\left(\frac{-4}{2}\right)^2=4\)</span> to both sides to complete the square for the binomial <span class="math inline">\(x^2-4x\)</span>.
 <span class="math display">\[
- \begin{aligned}
+\begin{aligned}
      x^2-4x+4&amp;=-\frac{9}{2}+4\\\
      (x-2)^2&amp;=-\frac{1}{2}
- \end{aligned}
- \]</span></li>
+\end{aligned}
+\]</span></li>
 <li>Solve the resulting equation and simplify.
 <span class="math display">\[
- \begin{aligned}
+\begin{aligned}
      x-2 =\frac{\ii}{\sqrt{2}}    &amp; \qquad\text{or} &amp; x-2 =-\frac{\ii}{\sqrt{2}}   \\
      x   =2+\frac{\sqrt{2}}{2}\ii &amp; \qquad\text{or} &amp; x   =2-\frac{\sqrt{2}}{2}\ii
- \end{aligned}
- \]</span></li>
+\end{aligned}
+\]</span></li>
 </ol>
 </div>
 <div class="rmdtip">
 <p>Another way to complete the square is to use the formula <span class="math inline">\(ax^2+bx+c=a(x-h)^2+f(h)\)</span>, where <span class="math inline">\(f(h)=ah^2+bh+c\)</span> is the value of the polynomial <span class="math inline">\(ax^2+bx+c\)</span> at <span class="math inline">\(x=h\)</span>.</p>
 </div>
 </div>
-<div id="the-quadratic-formula" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> The Quadratic Formula</h2>
+<div id="the-quadratic-formula" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The Quadratic Formula<a href="quadratic-formula.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using the method of completing the square, we obtain the follow quadratic formula for the quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span> with <span class="math inline">\(a\neq 0\)</span>:
 <span class="math display">\[
     x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}.
@@ -553,15 +324,15 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
          (x-1)(x+2)&amp;=-3\\
          x^2+x+1&amp;=0
      \end{aligned}
- \]</span></li>
+\]</span></li>
 <li>Find the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.
 <span class="math display">\[
      a=1, b=1 ~\text{and}~ c=1.
- \]</span></li>
+\]</span></li>
 <li>Find the discriminant <span class="math inline">\(b^2-4ac\)</span>.
 <span class="math display">\[
      b^2-4ac=1^2-4\cdot 1\cdot 1=-3.
- \]</span></li>
+\]</span></li>
 </ol>
 <p>The equation has two imaginary solutions.</p>
 </div>
@@ -575,20 +346,20 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
 <li>Find the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.
 <span class="math display">\[
      a=2, b=-4 ~\text{and}~ c=7.
- \]</span></li>
+\]</span></li>
 <li>Find the discriminant <span class="math inline">\(b^2-4ac\)</span>.
 <span class="math display">\[
      b^2-4ac=(-4)^2-4\cdot 2\cdot 7=16-56=-40.
- \]</span></li>
+\]</span></li>
 <li>Apply the quadratic formula and simplify.
 <span class="math display">\[
- \begin{aligned}
+\begin{aligned}
      x=&amp;\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\\
      =&amp;\dfrac{-(-4)\pm\sqrt{-40}}{2\cdot 2}\\
      =&amp;\frac{4\pm 2\sqrt{10} \ii}{4}\\
      =&amp;1\pm\frac{\sqrt{10}}{2}\ii.
- \end{aligned}
- \]</span></li>
+\end{aligned}
+\]</span></li>
 </ol>
 </div>
 <div class="example">
@@ -607,19 +378,19 @@ ax^2+bx+c=a(x-h)^2+f(h)=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a^2}.
          x(2x+3)&amp;=10\\
          2x^2+3x-10&amp;=0.
      \end{aligned}
- \]</span></li>
+\]</span></li>
 <li>By the quadratic formula, we have
 <span class="math display">\[
- x=\frac{-3\pm\sqrt{3^2-4\cdot 2\cdot (-10)}}{2\cdot 2}=\frac{-3\pm \sqrt{89}}{4}.
- \]</span></li>
+x=\frac{-3\pm\sqrt{3^2-4\cdot 2\cdot (-10)}}{2\cdot 2}=\frac{-3\pm \sqrt{89}}{4}.
+\]</span></li>
 </ol>
 <p>Since <span class="math inline">\(x\)</span> can not be negative, <span class="math inline">\(x=\frac{-3+\sqrt{89}}{4}\approx 1.6\)</span> and <span class="math inline">\(2x+3\approx 6.2\)</span>.
 The height and base of the triangle are approximately <span class="math inline">\(1.6\)</span> inches and 6.2 inches respectively.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-5" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Practice</h2>
+<div id="practice-5" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Practice<a href="quadratic-formula.html#practice-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-134" class="exercise"><strong>Problem 6.1  </strong></span>Solve the quadratic equation by the square root property.</p>
 <ol style="list-style-type: decimal">
@@ -725,7 +496,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

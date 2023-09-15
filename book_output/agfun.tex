@@ -5,16 +5,19 @@
 \documentclass[
   en,11pt]{elegantbook}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -33,14 +36,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Algebra and Geometry of Elementary Functions},
-  pdfauthor={Fei Ye},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -462,10 +457,18 @@ margin=1in
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Algebra and Geometry of Elementary Functions},
+  pdfauthor={Fei Ye},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Algebra and Geometry of Elementary Functions}
 \author{Fei Ye}
-\date{2022-02-23}
+\date{2023-09-15}
 
 \begin{document}
 \maketitle
@@ -474,7 +477,6 @@ margin=1in
 \setcounter{tocdepth}{0}
 \tableofcontents
 }
-file.copy('\_redirects', 'book\_output/\_redirects', overwrite = TRUE)
 
 \mainmatter
 
@@ -542,14 +544,16 @@ In the notation \(x^n\), \(n\) is called \textbf{\emph{the exponent}}, \(x\) is 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Property
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Example
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 The product rule \(x^m\cdot x^n=x^{m+n}.\) & \(2x^2\cdot (-3x^3)=-6x^5.\) \\
 The quotient rule (for \(x\neq 0\).) \(\dfrac{x^m}{x^n}= \begin{cases} x^{m-n}  & \text{if} m\ge n.\\[1em] \dfrac{1}{x^{n-m}} & \text{if} m\le n. \end{cases} \) & \(\frac{15x^5}{5x^2}=3x^3;\) \(\frac{-3x^2}{6x^3}=-\frac{1}{2x}.\) \\
 The zero exponent rule (for \(x\neq 0\).) \(x^0=1.\) & \((-2)^0=1;\) \(-x^0=-1.\) \\
@@ -557,7 +561,6 @@ The negative exponent rule (for \(x\neq 0\).) \(x^{-n}=\dfrac{1}{x^n} \quad\text
 The power to a power rule \(\left(x^a\right)^b=x^{ab}.\) & \(\left(2^{2}\right)^3=2^6=64;\) \(\left(x^2\right)^3=x^6.\) \\
 The product raised to a power rule \((xy)^n=x^ny^n.\) & \(\left(-2x\right)^{2}=(-2)^2x^2=4x^2.\) \\
 The quotient raised to a power rule (for \(y\neq 0\).) \(\left(\dfrac{x}{y}\right)^n=\dfrac{x^n}{y^n}.\) & \(    \left(\dfrac{x}{-2}\right)^{3}=\dfrac{x^3}{(-2)^3}=-\dfrac{x^3}{8}.\) \\
-\bottomrule
 \end{longtable}
 
 \begin{rmdnote}
@@ -715,8 +718,6 @@ Factor \(4x^3y-8x^2y^2+12x^3y^3\).
 
 \begin{solution}
 
-~
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
@@ -743,8 +744,6 @@ Factor \(2x^2-6xy+xz-3yz\).
 \end{example}
 
 \begin{solution}
-
-~
 
 For a polynomial with four terms, one can normally try the grouping method.
 
@@ -783,7 +782,7 @@ Factor \(ax+4b-2a-2bx\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -841,7 +840,7 @@ Factor \(25x^2-16\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -869,7 +868,6 @@ Factor \(32x^3y-2xy^5\) completely.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -925,7 +923,7 @@ One may factor the trinomial in the following way.
   \[1\cdot 4+ 1\cdot 2=6.\]\\
   This step can be checked easily using the following diagram.
 
-  \hfill\break{\centering\includegraphics{figs/tikz-factoring-x2.png}\par}
+  {\centering\includegraphics{figs/tikz-factoring-x2.png}\par}
 \item
   Factor the trinomial
   \[x^2+6x+8=(x+2)(x+4).\]
@@ -954,7 +952,7 @@ One may factor the trinomial in the following way.
   \[2\cdot 3+1\cdot(-1)=5.\]\\
   This step can be checked easily using the following diagram.
 
-  \hfill\break{\centering\includegraphics{figs/tikz-factoring-2x2.png}\par}
+  {\centering\includegraphics{figs/tikz-factoring-2x2.png}\par}
 \item
   Factor the trinomial
   \[2x^2+5x-3=(x+3)(2x-1).\]
@@ -1131,14 +1129,22 @@ Each of trinomial below has a factor in the table. Match the letter on the left 
 \phantom{"} \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{11~~2~~2}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{8~~5~~3~~6}\);
 \phantom{"} \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{14~~3}\),\quad \(\dfrac{\phantom{A}}{9~~5~~14}\)\quad \(\dfrac{\phantom{A}}{13}\)\quad \(\dfrac{\phantom{A}}{12~~5~~14~~2~~15~~11~~1~~9~~5~~14}\).''
 
-\begin{longtable}[]{@{}lllllll@{}}
-\toprule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{A:} \(3x-2\) & \textbf{B:} \(2x+1\) & \textbf{C:} \(x+6\) & \textbf{D:} \(x+7\) & \textbf{E:} \(2x-1\) & \textbf{F:} \(3x-1\) & \textbf{G:} \(x+10\) \\
 \textbf{H:} \(x-8\) & \textbf{I:} \(2x+9\) & \textbf{J:} \(x-1\) & \textbf{K:} \(x+3\) & \textbf{L:} \(2x-5\) & \textbf{M:} \(x+5\) & \textbf{N:} \(x-7\) \\
 \textbf{O:} \(x-13\) & \textbf{P:} \(5x-3\) & \textbf{Q:} \(4x-11\) & \textbf{R:} \(x-9\) & \textbf{S:} \(2x+3\) & \textbf{T:} \(x+4\) & \textbf{U:} \(7x+1\) \\
 \textbf{V:} \(3x+5\) & \textbf{W:} \(3x+4\) & \textbf{X:} \(8x+3\) & \textbf{Y:} \(x-14\) & \textbf{Z:} \(5x-6\) & & \\
-\bottomrule
 \end{longtable}
 
 \end{exercise}
@@ -1218,7 +1224,7 @@ Simplify \(\dfrac{x^2+4x+3}{x^2+3x+2}\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1242,7 +1248,7 @@ Simplify \(\dfrac{2x^2-x-3}{2x^2-3x-5}\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1271,7 +1277,7 @@ Multiply and then simplify.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1297,7 +1303,6 @@ Multiply and then simplify.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \dfrac{3x^2-8x-3}{x^2+8x+16}\cdot\dfrac{x^2-16}{5x^2-14x-3}
@@ -1323,7 +1328,7 @@ Divide and then simplify.\\
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1362,7 +1367,7 @@ Add and simplify\\
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1386,7 +1391,6 @@ Subtract and simplify \(\dfrac{2x^2}{2x^2-x-3}-\dfrac{3x+5}{2x^2-x-3}\).
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -1417,7 +1421,7 @@ Find the LCD of \(\dfrac{3}{x^2-x-6}\) and \(\dfrac{6}{x^2-4}\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1430,12 +1434,13 @@ Find the LCD of \(\dfrac{3}{x^2-x-6}\) and \(\dfrac{6}{x^2-4}\).
   List the factors of the first denominator and add unlisted factors of the second factor to get the final list.
 
   \begin{longtable}[]{@{}lccc@{}}
-  \toprule
+  \toprule\noalign{}
   \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
   First list & \((x+2)\) & \((x-3)\) & \\
   Second list & \((x+2)\) & & \((x-2)\) \\
   Final list & \((x+2)\) & \((x-3)\) & \((x-2)\) \\
-  \bottomrule
   \end{longtable}
 \item
   The LCD is the product of factors in the final list.\\
@@ -1451,7 +1456,7 @@ Subtract and simplify\\
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1469,12 +1474,13 @@ Subtract and simplify\\
     Then using the table to find the final list of factors of the LCD.
 
     \begin{longtable}[]{@{}lccc@{}}
-    \toprule
+    \toprule\noalign{}
     \endhead
+    \bottomrule\noalign{}
+    \endlastfoot
     First list & \((x+2)\) & & \((x-4)\) \\
     Second list & \((x+2)\) & \((x-2)\) & \\
     Final list & \((x+2)\) & \((x-2)\) & \((x-4)\) \\
-    \bottomrule
     \end{longtable}
   \end{enumerate}
 
@@ -1515,7 +1521,7 @@ Simplify
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1584,7 +1590,7 @@ Simplify
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1863,7 +1869,7 @@ Simplify the radical expression using the definition.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1928,7 +1934,7 @@ Simplify the radical expression or the expression with rational exponents. \text
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1983,7 +1989,7 @@ Simplify the expression.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2010,7 +2016,6 @@ Simplify the expression.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \sqrt{8x^3}-\sqrt{(-2)^2 x^4}+\sqrt{2x^5}=2x\sqrt{2x}-2x^2+x^2\sqrt{2x}=(x^2+2x)\sqrt{2x}-2x^2.
@@ -2030,7 +2035,6 @@ Simplify the expression.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -2065,7 +2069,7 @@ Rationalize the denominator.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2122,7 +2126,7 @@ Simplify and write your answer in the form \(a+b\ii\), where \(a\) and \(b\) are
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2165,7 +2169,6 @@ Evaluate the express \(z^2+\frac{z-1}{z+1}\) for \(z=1+\ii\). Write your answer 
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -2678,7 +2681,7 @@ Solve the equation
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2716,7 +2719,7 @@ Solve the equation
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2752,11 +2755,12 @@ Solve the equation
 A rectangular garden is surrounded by a path of uniform width. If the dimension of the garden is \(10\) meters by \(16\) meters and the total area is 216 square meters, determine the width of the path.
 
 \includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-rectangular-uniform-width.png}\\
+
 \end{example}
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2840,6 +2844,7 @@ Find all real solutions of the equation by factoring.
 A paint measuring \(3\) inches by \(4\) inches is surrounded by a frame of uniform width. If the combined area of the paint and the frame is \(30\) square inches, determine the width of the frame.
 
 \includegraphics[width=0.3\textwidth,height=\textheight]{figs/tikz-paint-uniform-width.png}\\
+
 \end{exercise}
 
 \begin{exercise}
@@ -2910,7 +2915,6 @@ Solve the equation \(x^2+2x-1=0\).
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2946,7 +2950,7 @@ Solve the equation \(-2x^2+8x-9=0\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3009,7 +3013,6 @@ Determine the type and the number of solutions of the equation \((x-1)(x+2)=-3\)
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3043,7 +3046,7 @@ Solve the equation \(2x^2-4x+7=0\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3077,7 +3080,6 @@ Find the base and the height of a \textbf{triangle} whose base is three inches m
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3236,7 +3238,7 @@ Solve
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3293,7 +3295,7 @@ Solve for \(x\) from the equation
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3443,7 +3445,7 @@ Solve the equation \(x-\sqrt{x+1}=1.\)
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3483,7 +3485,7 @@ Solve the equation \(\sqrt{x-1}-\sqrt{x-6}=1.\)
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3526,7 +3528,7 @@ Solve the equation \(-2\sqrt[3]{x-4}=6.\)
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3560,7 +3562,6 @@ Solve the equation \((x+2)^{\frac12}-(x-3)^{\frac12}=1\).
 \end{example}
 
 \begin{solution}
-\\
 
 Since there are more than one term involving rational exponents, to solve the equation, we isolate one term and taking power and so on so forth.
 \[
@@ -3586,7 +3587,6 @@ Solve the equation \((x-1)^{\frac{2}{3}}=4\).
 \end{example}
 
 \begin{solution}
-\\
 
 There are different way to solve this equation. One may is to take rational powers of both sides and solve the resulting equation.
 \[
@@ -3633,7 +3633,6 @@ Answer: the equation has two solutions \(x=2\) and \(x=-1\).
 \end{example}
 
 \begin{solution}
-\\
 
 When squaring one side of the equation, the other side as a whole should be squared. The mistake occurred at the squaring step. The right way to solve the equation is as follows.
 \[
@@ -3784,7 +3783,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 The equation is equivalent to
 \[
@@ -3804,7 +3802,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3831,7 +3828,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3858,7 +3854,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3885,7 +3880,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 Note that two numbers have the same absolute value only if they are the same or opposite to each other. Then the equation is equivalent to\\
 \[3x-2=x+2\quad \text{or} \quad 3x-2=-(x+2).\]
@@ -3906,7 +3900,6 @@ Solve the equation
 \end{example}
 
 \begin{solution}
-\\
 
 Since \(2\) is positive, \(2|1-x|=|2||1-x|=|2-2x|\). Moreover, because \(|-X|=|X|\), the equation is equivalent to
 \[|2x-2|=|2x+10|.\]
@@ -4061,18 +4054,19 @@ An inequality defines a relationship between two expressions. The following prop
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Property
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Example
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{The additive property} If \(a<b\), then \(a+c<b+c\), for any real number \(c\). If \(a<b\), then \(a-c<b-c\), for any real number \(c\). & If \(x+3<5\), then \(x+3-3<5-3\). Simplifying both sides, we get \(x<2\). \\
 \textbf{The positive multiplication property} If \(a<b\) and \(c\) is positive, then \(ac<bc\). If \(a<b\) and \(c\) is positive, then \(\frac ac<\frac bc\). & If \(2x<4\), then \(\frac{2x}{2}<\frac{4}{2}\). Simplifying both sides, we get \(x<2\). \\
 \textbf{The negative multiplication property} If \(a<b\) and \(c\) is negative, then \(ac>bc\). If \(a<b\) and \(c\) is negative, then \(\frac ac>\frac bc\). & If \(1<2\), then \(-2=1\cdot(-2)>2\cdot(-2)=-4\). If \(-2x<4\), then \(\frac{-2x}{-2}>\frac{4}{-2}\). Simplifying both sides, we get \(x>2\). \\
-\bottomrule
 \end{longtable}
 
 \begin{rmdnote}
@@ -4127,7 +4121,6 @@ Solve the linear inequality
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -4147,7 +4140,6 @@ Solve the linear inequality
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -4167,7 +4159,6 @@ x+2<3\quad \text{and}\quad -2x-3<1.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -4187,7 +4178,6 @@ Solve the compound linear inequality\\
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -4207,7 +4197,6 @@ Solve the compound linear inequality
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{array}{rcl}
@@ -4228,7 +4217,6 @@ Solve the compound linear inequality
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{array}{rcl}
@@ -4246,7 +4234,6 @@ Suppose that \(-1\le x < 2\). Find the range of \(5-3x\). Write your answer in i
 \end{example}
 
 \begin{solution}
-\\
 
 To get \(5-3x\) from \(x\), we need first multiply \(x\) be \(-3\) and then add \(5\).
 \[
@@ -4449,7 +4436,7 @@ Find the indicated function value.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4483,7 +4470,6 @@ Determine which of the following graphs defines a function.
 \end{figure}
 
 \begin{solution}
-\\
 
 Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don't define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.
 \end{solution}
@@ -4526,7 +4512,7 @@ Use the graph in the picture to answer the following questions.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4714,7 +4700,7 @@ Find the slope-intercept form equation for the linear function \(f\) such that \
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4737,7 +4723,6 @@ Sketch the graph of the linear function \(f(x)=-\frac12 x + 1\).
 \end{example}
 
 \begin{solution}
-\\
 
 \textbf{Method 1: Get points by evaluating \(f(x)\).}
 
@@ -4768,6 +4753,7 @@ Sketch the graph of the linear function \(f(x)=-\frac12 x + 1\).
 \end{enumerate}
 
 \includegraphics[width=0.8\textwidth,height=\textheight]{figs/tikz-linear-function-example-b.png}\\
+
 \end{solution}
 
 \hypertarget{horizontal-and-vertical-lines}{%
@@ -4812,7 +4798,7 @@ Find an equation of the line that is parallel to the line \(4x+2y=1\) and passes
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4840,7 +4826,7 @@ Find an equation of the line that is perpendicular to the line \(4x-2y=1\) and p
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4984,6 +4970,7 @@ Use the graph of the line \(L\) to answer the following questions
 \end{enumerate}
 
 \includegraphics[width=0.8\textwidth,height=\textheight]{figs/tikz-perp-prll-exercise.png}\\
+
 \end{exercise}
 
 \begin{exercise}
@@ -5071,6 +5058,7 @@ Find the axis of symmetry and the vertex of the quadratic function \(f(x)=x^2-4x
 \end{example}
 
 \begin{solution}
+\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5090,6 +5078,7 @@ Find the axis of symmetry and the vertex of the quadratic function \(f(x)=2(x-1)
 \end{example}
 
 \begin{solution}
+\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5109,6 +5098,7 @@ Sketch the graph of the quadratic function \(f(x)=x^2-2x+3\).
 \end{example}
 
 \begin{solution}
+\leavevmode
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5140,7 +5130,7 @@ Does the function \(f(x)=2x^2-4x-6\) have a maximum or minimum? Find it.
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5166,7 +5156,7 @@ Consider the function \(f(x)=-x^2+3x+6\). Find values of \(x\) such that \(f(x)=
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5187,7 +5177,7 @@ A quadratic function \(f\) whose the vertex is \((1, 2)\) has a \(y\)-intercept 
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5271,6 +5261,7 @@ Consider the parabola in the graph.
 \end{enumerate}
 
 \includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-exercise-graph-quadratic-1.png}\\
+
 \end{exercise}
 
 \begin{exercise}
@@ -5302,6 +5293,7 @@ Consider the graph of the function \(f\) shown in the picture.
 \end{enumerate}
 
 \includegraphics[width=0.6\textwidth,height=\textheight]{figs/tikz-exercise-graph-quadratic-2.png}\\
+
 \end{exercise}
 
 :::\{.exercise\}
@@ -5413,7 +5405,6 @@ Find the domain of the function \(f(x)=\frac{1}{x-1}\).
 \end{example}
 
 \begin{solution}
-\\
 
 Solve the equation \(x-1=0\), we get \(x=1\). Then the domain is \(\{x\mid x\neq 1\}\). In interval notation, the domain is
 \[
@@ -5503,7 +5494,6 @@ Find the domain of the function \(f(x)=\sqrt{x+1}\).
 \end{example}
 
 \begin{solution}
-\\
 
 Since the index is \(2\) which is even, the function has real outputs only if the radicand \(x+1\geq 0\).
 Solve the inequality, we get \(x\geq -1\). In interval notation, the domain is
@@ -5529,6 +5519,7 @@ where \(L\) and \(T\) are measured in meters and seconds respectively.
 \end{example}
 
 \begin{solution}
+\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -5652,7 +5643,7 @@ A sum of \(\$10,000\) is invested at an annual rate of \(8\%\), Find the balance
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5698,7 +5689,6 @@ To the nearest thousandth of a billion, what will the predicted population of th
 \end{example}
 
 \begin{solution}
-\\
 
 The population is approximately
 \[
@@ -5834,7 +5824,7 @@ Convert between exponential and logarithmic forms.
 
 \begin{solution}
 
-\hfill\break
+
 
 When converting between exponential and logarithmic forms, we move the base from one side to the other side, then add or drop the log sign.
 
@@ -5870,7 +5860,7 @@ Evaluate the logarithms.
 
 \begin{solution}
 
-\hfill\break
+
 
 The key is to rewrite the log and the power so that they have the same base.
 
@@ -5892,7 +5882,6 @@ Find the domain of the function \(f(x)=\ln(2-3x)\).
 \end{example}
 
 \begin{solution}
-\\
 
 The function has a real output if \(2-3x>0\). Solving the inequality, we get \(x<\frac{2}{3}\). So the domain of the function is \((-\infty, \frac{2}{3})\).
 \end{solution}
@@ -5923,7 +5912,6 @@ Expand and simplify the logarithm \(\log_2\left(\frac{8\sqrt{y}}{x^3}\right)\).
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \begin{aligned}
@@ -5939,7 +5927,6 @@ Write the expression \(2\ln(x-1)-\ln(x^2+1)\) as a single logarithm.
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 2\ln(x-1)-\ln(x^2+1)=\ln((x-1)^2)-\ln(x^2+1)=\ln\left(\frac{(x-1)^2}{x^2+1}\right).
@@ -5951,7 +5938,6 @@ Evaluate the logarithm \(\log_34\) and round it to the nearest tenth.
 \end{example}
 
 \begin{solution}
-\\
 
 On most scientific calculator, there are only the common logarithmic function \texttt{LOG} and the natural logarithmic function \texttt{LN}. To evaluate a logarithm based on a general number, we use the change-of-base property. In this case, the value of \(\log_34\) is \[\log_34=\frac{\log4}{\log3}\approx 1.3.\]
 \end{solution}
@@ -5964,7 +5950,6 @@ Simplify the logarithmic expression
 \end{example}
 
 \begin{solution}
-\\
 
 \[
 \log_2(x^{\ln 3})\log_32
@@ -6206,7 +6191,7 @@ Solve the equation \(10^{2x-1}-5=0\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6229,7 +6214,7 @@ Solve the equation \(\log_2 x + \log_2 (x - 2) = 3\).
 
 \begin{solution}
 
-\hfill\break
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6256,7 +6241,6 @@ A check of \$5000 was deposited in a savings account with an annual interest rat
 \end{example}
 
 \begin{solution}
-\\
 
 The question tells us the following information:
 \(P=5000\), \(r=0.06\), \(n=12\), and \(A=5000\cdot (1+0.2)=6000\). What we want to know is the number of years \(t\). The compound interest model tells us that \(t\) satisfies the following equation:

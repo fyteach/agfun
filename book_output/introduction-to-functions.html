@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 11 Introduction to Functions | Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 11 Introduction to Functions | Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="github-repo" content="fyemath/agfun" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2022-02-23" />
+<meta name="date" content="2023-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="linear-inequalities.html"/>
 <link rel="next" href="linear-functions.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,297 +49,66 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script>
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-/* jshint latedef: false */
-
-+function ($) {
-  'use strict';
-
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
-
-  var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
-    this.transitioning = null
-
-    if (this.options.parent) {
-      this.$parent = this.getParent()
-    } else {
-      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
-    }
-
-    if (this.options.toggle) this.toggle()
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<style>
+  div.solution {
+    display: none;
   }
 
-  Collapse.VERSION  = '3.3.7'
-
-  Collapse.TRANSITION_DURATION = 350
-
-  Collapse.DEFAULTS = {
-    toggle: true
+  div.SolutionWrapper {
+    margin: 1em 0;
   }
 
-  Collapse.prototype.dimension = function () {
-    var hasWidth = this.$element.hasClass('width')
-    return hasWidth ? 'width' : 'height'
+  button.SolutionToggleBtn {
+    border: none;
+    color: rgb(127, 54, 223);
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
   }
 
-  Collapse.prototype.show = function () {
-    if (this.transitioning || this.$element.hasClass('in')) return
-
-    var activesData
-    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
-
-    if (actives && actives.length) {
-      activesData = actives.data('bs.collapse')
-      if (activesData && activesData.transitioning) return
-    }
-
-    var startEvent = $.Event('show.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    if (actives && actives.length) {
-      Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.collapse', null)
-    }
-
-    var dimension = this.dimension()
-
-    this.$element
-      .removeClass('collapse')
-      .addClass('collapsing')[dimension](0)
-      .attr('aria-expanded', true)
-
-    this.$trigger
-      .removeClass('collapsed')
-      .attr('aria-expanded', true)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse in')[dimension]('')
-      this.transitioning = 0
-      this.$element
-        .trigger('shown.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
-
-    this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  .solution>p:first-of-type {
+    display: none;
   }
-
-  Collapse.prototype.hide = function () {
-    if (this.transitioning || !this.$element.hasClass('in')) return
-
-    var startEvent = $.Event('hide.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    var dimension = this.dimension()
-
-    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
-
-    this.$element
-      .addClass('collapsing')
-      .removeClass('collapse in')
-      .attr('aria-expanded', false)
-
-    this.$trigger
-      .addClass('collapsed')
-      .attr('aria-expanded', false)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.transitioning = 0
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse')
-        .trigger('hidden.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    this.$element
-      [dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
-  }
-
-  Collapse.prototype.toggle = function () {
-    this[this.$element.hasClass('in') ? 'hide' : 'show']()
-  }
-
-  Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
-      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
-      .each($.proxy(function (i, element) {
-        var $element = $(element)
-        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
-      }, this))
-      .end()
-  }
-
-  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
-    var isOpen = $element.hasClass('in')
-
-    $element.attr('aria-expanded', isOpen)
-    $trigger
-      .toggleClass('collapsed', !isOpen)
-      .attr('aria-expanded', isOpen)
-  }
-
-  function getTargetFromTrigger($trigger) {
-    var href
-    var target = $trigger.attr('data-target')
-      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
-
-    return $(target)
-  }
-
-
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.collapse')
-      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
-
-      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
-      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  var old = $.fn.collapse
-
-  $.fn.collapse             = Plugin
-  $.fn.collapse.Constructor = Collapse
-
-
-  // COLLAPSE NO CONFLICT
-  // ====================
-
-  $.fn.collapse.noConflict = function () {
-    $.fn.collapse = old
-    return this
-  }
-
-
-  // COLLAPSE DATA-API
-  // =================
-
-  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this   = $(this)
-
-    if (!$this.attr('data-target')) e.preventDefault()
-
-    var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
-
-    Plugin.call($target, option)
-  })
-
-}(jQuery);
-
-</script>
+</style>
 
 <script>
-// Folding solutions.
-// Code modified from the answer for the question on stackoverflow
-// https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+  document.addEventListener('DOMContentLoaded', function () {
+  // Select all solution blocks
+  var solutions = document.querySelectorAll('div.solution');
+  
+  solutions.forEach(function (solution) {
+    // Create a collapsible div to wrap the solution in
+    var solutionWrapper = document.createElement('div');
+    solutionWrapper.classList.add('SolutionWrapper');
 
-window.initializeSolutionFolding = function(show) {
+    // Add a show solution button right above
+    var solutionButton = document.createElement('button');
+    solutionButton.type = 'button';
+    solutionButton.classList.add('SolutionToggleBtn');
+    solutionButton.textContent = 'Solution'; // Initial text
 
-// handlers for show-all and hide all
-$("#rmd-show-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('show');
+    // Add a click event listener to the button
+    solutionButton.addEventListener('click', function () {
+      if (solution.style.display === 'block') {
+        solution.style.display = 'none';
+        // solutionButton.textContent = 'Show Solution';
+      } else {
+        solution.style.display = 'block';
+        // solutionButton.textContent = 'Hide Solution';
+      }
+    });
+
+    // Insert the button and the solution into the wrapper
+    solution.parentNode.insertBefore(solutionWrapper, solution);
+    solutionWrapper.appendChild(solutionButton);
+    // Insert the wrapper before the original solution div
   });
 });
-$("#rmd-hide-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('hide');
-  });
-});
-
-// index for unique solution element ids
-var currentIndex = 1;
-
-// select all solution blocks
-var rSolutionBlocks = $('div.solution');
-rSolutionBlocks.each(function() {
-
-  // create a collapsable div to wrap the solution in
-  var div = $('<div class="collapse solution-collapse"></div>');
-  if (show)
-    div.addClass('in');
-  var id = 'solution-643E0F36' + currentIndex++;
-  div.attr('id', id);
-  $(this).before(div);
-  $(this).detach().appendTo(div);
-
-  // add a show solution button right above
-  var showSolutionText = $('<span>' + (show ? 'Hide' : 'Solution') + '</span>');
-  var showSolutionButton = $('<button type="button" class="btn btn-default btn-xs solution-folding-btn pull-right"></button>');
-  showSolutionButton.append(showSolutionText);
-  showSolutionButton
-      .attr('data-toggle', 'collapse')
-      .attr('data-target', '#' + id)
-      .attr('aria-expanded', show)
-      .attr('aria-controls', id);
-
-  var buttonRow = $('<div class="solution-button-row"></div>');
-  var buttonCol = $('<div class="col-md-12"></div>');
-
-  buttonCol.append(showSolutionButton);
-  buttonRow.append(buttonCol);
-
-  div.before(buttonRow);
-
-  // update state of button on show/hide
-  // div.on('hidden.bs.collapse', function () {
-  //   showSolutionText.text('Show');
-  // });
-  // div.on('show.bs.collapse', function () {
-  //   showSolutionText.text('Hide');
-  // });
-});
-
-}
-
 </script>
-
-<script>
-$(document).ready(function () {
-  window.initializeSolutionFolding("show" === "hide");
-});
-</script>
-
-
 
 <div id="warningModal" style="display: none;">
     <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
@@ -378,6 +145,10 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
@@ -419,7 +190,7 @@ $(document).ready(function () {
 <li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
 <li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li>Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a></li>
 
 </ul>
 
@@ -448,10 +219,10 @@ $$\newcommand{\ii}{\mathbf{i}}$$
 $$\newcommand{\parll}{ {\mathbin{\parallel}} }$$
 $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
-<div id="introduction-to-functions" class="section level1" number="11">
-<h1><span class="header-section-number">Topic 11</span> Introduction to Functions</h1>
-<div id="it-is-a-flu-season" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> It is a Flu Season</h2>
+<div id="introduction-to-functions" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Topic 11</span> Introduction to Functions<a href="introduction-to-functions.html#introduction-to-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="it-is-a-flu-season" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> It is a Flu Season<a href="introduction-to-functions.html#it-is-a-flu-season" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="rmdthink">
 <p>The following graph shows a relation between the week number from 2019/09/30 to 2020/01/27, and the number of people being tested for flu, and the number of people whose tests were positive.</p>
 <ul>
@@ -463,8 +234,8 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <p><img src="figs/flu-season.png" width="90%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="definition-and-notations" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> Definition and Notations</h2>
+<div id="definition-and-notations" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Definition and Notations<a href="introduction-to-functions.html#definition-and-notations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong><em>relation</em></strong> is a set of ordered pairs. The set of all first components of the ordered pairs is called the <strong><em>domain</em></strong>. The set of all second components of the ordered pairs is called the <strong><em>range</em></strong>.</p>
 <p>A <strong><em>function</em></strong> is a relation such that each element in the domain corresponds to <strong>exactly one</strong> element in the range.</p>
 <p>For a function, we usually use the variable <span class="math inline">\(x\)</span> to represent an element from the domain and call it the <strong><em>independent variable</em></strong>. The variable <span class="math inline">\(y\)</span> is used to represent the value corresponding to <span class="math inline">\(x\)</span> and is called the <strong><em>dependent variable</em></strong>. We say <span class="math inline">\(y\)</span> is a function of <span class="math inline">\(x\)</span>. When we consider several functions together, to distinguish them we named functions by a letter such as <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, or <span class="math inline">\(F\)</span>. The notation <span class="math inline">\(f(x)\)</span>, read as <strong>“<span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span>” or “<span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>”</strong>, represents the output of the function <span class="math inline">\(f\)</span> when the input is <span class="math inline">\(x\)</span>.</p>
@@ -488,8 +259,8 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </ol>
 </div>
 </div>
-<div id="graphs-of-functions" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> Graphs of Functions</h2>
+<div id="graphs-of-functions" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Graphs of Functions<a href="introduction-to-functions.html#graphs-of-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong><em>The graph of a function</em></strong> is the graph of its ordered pairs. A graph of ordered pairs <span class="math inline">\((x,y)\)</span> in the rectangular coordinate system defines <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(x\)</span> if any vertical line crosses the graph at most once. This test is called the <strong><em>vertical line test</em></strong>.</p>
 <div class="example">
 <p><span id="exm:unlabeled-div-214" class="example"><strong>Example 11.2  </strong></span>Determine which of the following graphs defines a function.</p>
@@ -501,8 +272,8 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <p>Because in graphs A. B. C. there are vertical lines intersecting the graph at two points. So those graphs fail the vertical line test and hence don’t define functions. In graph D., although the graphs are not connected, but any vertical line only intersects one point. Therefore, Graph D. defines a functions.</p>
 </div>
 </div>
-<div id="graph-reading" class="section level2" number="11.4">
-<h2><span class="header-section-number">11.4</span> Graph Reading</h2>
+<div id="graph-reading" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Graph Reading<a href="introduction-to-functions.html#graph-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The domain of a graph is the set of <span class="math inline">\(x\)</span>-coordinates of all points on the graph. The range of a graph is the set of <span class="math inline">\(y\)</span>-coordinates of all points on the graph. To find the domain of a graph, we look for the left and the right endpoints. To find the range of a graph, we look for the highest and the lowest positioned points.</p>
 <p>To find the coordinates of a point on a graph, one draw a horizontal line and a vertical line through the point. The number on the <span class="math inline">\(x\)</span>-axis where the vertical line passing through is the <span class="math inline">\(x\)</span>-coordinate of the point. The number on the <span class="math inline">\(y\)</span>-axis where the horizontal line passing through is the <span class="math inline">\(y\)</span>-coordinate of the point.</p>
 <div class="example">
@@ -535,8 +306,8 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div id="practice-10" class="section level2" number="11.5">
-<h2><span class="header-section-number">11.5</span> Practice</h2>
+<div id="practice-10" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Practice<a href="introduction-to-functions.html#practice-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-218" class="exercise"><strong>Problem 11.1  </strong></span>Find the indicated function values for the functions <span class="math inline">\(f(x)=-x^2+x-1\)</span> and <span class="math inline">\(g(x)=2x-1\)</span>. Simplify your answer.</p>
 <ol style="list-style-type: decimal">
@@ -645,7 +416,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

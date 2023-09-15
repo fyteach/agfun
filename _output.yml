@@ -10,7 +10,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Algebra and Geometry of Elementary Functions</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li>Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a></li>
     download: ["pdf"]
     sharing: no
       # github: no

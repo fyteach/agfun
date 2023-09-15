@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Algebra and Geometry of Elementary Functions</title>
   <meta name="description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Algebra and Geometry of Elementary Functions" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This notebook is designed to give a concise introduction to algebra and geometry of elementary functions which can be served as a textbook for a College Algebra course." />
   <meta name="github-repo" content="fyemath/agfun" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Fei Ye" />
 
 
-<meta name="date" content="2022-02-23" />
+<meta name="date" content="2023-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 
 <link rel="next" href="integer-exponents.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,297 +49,66 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script>
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-/* jshint latedef: false */
-
-+function ($) {
-  'use strict';
-
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
-
-  var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
-    this.transitioning = null
-
-    if (this.options.parent) {
-      this.$parent = this.getParent()
-    } else {
-      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
-    }
-
-    if (this.options.toggle) this.toggle()
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<style>
+  div.solution {
+    display: none;
   }
 
-  Collapse.VERSION  = '3.3.7'
-
-  Collapse.TRANSITION_DURATION = 350
-
-  Collapse.DEFAULTS = {
-    toggle: true
+  div.SolutionWrapper {
+    margin: 1em 0;
   }
 
-  Collapse.prototype.dimension = function () {
-    var hasWidth = this.$element.hasClass('width')
-    return hasWidth ? 'width' : 'height'
+  button.SolutionToggleBtn {
+    border: none;
+    color: rgb(127, 54, 223);
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
   }
 
-  Collapse.prototype.show = function () {
-    if (this.transitioning || this.$element.hasClass('in')) return
-
-    var activesData
-    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
-
-    if (actives && actives.length) {
-      activesData = actives.data('bs.collapse')
-      if (activesData && activesData.transitioning) return
-    }
-
-    var startEvent = $.Event('show.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    if (actives && actives.length) {
-      Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.collapse', null)
-    }
-
-    var dimension = this.dimension()
-
-    this.$element
-      .removeClass('collapse')
-      .addClass('collapsing')[dimension](0)
-      .attr('aria-expanded', true)
-
-    this.$trigger
-      .removeClass('collapsed')
-      .attr('aria-expanded', true)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse in')[dimension]('')
-      this.transitioning = 0
-      this.$element
-        .trigger('shown.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
-
-    this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  .solution>p:first-of-type {
+    display: none;
   }
-
-  Collapse.prototype.hide = function () {
-    if (this.transitioning || !this.$element.hasClass('in')) return
-
-    var startEvent = $.Event('hide.bs.collapse')
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    var dimension = this.dimension()
-
-    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
-
-    this.$element
-      .addClass('collapsing')
-      .removeClass('collapse in')
-      .attr('aria-expanded', false)
-
-    this.$trigger
-      .addClass('collapsed')
-      .attr('aria-expanded', false)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.transitioning = 0
-      this.$element
-        .removeClass('collapsing')
-        .addClass('collapse')
-        .trigger('hidden.bs.collapse')
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    this.$element
-      [dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
-  }
-
-  Collapse.prototype.toggle = function () {
-    this[this.$element.hasClass('in') ? 'hide' : 'show']()
-  }
-
-  Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
-      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
-      .each($.proxy(function (i, element) {
-        var $element = $(element)
-        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
-      }, this))
-      .end()
-  }
-
-  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
-    var isOpen = $element.hasClass('in')
-
-    $element.attr('aria-expanded', isOpen)
-    $trigger
-      .toggleClass('collapsed', !isOpen)
-      .attr('aria-expanded', isOpen)
-  }
-
-  function getTargetFromTrigger($trigger) {
-    var href
-    var target = $trigger.attr('data-target')
-      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
-
-    return $(target)
-  }
-
-
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.collapse')
-      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
-
-      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
-      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  var old = $.fn.collapse
-
-  $.fn.collapse             = Plugin
-  $.fn.collapse.Constructor = Collapse
-
-
-  // COLLAPSE NO CONFLICT
-  // ====================
-
-  $.fn.collapse.noConflict = function () {
-    $.fn.collapse = old
-    return this
-  }
-
-
-  // COLLAPSE DATA-API
-  // =================
-
-  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this   = $(this)
-
-    if (!$this.attr('data-target')) e.preventDefault()
-
-    var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
-
-    Plugin.call($target, option)
-  })
-
-}(jQuery);
-
-</script>
+</style>
 
 <script>
-// Folding solutions.
-// Code modified from the answer for the question on stackoverflow
-// https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+  document.addEventListener('DOMContentLoaded', function () {
+  // Select all solution blocks
+  var solutions = document.querySelectorAll('div.solution');
+  
+  solutions.forEach(function (solution) {
+    // Create a collapsible div to wrap the solution in
+    var solutionWrapper = document.createElement('div');
+    solutionWrapper.classList.add('SolutionWrapper');
 
-window.initializeSolutionFolding = function(show) {
+    // Add a show solution button right above
+    var solutionButton = document.createElement('button');
+    solutionButton.type = 'button';
+    solutionButton.classList.add('SolutionToggleBtn');
+    solutionButton.textContent = 'Solution'; // Initial text
 
-// handlers for show-all and hide all
-$("#rmd-show-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('show');
+    // Add a click event listener to the button
+    solutionButton.addEventListener('click', function () {
+      if (solution.style.display === 'block') {
+        solution.style.display = 'none';
+        // solutionButton.textContent = 'Show Solution';
+      } else {
+        solution.style.display = 'block';
+        // solutionButton.textContent = 'Hide Solution';
+      }
+    });
+
+    // Insert the button and the solution into the wrapper
+    solution.parentNode.insertBefore(solutionWrapper, solution);
+    solutionWrapper.appendChild(solutionButton);
+    // Insert the wrapper before the original solution div
   });
 });
-$("#rmd-hide-all-solution").click(function() {
-  $('div.solution-collapse').each(function() {
-    $(this).collapse('hide');
-  });
-});
-
-// index for unique solution element ids
-var currentIndex = 1;
-
-// select all solution blocks
-var rSolutionBlocks = $('div.solution');
-rSolutionBlocks.each(function() {
-
-  // create a collapsable div to wrap the solution in
-  var div = $('<div class="collapse solution-collapse"></div>');
-  if (show)
-    div.addClass('in');
-  var id = 'solution-643E0F36' + currentIndex++;
-  div.attr('id', id);
-  $(this).before(div);
-  $(this).detach().appendTo(div);
-
-  // add a show solution button right above
-  var showSolutionText = $('<span>' + (show ? 'Hide' : 'Solution') + '</span>');
-  var showSolutionButton = $('<button type="button" class="btn btn-default btn-xs solution-folding-btn pull-right"></button>');
-  showSolutionButton.append(showSolutionText);
-  showSolutionButton
-      .attr('data-toggle', 'collapse')
-      .attr('data-target', '#' + id)
-      .attr('aria-expanded', show)
-      .attr('aria-controls', id);
-
-  var buttonRow = $('<div class="solution-button-row"></div>');
-  var buttonCol = $('<div class="col-md-12"></div>');
-
-  buttonCol.append(showSolutionButton);
-  buttonRow.append(buttonCol);
-
-  div.before(buttonRow);
-
-  // update state of button on show/hide
-  // div.on('hidden.bs.collapse', function () {
-  //   showSolutionText.text('Show');
-  // });
-  // div.on('show.bs.collapse', function () {
-  //   showSolutionText.text('Hide');
-  // });
-});
-
-}
-
 </script>
-
-<script>
-$(document).ready(function () {
-  window.initializeSolutionFolding("show" === "hide");
-});
-</script>
-
-
 
 <div id="warningModal" style="display: none;">
     <div id="warningModalSlide" style="background-color: rgb(235, 224, 77); display: none;">
@@ -378,6 +145,10 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="css/licenseInfo.css" type="text/css" />
@@ -419,7 +190,7 @@ $(document).ready(function () {
 <li class="chapter" data-level="17" data-path="logarithmic-functions.html"><a href="logarithmic-functions.html"><i class="fa fa-check"></i><b>17</b> Logarithmic Functions</a></li>
 <li class="chapter" data-level="18" data-path="applications-of-exponential-and-logarithmic-functions.html"><a href="applications-of-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>18</b> Applications of Exponential and Logarithmic Functions</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li>Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a></li>
 
 </ul>
 
@@ -451,19 +222,19 @@ $$\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}$$
 <div id="header">
 <h1 class="title">Algebra and Geometry of Elementary Functions</h1>
 <p class="author"><em>Fei Ye</em></p>
-<p class="date"><em>2022-02-23</em></p>
+<p class="date"><em>2023-09-15</em></p>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This notebook is intended to give a brief introduction to elementary functions emphasizing on effective thinking in algebra and geometry.</p>
 <p>In the first part, we will review mathematical operations including addition, multiplication, <span class="math inline">\(n\)</span>-th root, exponentiation and logarithm.</p>
 <p>In the second part, we will study the concepts of functions, algebraic functions and their applications.</p>
 <p>In the third part, we will study elementary transcendental functions and applications.</p>
 <p>Comments and suggestions are very welcome.</p>
 <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<div class="figure">
-<img src="figs/by-nc-sa.png" alt="" />
-<p class="caption">by-nc-sa license icon</p>
+<div class="float">
+<img src="figs/by-nc-sa.png" alt="by-nc-sa license icon" />
+<div class="figcaption">by-nc-sa license icon</div>
 </div>
 
 </div>
@@ -526,7 +297,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

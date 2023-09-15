@@ -80,31 +80,6 @@ span.exercise::before{
   padding-right: 0.3em;
 }
 
-.solution-folding-btn {
-    background-color: rgb(127, 54, 223);
-    border: none;
-    color: white;
-    display: inline-block;
-    cursor: pointer;
-  }
-
-.solution-button-row {
-    display: flex;
-    margin-bottom: 1em;
-}
-
-.solution>p:first-of-type {
-  display: none;
-}
-
-.collapse {
-    display: none;
-}
-
-.in {
-    display:block
-}
-
 img {
     display: block;
     margin-left: auto;
